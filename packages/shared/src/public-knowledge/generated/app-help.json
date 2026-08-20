@@ -1,0 +1,413 @@
+{
+	"schemaVersion": 1,
+	"surface": "app-help",
+	"documents": [
+		{
+			"schemaVersion": 1,
+			"id": "pebbledesk-public-pricing",
+			"title": "Public pricing",
+			"tags": ["pricing", "plans", "trial", "billing", "limited-offer"],
+			"sections": [
+				{
+					"id": "pricing.default-cadence",
+					"heading": "Annual billing is the default",
+					"body": "PebbleDesk publishes flat childcare software pricing with annual billing as the default. The Home, Center Starter, Center Pro, and Group plans are self-serve. Larger multi-site rollouts are sales-led and custom-priced."
+				},
+				{
+					"id": "pricing.published-plans",
+					"heading": "Published plan labels",
+					"body": "Home is $8/mo when paid yearly ($93.60/year), then $39/mo when paid yearly ($468/year). Center Starter is $26/mo when paid yearly ($309.60/year), then $129/mo when paid yearly ($1548/year). Center Pro is $40/mo when paid yearly ($477.60/year), then $199/mo when paid yearly ($2388/year). Group is $80/mo when paid yearly ($957.60/year), then $399/mo when paid yearly ($4788/year)."
+				},
+				{
+					"id": "pricing.promotion",
+					"heading": "Limited subscription offer",
+					"body": "Use M80OFF or Y80OFF. Get 80% off the first year. Home is $8/mo when paid yearly, then $39/mo when paid yearly ($468/year). Center Starter is $26/mo when paid yearly, then $129/mo when paid yearly ($1548/year). Center Pro is $40/mo when paid yearly, then $199/mo when paid yearly ($2388/year). Group is $80/mo when paid yearly, then $399/mo when paid yearly ($4788/year). PebbleDesk offers a 30-day free trial."
+				}
+			],
+			"sourceRefs": [
+				{
+					"id": "site.pricing",
+					"label": "Pricing page",
+					"url": "/pricing/",
+					"kind": "site-page"
+				},
+				{
+					"id": "site.signup",
+					"label": "Signup page",
+					"url": "/signup/",
+					"kind": "site-page"
+				}
+			],
+			"publicPaths": ["/pricing/", "/signup/"],
+			"roleVisibility": ["public", "guardian", "staff", "director", "owner"],
+			"lastReviewed": "2026-05-09",
+			"botSafeAnswer": "PebbleDesk has flat published pricing with annual billing as the default. Plans start with Home at $8/mo when paid yearly, then $39/mo when paid yearly ($468/year). Center plans start with Center Starter at $26/mo when paid yearly, then $129/mo when paid yearly ($1548/year). Use M80OFF or Y80OFF. Get 80% off the first year. Larger multi-site rollouts are sales-led and custom-priced, and PebbleDesk offers a 30-day free trial."
+		},
+		{
+			"schemaVersion": 1,
+			"id": "pebbledesk-records-audit-readiness",
+			"title": "Records and audit readiness",
+			"tags": ["audit-readiness", "attendance", "records", "ratios", "subsidy-billing"],
+			"sections": [
+				{
+					"id": "records.connected-workflow",
+					"heading": "Connected childcare records",
+					"body": "PebbleDesk keeps attendance, ratios, family records, subsidy billing context, and reports connected so directors can answer licensing and payment questions without rebuilding records from separate tools."
+				},
+				{
+					"id": "records.operational-scope",
+					"heading": "Operational scope",
+					"body": "PebbleDesk supports online childcare administration for licensed centers, family childcare homes, and multi-site operators. V1 focuses on attendance, ratio visibility, child and guardian records, billing workflows, messaging, and report readiness."
+				},
+				{
+					"id": "records.state-support",
+					"heading": "State support posture",
+					"body": "PebbleDesk supports generic childcare workflows nationally, with verified state-specific ratio and licensing report support for Texas, California, and Florida. State-specific workflows outside those formats are scoped during rollout."
+				}
+			],
+			"sourceRefs": [
+				{
+					"id": "site.features.audit",
+					"label": "Audit-ready childcare platform positioning",
+					"url": "/features/audit-readiness/",
+					"kind": "site-page"
+				},
+				{
+					"id": "site.resources.audit",
+					"label": "Audit and licensing resources",
+					"url": "/resources/audit-licensing/",
+					"kind": "site-page"
+				}
+			],
+			"publicPaths": ["/features/audit-readiness/", "/resources/audit-licensing/"],
+			"roleVisibility": ["public", "staff", "director", "owner"],
+			"lastReviewed": "2026-05-09",
+			"botSafeAnswer": "PebbleDesk is an audit-ready childcare administration platform for licensed childcare operators. It keeps attendance, ratios, family records, billing context, messaging, and reports connected so center teams can prepare for licensing visits and payment reviews with less manual record chasing."
+		},
+		{
+			"schemaVersion": 1,
+			"id": "pebbledesk-authenticated-app-help",
+			"title": "Authenticated app help",
+			"tags": ["app-help", "guidance", "dashboard", "attendance", "ratios", "billing", "reports"],
+			"sections": [
+				{
+					"id": "app-help.dashboard",
+					"heading": "Need help with the dashboard?",
+					"body": "This is your starting place. It shows setup progress and today's center snapshot. Finish the highlighted setup step, then use Attendance for the live day. If ratio data is unavailable or a room falls out of ratio, fix attendance before making reports."
+				},
+				{
+					"id": "app-help.attendance",
+					"heading": "Attendance plain-language guide",
+					"body": "Attendance is the live record of who is in each room right now. Clock staff into the room, then check children in as they arrive. A red status means the room needs staff, checkout, or roster correction right away."
+				},
+				{
+					"id": "app-help.classrooms",
+					"heading": "Classrooms plain-language guide",
+					"body": "Classrooms are the rooms PebbleDesk uses for attendance, capacity, and ratio rules. Add each licensed room using the same room names your staff already use. Capacity and ratio numbers should match your license, because they drive warnings."
+				},
+				{
+					"id": "app-help.children",
+					"heading": "Children plain-language guide",
+					"body": "This list shows enrolled, waitlisted, and withdrawn child records. Search for a child before adding a new one so you do not create duplicates. Enrollment status affects attendance, reports, and billing eligibility."
+				},
+				{
+					"id": "app-help.children-enroll",
+					"heading": "Enrollment plain-language guide",
+					"body": "Enrollment creates the child's record, family contacts, and room assignment. Add the child's details, then add or link at least one guardian. Review pickup permission, subsidy status, and classroom before saving."
+				},
+				{
+					"id": "app-help.guardians",
+					"heading": "Guardians plain-language guide",
+					"body": "Guardians are family contacts used for pickup, billing, messages, and emergencies. Search before adding a new guardian so one person does not get duplicate records. Missing phone or email can slow down urgent communication."
+				},
+				{
+					"id": "app-help.scheduling",
+					"heading": "Scheduling plain-language guide",
+					"body": "Scheduling is the plan for staff coverage. Attendance is the record of what happened. Create a schedule, then add shifts for staff, rooms, days, and times. A schedule does not count toward ratios until staff clock in on Attendance."
+				},
+				{
+					"id": "app-help.ratios",
+					"heading": "Ratios plain-language guide",
+					"body": "Ratios show whether each room has enough staff for the children present right now. Look for red rooms first, then amber rooms, then review green rooms if needed. Ratios update from attendance, so wrong check-ins or staff clock-ins can create false alarms."
+				},
+				{
+					"id": "app-help.reports",
+					"heading": "Reports plain-language guide",
+					"body": "Reports create files you can share with licensing, subsidy agencies, or families. Choose the report type, pick the exact date range requested, then generate. If a report looks wrong, check Attendance first because reports use those records."
+				},
+				{
+					"id": "app-help.billing",
+					"heading": "Billing plain-language guide",
+					"body": "Billing is for family invoices and payments. Subsidies are handled on the Subsidies page. Create a draft invoice, review it, then send the payment link when it is correct. Check the family, dates, due date, and line items before sending anything."
+				},
+				{
+					"id": "app-help.subsidies",
+					"heading": "Subsidies plain-language guide",
+					"body": "Subsidies track agency cases and claims separate from family invoices. Start with a subsidy case, then create or review claims for that case. Claims depend on attendance records, so fix attendance before submitting money requests."
+				},
+				{
+					"id": "app-help.import",
+					"heading": "Import plain-language guide",
+					"body": "Import brings spreadsheet records into PebbleDesk after you preview them. Choose what is in the CSV, choose where it came from, then upload the file. Rows with errors are skipped. Nothing should be saved until you review the preview."
+				},
+				{
+					"id": "app-help.messages",
+					"heading": "Messages plain-language guide",
+					"body": "Messages help you send updates to guardians and see whether delivery worked. Choose the right recipients before writing the message. Use alerts only for urgent items so families learn to pay attention to them."
+				},
+				{
+					"id": "app-help.settings",
+					"heading": "Settings plain-language guide",
+					"body": "Settings is where owners manage center details, team access, billing, and bookkeeping links. Review the warning banner first, then handle QuickBooks or team invitations. Disconnecting services or changing center details can affect billing and reports."
+				},
+				{
+					"id": "app-guide.dashboard-basics",
+					"heading": "Dashboard basics",
+					"body": "Use the dashboard as your morning desk: finish setup, see what needs attention, then open the next page. Steps: Do the highlighted next step first: If PebbleDesk shows a setup step, finish that before jumping into daily work. Check today before reports: Attendance and ratios depend on today's room records, so keep them current first. Use Help when a word feels unfamiliar: Search plain words like child, red, PDF, billing, or lost."
+				},
+				{
+					"id": "app-guide.owner-start-here",
+					"heading": "Start here: set up the center",
+					"body": "Build the basics in the right order so attendance, ratios, billing, and reports all work together. Steps: Add your classrooms: Create each room and enter the staff-to-child ratio your license requires. Enroll children and guardians: Add the child, guardian, emergency contact, and enrollment status. Open attendance for today: Check children and staff into rooms so ratios update automatically. Generate your first report: Pick a date range, generate the report, then download the file."
+				},
+				{
+					"id": "app-guide.attendance-basics",
+					"heading": "Attendance without guessing",
+					"body": "Keep the live roster accurate so ratios, subsidy claims, and reports are trustworthy. Steps: Clock staff into the right room: Staff must be in the room before PebbleDesk can count them for ratios. Check children in as they arrive: Search by name, confirm the room, and check them out when they leave. Fix red rooms right away: Red means the room is out of ratio or the roster needs correction."
+				},
+				{
+					"id": "app-guide.classroom-setup",
+					"heading": "Classroom setup basics",
+					"body": "Classrooms control capacity, age groups, attendance rosters, and ratio rules. Steps: Create one room for each licensed classroom: Use the names staff already say during the day. Enter license capacity and ratio: These numbers tell PebbleDesk when a room is getting too full. Assign children to rooms: Attendance is easier when each child already has the right classroom."
+				},
+				{
+					"id": "app-guide.enrollment-basics",
+					"heading": "Enroll a child step by step",
+					"body": "Add the child, family contacts, and classroom assignment in the order PebbleDesk needs. Steps: Start with the child's basic details: Date of birth helps suggest the age group for classroom placement. Add at least one guardian: Guardians are the family contacts for messages, pickup, and billing. Review before saving: Check spelling, pickup permission, subsidy status, and classroom before submitting."
+				},
+				{
+					"id": "app-guide.guardian-basics",
+					"heading": "Guardian records basics",
+					"body": "Use guardian records for family contacts, pickup permission, messages, and billing links. Steps: Mark the main contact clearly: The primary guardian is usually who receives routine calls and billing. Check pickup permission: Only authorized pickup contacts should be used for release decisions."
+				},
+				{
+					"id": "app-guide.scheduling-basics",
+					"heading": "Scheduling basics",
+					"body": "Use schedules to plan staff coverage before the room gets busy. Steps: Create the recurring plan: A schedule is the plan for who should be in each room. Use attendance for what actually happened: Schedules plan coverage; attendance proves who was present."
+				},
+				{
+					"id": "app-guide.staff-daily-basics",
+					"heading": "Staff daily basics",
+					"body": "The simple daily routine: clock in, check children in, and ask for help when a room is off. Steps: Clock yourself into the room: Choose your room and use Clock In before children arrive. Check in each child: Search for a child, confirm the room, and check them in. Watch the room status: If the screen shows a warning or violation, tell your director before the room gets busier."
+				},
+				{
+					"id": "app-guide.ratio-colors",
+					"heading": "Understand ratio colors",
+					"body": "Know what green, amber, and red mean before an inspector or parent asks. Steps: Green means the room is okay: Children and staff are currently within the room's required ratio. Amber means watch this room: The room is close to its limit. Add staff or avoid moving more children in. Red means fix it now: Move staff, check a child out, or correct the roster so the room returns to compliance."
+				},
+				{
+					"id": "app-guide.download-pdf-report",
+					"heading": "Generate and find a PDF report",
+					"body": "Use reports when someone asks for attendance, ratio, subsidy, or licensing proof. Steps: Choose the report type: Pick attendance, ratio, subsidy, or licensing based on what you were asked for. Choose start and end dates: Use the exact dates the state, family, or subsidy agency requested. Click Download and check Downloads: Most browsers save the file in the Downloads folder. Look for the newest PebbleDesk file."
+				},
+				{
+					"id": "app-guide.csv-import-basics",
+					"heading": "Import a CSV without stress",
+					"body": "Bring records from another system into PebbleDesk and review rows before anything is saved. Steps: Choose what you are importing: Select children, guardians, invoices, or full enrollment. Select the CSV file: A CSV is a spreadsheet saved as a simple text file. PebbleDesk previews it first. Review the preview: Rows with issues are skipped. Fix the file and upload again if something looks wrong."
+				},
+				{
+					"id": "app-guide.billing-subsidy-flow",
+					"heading": "Billing and subsidy basics",
+					"body": "Know the difference between family invoices and agency subsidy claims. Steps: Use Billing for family payments: Create or send invoices, then record payments when money comes in. Use Subsidies for agency cases: Track eligibility, claim periods, and amounts expected from the subsidy agency. Keep attendance current: Subsidy claims depend on attendance records, so daily check-ins matter."
+				},
+				{
+					"id": "app-guide.messages-basics",
+					"heading": "Messaging basics",
+					"body": "Send simple updates to a whole classroom or selected guardians, then review delivery status. Steps: Choose who should receive it: Pick a classroom for a group update or selected guardians for a smaller message. Choose the message type: Use announcement for routine updates, alert for urgent items, and direct for selected families."
+				},
+				{
+					"id": "app-topic.what-first",
+					"heading": "What should I do first?",
+					"body": "Start with classrooms, then enroll children, then use attendance each day."
+				},
+				{
+					"id": "app-topic.lost",
+					"heading": "I feel lost. What should I do?",
+					"body": "Open Dashboard, complete the highlighted next step, then use Attendance for today's records."
+				},
+				{
+					"id": "app-topic.dashboard-meaning",
+					"heading": "What is the dashboard for?",
+					"body": "It shows setup progress and today's basics so you know where to go next."
+				},
+				{
+					"id": "app-topic.capacity-meaning",
+					"heading": "What does capacity mean?",
+					"body": "Capacity is the most children your license allows in a room. PebbleDesk warns you before a room is too full."
+				},
+				{
+					"id": "app-topic.guardian-primary",
+					"heading": "What is a primary guardian?",
+					"body": "The primary guardian is the main family contact for routine updates, billing, and questions."
+				},
+				{
+					"id": "app-topic.find-pdf",
+					"heading": "Where did my PDF go?",
+					"body": "After you click Download, check your browser's Downloads folder for the newest file."
+				},
+				{
+					"id": "app-topic.attendance-check-in",
+					"heading": "How do I check in a child?",
+					"body": "Open Attendance, search for the child, choose the room, and confirm the check-in."
+				},
+				{
+					"id": "app-topic.attendance-clock-in",
+					"heading": "Why do staff clock in?",
+					"body": "PebbleDesk counts clocked-in staff toward ratios. If staff are not clocked in, a room may look out of ratio."
+				},
+				{
+					"id": "app-topic.ratio-red",
+					"heading": "What does a red ratio mean?",
+					"body": "The room needs attention now. Add staff, correct attendance, or move children."
+				},
+				{
+					"id": "app-topic.csv-meaning",
+					"heading": "What is a CSV file?",
+					"body": "It is a spreadsheet file saved in a simple format. PebbleDesk lets you preview it before saving."
+				},
+				{
+					"id": "app-topic.billing-vs-subsidy",
+					"heading": "Billing or subsidy?",
+					"body": "Billing is for families. Subsidies are for agency cases and claims."
+				},
+				{
+					"id": "app-topic.schedule-vs-attendance",
+					"heading": "Schedule or attendance?",
+					"body": "Scheduling is the plan. Attendance is the record of who was actually there."
+				},
+				{
+					"id": "app-topic.send-message",
+					"heading": "How do I send a message?",
+					"body": "Open Messages, choose a classroom or guardians, write the note, then send it."
+				},
+				{
+					"id": "app-topic.still-stuck",
+					"heading": "I still need help",
+					"body": "Start in Help, then choose the closest plain-language guide for the job in front of you."
+				}
+			],
+			"sourceRefs": [
+				{
+					"id": "app.help",
+					"label": "Authenticated help center",
+					"url": "/help",
+					"kind": "app-copy"
+				},
+				{
+					"id": "app.route.dashboard",
+					"label": "Need help with the dashboard?",
+					"url": "/dashboard",
+					"kind": "app-copy"
+				},
+				{
+					"id": "app.route.attendance",
+					"label": "Attendance plain-language guide",
+					"url": "/attendance",
+					"kind": "app-copy"
+				},
+				{
+					"id": "app.route.classrooms",
+					"label": "Classrooms plain-language guide",
+					"url": "/classrooms",
+					"kind": "app-copy"
+				},
+				{
+					"id": "app.route.children",
+					"label": "Children plain-language guide",
+					"url": "/children",
+					"kind": "app-copy"
+				},
+				{
+					"id": "app.route.children-enroll",
+					"label": "Enrollment plain-language guide",
+					"url": "/children/enroll",
+					"kind": "app-copy"
+				},
+				{
+					"id": "app.route.guardians",
+					"label": "Guardians plain-language guide",
+					"url": "/guardians",
+					"kind": "app-copy"
+				},
+				{
+					"id": "app.route.scheduling",
+					"label": "Scheduling plain-language guide",
+					"url": "/scheduling",
+					"kind": "app-copy"
+				},
+				{
+					"id": "app.route.ratios",
+					"label": "Ratios plain-language guide",
+					"url": "/ratios",
+					"kind": "app-copy"
+				},
+				{
+					"id": "app.route.reports",
+					"label": "Reports plain-language guide",
+					"url": "/reports",
+					"kind": "app-copy"
+				},
+				{
+					"id": "app.route.billing",
+					"label": "Billing plain-language guide",
+					"url": "/billing",
+					"kind": "app-copy"
+				},
+				{
+					"id": "app.route.subsidies",
+					"label": "Subsidies plain-language guide",
+					"url": "/subsidies",
+					"kind": "app-copy"
+				},
+				{
+					"id": "app.route.import",
+					"label": "Import plain-language guide",
+					"url": "/import",
+					"kind": "app-copy"
+				},
+				{
+					"id": "app.route.messages",
+					"label": "Messages plain-language guide",
+					"url": "/messages",
+					"kind": "app-copy"
+				},
+				{
+					"id": "app.route.settings",
+					"label": "Settings plain-language guide",
+					"url": "/settings",
+					"kind": "app-copy"
+				}
+			],
+			"publicPaths": [
+				"/help",
+				"/dashboard",
+				"/attendance",
+				"/classrooms",
+				"/children",
+				"/children/enroll",
+				"/guardians",
+				"/scheduling",
+				"/ratios",
+				"/reports",
+				"/billing",
+				"/subsidies",
+				"/import",
+				"/messages",
+				"/settings"
+			],
+			"roleVisibility": ["staff", "director", "owner"],
+			"lastReviewed": "2026-05-09",
+			"botSafeAnswer": "PebbleDesk app help explains the main authenticated workflows in plain language: start on the dashboard, keep attendance current, watch ratio colors, maintain child and guardian records, use reports for proof, and separate family billing from subsidy cases."
+		}
+	]
+}

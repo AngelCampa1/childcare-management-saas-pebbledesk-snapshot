@@ -1,0 +1,141 @@
+---
+import { buildPostHogBootstrapScript } from "../lib/analytics"
+import {
+  buildChunkRecoveryScript,
+  buildDocumentBootstrapScript,
+  buildScrollRevealScript,
+} from "../lib/base-layout-scripts"
+import { buildFontCssOverrides, buildGoogleFontsUrl, DEFAULT_FONTS } from "../lib/fonts"
+import { generateThemeCSS } from "../lib/generate-theme-css"
+import { ensureTrailingSlash } from "../lib/meta"
+import MetaTags from "../seo/meta-tags.astro"
+import type { SiteTheme } from "../types"
+
+interface Props {
+  title: string
+  description: string
+  canonicalUrl: string
+  siteName: string
+  ogImage?: string
+  ogImageWidth?: number
+  ogImageHeight?: number
+  ogImageAlt?: string
+  publishedAt?: string
+  updatedAt?: string
+  noindex?: boolean
+  ogType?: string
+  twitterSite?: string
+  articleAuthor?: string
+  articleSection?: string
+  articleTags?: string[]
+  themeColor?: string
+  appleTouchIcon?: string
+  showHeader?: boolean
+  showFooter?: boolean
+  theme?: SiteTheme
+  fonts?: { heading: string; body: string; mono?: string }
+  siteUrl?: string
+  preserveMetaTagCopy?: boolean
+  prevUrl?: string
+  nextUrl?: string
+  analyticsEnabled?: boolean
+  rssUrl?: string
+  enableScrollReveal?: boolean
+}
+const {
+  showHeader = true,
+  showFooter = true,
+  theme,
+  fonts,
+  themeColor,
+  appleTouchIcon,
+  prevUrl,
+  nextUrl,
+  analyticsEnabled = true,
+  rssUrl,
+  enableScrollReveal = true,
+  siteName,
+  canonicalUrl: rawCanonicalUrl,
+  preserveMetaTagCopy = false,
+  ...props
+} = Astro.props
+const canonicalUrl = ensureTrailingSlash(rawCanonicalUrl)
+
+const resolvedFonts = fonts ?? DEFAULT_FONTS
+const fontsUrl = buildGoogleFontsUrl(resolvedFonts)
+const fontCssOverrides = buildFontCssOverrides(resolvedFonts)
+const themeCss = theme ? generateThemeCSS(theme) : ""
+const documentBootstrapScript = buildDocumentBootstrapScript()
+const chunkRecoveryScript = buildChunkRecoveryScript()
+const scrollRevealScript = buildScrollRevealScript()
+const postHogBootstrapScript = buildPostHogBootstrapScript(siteName)
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    {appleTouchIcon && <link rel="apple-touch-icon" href={appleTouchIcon} />}
+    <link rel="sitemap" href="/sitemap-index.xml" />
+    {rssUrl && <link rel="alternate" type="application/rss+xml" title={`${siteName} RSS Feed`} href={rssUrl} />}
+    <meta name="pebbledesk-site-name" content={siteName} />
+    {themeColor && <meta name="theme-color" content={themeColor} />}
+    <MetaTags
+      siteName={siteName}
+      canonicalUrl={canonicalUrl}
+      preserveAuthoredMetadata={preserveMetaTagCopy}
+      {...props}
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preload" as="style" href={fontsUrl} />
+    <link rel="stylesheet" href={fontsUrl} media="print" onload="this.media='all'" />
+    <noscript><link rel="stylesheet" href={fontsUrl} /></noscript>
+    <style set:html={fontCssOverrides} />
+    {themeCss && <style set:html={themeCss} />}
+    <script is:inline set:html={documentBootstrapScript} />
+    <script is:inline>
+      // PebbleDesk is light-mode-only. Override any stored or OS dark preference.
+      document.documentElement.classList.remove("dark");
+      document.documentElement.classList.add("light");
+    </script>
+    <script is:inline set:html={chunkRecoveryScript} />
+    {import.meta.env.PROD && (
+      <script>
+        import { initSentry } from "../lib/sentry-client";
+        const siteName =
+          document.querySelector('meta[name="pebbledesk-site-name"]')?.getAttribute("content") ?? "unknown";
+        initSentry(siteName);
+      </script>
+    )}
+    {analyticsEnabled && import.meta.env.PROD && (
+      <script is:inline set:html={postHogBootstrapScript} />
+    )}
+    {analyticsEnabled && import.meta.env.PROD && (
+      <script>
+        import { initCroTracking } from "../lib/cro-tracker";
+        initCroTracking();
+      </script>
+    )}
+    <slot name="head" />
+    {prevUrl && <link rel="prev" href={prevUrl} />}
+    {nextUrl && <link rel="next" href={nextUrl} />}
+  </head>
+  <body class="bg-brand-surface text-brand-text min-h-screen font-[family-name:var(--font-body)] antialiased" data-site-name={siteName}>
+    <a
+      href="#main-content"
+      class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-brand-primary focus:text-[var(--color-neutral-50)] focus:rounded-md focus:text-sm focus:font-medium"
+    >
+      Skip to main content
+    </a>
+    {showHeader && <slot name="header" />}
+    <main id="main-content" class="overflow-x-hidden" data-pagefind-body>
+      <slot />
+    </main>
+    {showFooter && <slot name="footer" />}
+    {enableScrollReveal && (
+      <script is:inline set:html={scrollRevealScript} />
+    )}
+  </body>
+</html>

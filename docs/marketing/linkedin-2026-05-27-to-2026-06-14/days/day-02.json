@@ -1,0 +1,171 @@
+{
+	"date": "2026-05-28",
+	"theme": "Ratio moments directors miss during transitions",
+	"posts": [
+		{
+			"index_in_day": 1,
+			"time_central": "04:00",
+			"pillar": "Ratio compliance",
+			"format": "Practical warning",
+			"post_content": "Ratio risk usually shows up in motion.\n\nNot when every classroom is settled.\nNot when the schedule looks clean.\n\nIt shows up during drop-off, lunch breaks, nap handoffs, room moves, and pickup.\n\nThat is why a ratio habit has to watch the transitions, not just the posted chart.\n\nA director can know the rule perfectly and still miss the three-minute window where the room changed before the record did.",
+			"source": "apps/site/src/content/guides/childcare-ratio-compliance-automation.md",
+			"url": "https://pebbledesk.app/resources/guides/childcare-ratio-compliance-automation/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Grounded in the guide's transition-period ratio risk framing."
+		},
+		{
+			"index_in_day": 2,
+			"time_central": "05:00",
+			"pillar": "Staff scheduling",
+			"format": "Checklist",
+			"post_content": "Before the day starts, check the four ratio windows that tend to cause trouble:\n\n1. Morning drop-off\n2. Post-lunch breaks\n3. Nap supervision handoffs\n4. Afternoon pickup\n\nFor each one, ask:\n\nHow many children are expected?\nWhich staff are actually counted in ratio?\nWhere is the overlap?\nWhat happens if one staff member is late, pulled away, or out sick?\n\nSchedules should be built for the day that happens, not only the day that was planned.",
+			"source": "apps/site/src/content/guides/staff-scheduling-for-ratio-compliance.md",
+			"url": "https://pebbledesk.app/resources/guides/staff-scheduling-for-ratio-compliance/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Uses the guide's four high-risk transition windows and variation planning."
+		},
+		{
+			"index_in_day": 3,
+			"time_central": "06:00",
+			"pillar": "Morning drop-off",
+			"format": "Director moment",
+			"post_content": "Morning drop-off can look calm from the office and still be fragile in one room.\n\nThree children arrive close together.\nA staff member walks one child down the hall.\nAnother staff member has not clocked in yet.\nThe room is only off for a few minutes.\n\nBut licensing does not grade ratio risk by how long the moment felt.\n\nThe practical habit: watch the room count during arrival, not just the total center count.",
+			"source": "apps/site/src/content/guides/staff-scheduling-for-ratio-compliance.md",
+			"url": "https://pebbledesk.app/resources/guides/staff-scheduling-for-ratio-compliance/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Draws from the guide's morning arrival example without inventing customer claims."
+		},
+		{
+			"index_in_day": 4,
+			"time_central": "07:00",
+			"pillar": "Ratio tracking",
+			"format": "Plain-language explainer",
+			"post_content": "A ratio chart tells staff the rule.\n\nIt does not tell the director what is happening at 8:17.\n\nThat is the gap ratio tracking has to close: children checked in, staff assigned, room context, and the rule that applies to that age group.\n\nThe hard part is rarely understanding the standard on paper. The hard part is keeping coverage visible while the building is moving.",
+			"source": "apps/site/src/content/features/ratio-tracking.md",
+			"url": "https://pebbledesk.app/features/ratio-tracking/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Grounded in the ratio feature page's point that knowing the rule is easier than keeping real-time room coverage visible."
+		},
+		{
+			"index_in_day": 5,
+			"time_central": "08:00",
+			"pillar": "Attendance and ratios",
+			"format": "Operational tip",
+			"post_content": "Attendance is one of the first ratio signals of the day.\n\nIf check-ins are late, rounded, or sitting on paper waiting to be entered, the ratio view is already behind.\n\nA small habit that helps: close the arrival record while arrival is still happening.\n\nNot at lunch.\nNot before pickup.\n\nWhile staff can still move coverage if the room count changes.",
+			"source": "apps/site/src/content/features/attendance-tracking.md",
+			"url": "https://pebbledesk.app/features/attendance-tracking/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Uses attendance as an input to room status, ratio review, and follow-up records."
+		},
+		{
+			"index_in_day": 6,
+			"time_central": "09:00",
+			"pillar": "Scheduling coverage",
+			"format": "Point of view",
+			"post_content": "Coverage and overlap are not the same thing.\n\nCoverage means the schedule technically meets the minimum.\nOverlap means the center has room for normal childcare reality.\n\nA late arrival.\nA bathroom escort.\nA callout.\nA parent conversation at the door.\nA child moved to another room.\n\nIf the schedule only works when nothing bends, the schedule is too brittle for ratio compliance.",
+			"source": "apps/site/src/content/guides/staff-scheduling-for-ratio-compliance.md",
+			"url": "https://pebbledesk.app/resources/guides/staff-scheduling-for-ratio-compliance/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Grounded in the guide's coverage vs overlap distinction and normal variation examples."
+		},
+		{
+			"index_in_day": 7,
+			"time_central": "10:00",
+			"pillar": "Room transitions",
+			"format": "Question post",
+			"post_content": "When children move rooms, what moves with them?\n\nThe child count?\nThe assigned staff?\nThe ratio rule?\nThe attendance context?\nThe record of when the change happened?\n\nRoom transitions are where a center can be doing the right thing and still leave a messy trail.\n\nA practical test: if someone asked about a room change tomorrow, could the record show the move without relying on whoever remembers it best?",
+			"source": "apps/site/src/content/features/classroom-management.md",
+			"url": "https://pebbledesk.app/features/classroom-management/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Uses classroom/room activity as related operational context; risk is framed as a practical record question."
+		},
+		{
+			"index_in_day": 8,
+			"time_central": "11:00",
+			"pillar": "Lunch and nap transitions",
+			"format": "Practical reminder",
+			"post_content": "Lunch and nap transitions are ratio-risk magnets because the room may look settled from a distance.\n\nChildren are in place.\nThe lights are lower.\nThe hallway is quieter.\n\nBut staff breaks, handoffs, and classroom coverage are changing underneath that calm surface.\n\nA useful director habit is to check the actual staff counted in each room before the break rotation starts, not after the gap appears.",
+			"source": "apps/site/src/content/guides/staff-scheduling-for-ratio-compliance.md",
+			"url": "https://pebbledesk.app/resources/guides/staff-scheduling-for-ratio-compliance/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Grounded in post-lunch and nap supervision handoff risk from the scheduling guide."
+		},
+		{
+			"index_in_day": 9,
+			"time_central": "12:00",
+			"pillar": "Audit documentation",
+			"format": "Explainer",
+			"post_content": "The planned schedule is not the ratio record.\n\nIt is the first guess.\n\nThe real record has to show what happened after the doors opened:\n\nWhich children arrived.\nWhich staff were actually present.\nWhich room each child was in.\nWhen someone stepped out.\nWhen a room combined or split.\n\nIf a licensing question points to 10:35 on a Tuesday, the director needs more than the staffing plan printed on Monday.\n\nShe needs the day as it actually ran.",
+			"source": "apps/site/src/content/guides/staff-scheduling-for-ratio-compliance.md",
+			"url": "https://pebbledesk.app/resources/guides/staff-scheduling-for-ratio-compliance/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Rewritten to avoid repeated hook while keeping the schedule-versus-actual-record point."
+		},
+		{
+			"index_in_day": 10,
+			"time_central": "13:00",
+			"pillar": "Product philosophy",
+			"format": "Founder POV",
+			"post_content": "PebbleDesk keeps ratio tracking close to attendance and classroom activity because that is where ratio risk usually appears.\n\nA child checks in.\nA room combines.\nA teacher covers a break.\nA floater gets pulled somewhere else.\nPickup starts early for one classroom and late for another.\n\nNone of those moments feels like a compliance event while it is happening.\n\nThey feel like Tuesday.\n\nDirectors need that fragile moment to be visible while there is still time to move coverage, not reconstructed later from memory.",
+			"source": "apps/site/src/content/features/ratio-tracking.md",
+			"url": "https://pebbledesk.app/features/ratio-tracking/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Rewritten to remove product-thesis language and ground the post in concrete director moments."
+		},
+		{
+			"index_in_day": 11,
+			"time_central": "14:00",
+			"pillar": "Callout protocol",
+			"format": "Operational checklist",
+			"post_content": "A staff callout plan is a ratio document.\n\nIt should answer:\n\n- Who can be called within the next two hours?\n- Which rooms can be combined, if state rules and ages allow it?\n- When does the director step into coverage?\n- Who documents the decision?\n- How is the substitute's qualification status confirmed?\n\nA callout is stressful. The protocol should not be invented while the room is already tight.",
+			"source": "apps/site/src/content/guides/staff-scheduling-for-ratio-compliance.md",
+			"url": "https://pebbledesk.app/resources/guides/staff-scheduling-for-ratio-compliance/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Grounded in the callout protocol guidance and qualified staff definition."
+		},
+		{
+			"index_in_day": 12,
+			"time_central": "15:00",
+			"pillar": "Afternoon pickup",
+			"format": "Practical warning",
+			"post_content": "Pickup can make a room look calmer right when coverage gets more fragile.\n\nChildren leave one by one.\nStaff are cleaning, answering parent questions, gathering belongings, and preparing to close.\nA teacher may step out because the room \"only has a few kids left.\"\n\nThat is exactly when the record still matters.\n\nThe day is not over until the last child is signed out and the room coverage still makes sense.\n\nA good pickup routine checks both sides:\n\nWho is still here?\nWho is still counted?",
+			"source": "apps/site/src/content/guides/childcare-ratio-compliance-automation.md",
+			"url": "https://pebbledesk.app/resources/guides/childcare-ratio-compliance-automation/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Rewritten to avoid repeated hook while preserving pickup-ratio risk."
+		},
+		{
+			"index_in_day": 13,
+			"time_central": "16:00",
+			"pillar": "Staff scheduling",
+			"format": "Director prompt",
+			"post_content": "A schedule that looks efficient on paper can still be risky in a childcare center.\n\nAsk one question:\n\nWhere does this schedule absorb ordinary variation?\n\nIf the answer is nowhere, the plan depends on every child, staff member, family, and transition behaving exactly as expected.\n\nThat is not how childcare days work.\n\nRatio compliance needs a little practical slack in the moments that bend.",
+			"source": "apps/site/src/content/guides/staff-scheduling-for-ratio-compliance.md",
+			"url": "https://pebbledesk.app/resources/guides/staff-scheduling-for-ratio-compliance/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Grounded in building overlap and planning for variation rather than averages."
+		},
+		{
+			"index_in_day": 14,
+			"time_central": "17:00",
+			"pillar": "Audit reports",
+			"format": "Recordkeeping tip",
+			"post_content": "Ratio review is easier when it stays connected to the rest of the day.\n\nAttendance explains who was present.\nRoom activity explains where children were assigned.\nScheduling explains who was expected.\nThe staff record explains who could be counted.\nReports explain what happened later.\n\nWhen those pieces split apart, directors end up doing detective work for a routine compliance question.",
+			"source": "apps/site/src/content/features/audit-reports.md",
+			"url": "https://pebbledesk.app/features/audit-reports/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Grounded in audit reports connecting attendance, ratio, billing, and audit-log context."
+		},
+		{
+			"index_in_day": 15,
+			"time_central": "18:00",
+			"pillar": "End-of-day review",
+			"format": "Checklist",
+			"post_content": "End-of-day ratio review:\n\n- Which transition was tightest?\n- Did any room rely on a staff member who was not clearly counted in the record?\n- Were room moves reflected when they happened?\n- Did pickup coverage hold through the last child?\n- Is there a pattern to address before tomorrow?\n\nNo one needs another blame exercise at closing time.\n\nWhat directors need is the pattern while it is still small enough to fix in tomorrow's coverage plan, before it becomes part of a licensing conversation.",
+			"source": "apps/site/src/content/guides/preparing-for-state-audit-childcare.md",
+			"url": "https://pebbledesk.app/resources/guides/preparing-for-state-audit-childcare/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Rewritten to replace formulaic point/point close with a director-facing close."
+		}
+	]
+}

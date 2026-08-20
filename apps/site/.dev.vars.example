@@ -1,0 +1,17 @@
+# Copy to .dev.vars and fill in real values before running `wrangler dev`.
+# These are Cloudflare Worker secrets — never commit .dev.vars to source control.
+# `wrangler dev` applies .dev.vars over wrangler.jsonc `vars`, so the line below
+# overrides the production ENVIRONMENT and makes Turnstile bypass locally when
+# TURNSTILE_SECRET_KEY is unset. Remove it (or set "production") to test fail-closed.
+ENVIRONMENT=development
+
+RESEND_API_KEY=re_...
+MARKETING_FROM_EMAIL=angel.campa@pebbledesk.app
+R2_PUBLIC_URL=https://cdn.pebbledesk.app
+UNSUBSCRIBE_SECRET=a-random-secret-used-to-sign-unsubscribe-tokens
+
+# Cloudflare Turnstile secret key for the /api/leads anti-abuse check.
+# In production set it as a Worker secret: `wrangler secret put TURNSTILE_SECRET_KEY`.
+# Leave unset for local dev / tests — verification is bypassed only when ENVIRONMENT
+# is not "production". The matching public site key is PUBLIC_TURNSTILE_SITE_KEY (see .env.example).
+TURNSTILE_SECRET_KEY=0x...

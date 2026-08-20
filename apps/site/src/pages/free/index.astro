@@ -1,0 +1,67 @@
+---
+import "../../styles/global.css"
+import { getCollection } from "astro:content"
+import PublicSignupCta from "@pebbledesk/marketing/components/public-signup-cta"
+import CategoryHub from "@pebbledesk/marketing/hubs/category-hub.astro"
+import { mapToContentItems, sortByUpdatedAtDesc } from "@pebbledesk/marketing/lib/collections"
+import { PEBBLEDESK_OFFERING } from "@pebbledesk/shared/constants"
+import { siteConfig } from "@/config/site"
+import { entrySlug } from "@/lib/page-helpers"
+
+const entries = await getCollection("lead-magnets")
+const sorted = sortByUpdatedAtDesc(entries)
+const items = mapToContentItems(
+  sorted,
+  (e) => `/free/${entrySlug(e)}/`,
+  () => ({ category: "Free resource" }),
+)
+
+const page = {
+  data: items,
+  currentPage: 1,
+  lastPage: 1,
+  url: { prev: undefined, next: undefined },
+}
+---
+
+<CategoryHub
+  config={siteConfig}
+  title="Free Childcare Resources"
+  description="Downloadable checklists, calculators, templates, and scorecards for audit, subsidy, ratio, and software-buying workflows."
+  items={items}
+  page={page}
+  basePath="/free"
+  breadcrumbs={[
+    { label: "Home", href: "/" },
+    { label: "Resources", href: "/resources/" },
+    { label: "Free Resources", href: "/free/" },
+  ]}
+>
+  <section slot="intro" class="mb-8 rounded-[var(--radius-xl)] border border-[var(--site-panel-border)] bg-[var(--site-panel-bg)] p-6 shadow-[var(--shadow-card)]">
+    <p class="font-mono text-[length:var(--text-caption)] uppercase tracking-[0.18em] text-[var(--color-accent-700)]">
+      Downloadable tools
+    </p>
+    <h2 class="mt-2 text-xl font-bold text-[var(--color-brand-text)]">
+      Start with the resource that matches the paperwork pressure in front of you.
+    </h2>
+    <p class="mt-4 max-w-3xl leading-7 text-[var(--color-brand-muted)]">
+      PebbleDesk solves one-off paperwork pressure for childcare operators. Each worksheet helps
+      directors, family providers, and administrators handle audit prep, subsidy billing, ratio
+      checks, parent paperwork, software pricing, and migration decisions across licensed centers,
+      family childcare homes, and multi-site programs. Use the worksheet that matches today's admin
+      pressure.
+    </p>
+  </section>
+
+  <section slot="cta" class="mt-8 border-t border-[var(--color-neutral-200)] py-10 text-center" id="signup">
+    <h2 class="mb-2 text-2xl font-bold text-[var(--color-brand-text)]">Want the tools connected to the daily workflow?</h2>
+    <p class="mx-auto mb-6 max-w-md text-[var(--color-brand-muted)]">
+      Start your {PEBBLEDESK_OFFERING.trial.label} and keep attendance, ratios, billing, and audit records in one place.
+    </p>
+    <PublicSignupCta
+      client:load
+      sourcePage="/free/"
+      buttonText={siteConfig.funnel.bofu.ctaText}
+    />
+  </section>
+</CategoryHub>

@@ -1,0 +1,46 @@
+User-agent: *
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+User-agent: Amazonbot
+Allow: /
+
+User-agent: meta-externalagent
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+User-agent: Cohere-Bot
+Allow: /
+
+User-agent: YouBot
+Allow: /
+
+Llms-Txt: https://pebbledesk.app/llms.txt
+Llms-Txt: https://pebbledesk.app/llms-full.txt
+
+Sitemap: https://pebbledesk.app/sitemap-index.xml

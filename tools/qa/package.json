@@ -1,0 +1,12 @@
+{
+	"name": "@pebbledesk/qa-tools",
+	"version": "0.0.1",
+	"private": true,
+	"type": "module",
+	"description": "Shared helpers for one-off QA scripts (Playwright bug-hunt classifiers, etc).",
+	"scripts": {
+		"test": "node --test bug-hunt-classifier.test.mjs",
+		"test:watch": "node --test --watch bug-hunt-classifier.test.mjs",
+		"test:coverage": "node --test --experimental-test-coverage bug-hunt-classifier.test.mjs"
+	}
+}

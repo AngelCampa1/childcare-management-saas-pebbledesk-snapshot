@@ -1,0 +1,171 @@
+{
+	"date": "2026-05-15",
+	"theme": "Tuition billing, guardian payments, invoices, co-pays, and fee policy",
+	"posts": [
+		{
+			"index_in_day": 1,
+			"time_central": "04:00",
+			"pillar": "Tuition billing and center finances",
+			"format": "Practical tip",
+			"post_content": "Tuition rates should not start with, \"What do nearby centers charge?\"\n\nThat question matters, but it is the second question.\n\nThe first question is quieter and more uncomfortable:\n\nWhat does one enrolled slot actually cost us?\n\nFor a childcare center, that means looking at fixed costs like rent, insurance, utilities, base salaries, and software. Then adding variable costs like food, supplies, cleaning materials, and classroom staffing as enrollment changes.\n\nOnly after that should a director compare local market rates.\n\nA rate that matches the market but sits below your cost is not competitive. It is a delayed cash flow problem.\n\nA useful Friday exercise:\n\nPick one classroom. Estimate the monthly cost to operate it at expected enrollment. Then compare that number to the tuition billed for the same children.\n\nIf the math only works when every family pays on time and every slot stays full, the billing policy may be carrying more risk than it appears.",
+			"source": "apps/site/src/content/guides/how-to-set-daycare-tuition-rates.md",
+			"url": "https://pebbledesk.app/resources/guides/how-to-set-daycare-tuition-rates/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Opens the day with the source guide's cost-first rate-setting method and connects it to billing risk."
+		},
+		{
+			"index_in_day": 2,
+			"time_central": "05:00",
+			"pillar": "Rate setting and classroom economics",
+			"format": "Teaching post",
+			"post_content": "Infant tuition is not higher because infant care is \"premium.\"\n\nIt is higher because the staffing math is different.\n\nAn infant room may require far more staff per child than a preschool room. The tuition rate has to reflect that labor reality, or the center quietly asks preschool revenue to cover the gap.\n\nThat can work until it doesn't.\n\nIf preschool enrollment dips, the cross-subsidy disappears. Then the infant classroom can look full and still run at a loss.\n\nFor directors reviewing rates, the practical question is:\n\nAre we pricing each age group based on the cost of that classroom, or are we smoothing the numbers so the fee sheet feels easier to explain?\n\nFamilies deserve clear, predictable rates. Centers also deserve rates that reflect the care they are staffed and licensed to provide.\n\nA fee schedule is not just a parent communication document.\n\nIt is a staffing document in disguise.",
+			"source": "apps/site/src/content/guides/how-to-set-daycare-tuition-rates.md",
+			"url": "https://pebbledesk.app/resources/guides/how-to-set-daycare-tuition-rates/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Uses the guide's age-group pricing section to explain why infant and toddler rates should reflect ratio-driven labor costs."
+		},
+		{
+			"index_in_day": 3,
+			"time_central": "06:00",
+			"pillar": "Fee policy and family communication",
+			"format": "Practical checklist",
+			"post_content": "A childcare fee policy should remove guesswork before money gets emotional.\n\nThe strongest policies answer the ordinary questions families will eventually ask:\n\nWhen is tuition due?\nWhat happens if payment is late?\nHow are returned payments handled?\nAre registration fees refundable?\nHow are part-time absences billed?\nWhen do rate changes take effect?\nHow much notice will families receive?\nWhat happens if an account becomes past due?\n\nThis is not about sounding strict.\n\nIt is about making the agreement clear while everyone is calm.\n\nDirectors often end up in hard conversations because the policy was too soft, too verbal, or too scattered across enrollment forms, emails, and front desk reminders.\n\nA written fee policy gives staff the same answer every time.\n\nThat consistency protects the relationship with families, because the director is enforcing a known agreement instead of inventing a rule in the moment.",
+			"source": "apps/site/src/content/lead-magnets/childcare-fee-policy-template.md",
+			"url": "https://pebbledesk.app/free/childcare-fee-policy-template/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Grounded in the template's tuition, additional fees, payment terms, delinquent accounts, and rate-change sections."
+		},
+		{
+			"index_in_day": 4,
+			"time_central": "07:00",
+			"pillar": "Guardian payments and invoices",
+			"format": "Risk callout",
+			"post_content": "The invoice a family sees should be the invoice the office is using.\n\nThat sounds obvious until a charge changes after the first invoice was sent.\n\nA schedule changes.\nA late fee is reversed.\nA sibling discount is corrected.\nA subsidy co-pay is updated.\nA one-time fee is added after a field trip.\n\nIf the family has an old copy and the office has a newer balance, the conversation starts in confusion instead of payment.\n\nThis is why current invoice status matters. Directors need families looking at the latest charge, not a stale PDF sitting in an email thread.\n\nA practical billing check:\n\nWhen an invoice changes after it was sent, what exactly does the guardian see next?\n\nIf the answer depends on someone remembering to send a correction manually, the process is asking a busy office to be perfect.",
+			"source": "apps/site/src/content/features/billing-payments.md",
+			"url": "https://pebbledesk.app/features/billing-payments/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Uses the billing page's claim that PebbleDesk keeps the current invoice version active so families see the latest charge."
+		},
+		{
+			"index_in_day": 5,
+			"time_central": "08:00",
+			"pillar": "Childcare accounting basics",
+			"format": "Teaching post",
+			"post_content": "A full bank account is not the same as a healthy childcare business.\n\nThat difference matters most when tuition collection lags.\n\nA center can appear busy, enrolled, and stable while still carrying past-due balances that do not show up clearly in a cash-basis P&L.\n\nFor directors, the monthly finance review should separate three ideas:\n\nRevenue earned.\nCash received.\nTuition still owed.\n\nIf those three numbers are treated as one number, the center can miss the early warning signs.\n\nOutstanding tuition is not only a family follow-up task. It affects payroll planning, classroom decisions, subsidy reconciliation, and whether a rate increase is actually solving the right problem.\n\nThe practical habit:\n\nReview accounts receivable beside the P&L each month.\n\nThe P&L tells one part of the story. The unpaid tuition list tells the part that can quietly drain the week.",
+			"source": "apps/site/src/content/guides/childcare-accounting-basics-directors.md",
+			"url": "https://pebbledesk.app/resources/guides/childcare-accounting-basics-directors/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Adapts the accounting guide's cash versus accrual and outstanding tuition guidance for directors."
+		},
+		{
+			"index_in_day": 6,
+			"time_central": "09:00",
+			"pillar": "Subsidy billing and family co-pays",
+			"format": "Teaching post",
+			"post_content": "Subsidy billing is not the same job as parent tuition billing.\n\nFor a subsidized child, the center may need to track two related balances:\n\nThe family co-pay.\nThe agency reimbursement.\n\nThose two amounts have different payers, different documentation needs, and different follow-up paths.\n\nThe mistake is treating the child as either \"paid by subsidy\" or \"paid by family\" and losing the split.\n\nIf a voucher covers part of tuition, the remaining co-pay still needs to be billed clearly to the guardian. At the same time, the reimbursement side needs attendance support and reconciliation when the agency payment arrives.\n\nThat is why mixed-funding centers often end up with a billing system plus a spreadsheet.\n\nA useful test:\n\nCan you pick one subsidized child and see the family co-pay, agency portion, attendance support, and payment status without rebuilding the month by hand?",
+			"source": "apps/site/src/content/listicles/best-childcare-billing-software.md",
+			"url": "https://pebbledesk.app/resources/best/best-childcare-billing-software/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Uses the listicle's explanation of multi-funding-stream billing and co-pay calculation."
+		},
+		{
+			"index_in_day": 7,
+			"time_central": "10:00",
+			"pillar": "Fee policy and rate increases",
+			"format": "Practical tip",
+			"post_content": "Rate increases go better when families are not surprised.\n\nThat does not mean every family will love the news. It means the center has handled the change clearly and respectfully.\n\nA strong rate-change notice includes:\n\nThe effective date.\nThe current rate and new rate.\nThe child's classroom or program.\nThe reason in plain language.\nThe amount of advance notice promised in the fee policy.\nWho families can contact with questions.\n\nThe childcare fee policy template recommends written notice 60 to 90 days before a rate change.\n\nThat window matters. Families need time to adjust budgets. Directors need time to answer questions without turning the front desk into a rumor mill.\n\nThe worst version is a vague message that says, \"Rates are going up soon.\"\n\nThe better version gives the family enough detail to know exactly what changes, when, and why.",
+			"source": "apps/site/src/content/lead-magnets/childcare-fee-policy-template.md",
+			"url": "https://pebbledesk.app/free/childcare-fee-policy-template/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Draws from the template's rate-change notice and communication best-practices sections."
+		},
+		{
+			"index_in_day": 8,
+			"time_central": "11:00",
+			"pillar": "Billing systems and operating records",
+			"format": "Product education",
+			"post_content": "Billing should not live in a separate world from the child record.\n\nIn childcare, the invoice is rarely just a number.\n\nIt may depend on:\n\nEnrollment schedule.\nAge group.\nPart-time terms.\nSibling discount.\nRegistration or activity fees.\nLate payment policy.\nSubsidy co-pay.\nAttendance records.\nFamily payment history.\n\nWhen billing sits outside the center record, the director becomes the bridge between systems.\n\nThat is how a simple balance question turns into checking a spreadsheet, a family file, a payment processor, and an attendance record.\n\nPebbleDesk's billing surface keeps invoices, payment status, public guardian payment links, and accounting context close to the child and family record the director already works from.\n\nThe goal is not a fancier ledger.\n\nThe goal is fewer loose ends when a family asks, \"What do we owe?\"",
+			"source": "apps/site/src/content/features/billing-payments.md",
+			"url": "https://pebbledesk.app/features/billing-payments/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Uses the billing feature page's core positioning that billing belongs near the child and family record."
+		},
+		{
+			"index_in_day": 9,
+			"time_central": "12:00",
+			"pillar": "Accounting categories and financial reporting",
+			"format": "Practical checklist",
+			"post_content": "One of the fastest ways to make childcare finances blurry is to call too many things \"tuition.\"\n\nA director's chart of accounts should separate revenue types that behave differently:\n\nPrivate-pay tuition.\nSubsidy revenue.\nCACFP reimbursements.\nRegistration and activity fees.\n\nThose lines answer different operating questions.\n\nPrivate-pay tuition shows family-paid revenue.\nSubsidy revenue shows the agency-funded part of enrollment.\nCACFP reimbursements help directors understand the food program separately.\nRegistration and activity fees should not be mistaken for recurring tuition.\n\nWhen everything lands in one broad income bucket, the center loses visibility into its enrollment mix.\n\nThat matters when deciding whether subsidy rates cover cost, whether private-pay collection is lagging, or whether one-time fees are hiding a weak month.\n\nClean categories do not make the numbers more complicated.\n\nThey make the numbers honest enough to manage.",
+			"source": "apps/site/src/content/guides/childcare-accounting-basics-directors.md",
+			"url": "https://pebbledesk.app/resources/guides/childcare-accounting-basics-directors/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Based on the accounting guide's chart-of-accounts recommendations for childcare revenue categories."
+		},
+		{
+			"index_in_day": 10,
+			"time_central": "13:00",
+			"pillar": "Guardian payments and staff time",
+			"format": "Operator question",
+			"post_content": "A parent payment link is small, but the office impact can be large.\n\nNot because online payment is magical.\n\nBecause every extra payment step creates another place for delay:\n\nFamily asks for the balance.\nOffice checks the invoice.\nOffice sends payment instructions.\nFamily needs a login.\nFamily cannot find the message.\nOffice follows up again.\n\nFor a busy childcare center, that back-and-forth often happens while the same person is answering phones, covering the front desk, and preparing subsidy paperwork.\n\nPebbleDesk can send a public invoice link so guardians can pay online without logging into the admin side of the app.\n\nA useful billing-process question:\n\nHow many staff touches does it take for a family to go from \"What do I owe?\" to \"Paid\"?\n\nReducing that number can make payment follow-up less personal and more practical.",
+			"source": "apps/site/src/content/features/billing-payments.md",
+			"url": "https://pebbledesk.app/features/billing-payments/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Uses the billing page's public invoice link support and frames it as an operational payment-follow-up improvement."
+		},
+		{
+			"index_in_day": 11,
+			"time_central": "14:00",
+			"pillar": "Late fees and payment policy",
+			"format": "Risk callout",
+			"post_content": "Late pickup fees and late payment fees do different jobs.\n\nA late payment fee protects the center's cash flow and sets a boundary around tuition due dates.\n\nA late pickup fee protects staff time, closing routines, and ratio coverage after hours.\n\nBoth need to be written clearly before they are enforced.\n\nThe fee policy template separates additional fees from tuition for a reason. Families should be able to see the fee amount, when it applies, and what happens next.\n\nThe risk is inconsistency.\n\nIf one family is charged, another is waived, and staff cannot explain the rule, the fee becomes a relationship problem instead of a policy.\n\nA practical review for directors:\n\nLook at the last three late fees your center applied. Would a new assistant director understand why each one happened by reading the policy alone?\n\nIf not, the policy needs clearer language.",
+			"source": "apps/site/src/content/lead-magnets/childcare-fee-policy-template.md",
+			"url": "https://pebbledesk.app/free/childcare-fee-policy-template/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Uses the template's additional-fees and payment-terms sections to make a practical consistency point."
+		},
+		{
+			"index_in_day": 12,
+			"time_central": "15:00",
+			"pillar": "Billing software evaluation",
+			"format": "Comparison framework",
+			"post_content": "When evaluating childcare billing software, do not start with the longest feature list.\n\nStart with your funding mix.\n\nA mostly private-pay center needs strong tuition invoices, guardian payments, payment tracking, late fees, deposits, and sibling discount rules.\n\nA mixed-funding center needs all of that plus subsidy work:\n\nVoucher or authorization tracking.\nAttendance-linked billing support.\nFamily co-pay calculation.\nAgency reimbursement reconciliation.\nDocumentation that can support a payment review.\n\nThose are different operational requirements.\n\nThis is why a tool can be perfectly fine for one childcare center and frustrating for another.\n\nThe buying question is not, \"Does it do billing?\"\n\nIt is:\n\nCan it handle the way our center actually gets paid?",
+			"source": "apps/site/src/content/listicles/best-childcare-billing-software.md",
+			"url": "https://pebbledesk.app/resources/best/best-childcare-billing-software/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Turns the listicle's private-pay versus subsidy billing distinction into a vendor-evaluation framework."
+		},
+		{
+			"index_in_day": 13,
+			"time_central": "16:00",
+			"pillar": "Rate review and annual planning",
+			"format": "Director habit",
+			"post_content": "The hardest tuition increase is often the one a center delayed for too long.\n\nHolding rates flat can feel kind to families in the short term. But childcare costs rarely stay flat, especially labor.\n\nAfter two or three years, the center may need a larger correction all at once. That is harder for families to absorb and harder for directors to explain.\n\nThe rate-setting guide recommends reviewing tuition at least annually. The fee policy template points to predictable written notice before changes take effect.\n\nTogether, those two habits make rate changes less dramatic:\n\nReview the math every year.\nSet the effective date in policy.\nGive families written notice.\nExplain the reason plainly.\nKeep the increase tied to staffing, supplies, facility costs, or program quality.\n\nA rate increase should not sound like a surprise announcement.\n\nIt should sound like a responsible center following the policy families already received.",
+			"source": "apps/site/src/content/guides/how-to-set-daycare-tuition-rates.md",
+			"url": "https://pebbledesk.app/resources/guides/how-to-set-daycare-tuition-rates/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Combines the rate-setting guide's annual review advice with careful family communication principles."
+		},
+		{
+			"index_in_day": 14,
+			"time_central": "17:00",
+			"pillar": "Subsidy reconciliation and attendance records",
+			"format": "Practical tip",
+			"post_content": "For subsidy-heavy centers, attendance is not just an operational record.\n\nIt is billing support.\n\nThat changes the standard for \"good enough\" attendance documentation.\n\nThe record needs to support which child attended, when care was delivered, whether the care matched authorization rules, and how the billed amount connects to the reimbursement received.\n\nWhen attendance and subsidy billing are separated, reconciliation becomes a manual matching exercise:\n\nDaily attendance here.\nVoucher details there.\nAgency payment somewhere else.\nFamily co-pay in another list.\n\nThat is where payment delays and documentation gaps become painful.\n\nA useful end-of-week check:\n\nFor every subsidized child billed this week, can the attendance record support the billing record without extra explanation?\n\nIf the answer is no, fix the record while the week is still fresh.",
+			"source": "apps/site/src/content/listicles/best-childcare-billing-software.md",
+			"url": "https://pebbledesk.app/resources/best/best-childcare-billing-software/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Uses the listicle's subsidy billing requirements: attendance support, authorization tracking, co-pay, and reimbursement reconciliation."
+		},
+		{
+			"index_in_day": 15,
+			"time_central": "18:00",
+			"pillar": "Billing operations and director relief",
+			"format": "Closing thought",
+			"post_content": "Childcare billing is not only about collecting money.\n\nIt is about keeping promises clear.\n\nThe promise to families: here is what tuition costs, when it is due, what fees apply, and how changes are communicated.\n\nThe promise to staff: here is a policy you can follow without guessing.\n\nThe promise to the business: rates cover the real cost of care, invoices reflect current balances, and outstanding tuition is visible before it becomes a crisis.\n\nThe promise to subsidy programs: billing can be traced back to attendance and authorization records.\n\nThat is a lot for one office to carry with paper notes, payment links, spreadsheets, and memory.\n\nPebbleDesk is built around the idea that invoices, guardian payment status, subsidy context, family records, and operating records should stay close together.\n\nNot because directors need more software.\n\nBecause directors need fewer billing stories to rebuild by hand.",
+			"source": "apps/site/src/content/features/billing-payments.md",
+			"url": "https://pebbledesk.app/features/billing-payments/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Closes the day by tying the theme back to PebbleDesk's billing-positioning source and connected-record promise."
+		}
+	]
+}

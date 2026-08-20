@@ -1,0 +1,178 @@
+---
+import { getPricingIntentTierFromHref } from "../lib/pricing-intent"
+import {
+  isDirectSignupTarget,
+  resolvePublicSignupCta,
+  sanitizePublicSignupCtaText,
+} from "../lib/public-signup-cta"
+import {
+  getStickyMobileCtaRenderState,
+  getStickyMobileCtaSpacerHeight,
+  type StickyMobileCtaAction,
+  shouldShowStickyMobileCta,
+} from "../lib/sticky-mobile-cta"
+
+interface Props {
+  ctaText: string
+  ctaTarget: string
+  subtitle?: string
+  ctaAction?: StickyMobileCtaAction
+}
+const { ctaText, ctaTarget, subtitle, ctaAction } = Astro.props
+const renderState = getStickyMobileCtaRenderState(ctaAction)
+const resolvedCta = isDirectSignupTarget(ctaTarget)
+  ? {
+      text: sanitizePublicSignupCtaText(ctaText),
+      target: ctaTarget,
+    }
+  : resolvePublicSignupCta({
+      sourcePage: "/",
+      explicitTarget: ctaTarget,
+      explicitText: ctaText,
+    })
+const targetTierName = getPricingIntentTierFromHref(resolvedCta.target)
+---
+
+<div data-sticky-cta-spacer class="lg:hidden" style="height:0px" aria-hidden="true"></div>
+<div
+  data-sticky-cta
+  data-cta-action={renderState.action}
+  data-target-tier-name={targetTierName}
+  data-intercepts-link-clicks={renderState.interceptsLinkClicks ? "true" : "false"}
+  class="fixed bottom-0 left-0 right-0 z-50 lg:hidden invisible translate-y-full opacity-0 transition-[transform,opacity] duration-300 ease-out border-t border-[var(--color-neutral-200)] pb-[max(1rem,env(safe-area-inset-bottom))]"
+  style="background: color-mix(in srgb, var(--surface-primary) 96%, var(--surface-secondary))"
+>
+  <div class="w-full pl-[max(1rem,env(safe-area-inset-left))] pr-[max(1rem,env(safe-area-inset-right))] py-3 flex items-center justify-between gap-3">
+    {subtitle && (
+      <span class="text-[length:var(--text-caption)] text-[var(--color-brand-muted)] hidden min-[400px]:block">
+        {subtitle}
+      </span>
+    )}
+    {renderState.showLink && (
+      <a
+        href={resolvedCta.target}
+        data-sticky-cta-link
+        class="btn-primary leading-tight shadow-[var(--shadow-accent-soft)]"
+      >
+        {resolvedCta.text}
+      </a>
+    )}
+  </div>
+</div>
+
+<script>
+  import {
+    getStickyMobileCtaSpacerHeight,
+    shouldShowStickyMobileCta,
+  } from "../lib/sticky-mobile-cta";
+
+  const bar = document.querySelector('[data-sticky-cta]') as HTMLElement | null;
+  const spacer = document.querySelector('[data-sticky-cta-spacer]') as HTMLElement | null;
+  const hero = document.querySelector('[data-hero]');
+  const footer = document.querySelector('[data-site-footer]');
+  let footerIntersecting = false;
+
+  function getHeroIntersecting() {
+    return hero instanceof Element
+      ? hero.getBoundingClientRect().bottom > 0 &&
+          hero.getBoundingClientRect().top < window.innerHeight
+      : false;
+  }
+
+  function syncBarVisibility(isVisible: boolean) {
+    if (!bar) {
+      return;
+    }
+
+    if (isVisible) {
+      bar.classList.remove('invisible', 'translate-y-full', 'opacity-0');
+      bar.classList.add('visible', 'translate-y-0', 'opacity-100');
+    } else {
+      bar.classList.add('invisible', 'translate-y-full', 'opacity-0');
+      bar.classList.remove('visible', 'translate-y-0', 'opacity-100');
+    }
+
+    if (spacer) {
+      spacer.style.height = `${getStickyMobileCtaSpacerHeight({
+        isVisible,
+        barHeight: bar.getBoundingClientRect().height,
+      })}px`;
+    }
+  }
+
+  function syncFromViewport() {
+    syncBarVisibility(
+      shouldShowStickyMobileCta({
+        heroIntersecting: getHeroIntersecting(),
+        footerIntersecting,
+      }),
+    );
+  }
+
+  if (bar && !hero) {
+    syncFromViewport();
+  }
+
+  if (bar && hero) {
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (prefersReducedMotion) {
+      bar.style.transition = 'none';
+    }
+
+    const heroObserver = new IntersectionObserver(([entry]) => {
+      syncBarVisibility(
+        shouldShowStickyMobileCta({
+          heroIntersecting: entry.isIntersecting,
+          footerIntersecting,
+        }),
+      );
+    }, { threshold: 0 });
+    heroObserver.observe(hero);
+  }
+
+  if (bar && footer) {
+    const footerObserver = new IntersectionObserver(([entry]) => {
+      footerIntersecting = entry.isIntersecting;
+      syncFromViewport();
+    }, { threshold: 0 });
+    footerObserver.observe(footer);
+  }
+
+  if (bar) {
+    const handleResize = () => {
+      syncFromViewport();
+    };
+
+    window.addEventListener('resize', handleResize);
+    document.addEventListener('astro:before-swap', () => {
+      window.removeEventListener('resize', handleResize);
+    }, { once: true });
+  }
+
+  const ctaAction = bar?.dataset.ctaAction;
+  const interceptsLinkClicks = bar?.dataset.interceptsLinkClicks === 'true';
+  const targetTierName = bar?.dataset.targetTierName;
+  const ctaLink = bar?.querySelector('[data-sticky-cta-link]') as HTMLAnchorElement | null;
+
+  if (ctaAction === 'pricing-modal' && interceptsLinkClicks && ctaLink) {
+    let pricingReady = document.documentElement.dataset.fakeDoorPricingReady === 'true';
+
+    document.addEventListener('fake-door-pricing-ready', () => {
+      pricingReady = true;
+    });
+
+    ctaLink.addEventListener('click', (event) => {
+      if (!pricingReady) {
+        return;
+      }
+
+      event.preventDefault();
+      document.dispatchEvent(
+        new CustomEvent('open-pricing-modal', {
+          bubbles: true,
+          detail: targetTierName ? { tierName: targetTierName } : undefined,
+        }),
+      );
+    });
+  }
+</script>

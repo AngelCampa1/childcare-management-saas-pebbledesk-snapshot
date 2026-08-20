@@ -1,0 +1,171 @@
+{
+	"date": "2026-06-03",
+	"theme": "Incident reports, same-day documentation, and parent notification",
+	"posts": [
+		{
+			"index_in_day": 1,
+			"time_central": "04:00",
+			"pillar": "Incident documentation",
+			"format": "Practical tip",
+			"post_content": "Incident reports are not written for the easiest version of the day.\n\nThey are written for the later question.\n\nWhat happened?\nWhen did it happen?\nWhere was the child?\nWho was present?\nWhat did staff observe?\nWhat action was taken?\nWhen was the parent notified?\nDid the parent receive the report?\n\nA report that says \"child fell, ice applied\" leaves too much work for future-you.\n\nThe useful report is factual, specific, and completed while the details are still fresh.",
+			"source": "apps/site/src/content/guides/childcare-incident-report-documentation.md",
+			"url": "https://pebbledesk.app/resources/guides/childcare-incident-report-documentation/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Opens with the incident guide's required report elements and same-day documentation principle."
+		},
+		{
+			"index_in_day": 2,
+			"time_central": "05:00",
+			"pillar": "Same-day reporting",
+			"format": "Risk reminder",
+			"post_content": "Same-day incident documentation is not a paperwork preference.\n\nMemory changes quickly.\n\nA report written four days later is a reconstruction. It may miss the time, the exact location, who was present, what first aid was provided, or how the child behaved after the incident.\n\nThat matters during licensing review, insurance follow-up, or a parent complaint.\n\nThe practical habit:\n\nCapture the basic facts immediately, even if the complete report has to be finished later that day.\n\nTime. Place. Child. Staff present. What was observed. Action taken.\n\nDo not let the record depend on tomorrow's memory.",
+			"source": "apps/site/src/content/guides/childcare-incident-report-documentation.md",
+			"url": "https://pebbledesk.app/resources/guides/childcare-incident-report-documentation/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Uses the guide's same-day timing rationale and two-step note-to-report process."
+		},
+		{
+			"index_in_day": 3,
+			"time_central": "06:00",
+			"pillar": "Parent notification",
+			"format": "Teaching post",
+			"post_content": "Parent notification and the incident report are not the same thing.\n\nNotification is the conversation.\n\nThe report is the record that the conversation happened.\n\nA strong incident file should show:\n\n- when the parent was contacted\n- how they were contacted\n- who was reached\n- what staff told them\n- whether a voicemail or follow-up was needed\n- whether the parent signed at pickup, if required\n\nParents are usually most upset when they learn about an incident from the child before they hear it from the center.\n\nDocumentation cannot replace good communication.\n\nIt should prove that communication happened.",
+			"source": "apps/site/src/content/guides/childcare-incident-report-documentation.md",
+			"url": "https://pebbledesk.app/resources/guides/childcare-incident-report-documentation/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Grounded in the guide's parent notification section and report requirements."
+		},
+		{
+			"index_in_day": 4,
+			"time_central": "07:00",
+			"pillar": "Report quality",
+			"format": "Practical checklist",
+			"post_content": "A complete childcare incident report should make the day understandable to someone who was not there.\n\nAt minimum, check for:\n\n- child name and classroom\n- date, time, and location\n- factual description of what happened\n- staff and witnesses present\n- visible injury or \"no visible injury observed\"\n- first aid or other action taken\n- parent notification time and method\n- parent signature where required\n- staff signature\n- director review\n- licensing agency report decision, if applicable\n\nThe report does not need dramatic language.\n\nIt needs usable facts.",
+			"source": "apps/site/src/content/lead-magnets/incident-report-log-template.md",
+			"url": "https://pebbledesk.app/free/incident-report-log-template/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Uses the lead magnet's incident report form fields and checklist structure."
+		},
+		{
+			"index_in_day": 5,
+			"time_central": "08:00",
+			"pillar": "Child safety and inspection readiness",
+			"format": "Risk callout",
+			"post_content": "The threshold for documenting incidents is usually broader than centers assume.\n\nIt may include first aid, head injuries, bites, hazardous ingestion, unauthorized departure, emergency services, or any injury that led to parent notification.\n\nState rules vary, so directors still need to check their own licensing requirements.\n\nBut the safer operating habit is simple:\n\nWhen in doubt, document.\n\nAn extra factual report is rarely the problem.\n\nA missing report for an incident that later becomes a parent complaint or licensing question is a much harder problem.",
+			"source": "apps/site/src/content/guides/childcare-incident-report-documentation.md",
+			"url": "https://pebbledesk.app/resources/guides/childcare-incident-report-documentation/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Uses the incident guide's examples of reportable incidents while preserving state-specific caution."
+		},
+		{
+			"index_in_day": 6,
+			"time_central": "09:00",
+			"pillar": "Staff training",
+			"format": "Director habit",
+			"post_content": "Incident report training should happen before the playground fall.\n\nNew staff need to know what the center expects:\n\nWrite observable facts.\nUse exact times and locations.\nName who was present.\nAvoid guessing about why it happened.\nDocument first aid clearly.\nNotify the right person.\nFinish the report the same day.\nGet the required signatures.\n\nA new teacher who wants to do the right thing can still write a weak report if nobody taught the standard.\n\nIncident documentation is a supervision habit, not just a form.",
+			"source": "apps/site/src/content/guides/childcare-incident-report-documentation.md",
+			"url": "https://pebbledesk.app/resources/guides/childcare-incident-report-documentation/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Based on the guide's staff training and report-content guidance."
+		},
+		{
+			"index_in_day": 7,
+			"time_central": "10:00",
+			"pillar": "Product education",
+			"format": "Soft product post",
+			"post_content": "Paper incident reports fail in ordinary ways.\n\nThey get misfiled.\nThey get wet.\nThey sit in the wrong binder.\nThey are hard to retrieve by child or date.\n\nPebbleDesk keeps incident reports attached to the child record, with date, time, description, staff present, action taken, and parent notification details captured in the report.\n\nThat does not change the center's obligation to document correctly.\n\nIt changes how easy it is for the director to find the record when licensing, a parent, or an insurer asks later.",
+			"source": "apps/site/src/content/features/incident-reporting.md",
+			"url": "https://pebbledesk.app/features/incident-reporting/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Accurately reflects the incident reporting feature page without promising compliance outcomes."
+		},
+		{
+			"index_in_day": 8,
+			"time_central": "11:00",
+			"pillar": "Parent communication",
+			"format": "Practical tip",
+			"post_content": "A parent notification note should be boringly specific.\n\nNot just \"parent called.\"\n\nBetter:\n\n- time of call\n- number or method used\n- parent or guardian reached\n- what staff explained\n- parent response or request\n- whether follow-up is needed\n- whether a written report was provided at pickup\n\nThis protects the center and the family.\n\nIt also prevents the director from having to reconstruct a sensitive conversation from memory after a parent follows up later.",
+			"source": "apps/site/src/content/lead-magnets/incident-report-log-template.md",
+			"url": "https://pebbledesk.app/free/incident-report-log-template/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Uses the template's parent notification section and documentation fields."
+		},
+		{
+			"index_in_day": 9,
+			"time_central": "12:00",
+			"pillar": "Report language",
+			"format": "Teaching post",
+			"post_content": "Incident reports should describe what staff observed, not what staff assume.\n\n\"Child slipped because the surface was wet\" may sound reasonable.\n\nBut unless the staff member saw the slip and verified the condition, it adds speculation.\n\nA stronger report says what can be observed:\n\n\"At 2:40 PM on the outdoor play area, child was found seated near the climbing structure. Staff observed redness on the left knee. Ice pack applied. Child resumed play after 15 minutes. Parent notified by phone at 3:05 PM.\"\n\nPlain facts are stronger than dramatic explanations.",
+			"source": "apps/site/src/content/guides/childcare-incident-report-documentation.md",
+			"url": "https://pebbledesk.app/resources/guides/childcare-incident-report-documentation/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Uses the guide's advice to stick to observable facts and avoid speculation."
+		},
+		{
+			"index_in_day": 10,
+			"time_central": "13:00",
+			"pillar": "Inspection readiness",
+			"format": "Operator question",
+			"post_content": "If licensing asked for incident reports from the last six months, how long would retrieval take?\n\nSeconds?\nFive minutes?\nTwenty minutes?\nA search through binders, classrooms, and the office?\n\nRetrieval matters because incident documentation is not only about whether the form was completed.\n\nIt is also whether the director can produce the right records by date, child, or incident type when asked.\n\nA record that exists but cannot be found creates its own inspection stress.\n\nThe filing system is part of the compliance habit.",
+			"source": "apps/site/src/content/features/incident-reporting.md",
+			"url": "https://pebbledesk.app/features/incident-reporting/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Grounded in the feature page's searchable incident records and inspection retrieval framing."
+		},
+		{
+			"index_in_day": 11,
+			"time_central": "14:00",
+			"pillar": "Licensing agency reporting",
+			"format": "Risk reminder",
+			"post_content": "Internal incident reports and licensing agency reports are different obligations.\n\nEvery serious event should have the center's internal record.\n\nSome events also require direct reporting to the state licensing agency within a required timeframe.\n\nThe triggers vary by state, but commonly include emergency medical services, serious injury, a missing child, suspected abuse or neglect, or major facility incidents affecting child safety.\n\nThe director's process should force the question:\n\nDoes this incident require agency notification?\n\nThat decision should be documented, not left as a hallway conversation.",
+			"source": "apps/site/src/content/guides/childcare-incident-report-documentation.md",
+			"url": "https://pebbledesk.app/resources/guides/childcare-incident-report-documentation/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Uses the guide's mandatory reporting section with state-specific caution."
+		},
+		{
+			"index_in_day": 12,
+			"time_central": "15:00",
+			"pillar": "Pattern review",
+			"format": "Director habit",
+			"post_content": "Incident logs are useful after the form is filed.\n\nAt the end of the week, review the pattern:\n\nSame playground area?\nSame transition?\nSame classroom?\nSame type of bite or fall?\nSame equipment?\nSame time of day?\n\nA single incident report explains one event.\n\nA log can show whether the center has an operating pattern worth fixing.\n\nWeekly review turns the log into action: fewer repeat incidents, clearer follow-up, and better documentation if licensing asks what changed.",
+			"source": "apps/site/src/content/lead-magnets/incident-report-log-template.md",
+			"url": "https://pebbledesk.app/free/incident-report-log-template/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Rewritten final sentence into one plain operational takeaway."
+		},
+		{
+			"index_in_day": 13,
+			"time_central": "16:00",
+			"pillar": "Product education",
+			"format": "Practical product note",
+			"post_content": "Incident reports are more useful when they stay attached to the child file.\n\nThat way, the record is not floating in a binder apart from the rest of the child's history.\n\nPebbleDesk stores incident reports against the child record and supports search by child name, date range, and incident type.\n\nFor directors, the practical value is simple:\n\nThe report is easier to find when the question is specific.\n\n\"Show me incidents for this child.\"\n\"Show me reports from March.\"\n\"Show me playground incidents.\"\n\nThe record should be organized around how people actually ask for it.",
+			"source": "apps/site/src/content/features/incident-reporting.md",
+			"url": "https://pebbledesk.app/features/incident-reporting/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Uses the feature page's child-attached, searchable incident records."
+		},
+		{
+			"index_in_day": 14,
+			"time_central": "17:00",
+			"pillar": "Same-day closeout",
+			"format": "End-of-day checklist",
+			"post_content": "Before the day closes, every incident report should pass a simple review.\n\nIs the report complete?\nIs the time exact?\nIs the location specific?\nIs the description factual?\nIs first aid documented?\nIs parent notification logged?\nWas the parent given the report or asked to sign where required?\nDid the director review it?\nWas licensing agency notification considered?\nIs any follow-up assigned?\n\nSame-day closeout is the point.\n\nThe report should not wait for someone to remember the details tomorrow.",
+			"source": "apps/site/src/content/lead-magnets/incident-report-log-template.md",
+			"url": "https://pebbledesk.app/free/incident-report-log-template/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Uses the incident report template's fields and same-day completion instruction."
+		},
+		{
+			"index_in_day": 15,
+			"time_central": "18:00",
+			"pillar": "Director relief",
+			"format": "Closing reflection",
+			"post_content": "The best incident report is not dramatic.\n\nIt is calm.\nSpecific.\nSame-day.\nFindable.\nAttached to the right child.\nClear about parent notification.\nClear about what staff observed and did.\n\nThat kind of report does not make incidents less stressful in the moment.\n\nBut it gives the director a sturdier record after the moment passes.\n\nWhen a parent calls back, licensing asks, or the center reviews patterns, the report should carry the facts without forcing everyone to replay the day from memory.\n\nThat is the real relief: not perfect days, but records that hold up when the day was not perfect.",
+			"source": "apps/site/src/content/guides/childcare-incident-report-documentation.md",
+			"url": "https://pebbledesk.app/resources/guides/childcare-incident-report-documentation/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Closes with the incident guide's core themes: same-day, factual, parent notification, and retrievable records."
+		}
+	]
+}

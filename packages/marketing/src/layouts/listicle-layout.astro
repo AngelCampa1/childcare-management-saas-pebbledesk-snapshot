@@ -1,0 +1,189 @@
+---
+import ArticleMeta from "../components/article-meta.astro"
+import BreadcrumbNav from "../components/breadcrumb-nav.astro"
+import { ExitIntentPopup } from "../components/exit-intent-popup"
+import SiteFooter from "../components/site-footer.astro"
+import SiteHeader from "../components/site-header.astro"
+import ScoreBars from "../components/score-bars.astro"
+import TableOfContents from "../components/table-of-contents.astro"
+import type { LeadMagnetTrack } from "@pebbledesk/shared/public-knowledge"
+import { resolveExitPopupProps } from "../lib/exit-popup-props"
+import { resolvePopupMagnet } from "../lib/resolve-popup-magnet"
+import { resolveMarketingApiUrl } from "../lib/marketing-api-url"
+import { buyerStageToSection, composeMetaTitle, ensureTrailingSlash, resolveSchemaAuthor, resolveSchemaImage } from "../lib/meta"
+import { resolvePublicSignupCta } from "../lib/public-signup-cta"
+import { buildArticleSchema, buildBreadcrumbSchema, buildItemListSchema, buildWebPageSchema, mergeFaqSources } from "../lib/schema-builders"
+import { buildGraph, buildPublisherGraphNodes, withId } from "../lib/schema-graph"
+import BlufBlock from "../seo/bluf-block.astro"
+import SchemaMarkup from "../seo/schema-markup.astro"
+import type { BuyerStage, FaqItem, SiteConfig } from "../types"
+import BaseLayout from "./base-layout.astro"
+
+interface ToolItem {
+  name: string
+  summary: string
+}
+
+interface Props {
+  title: string
+  description: string
+  bluf: string
+  buyerStage?: BuyerStage
+  publishedAt: string
+  updatedAt: string
+  canonicalPath: string
+  config: SiteConfig
+  breadcrumbs: { label: string; href: string }[]
+  tools: ToolItem[]
+  schemas?: Record<string, unknown>[]
+  headings?: { depth: number; slug: string; text: string }[]
+  ogImage?: string
+  noindex?: boolean
+  answers?: { question: string; answer: string }[]
+  faqs?: FaqItem[]
+  tags?: string[]
+  track?: LeadMagnetTrack
+}
+const { title, description, bluf, buyerStage, publishedAt, updatedAt, canonicalPath, config, breadcrumbs, tools, schemas = [], headings, ogImage, noindex, answers = [], faqs = [], tags, track } = Astro.props
+const popupMagnet = resolvePopupMagnet(track, config.leadMagnet)
+const exitPopupProps = config.exitPopup?.enabled !== false ? resolveExitPopupProps(config) : undefined
+const marketingApiUrl = resolveMarketingApiUrl(import.meta.env.PUBLIC_API_URL as string | undefined, Astro.url.origin)
+const turnstileSiteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY as string | undefined
+const headerCta = resolvePublicSignupCta({
+  sourcePage: canonicalPath,
+  explicitTarget: config.funnel.bofu.ctaTarget,
+  explicitText: config.funnel.bofu.ctaText,
+})
+const canonicalUrl = ensureTrailingSlash(`https://${config.domain}${canonicalPath}`)
+const schemaAuthor = resolveSchemaAuthor(config.author, config.domain)
+
+const orgId = `https://${config.domain}/#organization`
+const articleSchema = buildArticleSchema({
+  headline: title,
+  description,
+  datePublished: publishedAt,
+  dateModified: updatedAt,
+  lastReviewed: updatedAt,
+  publisher: { "@id": orgId },
+  author: schemaAuthor,
+  image: resolveSchemaImage(config.domain, ogImage, config.defaultOgImage),
+  mainEntityOfPage: canonicalUrl,
+  speakableCssSelectors: [".bluf-block", ".faq-answer", ".answer-block-answer"],
+})
+
+const itemListSchema = buildItemListSchema(
+  tools.map((t) => ({ name: t.name, description: t.summary }))
+)
+const scoreItems = tools.slice(0, 3).map((tool, index) => ({
+  label: tool.name,
+  valueLabel: index === 0 ? "Start here" : "Compare",
+  note: tool.summary,
+}))
+const faqSchema = mergeFaqSources(faqs, answers)
+const articleId = `${canonicalUrl}#article`
+const breadcrumbId = `${canonicalUrl}#breadcrumb`
+const breadcrumbSchema = withId(buildBreadcrumbSchema(breadcrumbs, `https://${config.domain}`), breadcrumbId)
+const webPageSchema = buildWebPageSchema({
+  id: canonicalUrl,
+  url: canonicalUrl,
+  name: title,
+  description,
+  mainEntityId: articleId,
+  breadcrumbId,
+})
+const graph = buildGraph([
+  webPageSchema,
+  withId(articleSchema, articleId),
+  breadcrumbSchema,
+  ...buildPublisherGraphNodes({ siteUrl: `https://${config.domain}`, name: config.name, description: config.metaDescription ?? config.tagline }),
+  itemListSchema,
+  ...schemas,
+  ...(faqSchema ? [faqSchema] : []),
+])
+---
+
+<BaseLayout
+  title={composeMetaTitle(title, config.name)}
+  description={description}
+  canonicalUrl={canonicalUrl}
+  siteName={config.name}
+  publishedAt={publishedAt}
+  updatedAt={updatedAt}
+  twitterSite={config.social?.twitterHandle}
+  articleAuthor={config.author?.name}
+  themeColor={config.theme.primary}
+  ogImage={ogImage}
+  noindex={noindex}
+  theme={config.theme}
+  fonts={config.theme.fonts}
+  preserveMetaTagCopy={config.preserveMetaTagCopy}
+  appleTouchIcon={config.appleTouchIcon}
+  rssUrl="/rss.xml"
+  siteUrl={`https://${config.domain}`}
+  analyticsEnabled={config.analytics?.enabled ?? true}
+  enableScrollReveal={false}
+  articleSection={buyerStage ? buyerStageToSection(buyerStage) : undefined}
+  articleTags={tags}
+>
+  <SiteHeader
+    slot="header"
+    siteName={config.name}
+    navItems={config.nav?.items}
+    signInHref={config.nav?.signInHref}
+    ctaText={config.nav?.ctaText ?? headerCta.text}
+    ctaHref={headerCta.target}
+    ctaVariant="primary"
+    logoLight={config.logo?.light}
+    logoDark={config.logo?.dark}
+    promo={config.promoBanner}
+  />
+  <div data-editorial-layout class="article-page-shell editorial-shell mx-auto max-w-6xl px-4 py-[var(--section-py)]">
+    <div data-editorial-article class="article-page-intro border-b border-[color-mix(in_srgb,var(--color-neutral-200)_76%,transparent)] pb-8">
+      <BreadcrumbNav items={breadcrumbs} siteUrl={`https://${config.domain}`} emitSchema={false} />
+      <div class="mt-4 max-w-[var(--content-measure-wide)]">
+        <h1 class="mb-4 font-heading text-[length:var(--text-editorial-title)] font-bold leading-[1.04] text-[var(--color-brand-text)]">{title}</h1>
+        <ArticleMeta updatedAt={updatedAt} author={config.author} />
+      </div>
+    </div>
+    <div
+      class:list={[
+        "article-page-grid mt-8",
+        (headings && headings.length > 0) && "lg:grid lg:grid-cols-[minmax(0,1fr)_300px] lg:gap-12",
+      ]}
+    >
+      <article class="article-page-body max-w-[var(--content-measure-wide)] min-w-0">
+        <BlufBlock text={bluf} />
+        {scoreItems.length > 0 && <div class="my-8"><ScoreBars items={scoreItems} /></div>}
+        <div class="article-prose prose prose-lg max-w-none prose-p:max-w-[var(--content-measure)] prose-li:max-w-[var(--content-measure)]">
+          <slot />
+        </div>
+      </article>
+      {headings && headings.length > 0 && (
+        <aside data-editorial-sidebar class="article-page-sidebar mt-8 lg:mt-0" aria-label="Table of contents">
+          <TableOfContents headings={headings} />
+        </aside>
+      )}
+    </div>
+  </div>
+  <SchemaMarkup graph={graph} />
+  {exitPopupProps && (
+    <ExitIntentPopup
+      client:load
+      apiUrl={marketingApiUrl}
+      siteName={config.name}
+      sourcePage={canonicalPath}
+      leadMagnet={popupMagnet}
+      turnstileSiteKey={turnstileSiteKey}
+      {...exitPopupProps}
+    />
+  )}
+  <SiteFooter
+    slot="footer"
+    siteName={config.name}
+    tagline={config.tagline}
+    linkGroups={config.footer?.linkGroups}
+    legalLinks={config.footer?.legalLinks}
+    contactEmail={config.contactEmail}
+    captureVariant="none"
+  />
+</BaseLayout>

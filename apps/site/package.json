@@ -1,0 +1,44 @@
+{
+	"name": "@pebbledesk/site",
+	"private": true,
+	"type": "module",
+	"scripts": {
+		"dev": "astro dev",
+		"build": "astro build",
+		"preview": "astro preview",
+		"deploy": "powershell -NoProfile -ExecutionPolicy Bypass -File ../../scripts/cloudflare/deploy-site.ps1",
+		"lint": "astro check",
+		"typecheck": "astro check",
+		"test": "vitest run",
+		"test:coverage": "vitest run --coverage",
+		"build:assets": "tsx scripts/build-lead-magnet-pdfs.ts",
+		"check:links": "tsx scripts/check-links.ts"
+	},
+	"dependencies": {
+		"@astrojs/cloudflare": "^13.2.0",
+		"@astrojs/react": "^5.0.4",
+		"@astrojs/rss": "^4.0.18",
+		"@astrojs/sitemap": "^3",
+		"@pebbledesk/emails": "workspace:*",
+		"@pebbledesk/marketing": "workspace:*",
+		"@pebbledesk/shared": "workspace:*",
+		"@sentry/cloudflare": "^10.49.0",
+		"astro": "^6.1.9",
+		"react": "^19",
+		"react-dom": "^19"
+	},
+	"devDependencies": {
+		"@astrojs/check": "^0.9.8",
+		"@cloudflare/workers-types": "^4",
+		"@tailwindcss/vite": "^4",
+		"@types/react": "^19",
+		"@types/react-dom": "^19",
+		"@vitest/coverage-v8": "4.1.5",
+		"playwright": "^1.59.1",
+		"tailwindcss": "^4",
+		"tsx": "^4.21.0",
+		"typescript": "6.0.3",
+		"vitest": "4.1.5",
+		"wrangler": "^4.85.0"
+	}
+}

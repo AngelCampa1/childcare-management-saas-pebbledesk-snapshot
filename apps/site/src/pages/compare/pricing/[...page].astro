@@ -1,0 +1,55 @@
+---
+import "../../../styles/global.css"
+import { getCollection } from "astro:content"
+import PublicSignupCta from "@pebbledesk/marketing/components/public-signup-cta"
+import CategoryHub from "@pebbledesk/marketing/hubs/category-hub.astro"
+import { mapToContentItems, sortByUpdatedAtDesc } from "@pebbledesk/marketing/lib/collections"
+import { getPromotionalPlanPrice } from "@pebbledesk/shared/constants"
+import type { GetStaticPathsOptions } from "astro"
+import { hubFaqs } from "@/config/hub-faqs"
+import { siteConfig } from "@/config/site"
+
+export async function getStaticPaths({ paginate }: GetStaticPathsOptions) {
+  const entries = await getCollection("pricing-breakdowns")
+  const sorted = sortByUpdatedAtDesc(entries)
+  const items = mapToContentItems(
+    sorted,
+    (e) => `/compare/pricing/${e.data.competitor.slug}`,
+    (e) => ({ competitor: e.data.competitor.name }),
+  )
+  return paginate(items, { pageSize: 12 })
+}
+
+const { page } = Astro.props
+const sourcePage =
+  page.currentPage > 1 ? `/compare/pricing/${page.currentPage}` : "/compare/pricing"
+const homePromoPrice = getPromotionalPlanPrice("home", "annual")
+const centerStarterPromoPrice = getPromotionalPlanPrice("center_starter", "annual")
+---
+
+<CategoryHub
+  config={siteConfig}
+  title="Pricing Breakdowns"
+  description="What childcare software actually costs; tiers, hidden fees, and the fine print."
+  items={page.data}
+  page={page}
+  basePath="/compare/pricing"
+  breadcrumbs={[
+    { label: "Home", href: "/" },
+    { label: "Compare", href: "/compare" },
+    { label: "Pricing", href: "/compare/pricing" },
+  ]}
+  faqs={hubFaqs["/compare/pricing"]}
+>
+  <section slot="cta" class="mt-8 py-10 text-center border-t border-[var(--color-neutral-200)]" id="signup">
+    <h2 class="text-2xl font-bold text-[var(--color-brand-text)] mb-2">Tired of surprise fees?</h2>
+    <p class="text-[var(--color-brand-muted)] mb-6 max-w-md mx-auto">
+      {siteConfig.name} starts at {homePromoPrice.discountedPriceLabel} for home providers and {centerStarterPromoPrice.discountedPriceLabel} for licensed centers while {siteConfig.promoBanner.code} is active. Monthly billing is also available, with no setup fees.
+    </p>
+    <PublicSignupCta
+      client:load
+      sourcePage={sourcePage}
+      buttonText={siteConfig.funnel.bofu.ctaText}
+    />
+  </section>
+</CategoryHub>

@@ -1,0 +1,171 @@
+{
+	"date": "2026-06-08",
+	"theme": "State licensing support and honest product scope",
+	"posts": [
+		{
+			"index_in_day": 1,
+			"time_central": "04:00",
+			"pillar": "Licensing support",
+			"format": "Plain-language scope note",
+			"post_content": "A practical licensing-support question:\n\nWhat can the director pull in five minutes?\n\nNot in a perfect demo.\nNot after a weekend cleanup.\nDuring a normal workday.\n\nFor a childcare center, the useful answer usually includes attendance, room context, staff records, child files, ratio history, incident notes, and reports that match the state review question.\n\nState-specific formats matter. So does the ordinary daily record underneath them.\n\nThe real buyer question is concrete:\n\nCan I see the record I would actually use?",
+			"source": "apps/site/src/config/site.ts",
+			"url": "https://pebbledesk.app/pricing/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Humanized from scope transparency into a concrete director pull-test while preserving documented state-support scope."
+		},
+		{
+			"index_in_day": 2,
+			"time_central": "05:00",
+			"pillar": "Ratio compliance",
+			"format": "Director checklist",
+			"post_content": "A state ratio table is only helpful if it reaches the room.\n\nDirectors do not need another PDF sitting in a folder. They need the current rule where the staffing decision happens.\n\nFor each room, the working version should answer:\n\nWhat age group is in the room?\nWhat state ratio applies?\nDoes the youngest-child rule change the ratio?\nWhat is the room capacity?\nWho covers breaks?\nWho gets called before the room falls out of ratio?\n\nRatios vary by state and age group, and the rule has to be maintained continuously.\n\nNot just at check-in.\nNot just on a clean schedule.\n\nDuring lunch coverage, outdoor transitions, nap time, and pickup.\n\nThe quiet operational test:\n\nCould a teacher see the next step before a small coverage gap becomes a licensing problem?",
+			"source": "apps/site/src/content/guides/staff-to-child-ratio-by-state.md",
+			"url": "https://pebbledesk.app/resources/guides/staff-to-child-ratio-by-state/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Uses state-ratio guide and the high-performing ratio habit pattern."
+		},
+		{
+			"index_in_day": 3,
+			"time_central": "06:00",
+			"pillar": "Licensing preparation",
+			"format": "Operational risk post",
+			"post_content": "Licensing is not a one-time approval.\n\nThat is the part that gets missed when a center is focused on opening, renewal, or the next inspection date.\n\nThe real job is continuous:\n\nStaff files stay current.\nChild records stay complete.\nRatio logs cover ordinary days.\nEmergency contacts are reachable.\nIncident records are written while details are fresh.\nThe posted license and facility documents match the program as it actually operates.\n\nThe structure varies by state, but the everyday categories are familiar: facility standards, staff qualifications, ratios, health and safety records, and inspection readiness.\n\nA practical Monday question for directors:\n\nIf licensing asked for a random day from last month, would the record show what happened without you rebuilding it from memory?\n\nThat is the work PebbleDesk is built around.\n\nThe daily record, not the night-before scramble.",
+			"source": "apps/site/src/content/guides/daycare-licensing-requirements-guide.md",
+			"url": "https://pebbledesk.app/resources/guides/daycare-licensing-requirements-guide/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Turns licensing-scope source into a director-ready self-audit prompt."
+		},
+		{
+			"index_in_day": 4,
+			"time_central": "07:00",
+			"pillar": "Texas licensing",
+			"format": "State-specific example",
+			"post_content": "Texas is a good example of why state-specific support needs to be practical, not vague.\n\nA Texas director is not asking for a broad \"compliance dashboard.\"\n\nThey need daily attendance, ratio proof, staff records, child files, and licensing documents that match the review in front of them.\n\nThat does not mean a director should stop checking current HHSC rules.\n\nRules can change. Programs have different license types. Subsidy billing can add another layer.\n\nStart from concrete workflow questions:\n\nCan I see ratios by room?\nCan I keep attendance tied to the daily record?\nCan I pull the report format my state expects?\nCan I explain the day without five separate files?\n\nThat is the level of specificity childcare software owes directors.",
+			"source": "packages/shared/src/public-knowledge/data.ts",
+			"url": "https://pebbledesk.app/resources/audit-licensing/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Uses verified Texas support claim from public knowledge without overpromising."
+		},
+		{
+			"index_in_day": 5,
+			"time_central": "08:00",
+			"pillar": "California licensing",
+			"format": "Practical reminder",
+			"post_content": "California childcare licensing has enough detail that \"we support compliance\" is not a complete answer.\n\nA director has to think about Title 22 ratios, staff qualifications, Live Scan clearances, health records, disaster drills, and child file documentation.\n\nThose records are not all created at inspection time.\n\nThey are created while the center is running:\n\nA child enrolls.\nA teacher joins.\nA room changes.\nA medication form is updated.\nA pickup authorization changes.\nA drill happens.\n\nState-specific support matters most when it keeps the ordinary record usable.\n\nBecause the stressful part of a licensing visit is rarely one missing feature.\n\nIt is the director trying to connect attendance, staff coverage, child records, and proof fast enough while the day keeps moving.",
+			"source": "apps/site/src/content/guides/california-childcare-licensing-guide.md",
+			"url": "https://pebbledesk.app/resources/guides/california-childcare-licensing-guide/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "State example grounded in California guide and supported product boundaries."
+		},
+		{
+			"index_in_day": 6,
+			"time_central": "09:00",
+			"pillar": "Florida licensing",
+			"format": "Compliance nuance",
+			"post_content": "Florida directors often have two compliance conversations happening at once.\n\nDCF licensing is one system.\nSchool Readiness and VPK funding requirements can add another.\n\nThat distinction matters.\n\nA center can be thinking about ratios, background screening, training records, child files, and facility requirements for licensing while also needing point-of-service attendance documentation for funded care.\n\nFor software evaluation, the question is not just, \"Does it handle Florida?\"\n\nAsk it more plainly:\n\nCan it help with the daily records DCF may review?\nCan it keep attendance tied to funding documentation?\nCan it separate licensing records from payment records without making the director rebuild both?\n\nThe director's real test is whether the record makes sense when an actual question arrives.",
+			"source": "apps/site/src/content/guides/florida-childcare-licensing-guide.md",
+			"url": "https://pebbledesk.app/resources/guides/florida-childcare-licensing-guide/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Separates Florida licensing from funded-program documentation without overpromising."
+		},
+		{
+			"index_in_day": 7,
+			"time_central": "10:00",
+			"pillar": "Product honesty",
+			"format": "Founder POV",
+			"post_content": "The most useful software answers are often the least dramatic ones.\n\nCan it support this room today?\nCan it show who counted in ratio?\nCan it find the child's pickup permission?\nCan it attach the billing context to the attendance day?\nCan it produce the report the director needs without a scavenger hunt?\n\nA director does not need a vendor to sound impressive.\n\nShe needs clear answers before setup:\n\nWhat works now?\nWhat has been verified for my state?\nWhat needs migration help?\nWhat should be scoped before rollout?\nWhat happens if the internet is down?\n\nThose answers save time before launch.\n\nThey also prevent expensive surprises later.",
+			"source": "docs/marketing/linkedin-rewrite/founder-context.md",
+			"url": "https://pebbledesk.app/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Rewritten to reduce repeated state-scope language and make the founder/product point director-facing."
+		},
+		{
+			"index_in_day": 8,
+			"time_central": "11:00",
+			"pillar": "Inspection readiness",
+			"format": "Five-minute pull test",
+			"post_content": "A licensing record is only as useful as it is findable.\n\nTry the five-minute pull test:\n\nPick one child.\nPick one staff member.\nPick one operating day from last month.\n\nCan the director find:\n\nThe child's enrollment record.\nEmergency contacts and authorized pickup notes.\nAttendance for that day.\nRoom assignment or classroom context.\nThe staff member's credential file.\nThe ratio story for the relevant room.\nAny incident or medication note tied to that day.\n\nIf the answer takes twenty minutes and three people, the issue may not be compliance effort.\n\nIt may be record design.\n\nState requirements vary, but inspections usually come back to the same practical question:\n\nCan you show the proof clearly?\n\nPebbleDesk is built around keeping attendance, ratios, family records, billing context, messaging, and reports connected so that proof is not recreated from scratch.",
+			"source": "packages/shared/src/public-knowledge/data.ts",
+			"url": "https://pebbledesk.app/resources/audit-licensing/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Adapts the audit-readiness public knowledge into a concrete director exercise."
+		},
+		{
+			"index_in_day": 9,
+			"time_central": "12:00",
+			"pillar": "Online-only reality",
+			"format": "Risk planning note",
+			"post_content": "Online-only software still needs an offline plan.\n\nPebbleDesk is currently online-only. If internet drops, keep a temporary paper fallback and enter records once service returns.\n\nThat is not a footnote for childcare centers.\n\nIt is an operating plan.\n\nIf your center depends on a cloud system for attendance, ratios, billing, or parent messages, decide ahead of time:\n\nWhere is the paper sign-in fallback?\nWho starts it?\nHow are classroom counts communicated while the connection is down?\nWhen does the director enter the records back into the system?\nHow are corrections marked so the audit trail still makes sense?\n\nThe wrong time to answer those questions is 7:42 AM during arrival.\n\nA good software evaluation includes the normal day and the bad Wi-Fi day.\n\nBoth count.",
+			"source": "apps/site/src/config/site.ts",
+			"url": "https://pebbledesk.app/pricing/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Uses online-only scope honestly and turns it into a useful planning post."
+		},
+		{
+			"index_in_day": 10,
+			"time_central": "13:00",
+			"pillar": "State-specific evaluation",
+			"format": "Buyer questions",
+			"post_content": "When a vendor says \"state support,\" ask to see the actual artifact.\n\nA report.\nAn export.\nA child file.\nA ratio record.\nAn attendance log for the date range licensing may ask about.\n\nThe phrase matters less than the handoff.\n\nCould a director use it during a licensing review without opening three other systems and a spreadsheet?\n\nThat is the boring proof worth asking for.\n\nBroad workflows can still be useful, especially for attendance, child records, guardian records, billing, messaging, and reports.\n\nA state-specific report is a narrower claim.\n\nDirectors should know which one they are buying before implementation starts.",
+			"source": "packages/shared/src/public-knowledge/data.ts",
+			"url": "https://pebbledesk.app/resources/audit-licensing/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Rewritten to concrete artifact questions and reduced repeated PebbleDesk state list."
+		},
+		{
+			"index_in_day": 11,
+			"time_central": "14:00",
+			"pillar": "Licensing documentation",
+			"format": "Record design tip",
+			"post_content": "The best licensing record is not the longest record.\n\nIt is the one that answers the question being asked.\n\nFor childcare centers, those questions usually cluster around:\n\nWho was enrolled?\nWho was present?\nWhich staff were present and qualified?\nWhat room were children in?\nWere ratios maintained?\nWere health, safety, and emergency records current?\nWas the incident documented at the time?\n\nRequirements vary by state, but the review structure is familiar.\n\nThat is why record design matters.\n\nIf attendance is in one place, staff credentials in another, room coverage in a spreadsheet, and incident notes in a folder, the director has to become the integration layer.\n\nThat is too much to ask during a live operating day.",
+			"source": "apps/site/src/content/guides/daycare-licensing-requirements-guide.md",
+			"url": "https://pebbledesk.app/resources/guides/daycare-licensing-requirements-guide/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Specific compliance categories with careful, non-legal framing."
+		},
+		{
+			"index_in_day": 12,
+			"time_central": "15:00",
+			"pillar": "Ratio support",
+			"format": "Transition-window reminder",
+			"post_content": "The ratio risk is often hiding in the ordinary handoff.\n\nMorning drop-off.\nLunch breaks.\nOutdoor play.\nNap transitions.\nBathroom breaks.\nAfternoon pickup.\n\nRatios have to be maintained continuously. That word is doing a lot of work.\n\nA center can look fine at 9:00 and still have a problem at 11:42 when one teacher leaves for lunch and three children are moved into another room.\n\nThe record needs to follow the movement.\n\nWho was present?\nWhere were they?\nWhich staff counted in ratio?\nWhat changed during the transition?\n\nSoftware cannot replace a director's judgment. It can make the moving parts visible sooner.\n\nThat is the practical value of ratio tracking: catching the fragile moment while there is still time to fix the room.",
+			"source": "apps/site/src/content/guides/staff-to-child-ratio-by-state.md",
+			"url": "https://pebbledesk.app/resources/guides/staff-to-child-ratio-by-state/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Uses high-performing operational-risk pattern around transition windows."
+		},
+		{
+			"index_in_day": 13,
+			"time_central": "16:00",
+			"pillar": "Buyer trust",
+			"format": "Contrarian product note",
+			"post_content": "One underrated buying question:\n\nWhat does this product not do yet?\n\nThat question can save a childcare director weeks of confusion.\n\nIf messaging is mostly outbound, plan for that.\nIf the product is online-only, keep a paper fallback for outages.\nIf a state report is not yet verified, confirm the rollout plan before signing.\nIf multi-site requirements are complex, ask what implementation looks like before signing.\n\nNone of that is negative.\n\nIt is operating context.\n\nChildcare software holds records that staff and directors may rely on during arrival, pickup, billing, licensing, and parent conversations.\n\nClear limits help the right buyer evaluate faster.",
+			"source": "apps/site/src/config/site.ts",
+			"url": "https://pebbledesk.app/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Rewritten to avoid legalistic scope repetition and make limits operational."
+		},
+		{
+			"index_in_day": 14,
+			"time_central": "17:00",
+			"pillar": "State licensing workflow",
+			"format": "Director question",
+			"post_content": "Here is a useful question before any licensing workflow rollout:\n\nWhat will the director actually hand over?\n\nNot what the dashboard says.\nNot what the demo looked like.\nThe artifact.\n\nA PDF.\nA CSV.\nA report.\nA child file.\nA staff record.\nAn attendance log for a date range.\nA ratio record tied to rooms and staff.\n\nWhen a platform supports a state-specific report, ask to see that exact output. When it supports a broader workflow, ask how the center will convert that record into the state packet.\n\nBoth can be legitimate.\n\nThey are just different jobs.\n\nDirectors should not have to discover the difference during an inspection week.",
+			"source": "packages/shared/src/public-knowledge/data.ts",
+			"url": "https://pebbledesk.app/resources/audit-licensing/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Practical evaluation question that stays inside documented product scope."
+		},
+		{
+			"index_in_day": 15,
+			"time_central": "18:00",
+			"pillar": "Audit-ready positioning",
+			"format": "Closing reflection",
+			"post_content": "Audit-ready is not a magic word.\n\nA director still has to answer the same practical questions:\n\nWho was here?\nWho picked up?\nWhich room were they in?\nWhich staff were counted?\nWhat ratio applied?\nWhat billing or subsidy record came from that day?\nWhich report supports the review?\n\nThe calmer version of that moment starts earlier.\n\nIt starts when attendance, ratios, subsidy billing, family records, and reports stay close enough that the day still makes sense later.\n\nState-specific support should be checked carefully, especially outside verified formats.\n\nBut the daily habit is universal:\n\nKeep the record clear while the day is still fresh.",
+			"source": "packages/shared/src/constants/offering.ts",
+			"url": "https://pebbledesk.app/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Rewritten as a practical close with less product-scope repetition."
+		}
+	]
+}

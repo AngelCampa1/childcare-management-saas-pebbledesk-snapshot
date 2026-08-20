@@ -1,0 +1,288 @@
+---
+import BreadcrumbNav from "../components/breadcrumb-nav.astro"
+import FaqSection from "../components/faq-section.astro"
+import SiteFooter from "../components/site-footer.astro"
+import SiteHeader from "../components/site-header.astro"
+import BaseLayout from "../layouts/base-layout.astro"
+import { sumCategoryCounts } from "../lib/collections"
+import { hasHubFaqs, normalizeHubCanonicalUrl } from "../lib/hub-utils"
+import { composeMetaTitle } from "../lib/meta"
+import { resolvePublicSignupCta } from "../lib/public-signup-cta"
+import { buildCollectionPageSchema } from "../lib/schema-builders"
+import { buildGraph, withId } from "../lib/schema-graph"
+import SchemaMarkup from "../seo/schema-markup.astro"
+import type { BreadcrumbItem, CategorySummary, FaqItem, SiteConfig } from "../types"
+
+interface Props {
+  config: SiteConfig
+  title: string
+  description: string
+  categories: CategorySummary[]
+  canonicalUrl: string
+  breadcrumbs: BreadcrumbItem[]
+  browseLinkText?: string
+  itemNoun?: string
+  categoryNoun?: string
+  categoryNounPlural?: string
+  faqs?: FaqItem[]
+  faqHeading?: string
+  eyebrow?: string
+  variant?: "default" | "editorial"
+}
+
+const {
+  config,
+  title,
+  description,
+  categories = [],
+  canonicalUrl,
+  breadcrumbs,
+  browseLinkText = "Browse ->",
+  itemNoun = "article",
+  categoryNoun = "category",
+  categoryNounPlural = "categories",
+  faqs = [],
+  faqHeading,
+  eyebrow,
+  variant = "default",
+} = Astro.props
+
+const totalItems = sumCategoryCounts(categories)
+const siteUrl = `https://${config.domain}`
+const normalizedCanonicalUrl = normalizeHubCanonicalUrl(canonicalUrl)
+const sourcePage = new URL(normalizedCanonicalUrl).pathname
+const headerCta = resolvePublicSignupCta({
+  sourcePage,
+  explicitTarget: config.funnel.bofu.ctaTarget,
+  explicitText: config.funnel.bofu.ctaText,
+})
+const collectionSchema = buildCollectionPageSchema({
+  name: title,
+  description,
+  url: normalizedCanonicalUrl,
+  items: categories.map(cat => ({
+    name: cat.name,
+    description: cat.description,
+    url: `${siteUrl}${cat.href}`,
+  })),
+})
+const graph = buildGraph([withId(collectionSchema, `${normalizedCanonicalUrl}#collection`)])
+const featuredCategories = categories.slice(0, 3)
+---
+
+<BaseLayout
+  title={composeMetaTitle(title, config.name)}
+  description={description}
+  canonicalUrl={normalizedCanonicalUrl}
+  siteName={config.name}
+  ogType="website"
+  themeColor={config.theme.primary}
+  theme={config.theme}
+  fonts={config.theme.fonts}
+  appleTouchIcon={config.appleTouchIcon}
+>
+  <SiteHeader
+    slot="header"
+    siteName={config.name}
+    navItems={config.nav?.items}
+    signInHref={config.nav?.signInHref}
+    ctaText={config.nav?.ctaText ?? headerCta.text}
+    ctaHref={headerCta.target}
+    logoLight={config.logo?.light}
+    logoDark={config.logo?.dark}
+    promo={config.promoBanner}
+  />
+
+  <div
+    data-hub-layout
+    class:list={[
+      "hub-shell mx-auto px-4 py-[var(--section-py-sm)]",
+      variant === "editorial" ? "max-w-6xl editorial-shell" : "max-w-5xl",
+    ]}
+  >
+    <BreadcrumbNav items={breadcrumbs} siteUrl={`https://${config.domain}`} />
+
+    <header
+      data-hub-hero
+      class:list={[
+        "hub-intro mt-4",
+        variant === "editorial"
+          ? "mb-12 grid gap-6 lg:grid-cols-[minmax(0,1.4fr)_minmax(16rem,0.6fr)] lg:items-end"
+          : "mb-10 rounded-[var(--radius-xl)] border border-[color-mix(in_srgb,var(--color-neutral-300)_40%,transparent)] bg-[color-mix(in_srgb,var(--surface-primary)_78%,var(--surface-secondary))] px-6 py-7 shadow-[var(--shadow-card)]",
+      ]}
+    >
+      <div class="max-w-[var(--content-measure-wide)]">
+        {eyebrow && variant === "editorial" && <p class="editorial-kicker">{eyebrow}</p>}
+        <h1
+          class:list={[
+            "font-heading font-bold text-[var(--color-brand-text)]",
+            variant === "editorial"
+              ? "mt-4 text-[length:var(--text-editorial-title)] leading-[1.04]"
+              : "mb-3 text-[length:var(--text-heading)]",
+          ]}
+        >
+          {title}
+        </h1>
+        <p
+          class:list={[
+            "text-[var(--color-brand-muted)]",
+            variant === "editorial"
+              ? "editorial-lede"
+              : "max-w-2xl text-[length:var(--text-body-lg)]",
+          ]}
+        >
+          {description}
+        </p>
+      </div>
+
+      <div
+        class:list={[
+          variant === "editorial"
+            ? "editorial-panel editorial-panel--soft p-5 lg:justify-self-end lg:max-w-[18rem]"
+            : "mt-3 inline-flex rounded-full bg-[color-mix(in_srgb,var(--surface-elevated)_82%,var(--surface-primary))] px-3 py-1 text-[length:var(--text-caption)] text-[var(--color-neutral-500)]",
+        ]}
+      >
+        <p class="text-[length:var(--text-caption)] text-[var(--color-neutral-500)]">
+          {totalItems} {totalItems === 1 ? itemNoun : `${itemNoun}s`} across {categories.length} {categories.length === 1 ? categoryNoun : categoryNounPlural}
+        </p>
+      </div>
+    </header>
+
+    {featuredCategories.length > 0 && (
+      <section
+        data-hub-pathways
+        class="mb-10 rounded-[var(--radius-xl)] border border-[color-mix(in_srgb,var(--color-primary-200)_55%,transparent)] bg-[color-mix(in_srgb,var(--color-primary-50)_78%,white)] p-6 shadow-[var(--shadow-card)]"
+        aria-labelledby="hub-pathways-heading"
+      >
+        <div class="flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
+          <div class="max-w-2xl">
+            <p class="mb-2 text-[length:var(--text-caption)] font-semibold uppercase tracking-[0.12em] text-[var(--color-primary-700)]">
+              Where to start
+            </p>
+            <h2
+              id="hub-pathways-heading"
+              class="font-heading text-[length:var(--text-subheading)] font-bold text-[var(--color-brand-text)]"
+            >
+              Pick the workflow that matches the pressure you are under today.
+            </h2>
+            <p class="mt-2 text-[var(--color-brand-muted)]">
+              Start with the category that helps you prepare for the next audit, staffing check,
+              or subsidy deadline instead of scanning the whole library.
+            </p>
+          </div>
+          <p class="max-w-sm text-[length:var(--text-caption)] text-[var(--color-neutral-600)]">
+            Each path groups the pages directors use when they need an answer fast and need the
+            next step to be obvious.
+          </p>
+        </div>
+        <div class="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          {
+            featuredCategories.map((category, index) => (
+              <a
+                href={category.href}
+                class="rounded-[var(--radius-lg)] border border-[color-mix(in_srgb,var(--color-primary-200)_55%,transparent)] bg-white p-5 transition-[transform,box-shadow,border-color] duration-[var(--transition-base)] hover:-translate-y-0.5 hover:border-[var(--color-primary-400)] hover:shadow-[var(--shadow-card)]"
+              >
+                <p class="text-[length:var(--text-caption)] font-semibold uppercase tracking-[0.12em] text-[var(--color-primary-700)]">
+                  Path {index + 1}
+                </p>
+                <h3 class="mt-3 font-heading text-[length:var(--text-body-lg)] font-bold text-[var(--color-brand-text)]">
+                  {category.name}
+                </h3>
+                <p class="mt-2 text-[var(--color-brand-muted)]">{category.description}</p>
+                <p class="mt-4 text-[length:var(--text-caption)] text-[var(--color-neutral-600)]">
+                  {category.count} {category.count === 1 ? itemNoun : `${itemNoun}s`}
+                </p>
+              </a>
+            ))
+          }
+        </div>
+      </section>
+    )}
+
+    <section aria-label={`Content ${categories.length === 1 ? categoryNoun : categoryNounPlural}`}>
+      <div data-hub-card-grid class="hub-grid grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        {
+          categories.map((category) => (
+            <a
+              href={category.href}
+              data-hub-card
+              class:list={[
+                "group block rounded-[var(--radius-lg)] border transition-[transform,box-shadow,border-color,background-color] duration-[var(--transition-base)]",
+                variant === "editorial"
+                  ? "editorial-panel p-6 md:p-7 hover:-translate-y-0.5"
+                  : "border-[color-mix(in_srgb,var(--color-neutral-300)_50%,transparent)] bg-[color-mix(in_srgb,var(--surface-primary)_84%,var(--surface-elevated))] p-6 shadow-[var(--shadow-card)] hover:-translate-y-0.5 hover:border-[color-mix(in_srgb,var(--color-brand-primary)_42%,var(--color-neutral-300))] hover:bg-[var(--surface-primary)]",
+              ]}
+            >
+              <div class="mb-3 flex items-start justify-between gap-3">
+                <h2
+                  class:list={[
+                    "font-heading font-bold text-[var(--color-brand-text)] transition-colors",
+                    variant === "editorial"
+                      ? "text-[length:var(--text-subheading)] leading-tight"
+                      : "text-[length:var(--text-body-lg)] group-hover:text-[var(--color-brand-primary)]",
+                  ]}
+                >
+                  {category.name}
+                </h2>
+                <span
+                  class:list={[
+                    "shrink-0 px-2.5 py-1 text-[length:var(--text-caption)] font-mono",
+                    variant === "editorial"
+                      ? "rounded bg-[var(--color-primary-50)] text-[var(--color-primary-700)]"
+                      : "rounded-full bg-[var(--surface-secondary)] text-[var(--color-neutral-500)]",
+                  ]}
+                >
+                  {category.count}
+                </span>
+              </div>
+              <p
+                class:list={[
+                  "leading-relaxed text-[var(--color-brand-muted)]",
+                  variant === "editorial"
+                    ? "mt-4 text-[length:var(--text-body)]"
+                    : "mt-2 text-[length:var(--text-caption)]",
+                ]}
+              >
+                {category.description}
+              </p>
+              <span
+                class:list={[
+                  "inline-flex items-center gap-1 text-[length:var(--text-caption)] font-medium text-[var(--color-brand-primary)]",
+                  variant === "editorial" ? "mt-5 editorial-link" : "mt-4",
+                ]}
+                aria-hidden="true"
+              >
+                {browseLinkText.replace(/->$/, "").trimEnd()}
+                {browseLinkText.includes("->") && (
+                  <span class="inline-block transition-transform duration-[var(--transition-fast)] group-hover:translate-x-1">-&gt;</span>
+                )}
+              </span>
+            </a>
+          ))
+        }
+      </div>
+    </section>
+
+    <slot name="extra" />
+    <slot name="cta" />
+
+    {hasHubFaqs(faqs) && (
+      <FaqSection
+        faqs={faqs}
+        heading={faqHeading}
+        showBottomCta={false}
+        ctaVariant="compact"
+      />
+    )}
+  </div>
+
+  <SiteFooter
+    slot="footer"
+    siteName={config.name}
+    tagline={config.tagline}
+    linkGroups={config.footer?.linkGroups}
+    legalLinks={config.footer?.legalLinks}
+    captureVariant="compact"
+  />
+  <SchemaMarkup graph={graph} />
+</BaseLayout>

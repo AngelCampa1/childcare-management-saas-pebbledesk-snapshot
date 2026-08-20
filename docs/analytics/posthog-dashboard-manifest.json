@@ -1,0 +1,311 @@
+{
+	"projectId": 414219,
+	"dashboards": [
+		{
+			"name": "Founder Overview",
+			"description": "Top-line acquisition, activation, revenue, and product usage signals for PebbleDesk.",
+			"insights": [
+				{
+					"name": "Visitor to center creation funnel",
+					"type": "funnel",
+					"events": ["$pageview", "signup_started", "signup_completed", "center_created"]
+				},
+				{
+					"name": "Activation milestones",
+					"type": "trends",
+					"events": [
+						"center_created",
+						"classroom_created",
+						"child_created",
+						"guardian_created",
+						"enrollment_completed",
+						"attendance_checkin_completed",
+						"report_generated"
+					]
+				},
+				{
+					"name": "Revenue lifecycle",
+					"type": "trends",
+					"events": [
+						"billing_checkout_started",
+						"subscription_checkout_completed",
+						"trial_started",
+						"subscription_started",
+						"payment_failed",
+						"trial_expired"
+					]
+				}
+			]
+		},
+		{
+			"name": "Acquisition",
+			"description": "Marketing page movement, CTA demand, signup starts, and source quality.",
+			"insights": [
+				{ "name": "Landing page views by route", "type": "trends", "events": ["$pageview"] },
+				{
+					"name": "CTA and signup intent",
+					"type": "trends",
+					"events": [
+						"cta_clicked",
+						"signup_submitted",
+						"signup_started",
+						"signup_duplicate",
+						"enterprise_discovery_clicked"
+					]
+				},
+				{
+					"name": "Lead capture and surveys",
+					"type": "trends",
+					"events": [
+						"public_signup_submission",
+						"lead_magnet_submission",
+						"public_survey_submission",
+						"survey_completed"
+					]
+				},
+				{
+					"name": "Marketing engagement depth",
+					"type": "trends",
+					"events": [
+						"scroll_depth_reached",
+						"section_viewed",
+						"engaged_time_reached",
+						"faq_expanded",
+						"email_field_focused",
+						"email_field_abandoned"
+					]
+				},
+				{
+					"name": "Interactive tools and offers",
+					"type": "trends",
+					"events": [
+						"pricebook_builder_inputs_changed",
+						"pricebook_pdf_requested",
+						"cost_calculator_team_size_changed",
+						"referral_link_copied",
+						"billing_toggle_switched"
+					]
+				},
+				{
+					"name": "Exit popup journey",
+					"type": "trends",
+					"events": ["exit_popup_shown", "exit_popup_converted", "exit_popup_dismissed"]
+				}
+			]
+		},
+		{
+			"name": "Signup And Onboarding Funnel",
+			"description": "Signup, auth, onboarding, center creation, and early handoff friction.",
+			"insights": [
+				{
+					"name": "Self-serve onboarding funnel",
+					"type": "funnel",
+					"events": [
+						"$pageview",
+						"signup_started",
+						"signup_completed",
+						"onboarding_started",
+						"center_created",
+						"onboarding_completed"
+					]
+				},
+				{
+					"name": "Signup validation friction",
+					"type": "trends",
+					"events": ["signup_validation_failed", "auth_redirect_failed"]
+				},
+				{
+					"name": "Login and auth movement",
+					"type": "trends",
+					"events": [
+						"login_started",
+						"login_completed",
+						"google_login_started",
+						"auth_redirect_failed"
+					]
+				}
+			]
+		},
+		{
+			"name": "Activation",
+			"description": "Center setup and core compliance workflow adoption.",
+			"insights": [
+				{
+					"name": "Activation funnel",
+					"type": "funnel",
+					"events": [
+						"center_created",
+						"classroom_created",
+						"guardian_created",
+						"child_created",
+						"enrollment_completed",
+						"attendance_checkin_completed",
+						"report_generated"
+					]
+				},
+				{
+					"name": "Child and guardian record activity",
+					"type": "trends",
+					"events": [
+						"child_created",
+						"child_updated",
+						"child_withdrawn",
+						"child_reactivated",
+						"guardian_created",
+						"guardian_updated",
+						"guardian_deleted",
+						"guardian_linked",
+						"guardian_unlinked",
+						"guardian_link_updated"
+					]
+				},
+				{
+					"name": "Enrollment activity",
+					"type": "trends",
+					"events": ["enrollment_started", "enrollment_completed"]
+				},
+				{
+					"name": "Classroom management",
+					"type": "trends",
+					"events": [
+						"classroom_created",
+						"classroom_updated",
+						"classroom_archived",
+						"classroom_restored",
+						"classroom_child_assigned",
+						"classroom_child_unassigned",
+						"classroom_staff_assigned",
+						"classroom_staff_unassigned"
+					]
+				}
+			]
+		},
+		{
+			"name": "Product Engagement And Retention",
+			"description": "Authenticated app pageviews and feature adoption by route area and feature name.",
+			"insights": [
+				{ "name": "Product pageviews by feature", "type": "trends", "events": ["$pageview"] },
+				{
+					"name": "Operational workflow usage",
+					"type": "trends",
+					"events": [
+						"attendance_checkin_completed",
+						"attendance_checkout_completed",
+						"message_send_completed",
+						"quickbooks_action_completed",
+						"finance_action_completed",
+						"import_completed",
+						"report_generated",
+						"report_downloaded"
+					]
+				},
+				{
+					"name": "Center and team management",
+					"type": "trends",
+					"events": [
+						"center_settings_updated",
+						"center_switched",
+						"team_member_invited",
+						"team_member_removed"
+					]
+				},
+				{
+					"name": "Messaging activity",
+					"type": "trends",
+					"events": [
+						"message_send_completed",
+						"message_thread_opened",
+						"message_replies_read",
+						"message_redelivered"
+					]
+				},
+				{
+					"name": "Scheduling and compliance",
+					"type": "trends",
+					"events": [
+						"schedule_created",
+						"schedule_updated",
+						"shift_created",
+						"shift_updated",
+						"ratio_violation_notes_updated",
+						"audit_log_filtered"
+					]
+				}
+			]
+		},
+		{
+			"name": "Revenue And Trial Health",
+			"description": "Checkout, subscription, trial, payment, and billing health.",
+			"insights": [
+				{
+					"name": "Checkout funnel",
+					"type": "funnel",
+					"events": [
+						"billing_checkout_started",
+						"checkout_started",
+						"billing_checkout_redirect_opened",
+						"checkout_completed",
+						"subscription_checkout_completed"
+					]
+				},
+				{
+					"name": "Subscription lifecycle",
+					"type": "trends",
+					"events": [
+						"trial_started",
+						"subscription_started",
+						"subscription_status_changed",
+						"payment_failed",
+						"trial_expired"
+					]
+				},
+				{
+					"name": "Billing friction",
+					"type": "trends",
+					"events": ["billing_checkout_failed", "billing_portal_failed", "payment_failed"]
+				},
+				{
+					"name": "Billing portal and payouts",
+					"type": "trends",
+					"events": [
+						"billing_portal_opened",
+						"stripe_connect_onboarding_started",
+						"stripe_connect_onboarding_failed"
+					]
+				}
+			]
+		},
+		{
+			"name": "Friction And Quality",
+			"description": "Validation failures, auth redirects, failed operational workflows, and payment issues.",
+			"insights": [
+				{
+					"name": "Auth and signup friction",
+					"type": "trends",
+					"events": [
+						"signup_validation_failed",
+						"signup_duplicate",
+						"auth_redirect_failed"
+					]
+				},
+				{
+					"name": "Operational failures",
+					"type": "trends",
+					"events": [
+						"attendance_checkin_failed",
+						"attendance_checkout_failed",
+						"finance_action_failed",
+						"import_failed",
+						"message_send_failed",
+						"quickbooks_action_failed"
+					]
+				},
+				{
+					"name": "Revenue failures",
+					"type": "trends",
+					"events": ["billing_checkout_failed", "billing_portal_failed", "payment_failed"]
+				}
+			]
+		}
+	]
+}

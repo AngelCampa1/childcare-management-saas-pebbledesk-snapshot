@@ -1,0 +1,171 @@
+{
+	"date": "2026-06-09",
+	"theme": "Multi-site reporting, consistency, and operator oversight",
+	"posts": [
+		{
+			"index_in_day": 1,
+			"time_central": "04:00",
+			"pillar": "Multi-site oversight",
+			"format": "Operational risk post",
+			"post_content": "Multi-site childcare reporting usually breaks in a very ordinary way.\n\nEach location is doing real work.\n\nBut each one is tracking it a little differently.\n\nOne site has a clean attendance export.\nOne site adds room notes in a spreadsheet.\nOne site tracks subsidy follow-up in email.\nOne site knows staff credential dates because the director remembers them.\n\nThen the owner needs a portfolio view.\n\nEnrollment by site.\nRatio risk by site.\nOutstanding subsidy claims.\nStaff credential expirations.\nBilling follow-up.\nAudit readiness.\n\nThe work becomes a monthly reconstruction project.\n\nBefore adding another dashboard, ask the harder question:\n\nAre all sites recording the same facts in the same way?\n\nIf not, the dashboard is just a prettier version of the cleanup problem.",
+			"source": "apps/site/src/content/guides/multi-site-childcare-reporting-guide.md",
+			"url": "https://pebbledesk.app/resources/guides/multi-site-childcare-reporting-guide/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Opens the multi-site day with the strongest source theme: consistency before reporting."
+		},
+		{
+			"index_in_day": 2,
+			"time_central": "05:00",
+			"pillar": "Operator oversight",
+			"format": "Evaluation question",
+			"post_content": "A simple test for multi-site childcare software:\n\nCan I answer this without logging into every location separately?\n\nWhich rooms are close to ratio right now?\nWhich sites have attendance gaps this week?\nWhich subsidy claims are still pending?\nWhich staff credentials expire in the next 30 days?\nWhich location has enrollment capacity?\nWhich families have overdue balances?\n\nIf the answer requires five logins and a spreadsheet, the product may still be a single-site system wearing a group label.\n\nOperators do not need to micromanage every classroom.\n\nThey need enough visibility to catch preventable risk before it becomes a site-level surprise.",
+			"source": "apps/site/src/content/guides/childcare-software-for-multi-site-evaluation.md",
+			"url": "https://pebbledesk.app/resources/guides/childcare-software-for-multi-site-evaluation/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Uses multi-site architecture source and turns it into buyer-ready questions."
+		},
+		{
+			"index_in_day": 3,
+			"time_central": "06:00",
+			"pillar": "Cross-center visibility",
+			"format": "Product scope note",
+			"post_content": "Multi-site childcare permissions need a practical middle.\n\nA regional operator may need to see enrollment, ratio risk, staff credential dates, subsidy status, and billing across locations.\n\nA site director needs the children, families, staff, billing, attendance, and reports for her own center.\n\nA floating staff member may need access to two centers, but not the whole organization.\n\nThat distinction matters.\n\nGood oversight is not the same as loose access.\n\nOperators need a cross-center view without turning every child, family, billing, and staff record into organization-wide access.",
+			"source": "apps/site/src/content/features/multi-location-oversight.md",
+			"url": "https://pebbledesk.app/features/multi-location-oversight/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Carefully states supported multi-center boundaries and center-scoping from the feature page."
+		},
+		{
+			"index_in_day": 4,
+			"time_central": "07:00",
+			"pillar": "Standardization",
+			"format": "Practical rollout tip",
+			"post_content": "Standardize before you digitize.\n\nThat advice matters even more for multi-site childcare groups.\n\nIf Site A tracks classroom movement one way, Site B records subsidy notes in a different place, and Site C has its own staff credential spreadsheet, software will not magically make the organization consistent.\n\nIt may just preserve the inconsistency more neatly.\n\nBefore rollout, agree on the basics:\n\nWhat counts as the official attendance record?\nHow are room moves recorded?\nWhere do subsidy authorization dates live?\nWho owns staff credential updates?\nWhat is the required closeout check at the end of each day?\nWhich reports does every director need to produce the same way?\n\nThat is not extra project management.\n\nIt is how you avoid turning five local habits into one portfolio-level reporting mess.",
+			"source": "apps/site/src/content/guides/multi-site-childcare-reporting-guide.md",
+			"url": "https://pebbledesk.app/resources/guides/multi-site-childcare-reporting-guide/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Practical rollout post using source guidance on standardization."
+		},
+		{
+			"index_in_day": 5,
+			"time_central": "08:00",
+			"pillar": "Compliance reporting",
+			"format": "Board-report lens",
+			"post_content": "A board report can expose weak childcare records fast.\n\nNot because the board asks strange questions.\n\nBecause the normal questions cross location lines:\n\nTotal enrollment.\nAttendance trends.\nOpen staff credential items.\nSubsidy claim status.\nIncidents by site.\nRatio exceptions.\nBilling and collections.\nUpcoming licensing renewals.\n\nIf every site reports those differently, the central office has to normalize the story before it can interpret the story.\n\nThat is the hidden cost of inconsistent reporting.\n\nFor operators, the question is not only, \"Can we export?\"\n\nIt is:\n\nWill the report mean the same thing at every site?\n\nConsistency is what turns reporting from a monthly rescue into an oversight habit.",
+			"source": "apps/site/src/content/guides/multi-site-childcare-reporting-guide.md",
+			"url": "https://pebbledesk.app/resources/guides/multi-site-childcare-reporting-guide/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Connects multi-site source to operator board/funder reporting moments."
+		},
+		{
+			"index_in_day": 6,
+			"time_central": "09:00",
+			"pillar": "Architecture evaluation",
+			"format": "Demo question",
+			"post_content": "One demo question tells you a lot about multi-site architecture:\n\nIf a staff member works at two locations, do they have one staff record or two?\n\nThat sounds small.\n\nIt is not.\n\nOne record suggests the software understands the organization as the top-level entity, with locations underneath it.\n\nTwo separate records often means each site is still its own silo, with a reporting layer pasted on top.\n\nThe same question applies to families, staff credentials, permissions, and reports.\n\nCan access be scoped by location without duplicating people?\nCan an owner see across sites without exposing every record to every director?\nCan organization-level reporting happen without combining exports?\n\nDirectors should ask about it before signing, because a workaround that feels fine at two sites can become painful at five.",
+			"source": "apps/site/src/content/guides/childcare-software-for-multi-site-evaluation.md",
+			"url": "https://pebbledesk.app/resources/guides/childcare-software-for-multi-site-evaluation/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Uses a concrete source question about unified versus aggregated architecture."
+		},
+		{
+			"index_in_day": 7,
+			"time_central": "10:00",
+			"pillar": "Subsidy oversight",
+			"format": "Risk note",
+			"post_content": "Multi-site subsidy billing has a special kind of mess.\n\nEach location files claims under its own license or agency setup.\n\nBut the operator still needs to know the whole picture:\n\nWhich claims are pending?\nWhich location has a documentation request?\nWhich payments came in?\nWhich authorizations are close to expiration?\nWhich site is waiting on attendance correction before filing?\n\nA single-site system can make each location do its own work and still leave the central office blind.\n\nThe useful balance is simple:\n\nEach site keeps its claim record clean.\nLeadership can still see reimbursement risk across the organization before delays pile up.",
+			"source": "apps/site/src/content/guides/childcare-software-for-multi-site-evaluation.md",
+			"url": "https://pebbledesk.app/resources/guides/childcare-software-for-multi-site-evaluation/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Rewritten to remove formulaic goal close and keep the operational standard concrete."
+		},
+		{
+			"index_in_day": 8,
+			"time_central": "11:00",
+			"pillar": "Credential oversight",
+			"format": "Practical checklist",
+			"post_content": "For multi-site operators, staff credential tracking should not depend on which director is most organized.\n\nThe owner needs one view of upcoming risk:\n\nCPR and First Aid expirations.\nBackground check renewal dates.\nTraining hours.\nDirector or lead teacher qualification status.\nLocation assignment.\nStaff who float between sites.\nRenewals already in progress.\n\nThen each site still needs its own clean personnel file.\n\nBoth views matter.\n\nSite-level records keep the center ready for local inspection.\nOrganization-level oversight helps leadership see what is coming before it becomes tomorrow's staffing problem.\n\nCredential lapses are often preventable.\n\nThey become harder to prevent when the only warning lives in one site's spreadsheet and nobody else can see the date approaching.",
+			"source": "apps/site/src/content/guides/multi-site-childcare-reporting-guide.md",
+			"url": "https://pebbledesk.app/resources/guides/multi-site-childcare-reporting-guide/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Uses a proven staff credential topic through the multi-site lens."
+		},
+		{
+			"index_in_day": 9,
+			"time_central": "12:00",
+			"pillar": "Rollout sequencing",
+			"format": "Implementation tip",
+			"post_content": "Do not roll out five childcare sites on the same Monday if you can avoid it.\n\nA pilot site gives the central office a chance to learn:\n\nWhich roster fields were messy.\nWhich staff training questions repeated.\nWhich parent communication caused confusion.\nWhich billing setup took longer than expected.\nWhich ratio habits needed more practice.\nWhich report the owner actually wanted after week one.\n\nThen the second site benefits from the first site.\n\nThat is not delay.\n\nIt is how operators keep support realistic.\n\nThe cleanest rollout pattern is usually:\n\nPick the strongest pilot site.\nStandardize the record rules.\nRun the daily workflows.\nFix training gaps.\nThen move to the next wave with better instructions.\n\nSoftware rollout is easier when every site does not have to be the test site at once.",
+			"source": "apps/site/src/content/guides/multi-site-childcare-reporting-guide.md",
+			"url": "https://pebbledesk.app/resources/guides/multi-site-childcare-reporting-guide/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Specific rollout advice sourced from the multi-site transition section."
+		},
+		{
+			"index_in_day": 10,
+			"time_central": "13:00",
+			"pillar": "Permissions",
+			"format": "Security-aware post",
+			"post_content": "Multi-site visibility should not mean everyone sees everything.\n\nChildcare records are sensitive.\n\nA site director needs the children, guardians, staff, billing, attendance, and reports for their center.\n\nAn organization owner may need a cross-center view.\n\nA staff member floating between two sites may need access to both, but not a third.\n\nAsk vendors to show how that works.\n\nCan a user be assigned to more than one location?\nCan an owner see portfolio-level reports?\nCan a director be limited to their own site?\nAre child and family records scoped to the center they belong to?\n\nGood oversight has boundaries.\n\nIn childcare, that is not bureaucracy. It is basic record care.",
+			"source": "apps/site/src/content/guides/childcare-software-for-multi-site-evaluation.md",
+			"url": "https://pebbledesk.app/resources/guides/childcare-software-for-multi-site-evaluation/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Permission and center-scoping post aligned with security/data handling guardrails."
+		},
+		{
+			"index_in_day": 11,
+			"time_central": "14:00",
+			"pillar": "Reporting quality",
+			"format": "Anti-spreadsheet post",
+			"post_content": "A report that requires three CSV exports and one heroic spreadsheet is not really a report.\n\nIt is a monthly reconstruction ritual.\n\nFor multi-site childcare operators, the important reports cross location lines:\n\nTotal enrollment.\nRevenue by site and in aggregate.\nSubsidy claim status.\nRatio and licensing issues.\nStaff credential expirations.\nCapacity and waitlist pressure.\n\nIf each report starts with \"send me your latest spreadsheet,\" the operator is still managing separate centers by hand.\n\nDo not just ask whether reports exist.\n\nAsk the vendor to produce one location report and one organization report from the same data model.\n\nThen ask what happens when you add another location next year.",
+			"source": "apps/site/src/content/guides/childcare-software-for-multi-site-evaluation.md",
+			"url": "https://pebbledesk.app/resources/guides/childcare-software-for-multi-site-evaluation/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Concrete demo advice based on the guide's report evaluation section."
+		},
+		{
+			"index_in_day": 12,
+			"time_central": "15:00",
+			"pillar": "Center switching",
+			"format": "Product clarity",
+			"post_content": "Center switching sounds like a small feature until you operate more than one childcare location.\n\nThen it becomes the difference between oversight and tab juggling.\n\nA regional operator should be able to move from one center's attendance, ratios, billing, records, and reports to another without pretending each site is a separate business.\n\nAt the same time, the data should stay scoped.\n\nSite A's child records belong to Site A.\nSite B's billing history belongs to Site B.\nOrganization-level reports should roll up what leadership needs without loosening local access.\n\nThe useful pattern is simple in practice:\n\nOne organization view.\nClear center boundaries.\nEnough context to spot risk before every site has to send a spreadsheet.",
+			"source": "apps/site/src/content/features/multi-location-oversight.md",
+			"url": "https://pebbledesk.app/features/multi-location-oversight/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Product-specific post on center switching and scoped records."
+		},
+		{
+			"index_in_day": 13,
+			"time_central": "16:00",
+			"pillar": "Multi-site evaluation",
+			"format": "Operator questions",
+			"post_content": "Before a multi-site childcare demo, write down the questions that sound like your actual organization.\n\nCan I see all sites without logging in and out?\nCan each site keep its own license and subsidy records clean?\nCan an owner see enrollment and billing across locations?\nCan a director be limited to one center?\nCan a floating staff member have access to two locations?\nCan subsidy reports be produced by site while the owner tracks total claim status?\nCan staff credential expirations be reviewed across the group?\nWhat happens when we add another site?\n\nThose questions are more useful than a feature checklist.\n\nThey force the software to show whether it was built for multi-site operations or merely packaged for them.\n\nThe right system should make oversight calmer.\n\nIt should not make the central office better at chasing people for spreadsheets.",
+			"source": "apps/site/src/content/guides/childcare-software-for-multi-site-evaluation.md",
+			"url": "https://pebbledesk.app/resources/guides/childcare-software-for-multi-site-evaluation/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Demo-prep questions for the target multi-site operator persona."
+		},
+		{
+			"index_in_day": 14,
+			"time_central": "17:00",
+			"pillar": "Consistent daily records",
+			"format": "Daily habit post",
+			"post_content": "Multi-site consistency is built in tiny daily choices.\n\nDid every site close attendance the same way?\nWere room moves recorded in the same place?\nDid subsidy notes attach to the child record or disappear into email?\nWere staff credential updates entered when they happened?\nDid directors use the same incident categories?\nDid billing follow-up land in the same workflow?\n\nThose details look small until leadership needs a clean organization-level answer.\n\nIf each site exports something slightly different, the central office spends its best hours translating.\n\nA good operator rhythm is simple:\n\nSame fields.\nSame closeout habit.\nSame report definitions.\nLocal ownership.\nCentral visibility.\n\nThat is how multi-site oversight becomes practical instead of performative.",
+			"source": "apps/site/src/content/guides/multi-site-childcare-reporting-guide.md",
+			"url": "https://pebbledesk.app/resources/guides/multi-site-childcare-reporting-guide/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Daily-operations version of the consistency theme."
+		},
+		{
+			"index_in_day": 15,
+			"time_central": "18:00",
+			"pillar": "Portfolio readiness",
+			"format": "Closing reflection",
+			"post_content": "The promise of multi-site childcare software is not more dashboards.\n\nIt is fewer surprises.\n\nA staff credential expiring at one site.\nA subsidy claim stuck at another.\nA ratio pattern showing up every Friday afternoon.\nAn enrollment dip that needs attention.\nA billing issue that should not wait until month-end.\n\nGood oversight helps operators see those patterns while the sites can still act.\n\nThe central office does not need to run every classroom.\n\nIt needs a consistent operating record across locations, with enough visibility to answer the right question before it turns into a larger problem.",
+			"source": "apps/site/src/content/features/multi-location-oversight.md",
+			"url": "https://pebbledesk.app/features/multi-location-oversight/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Closes the day by connecting product scope to operator oversight outcomes."
+		}
+	]
+}

@@ -1,0 +1,252 @@
+---
+import { getCurrentYear } from "../lib/dates"
+import type { ReferralReward, SurveyQualificationConfig, SurveyQuestion } from "../types"
+import { EmailCapture } from "./email-capture"
+
+interface EmailCaptureConfig {
+  mode?: "capture" | "cta"
+  heading?: string
+  ctaText?: string
+  ctaTarget?: string
+  buttonText?: string
+  apiUrl: string
+  sourcePage: string
+  surveyQuestions: SurveyQuestion[]
+  surveyQualification?: SurveyQualificationConfig
+  qualification?: SurveyQualificationConfig
+  discoveryCallUrl: string
+  privacyNote?: string
+  errorInvalidEmail?: string
+  errorDuplicate?: string
+  errorGeneric?: string
+  successMessage?: string
+  surveyPreview?: string
+  subtitle?: string
+  whatHappensNext?: string
+  referralRewards?: ReferralReward[]
+  productName?: string
+  productDomain?: string
+  qualifiedHeading?: string
+  qualifiedBody?: string
+  qualifiedCtaText?: string
+  qualifiedDismissText?: string
+  unqualifiedHeading?: string
+  unqualifiedBody?: string
+  unqualifiedCtaText?: string
+  unqualifiedCtaTarget?: string
+  unqualifiedDismissText?: string
+}
+
+interface Props {
+  siteName: string
+  tagline?: string
+  linkGroups?: { heading: string; links: { label: string; href: string }[] }[]
+  legalLinks?: { label: string; href: string }[]
+  emailCapture?: EmailCaptureConfig
+  footerTextColor?: string
+  copyrightSuffix?: string
+  contactEmail?: string
+  captureVariant?: "full" | "compact" | "none"
+}
+
+const {
+  siteName,
+  tagline,
+  linkGroups = [],
+  legalLinks = [],
+  emailCapture,
+  footerTextColor = "var(--color-brand-text)",
+  copyrightSuffix = "All rights reserved.",
+  contactEmail,
+  captureVariant = "full",
+} = Astro.props
+
+const currentYear = getCurrentYear()
+const showEmailCapture = Boolean(emailCapture) && captureVariant !== "none"
+---
+
+<footer data-site-footer class="site-footer border-t border-[color-mix(in_srgb,var(--color-neutral-300)_55%,transparent)] bg-[var(--surface-secondary)] py-[var(--section-py-sm)]">
+  <div class="h-px" style="background: linear-gradient(to right, transparent, color-mix(in srgb, var(--color-accent-300) 70%, transparent), transparent)"></div>
+  <div class="site-footer-shell mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    {showEmailCapture && emailCapture && (
+      <div class:list={[captureVariant === "compact" ? "mb-8" : "mb-12"]}>
+        {captureVariant === "compact" ? (
+          <div data-footer-email-capture class="site-footer-capture rounded-[calc(var(--radius-xl)+2px)] border border-[color-mix(in_srgb,var(--color-neutral-300)_45%,transparent)] bg-[color-mix(in_srgb,var(--surface-elevated)_84%,var(--surface-primary))] p-5 shadow-[var(--shadow-card)] md:flex md:items-start md:justify-between md:gap-8">
+            <div class="max-w-[28rem]">
+              <p class="editorial-kicker">Stay in the loop</p>
+              {emailCapture.heading && (
+                <h3
+                  class="mt-4 font-heading text-[length:var(--text-subheading)] font-bold"
+                  style={`color: ${footerTextColor}`}
+                >
+                  {emailCapture.heading}
+                </h3>
+              )}
+              {emailCapture.subtitle && (
+                <p class="mt-3 text-[length:var(--text-caption)] leading-6 text-[var(--color-brand-muted)]">
+                  {emailCapture.subtitle}
+                </p>
+              )}
+            </div>
+            <div class="mt-5 md:mt-0 w-full sm:min-w-[20rem] md:flex-1">
+              {emailCapture.mode === "cta" ? (
+                <a
+                  href={emailCapture.ctaTarget}
+                  class="btn-primary inline-flex min-w-[16rem] items-center justify-center"
+                >
+                  {emailCapture.ctaText}
+                </a>
+              ) : (
+                <EmailCapture
+                  client:visible
+                  apiUrl={emailCapture.apiUrl}
+                  sourcePage={emailCapture.sourcePage}
+                  surveyQuestions={emailCapture.surveyQuestions}
+                  surveyQualification={emailCapture.qualification ?? emailCapture.surveyQualification}
+                  qualification={emailCapture.qualification ?? emailCapture.surveyQualification}
+                  discoveryCallUrl={emailCapture.discoveryCallUrl}
+                  buttonText={emailCapture.buttonText}
+                  privacyNote={emailCapture.privacyNote}
+                  errorInvalidEmail={emailCapture.errorInvalidEmail}
+                  errorDuplicate={emailCapture.errorDuplicate}
+                  errorGeneric={emailCapture.errorGeneric}
+                  successMessage={emailCapture.successMessage}
+                  surveyPreview={emailCapture.surveyPreview}
+                  subtitle={undefined}
+                  whatHappensNext={emailCapture.whatHappensNext}
+                  referralRewards={emailCapture.referralRewards}
+                  productName={emailCapture.productName}
+                  productDomain={emailCapture.productDomain}
+                  qualifiedHeading={emailCapture.qualifiedHeading}
+                  qualifiedBody={emailCapture.qualifiedBody}
+                  qualifiedCtaText={emailCapture.qualifiedCtaText}
+                  qualifiedDismissText={emailCapture.qualifiedDismissText}
+                  unqualifiedHeading={emailCapture.unqualifiedHeading}
+                  unqualifiedBody={emailCapture.unqualifiedBody}
+                  unqualifiedCtaText={emailCapture.unqualifiedCtaText}
+                  unqualifiedCtaTarget={emailCapture.unqualifiedCtaTarget}
+                  unqualifiedDismissText={emailCapture.unqualifiedDismissText}
+                />
+              )}
+            </div>
+          </div>
+        ) : (
+          <div data-footer-email-capture class="site-footer-capture rounded-[calc(var(--radius-xl)+2px)] border border-[color-mix(in_srgb,var(--color-neutral-300)_45%,transparent)] bg-[color-mix(in_srgb,var(--surface-elevated)_80%,var(--surface-primary))] px-5 py-6 shadow-[var(--shadow-card)] md:px-8 md:py-7">
+            {emailCapture.heading && (
+              <h3
+                class="mb-4 font-heading text-[length:var(--text-body-lg)] font-bold"
+                style={`color: ${footerTextColor}`}
+              >
+                {emailCapture.heading}
+              </h3>
+            )}
+            {emailCapture.mode === "cta" ? (
+              <a
+                href={emailCapture.ctaTarget}
+                class="btn-primary inline-flex items-center justify-center"
+              >
+                {emailCapture.ctaText}
+              </a>
+            ) : (
+              <EmailCapture
+                client:visible
+                apiUrl={emailCapture.apiUrl}
+                sourcePage={emailCapture.sourcePage}
+                surveyQuestions={emailCapture.surveyQuestions}
+                surveyQualification={emailCapture.qualification ?? emailCapture.surveyQualification}
+                qualification={emailCapture.qualification ?? emailCapture.surveyQualification}
+                discoveryCallUrl={emailCapture.discoveryCallUrl}
+                buttonText={emailCapture.buttonText}
+                privacyNote={emailCapture.privacyNote}
+                errorInvalidEmail={emailCapture.errorInvalidEmail}
+                errorDuplicate={emailCapture.errorDuplicate}
+                errorGeneric={emailCapture.errorGeneric}
+                successMessage={emailCapture.successMessage}
+                surveyPreview={emailCapture.surveyPreview}
+                subtitle={emailCapture.subtitle}
+                whatHappensNext={emailCapture.whatHappensNext}
+                referralRewards={emailCapture.referralRewards}
+                productName={emailCapture.productName}
+                productDomain={emailCapture.productDomain}
+                qualifiedHeading={emailCapture.qualifiedHeading}
+                qualifiedBody={emailCapture.qualifiedBody}
+                qualifiedCtaText={emailCapture.qualifiedCtaText}
+                qualifiedDismissText={emailCapture.qualifiedDismissText}
+                unqualifiedHeading={emailCapture.unqualifiedHeading}
+                unqualifiedBody={emailCapture.unqualifiedBody}
+                unqualifiedCtaText={emailCapture.unqualifiedCtaText}
+                unqualifiedCtaTarget={emailCapture.unqualifiedCtaTarget}
+                unqualifiedDismissText={emailCapture.unqualifiedDismissText}
+              />
+            )}
+          </div>
+        )}
+      </div>
+    )}
+
+    <div class="site-footer-grid mb-8 grid grid-cols-1 gap-[var(--component-gap)] md:grid-cols-[minmax(0,0.9fr)_minmax(0,2fr)]">
+      <div data-footer-brand class="site-footer-brand rounded-[var(--radius-lg)] border border-[color-mix(in_srgb,var(--color-neutral-300)_42%,transparent)] bg-[color-mix(in_srgb,var(--surface-primary)_72%,transparent)] p-5 shadow-[var(--shadow-sm)]">
+        <div class="mb-3 flex items-center gap-2">
+          <span class="inline-block h-2 w-2 shrink-0 rounded-full bg-[var(--color-accent-400)]" aria-hidden="true"></span>
+          <span class="font-heading text-base font-bold uppercase leading-none tracking-wide" style={`color: ${footerTextColor}`}>
+            {siteName}
+          </span>
+        </div>
+        {tagline && (
+          <p class="max-w-xs font-body text-[length:var(--text-body-sm)] leading-relaxed text-[var(--color-neutral-500)]">
+            {tagline}
+          </p>
+        )}
+      </div>
+
+      {linkGroups.length > 0 && (
+        <div class="site-footer-links grid grid-cols-1 gap-4 sm:grid-cols-[repeat(auto-fit,minmax(140px,1fr))]">
+          {linkGroups.map((group) => (
+            <div data-footer-link-group class="rounded-[var(--radius-lg)] border border-[color-mix(in_srgb,var(--color-neutral-300)_38%,transparent)] bg-[color-mix(in_srgb,var(--surface-primary)_58%,transparent)] px-5 py-5">
+              <h3 class="mb-4 font-mono text-[length:var(--text-caption)] uppercase tracking-widest text-[var(--color-accent-800)]">
+                {group.heading}
+              </h3>
+              <ul class="m-0 list-none space-y-2.5 p-0">
+                {(group.links ?? []).map((link) => (
+                  <li>
+                    <a
+                      href={link.href}
+                      class="inline-flex min-h-11 min-w-11 items-center font-body text-[length:var(--text-body-sm)] text-[var(--color-neutral-800)] no-underline transition-colors duration-[var(--transition-fast)] hover:text-[var(--color-primary-600)] hover:underline underline-offset-2"
+                    >
+                      {link.label}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+      )}
+    </div>
+
+    <div class="site-footer-bottom flex flex-col items-center justify-between gap-3 border-t border-[color-mix(in_srgb,var(--color-neutral-300)_55%,transparent)] pt-6 sm:flex-row">
+      <p class="font-mono text-[length:var(--text-caption)] text-[var(--color-neutral-500)]">
+        &copy; {currentYear} {siteName}. {copyrightSuffix}
+      </p>
+
+      <nav aria-label="Footer links" class="flex flex-wrap items-center justify-center gap-4">
+        {contactEmail && (
+          <a
+            href={`mailto:${contactEmail}`}
+            class="inline-flex min-h-11 min-w-11 items-center font-mono text-[length:var(--text-caption)] text-[var(--color-neutral-500)] no-underline transition-colors duration-[var(--transition-fast)] hover:text-[var(--color-primary-600)] hover:underline underline-offset-2"
+          >
+            Contact
+          </a>
+        )}
+        {legalLinks.map((link) => (
+          <a
+            href={link.href}
+            class="inline-flex min-h-11 min-w-11 items-center font-mono text-[length:var(--text-caption)] text-[var(--color-neutral-500)] no-underline transition-colors duration-[var(--transition-fast)] hover:text-[var(--color-primary-600)] hover:underline underline-offset-2"
+          >
+            {link.label}
+          </a>
+        ))}
+      </nav>
+    </div>
+  </div>
+</footer>

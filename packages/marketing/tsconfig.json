@@ -1,0 +1,13 @@
+{
+	"extends": "../../tsconfig.json",
+	"compilerOptions": {
+		"outDir": "./dist",
+		"rootDir": "./src",
+		"jsx": "react-jsx",
+		"types": ["@testing-library/jest-dom"],
+		"paths": {
+			"/pagefind/pagefind.js": ["./src/__stubs__/pagefind.ts"]
+		}
+	},
+	"include": ["src/**/*"]
+}

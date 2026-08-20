@@ -1,0 +1,194 @@
+---
+import "../styles/global.css";
+import LandingLayout from "@pebbledesk/marketing/layouts/landing-layout.astro";
+import { getProductSignupUrl, resolvePublicSignupCta } from "@pebbledesk/marketing/lib/public-signup-cta";
+import { formatPlanCapacityClaim, PEBBLEDESK_OFFERING } from "@pebbledesk/shared/constants";
+import { siteConfig } from "@/config/site";
+
+const signupCta = resolvePublicSignupCta({
+  sourcePage: "/about/",
+  explicitTarget: `${getProductSignupUrl()}?source=%2Fabout%2F`,
+  explicitText: "Try the product",
+});
+const homeCapacityClaim = formatPlanCapacityClaim("home");
+const starterCapacityClaim = formatPlanCapacityClaim("center_starter");
+const proCapacityClaim = formatPlanCapacityClaim("center_pro");
+---
+
+<LandingLayout
+  config={siteConfig}
+  canonicalPath="/about"
+  schemaMode="brand"
+  title="About PebbleDesk; Built for Licensed Childcare Centers"
+  description="PebbleDesk serves licensed childcare centers with ratio tracking, subsidy billing, and audit-ready records; no weekly record rebuilds."
+>
+  <!-- Header -->
+  <section class="bg-[var(--surface-primary)] px-4 pb-12 pt-16">
+    <div class="mx-auto max-w-3xl">
+      <h1 class="font-heading text-[length:var(--text-display)] font-bold text-[var(--color-brand-text)]">
+        Built because the admin work was breaking centers.
+      </h1>
+      <p class="mt-6 text-[length:var(--text-body-lg)] leading-8 text-[var(--color-brand-muted)]">
+        PebbleDesk is built for licensed childcare centers that need ratio tracking, subsidy billing, and audit-ready records without rebuilding those records by hand every week. It is built for the director who runs compliance, staffing, and billing from one desk, usually with no admin team.
+      </p>
+    </div>
+  </section>
+
+  <!-- Founder's note -->
+  <section class="bg-[var(--surface-secondary)] px-4 py-14" aria-labelledby="founder-heading">
+    <div class="mx-auto max-w-3xl">
+      <p class="font-mono text-[length:var(--text-caption)] uppercase tracking-[0.18em] text-[var(--color-accent-700)]">
+        A note from the founder
+      </p>
+      <h2 id="founder-heading" class="mt-3 font-heading text-[length:var(--text-heading)] font-bold text-[var(--color-brand-text)]">
+        Solo-built. Bootstrapped. Here to stay.
+      </h2>
+      <div class="mt-6 space-y-5 text-[length:var(--text-body-lg)] leading-8 text-[var(--color-brand-muted)]">
+        <p>
+          PebbleDesk is a solo-operated, bootstrapped business. That might be a reason to look elsewhere; I understand. This is not a private-equity operation or a venture-backed startup with millions to burn. What it is, is a product I care deeply about.
+        </p>
+        <p>
+          I read every support message personally. I take every call personally. I read every feature request and take it seriously. I monitor for bugs constantly and work to fix them fast, usually within a day. If you run into a problem, I want to know about it. Not so a support queue can log it, but because I want to fix it before the next person hits it.
+        </p>
+        <p>
+          My goal is to give you the best software experience you have ever had in this space. If that sounds like a fit, you can start a free trial and see for yourself. And even if you decide not to continue after the trial, I would be grateful for any feedback you can share. It makes PebbleDesk better for everyone who comes after you.
+        </p>
+      </div>
+      <p class="mt-6 text-[length:var(--text-body)] font-medium text-[var(--color-brand-text)]">Angel Campa, Founder
+      </p>
+      <div class="mt-6 flex flex-wrap items-center gap-4">
+        <a
+          href={signupCta.target}
+          class="inline-flex items-center justify-center rounded-[var(--radius-md)] bg-[var(--color-accent-700)] px-6 py-3 font-medium text-white no-underline transition-colors hover:bg-[var(--color-accent-800)]"
+        >
+          {signupCta.text}
+        </a>
+        <a
+          href={`mailto:${siteConfig.contactEmail}`}
+          class="inline-flex items-center justify-center rounded-[var(--radius-md)] border border-[var(--site-panel-border)] px-6 py-3 font-medium text-[var(--color-brand-text)] no-underline transition-colors hover:bg-[var(--site-soft-surface)]"
+        >
+          Send me feedback
+        </a>
+        {siteConfig.author?.sameAs?.[0] && (
+          <a
+            href={siteConfig.author.sameAs[0]}
+            class="inline-flex items-center gap-2 py-3 text-[length:var(--text-body)] text-[var(--color-accent-700)] no-underline transition-colors hover:text-[var(--color-accent-800)]"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            LinkedIn →
+          </a>
+        )}
+      </div>
+    </div>
+  </section>
+
+  <!-- Why we built this -->
+  <section class="bg-[var(--surface-primary)] px-4 py-14" aria-labelledby="problem-heading">
+    <div class="mx-auto max-w-3xl">
+      <p class="font-mono text-[length:var(--text-caption)] uppercase tracking-[0.18em] text-[var(--color-accent-700)]">
+        Background
+      </p>
+      <h2 id="problem-heading" class="mt-3 font-heading text-[length:var(--text-heading)] font-bold text-[var(--color-brand-text)]">
+        The problem we saw
+      </h2>
+      <p class="mt-5 text-[length:var(--text-body-lg)] leading-8 text-[var(--color-brand-muted)]">
+        Provider participation in the CCDF subsidy program fell from 475,394 in 2006 to 225,204 in 2022 <a href="https://acf.gov/occ/data/fy-2022-preliminary-data-table-7" target="_blank" rel="noopener noreferrer" aria-label="Source 1: ACF FY 2022 CCDF data table" class="-my-1 inline-flex min-h-[44px] min-w-[44px] items-center justify-center rounded-md px-2 align-middle text-sm font-semibold text-[var(--color-accent-700)] no-underline hover:bg-[var(--site-soft-surface)] hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent-600)]">[1]</a>. The main drag is paperwork: attendance logs in one place, billing notes in another, licensing records somewhere else. <a href="/resources/guides/why-providers-leaving-subsidy-system/" class="inline-flex min-h-[40px] items-center py-1 text-[var(--color-accent-700)] no-underline hover:underline">More on why providers are leaving →</a>
+      </p>
+      <p class="mt-3 text-[length:var(--text-caption)] text-[var(--color-brand-muted)]">
+        <span class="font-mono">1.</span> ACF Office of Child Care, FY 2022 CCDF Preliminary Data Table 7 (Number of Child Care Providers Receiving CCDF Funds); the 2006 baseline of 475,394 is drawn from the same series of CCDF provider-counts tables.
+      </p>
+      <p class="mt-4 text-[length:var(--text-body-lg)] leading-8 text-[var(--color-brand-muted)]">
+        Most software optimized for the parent experience. Directors were still reconciling by hand before every claim. PebbleDesk is built from the director's desk, not the parent's phone.
+      </p>
+    </div>
+  </section>
+
+  <!-- What we focus on -->
+  <section class="bg-[var(--surface-primary)] px-4 py-14" aria-labelledby="focus-heading">
+    <div class="mx-auto max-w-5xl">
+      <p class="font-mono text-[length:var(--text-caption)] uppercase tracking-[0.18em] text-[var(--color-accent-700)]">
+        What we focus on
+      </p>
+      <h2 id="focus-heading" class="mt-3 font-heading text-[length:var(--text-heading)] font-bold text-[var(--color-brand-text)]">
+        Three things done well
+      </h2>
+
+      <div class="mt-10 grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+        <div class="border-t-2 border-[var(--color-primary-400)] pt-6">
+          <p class="text-[length:var(--text-body)] leading-7 text-[var(--color-brand-text)]">
+            Ratio tracking that catches gaps before the licensor does
+          </p>
+        </div>
+        <div class="border-t-2 border-[var(--color-primary-400)] pt-6">
+          <p class="text-[length:var(--text-body)] leading-7 text-[var(--color-brand-text)]">
+            Subsidy reconciliation tied to attendance, not rebuilt manually
+          </p>
+        </div>
+        <div class="border-t-2 border-[var(--color-primary-400)] pt-6">
+          <p class="text-[length:var(--text-body)] leading-7 text-[var(--color-brand-text)]">
+            Audit exports from one record, not three spreadsheets
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Who this is for -->
+  <section class="bg-[var(--site-editorial-wash)] px-4 py-14" aria-labelledby="audience-heading">
+    <div class="mx-auto max-w-3xl">
+      <p class="font-mono text-[length:var(--text-caption)] uppercase tracking-[0.18em] text-[var(--color-accent-700)]">
+        Who PebbleDesk serves
+      </p>
+      <h2 id="audience-heading" class="mt-3 font-heading text-[length:var(--text-heading)] font-bold text-[var(--color-brand-text)]">
+        Built for directors running licensed programs
+      </h2>
+      <p class="mt-5 text-[length:var(--text-body-lg)] leading-8 text-[var(--color-brand-muted)]">
+        PebbleDesk serves licensed childcare centers, family childcare homes, and multi-site operators that need clearer attendance, ratio, subsidy, billing, and audit records. It is built for the people responsible for proving what happened later: center directors, owner/operators, family childcare providers, administrators, and multi-site operators. Plan fit still matters, but the product starts with whoever owns the daily record: Home for {homeCapacityClaim}, Center Starter for {starterCapacityClaim}, and Center Pro for {proCapacityClaim}.
+      </p>
+    </div>
+  </section>
+
+  <!-- Security / trust -->
+  <section class="bg-[var(--surface-primary)] px-4 py-14">
+    <div class="mx-auto max-w-5xl">
+      <div class="rounded-[var(--radius-xl)] border border-[var(--site-panel-border)] bg-[var(--site-panel-bg)] p-8 shadow-[var(--shadow-card)]">
+        <p class="font-mono text-[length:var(--text-caption)] uppercase tracking-[0.18em] text-[var(--color-accent-700)]">
+          Data & security
+        </p>
+        <h2 class="mt-3 font-heading text-[length:var(--text-subheading)] font-bold text-[var(--color-brand-text)]">
+          Your center's records stay yours
+        </h2>
+        <p class="mt-4 text-[length:var(--text-body)] leading-7 text-[var(--color-brand-muted)]">
+          All center data is isolated. No center can access another center's records, and records are stored in encrypted databases hosted in the United States.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="bg-[var(--surface-secondary)] px-4 py-16">
+    <div class="mx-auto max-w-2xl text-center">
+      <h2 class="font-heading text-[length:var(--text-heading)] font-bold text-[var(--color-brand-text)]">
+        See if PebbleDesk fits your center
+      </h2>
+      <p class="mt-3 text-[length:var(--text-body)] text-[var(--color-brand-muted)]">
+        {PEBBLEDESK_OFFERING.claims.trialDisclosure}
+      </p>
+      <div class="mt-6 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
+        <a
+          href="/pricing/"
+          class="inline-flex items-center justify-center rounded-[var(--radius-md)] border border-[var(--site-panel-border)] px-6 py-3 font-medium text-[var(--color-brand-text)] no-underline transition-colors hover:bg-[var(--site-soft-surface)]"
+        >
+          See the plans
+        </a>
+        <a
+          href={signupCta.target}
+          class="inline-flex items-center justify-center rounded-[var(--radius-md)] bg-[var(--color-accent-700)] px-6 py-3 font-medium text-white no-underline transition-colors hover:bg-[var(--color-accent-800)]"
+        >
+          {signupCta.text}
+        </a>
+      </div>
+    </div>
+  </section>
+</LandingLayout>

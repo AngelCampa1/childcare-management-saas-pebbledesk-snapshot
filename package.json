@@ -1,0 +1,57 @@
+{
+	"name": "pebbledesk",
+	"private": true,
+	"scripts": {
+		"dev": "turbo dev",
+		"dev:stack:start": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/dev/manage-pebbledesk-stack.ps1 start",
+		"dev:stack:stop": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/dev/manage-pebbledesk-stack.ps1 stop",
+		"dev:stack:status": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/dev/manage-pebbledesk-stack.ps1 status",
+		"dev:stack:restart": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/dev/manage-pebbledesk-stack.ps1 restart",
+		"build": "turbo build",
+		"typecheck": "turbo typecheck",
+		"test": "pnpm test:scripts && turbo test",
+		"test:scripts": "node --test scripts/*.test.mjs",
+		"posthog:dashboards:validate": "node scripts/posthog-dashboard-manifest.mjs validate",
+		"posthog:dashboards:plan": "node scripts/posthog-dashboard-manifest.mjs plan",
+		"test:watch": "turbo test:watch",
+		"lint": "biome check apps packages tools package.json pnpm-workspace.yaml turbo.json biome.json",
+		"lint:fix": "biome check --write apps packages tools package.json pnpm-workspace.yaml turbo.json biome.json",
+		"format": "biome format --write apps packages tools package.json pnpm-workspace.yaml turbo.json biome.json",
+		"public-knowledge:generate": "pnpm --filter @pebbledesk/shared public-knowledge:generate",
+		"public-knowledge:check": "pnpm --filter @pebbledesk/shared public-knowledge:check",
+		"cf:bootstrap": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/cloudflare/bootstrap-production.ps1",
+		"cf:deploy": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/cloudflare/deploy-project.ps1",
+		"cf:deploy:all": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/cloudflare/deploy-project.ps1 -Project all",
+		"cf:deploy:api": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/cloudflare/deploy-api.ps1",
+		"cf:deploy:site": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/cloudflare/deploy-site.ps1",
+		"cf:deploy:touched": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/cloudflare/deploy-project.ps1 -Project touched",
+		"cf:deploy:web": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/cloudflare/deploy-web.ps1",
+		"cf:cleanup:marketing": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/cloudflare/cleanup-pages.ps1",
+		"cf:cleanup:pages": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/cloudflare/cleanup-pages.ps1",
+		"db:generate": "pnpm --filter @pebbledesk/db db:generate",
+		"db:migrate": "pnpm --filter @pebbledesk/db db:migrate",
+		"db:studio": "pnpm --filter @pebbledesk/db db:studio",
+		"db:verify:production-schema": "pnpm --filter @pebbledesk/db verify:production-schema"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "^2.4",
+		"playwright": "^1.59.1",
+		"turbo": "^2.9",
+		"typescript": "6.0.3",
+		"wrangler": "^4"
+	},
+	"packageManager": "pnpm@10.11.0",
+	"engines": {
+		"node": ">=20.19.0"
+	},
+	"pnpm": {
+		"overrides": {
+			"devalue": ">=5.8.1",
+			"fast-uri": ">=3.1.2",
+			"fast-xml-builder": ">=1.1.7",
+			"kysely": "0.28.17",
+			"react": "^19.0.0",
+			"react-dom": "^19.0.0"
+		}
+	}
+}

@@ -1,0 +1,171 @@
+{
+	"date": "2026-05-25",
+	"theme": "Practical templates and resources that directors can actually use",
+	"posts": [
+		{
+			"index_in_day": 1,
+			"time_central": "04:00",
+			"pillar": "Licensing compliance resources",
+			"format": "Practical checklist",
+			"post_content": "A licensing checklist earns its keep before the visit.\n\nThe director question is simple:\n\nIf licensing walked in at 8:17 AM, what would we pull first?\n\nA useful checklist starts with the predictable areas:\n\nRoom-by-room ratios.\nStaff background checks, CPR, First Aid, and training hours.\nChild files with enrollment forms, immunizations, allergies, emergency contacts, and custody notes when needed.\nFacility documents like license, inspections, insurance, emergency plan, and incident log.\nSubsidy records, if your program accepts assistance.\n\nThe trick is not making the checklist longer.\n\nIt is making it usable on an ordinary week.\n\nTry a rotating rhythm:\n\nWeek 1: ratios and room coverage.\nWeek 2: staff credentials.\nWeek 3: child files.\nWeek 4: facility documents.\nWeek 5: billing and subsidy support.\n\nThe best checklist is the one your center can use before the day gets loud.",
+			"source": "apps/site/src/content/lead-magnets/licensing-compliance-checklist.md",
+			"url": "https://pebbledesk.app/free/licensing-compliance-checklist/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Introduces the day with a resource-forward use case for the licensing compliance checklist."
+		},
+		{
+			"index_in_day": 2,
+			"time_central": "05:00",
+			"pillar": "Ratio tracking and classroom coverage",
+			"format": "Director habit",
+			"post_content": "A ratio cheat sheet belongs where decisions happen.\n\nNot buried in a handbook.\nNot saved on one administrator's desktop.\nNot remembered from last year's training.\n\nPut your state ratios somewhere staff can see them during the exact moments ratios get fragile:\n\nMorning drop-off.\nLunch breaks.\nOutdoor play.\nNap transitions.\nBathroom breaks.\nAfternoon pickup.\nUnexpected callouts.\n\nThe most useful version includes more than the ratio number.\n\nIt should show:\n\nAge group.\nYour state requirement.\nMaximum children per staff member.\nRoom capacity.\nMixed-age rule.\nWho covers breaks.\nWho to call when the room is about to go out of ratio.\n\nThat last line matters.\n\nA teacher should not have to solve a staffing shortage alone while supervising children.\n\nA practical ratio sheet gives staff a clear next step before a small coverage gap becomes a licensing problem.",
+			"source": "apps/site/src/content/lead-magnets/ratio-tracking-cheatsheet.md",
+			"url": "https://pebbledesk.app/free/ratio-tracking-cheatsheet/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Turns the ratio tracking cheat sheet into a day-to-day placement and staff response habit."
+		},
+		{
+			"index_in_day": 3,
+			"time_central": "06:00",
+			"pillar": "Audit readiness and documentation",
+			"format": "Resource framework",
+			"post_content": "Treat every review like the same binder pull and the first ten minutes get messy.\n\nA licensing inspection, subsidy billing audit, and complaint investigation usually ask different questions.\n\nLicensing may focus on ratios, staff credentials, child files, the physical environment, incident logs, and postings.\n\nSubsidy billing review is more likely to match attendance, authorizations, co-pay records, claims, and payments for a period.\n\nA complaint investigation follows the allegation: people, dates, records, and what happened.\n\nDirectors can make this calmer with three short pull lists:\n\nWhat to pull for licensing.\nWhat to pull for subsidy billing.\nWhat to pull for a complaint investigation.\n\nThat is not overpreparing.\n\nIt lets staff keep supervising children while the right administrator gets the right records.",
+			"source": "apps/site/src/content/lead-magnets/state-audit-preparation-toolkit.md",
+			"url": "https://pebbledesk.app/free/state-audit-preparation-toolkit/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Uses the toolkit's three-audit framework to give directors a practical sorting model."
+		},
+		{
+			"index_in_day": 4,
+			"time_central": "07:00",
+			"pillar": "CCDF billing error prevention",
+			"format": "Pre-submission checklist",
+			"post_content": "Before a CCDF claim is submitted, slow down for the boring five-minute check.\n\nThat check can save weeks of cleanup.\n\nFor each subsidized child, confirm:\n\nThe authorization covers the dates being billed.\nAttendance exists for every claimed day.\nArrival and departure times are present where required.\nAbsence days are counted against your state's limit.\nThe rate code matches the child's age and schedule.\nThe family co-pay is documented according to your state's rules.\nThe claim total matches the support records.\n\nMost billing errors are not dramatic.\n\nThey are small mismatches between care delivered, attendance recorded, authorization dates, and the claim submitted.\n\nThe risky version is submitting first and reconciling later.\n\nThe safer version is catching the mismatch before the claim leaves your building.\n\nA checklist does not replace judgment.\n\nIt protects the director from having to remember every exception while also managing ratios, parents, lunch coverage, and staff questions.",
+			"source": "apps/site/src/content/lead-magnets/ccdf-billing-error-prevention.md",
+			"url": "https://pebbledesk.app/free/ccdf-billing-error-prevention/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Makes the CCDF billing error prevention checklist immediately usable before submission."
+		},
+		{
+			"index_in_day": 5,
+			"time_central": "08:00",
+			"pillar": "State subsidy billing resources",
+			"format": "Operator question",
+			"post_content": "A subsidy billing guide is only useful if it helps a director answer state-specific questions.\n\nNot \"How does CCDF work in general?\"\n\nMore like:\n\nDoes our state pay before care is delivered or after?\nWhat attendance format does the state require?\nDo parents sign electronically, on paper, or through a state system?\nWho collects the co-pay?\nWhat happens if an authorization expires mid-period?\nHow long do we keep billing records?\nWhat is the submission deadline?\nWhat records would we need if a payment is reviewed two years from now?\n\nThose answers should live in your billing process, not only in someone's memory.\n\nThis matters most when a center adds a second location, changes directors, accepts more subsidy families, or serves families across county lines.\n\nThe phrase \"this is how we have always done it\" is not a billing control.\n\nA state-specific reference helps turn subsidy billing from inherited office lore into a written process a new administrator can follow.",
+			"source": "apps/site/src/content/lead-magnets/state-subsidy-billing-guide.md",
+			"url": "https://pebbledesk.app/free/state-subsidy-billing-guide/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Frames the subsidy guide as a practical state-specific process reference."
+		},
+		{
+			"index_in_day": 6,
+			"time_central": "09:00",
+			"pillar": "Software evaluation and buyer education",
+			"format": "Scorecard prompt",
+			"post_content": "A childcare software demo can make almost anything look easy.\n\nA scorecard makes the conversation more honest.\n\nBefore comparing platforms, decide what matters in your center:\n\nAttendance tracking.\nBilling and invoicing.\nSubsidy management.\nParent communication.\nLicensing compliance.\nStaff scheduling.\nPricing.\nMobile quality.\n\nThen weight those categories based on your actual operation.\n\nA subsidy-heavy center should not score subsidy management as a nice-to-have.\nA multi-room center should not treat ratio-aware scheduling as optional.\nAn in-home provider may care less about staff scheduling and more about pricing and parent communication.\n\nThe useful question is not \"Which platform has the longest feature list?\"\n\nIt is:\n\nWhich platform handles the work that creates the most risk, rework, and late-night admin for this specific center?\n\nA scorecard gives directors permission to ignore shiny features that do not solve their day.",
+			"source": "apps/site/src/content/lead-magnets/childcare-software-scorecard.md",
+			"url": "https://pebbledesk.app/free/childcare-software-scorecard/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Uses the scorecard categories and weighting guidance without over-promoting software."
+		},
+		{
+			"index_in_day": 7,
+			"time_central": "10:00",
+			"pillar": "Staff credential tracking",
+			"format": "Monthly admin rhythm",
+			"post_content": "The staff credential tracker should have one owner.\n\nNot every teacher managing their own file.\nNot reminders scattered across personal calendars.\nNot expiration dates hidden in paper folders.\n\nOne master tracker.\nOne responsible administrator.\nOne backup person who knows how to access it.\n\nAt minimum, the tracker should show:\n\nStaff name and role.\nEmployment status.\nBackground check dates and expirations.\nFBI fingerprint status if required.\nChild abuse registry clearance.\nCPR and First Aid expirations.\nTraining hours completed year to date.\nHealth screening or TB renewal dates where required.\nDirector or lead teacher qualification status.\nNotes on renewals in progress.\n\nThe monthly habit is simple:\n\nSort by next expiration.\nAct on anything inside 90 days.\nEscalate anything inside 30 days.\nRemove expired credentials from the schedule if your state requires it.\n\nA credential lapse is one of the most preventable licensing findings.\n\nThe hard part is not knowing credentials expire.\n\nThe hard part is keeping the center from finding out too late.",
+			"source": "apps/site/src/content/lead-magnets/staff-credential-tracker.md",
+			"url": "https://pebbledesk.app/free/staff-credential-tracker/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Turns the credential tracker template into a clear monthly operating rhythm."
+		},
+		{
+			"index_in_day": 8,
+			"time_central": "11:00",
+			"pillar": "Family policies and handbook resources",
+			"format": "Template guidance",
+			"post_content": "A parent handbook is not just a welcome document.\n\nIt is a morning-interruption reducer.\n\nThe most useful handbook sections are the ones that prevent repeated questions and tense conversations:\n\nEnrollment requirements.\nDrop-off and pick-up windows.\nAuthorized pickup rules.\nIllness exclusion and return-to-care rules.\nMedication authorization.\nMeals and snacks.\nDiscipline approach.\nEmergency procedures.\nCommunication expectations.\nHoliday closures.\nFees, late pickup, returned payments, and withdrawal notice.\n\nThe detail matters.\n\n\"Please pick up on time\" is not a policy.\n\n\"Pick-up is by 5:30 PM. Late pickup is charged at $___ per minute and added to the next invoice\" is a policy.\n\n\"Keep sick children home\" is not enough either.\n\nFamilies need to know what fever, vomiting, diarrhea, rash, or communicable illness means for care that day.\n\nA good handbook is not cold.\n\nIt is kind because it makes expectations clear before anyone is upset.",
+			"source": "apps/site/src/content/lead-magnets/parent-handbook-template.md",
+			"url": "https://pebbledesk.app/free/parent-handbook-template/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Makes the parent handbook template useful by naming the high-friction sections directors need."
+		},
+		{
+			"index_in_day": 9,
+			"time_central": "12:00",
+			"pillar": "Ratio tracking and daily records",
+			"format": "Practical tip",
+			"post_content": "If you only check ratios at opening, you are checking the easiest part of the day.\n\nThe harder moments come later:\n\nA teacher leaves for lunch.\nToddlers move outside.\nA preschool room combines near closing.\nA child arrives late.\nA child wakes early from nap.\nA staff member steps out for a bathroom break.\n\nA practical ratio log should capture snapshots when the risk changes, not only when the day begins.\n\nUseful fields:\n\nDate.\nTime.\nRoom.\nAge group.\nChildren present.\nStaff present.\nApplicable ratio.\nWhether the room is within ratio.\nWho corrected the issue if it was close or over.\n\nThis is not busywork if the record matches how your center actually operates.\n\nIt gives directors a way to see patterns:\n\nThe 11:45 lunch gap.\nThe 4:30 pickup compression.\nThe Tuesday substitute problem.\nThe mixed-age room that needs a clearer rule.\n\nA ratio cheat sheet helps staff know the number.\n\nA ratio log helps leadership see where the system needs support.",
+			"source": "apps/site/src/content/lead-magnets/ratio-tracking-cheatsheet.md",
+			"url": "https://pebbledesk.app/free/ratio-tracking-cheatsheet/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Adds a concrete logging structure grounded in the ratio documentation guidance."
+		},
+		{
+			"index_in_day": 10,
+			"time_central": "13:00",
+			"pillar": "Audit readiness and staff preparation",
+			"format": "Staff briefing template",
+			"post_content": "The first five minutes of an inspection should feel boring.\n\nThat only happens if staff know their role before someone from licensing is standing at the door.\n\nA plain staff briefing helps:\n\nGreet the inspector politely.\nAsk them to sign in.\nNotify the director or designated administrator.\nKeep supervising children.\nAnswer basic questions about name, role, room, and children present.\nDo not guess about policies, billing, incidents, or files.\nSend record requests to the director.\n\nThe line worth repeating is this:\n\nSupervision comes first.\n\nA teacher trying to be helpful can accidentally leave the classroom short. A prepared response keeps the visit calmer and keeps children covered.",
+			"source": "apps/site/src/content/lead-magnets/state-audit-preparation-toolkit.md",
+			"url": "https://pebbledesk.app/free/state-audit-preparation-toolkit/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Adapts the toolkit's staff briefing template into a LinkedIn-native practical post."
+		},
+		{
+			"index_in_day": 11,
+			"time_central": "14:00",
+			"pillar": "Subsidy billing reconciliation",
+			"format": "Director habit",
+			"post_content": "A subsidy payment is not the finish line.\n\nIt is the start of reconciliation.\n\nWhen payment arrives, compare:\n\nAmount claimed.\nAmount paid.\nChildren included.\nDays paid.\nRate applied.\nCo-pay deduction or collection record.\nDenied or short-paid line items.\nReason codes, if provided.\nDispute deadline.\n\nThis matters because states can pay less than expected for reasons that are legitimate, incorrect, or unclear.\n\nIf nobody reviews the payment against the claim, the center may never recover a short-pay.\n\nIf the review happens too late, the dispute window may already be gone.\n\nThe practical resource is a simple reconciliation sheet by billing period:\n\nSubmitted.\nExpected.\nReceived.\nDifference.\nReason.\nFollow-up owner.\nFollow-up date.\nResolved.\n\nThat one sheet can protect real revenue without making subsidy billing more mysterious than it already is.",
+			"source": "apps/site/src/content/lead-magnets/ccdf-billing-error-prevention.md",
+			"url": "https://pebbledesk.app/free/ccdf-billing-error-prevention/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Uses the lead magnet's post-payment reconciliation section as a resource-forward habit."
+		},
+		{
+			"index_in_day": 12,
+			"time_central": "15:00",
+			"pillar": "Child and family file readiness",
+			"format": "File audit checklist",
+			"post_content": "A child file audit does not need to be complicated.\n\nPick 10 files each week and check the same items every time:\n\nEnrollment agreement signed.\nParent and guardian contacts current.\nEmergency contacts listed.\nAuthorized pickup list current.\nCustody documentation on file when needed.\nImmunization record current.\nAllergy or medical action plan present when applicable.\nEmergency medical authorization signed.\nMedication forms current if medication is administered.\nSubsidy authorization letter on file if the child receives assistance.\n\nThe goal is not perfection theater.\n\nThe goal is to catch ordinary gaps while families are still reachable and before licensing asks for a random file.\n\nA monthly whole-center audit sounds good, but it often gets pushed behind staffing, tours, billing, and parent needs.\n\nA weekly sample is easier to keep.\n\nAnd after a few weeks, directors start seeing the patterns:\n\nWhich form is always missing.\nWhich classroom needs a better enrollment handoff.\nWhich family records need annual refresh.\n\nThat is how a checklist becomes a better process.",
+			"source": "apps/site/src/content/lead-magnets/licensing-compliance-checklist.md",
+			"url": "https://pebbledesk.app/free/licensing-compliance-checklist/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Applies the licensing checklist to child file maintenance with a realistic weekly sample process."
+		},
+		{
+			"index_in_day": 13,
+			"time_central": "16:00",
+			"pillar": "Software evaluation and compliance fit",
+			"format": "Vendor question list",
+			"post_content": "When evaluating childcare software, ask questions that sound like your actual Tuesday.\n\nCan a teacher check a child in with an exact time?\nCan the director pull attendance by child, room, and date range?\nCan staff credentials be tracked with expiration reminders?\nCan ratio status be viewed by classroom?\nCan incident reports capture the details licensing expects?\nCan subsidy authorization dates be stored per child?\nCan co-pays and state payments be separated cleanly?\nCan records be exported if an auditor asks for them?\nCan parents get receipts and statements without emailing the office?\nCan the pricing still make sense when enrollment grows?\n\nA pretty demo matters less than a clean answer to those questions.\n\nThe scorecard approach helps directors compare tools against the work they are actually responsible for.\n\nNot the biggest promise.\nNot the flashiest parent app.\nNot the longest menu.\n\nThe system that fits is the one that reduces preventable admin risk in the places your center feels it most.",
+			"source": "apps/site/src/content/lead-magnets/childcare-software-scorecard.md",
+			"url": "https://pebbledesk.app/free/childcare-software-scorecard/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Turns the scorecard criteria into practical demo questions for directors."
+		},
+		{
+			"index_in_day": 14,
+			"time_central": "17:00",
+			"pillar": "State subsidy billing resources",
+			"format": "Record retention checklist",
+			"post_content": "Subsidy records should be organized for the future person who has to explain them.\n\nThat person may be you.\n\nIt may also be a new director, owner, bookkeeper, or auditor two years from now.\n\nFor each subsidized child, keep the story together:\n\nAuthorization documents, including expired authorizations.\nAttendance records with timestamps and signatures where required.\nBilling claims submitted.\nPayment remittances received.\nCo-payment records.\nCorrections, disputes, denials, and agency correspondence.\n\nThe state-by-state details matter because retention rules and billing formats vary.\n\nBut the operating principle is the same:\n\nDo not make the next review depend on memory.\n\nName folders consistently.\nOrganize by child and billing period.\nKeep records accessible to administrators, not classroom staff.\nArchive records before staff turnover makes the story harder to reconstruct.\n\nGood record retention is quiet work.\n\nIt becomes very loud only when it was not done.",
+			"source": "apps/site/src/content/lead-magnets/state-subsidy-billing-guide.md",
+			"url": "https://pebbledesk.app/free/state-subsidy-billing-guide/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Uses the subsidy guide's retention and documentation guidance without making state-specific legal advice claims."
+		},
+		{
+			"index_in_day": 15,
+			"time_central": "18:00",
+			"pillar": "Template library and practical operations",
+			"format": "Resource roundup",
+			"post_content": "The best admin resources are the ones directors actually use on a Tuesday.\n\nA licensing checklist for ratios, staff files, child files, facility documents, and subsidy records.\n\nA ratio cheat sheet for lunch breaks, transitions, and callouts.\n\nAn audit toolkit that separates licensing inspections, subsidy billing audits, and complaint investigations.\n\nA CCDF billing checklist for authorizations, attendance, co-pays, rates, and reconciliation.\n\nA state subsidy guide so billing rules do not live in one person's head.\n\nA software scorecard tied to the work your center actually does.\n\nA staff credential tracker that catches expirations before scheduling gets risky.\n\nA parent handbook template that turns repeated family questions into clear expectations.\n\nNot clever.\n\nUseful.\n\nThat is the bar for childcare admin help.",
+			"source": "apps/site/src/pages/free/index.astro",
+			"url": "https://pebbledesk.app/free/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Closes the resource-forward day with a concise roundup of all requested lead magnets."
+		}
+	]
+}

@@ -1,0 +1,24 @@
+---
+export const prerender = true;
+import { getCollection, render } from "astro:content"
+import LeadMagnetPrintLayout from "@pebbledesk/marketing/components/lead-magnet-print-layout.astro"
+import { entrySlug } from "@/lib/page-helpers"
+
+export async function getStaticPaths() {
+  const entries = await getCollection("lead-magnets")
+  return entries.map((entry) => ({
+    params: { slug: entrySlug(entry) },
+    props: { entry },
+  }))
+}
+
+const { entry } = Astro.props
+const { Content } = await render(entry)
+---
+<LeadMagnetPrintLayout
+  title={entry.data.title}
+  subtitle={entry.data.description}
+  magnetSlug={entrySlug(entry)}
+>
+  <Content />
+</LeadMagnetPrintLayout>

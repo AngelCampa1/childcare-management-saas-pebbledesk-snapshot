@@ -1,0 +1,146 @@
+---
+interface Props {
+  code: string
+  label: string
+  renewalLabel?: string
+  validThrough?: string | null
+  urgencyLabel?: string
+  ctaHref?: string
+  ctaLabel?: string
+  emoji?: string
+}
+
+const {
+  code,
+  label,
+  renewalLabel,
+  validThrough,
+  urgencyLabel = "Limited offer",
+  ctaHref,
+  ctaLabel = "View pricing",
+  emoji = "🎉",
+} = Astro.props
+
+// validThrough is a YYYY-MM-DD date. Treat as inclusive through end of that day in UTC.
+const expiryMs = validThrough ? new Date(`${validThrough}T23:59:59Z`).getTime() : 0
+const isExpired = expiryMs > 0 && Number.isFinite(expiryMs) && Date.now() > expiryMs
+
+---
+
+{!isExpired && (
+  <div
+    id="promo-banner"
+    data-promo-banner
+    data-promo-code={code}
+    data-promo-expires-at={expiryMs}
+    role="region"
+    aria-label="Promotional announcement"
+    class="promo-banner sticky top-0 z-50 w-full bg-[var(--color-brand-primary)] text-[var(--color-neutral-50)]"
+  >
+    <span
+      id="promo-banner-status"
+      role="status"
+      aria-live="polite"
+      aria-atomic="true"
+      class="sr-only"
+    ></span>
+    <div class="mx-auto flex max-w-7xl items-center justify-center gap-3 px-4 py-2 sm:px-6 lg:px-8">
+      <span class="hidden sm:inline" aria-hidden="true">{emoji}</span>
+      <p class="m-0 text-center text-[length:var(--text-caption)] leading-snug sm:text-[length:var(--text-body-sm)]">
+        <span class="font-semibold">{urgencyLabel}:</span>{" "}
+        <span class="promo-banner-highlight font-bold">{code} gives {label}.</span>
+        {renewalLabel && <span class="ml-1">{renewalLabel}</span>}
+        {ctaHref && (
+          <a
+            href={ctaHref}
+            class="ml-2 inline-flex min-h-[40px] items-center gap-1 px-1 py-2 underline underline-offset-2 transition-[color,transform] duration-[var(--transition-fast)] hover:translate-x-0.5 hover:text-[var(--color-neutral-50)] hover:opacity-90"
+          >
+            {ctaLabel} <span aria-hidden="true">→</span>
+          </a>
+        )}
+      </p>
+      <button
+        type="button"
+        data-promo-banner-dismiss
+        aria-label="Dismiss promotional banner"
+        class="absolute right-2 top-1/2 inline-flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full text-[var(--color-neutral-50)] opacity-80 transition-[opacity,background-color,transform] duration-[var(--transition-fast)] hover:-translate-y-1/2 hover:scale-110 hover:bg-[color-mix(in_srgb,var(--color-neutral-50)_18%,transparent)] hover:opacity-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-neutral-50)]"
+      >
+        <svg
+          class="h-4 w-4"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 20 20"
+          fill="currentColor"
+          aria-hidden="true"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M4.28 4.28a.75.75 0 0 1 1.06 0L10 8.94l4.66-4.66a.75.75 0 1 1 1.06 1.06L11.06 10l4.66 4.66a.75.75 0 1 1-1.06 1.06L10 11.06l-4.66 4.66a.75.75 0 0 1-1.06-1.06L8.94 10 4.28 5.34a.75.75 0 0 1 0-1.06Z"
+            clip-rule="evenodd"
+          />
+        </svg>
+      </button>
+    </div>
+  </div>
+)}
+
+<style>
+  .promo-banner-highlight {
+    animation: promo-pulse 2.4s ease-in-out infinite;
+  }
+
+  @keyframes promo-pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.78; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .promo-banner-highlight {
+      animation: none;
+    }
+  }
+</style>
+
+<script is:inline data-promo-banner-init>
+  (function () {
+    var DISMISS_KEY = "pebbledesk_promo_dismissed"
+    var banner = document.querySelector("[data-promo-banner]")
+    if (!banner) return
+
+    var code = banner.getAttribute("data-promo-code") || ""
+    var expiresAtRaw = banner.getAttribute("data-promo-expires-at") || "0"
+    var expiresAt = Number(expiresAtRaw)
+
+    function hide() {
+      banner.setAttribute("hidden", "")
+    }
+
+    if (Number.isFinite(expiresAt) && expiresAt > 0 && Date.now() > expiresAt) {
+      hide()
+      return
+    }
+
+    try {
+      var dismissed = window.localStorage.getItem(DISMISS_KEY)
+      if (dismissed && dismissed === code) {
+        hide()
+        return
+      }
+    } catch (err) {
+      /* localStorage unavailable; render banner */
+    }
+
+    var dismissBtn = banner.querySelector("[data-promo-banner-dismiss]")
+    if (dismissBtn) {
+      dismissBtn.addEventListener("click", function () {
+        try {
+          window.localStorage.setItem(DISMISS_KEY, code)
+        } catch (err) {
+          /* ignore */
+        }
+        var status = document.getElementById("promo-banner-status")
+        if (status) status.textContent = "Promotional banner dismissed"
+        hide()
+      })
+    }
+  })()
+</script>

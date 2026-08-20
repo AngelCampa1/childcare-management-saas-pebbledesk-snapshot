@@ -1,0 +1,110 @@
+---
+import "../../../styles/global.css"
+import { getCollection, render } from "astro:content"
+import ComparisonTable from "@pebbledesk/marketing/components/comparison-table.astro"
+import FaqSection from "@pebbledesk/marketing/components/faq-section.astro"
+import FunnelCta from "@pebbledesk/marketing/components/funnel-cta.astro"
+import RelatedPages from "@pebbledesk/marketing/components/related-pages.astro"
+import ComparisonLayout from "@pebbledesk/marketing/layouts/comparison-layout.astro"
+import AnswerBlock from "@pebbledesk/marketing/seo/answer-block.astro"
+import ProsConsBlock from "@pebbledesk/marketing/seo/pros-cons-block.astro"
+import StatisticCitation from "@pebbledesk/marketing/seo/statistic-citation.astro"
+import { getPromotionalPlanPrice } from "@pebbledesk/shared/constants"
+import { inferPageTrack } from "@pebbledesk/marketing/lib/page-track"
+import { siteConfig } from "@/config/site"
+import { buildAlternativeBreadcrumbs } from "@/lib/breadcrumbs"
+import { buildAlternativeComparisonRows } from "@/lib/comparison-rows"
+import { buildContentMap, resolveRelatedLinksWithFallback } from "@/lib/page-helpers"
+
+export async function getStaticPaths() {
+  const entries = await getCollection("alternatives")
+  return entries.map((entry) => ({
+    params: { slug: entry.data.competitor.slug },
+    props: { entry },
+  }))
+}
+
+const { entry } = Astro.props
+const { Content } = await render(entry)
+const { title, description, bluf, buyerStage, publishedAt, updatedAt, competitor, faqs, relatedPages, proscons, answers, pricingStats, noindex } = entry.data
+
+const [alternatives, comparisons, pricingBreakdowns, listicles, guides, statePages, leadMagnets, features] = await Promise.all([
+  getCollection("alternatives"),
+  getCollection("comparisons"),
+  getCollection("pricing-breakdowns"),
+  getCollection("listicles"),
+  getCollection("guides"),
+  getCollection("state-pages"),
+  getCollection("lead-magnets"),
+  getCollection("features"),
+])
+const contentMap = buildContentMap({ alternatives, comparisons, pricingBreakdowns, listicles, guides, statePages, leadMagnets, features })
+
+const canonicalPath = entry.data.canonicalHref ?? `/compare/alternatives/${competitor.slug}`
+const track = inferPageTrack({ track: entry.data.track, pageType: "compare" })
+const resolvedRelatedPages = resolveRelatedLinksWithFallback({ currentPath: canonicalPath, relatedPages, contentMap })
+const breadcrumbs = buildAlternativeBreadcrumbs(competitor.name, canonicalPath)
+const comparisonRows = buildAlternativeComparisonRows(competitor.pricing, competitor.setupFee, siteConfig.product.price)
+const homePromoPrice = getPromotionalPlanPrice("home", "annual")
+const centerStarterPromoPrice = getPromotionalPlanPrice("center_starter", "annual")
+---
+
+<ComparisonLayout
+  title={title}
+  description={description}
+  bluf={bluf}
+  publishedAt={publishedAt}
+  updatedAt={updatedAt}
+  canonicalPath={canonicalPath}
+  config={siteConfig}
+  breadcrumbs={breadcrumbs}
+  answers={answers?.map(a => ({ question: a.q, answer: a.a }))}
+  noindex={noindex}
+  track={track}
+>
+  <div
+    class="mb-8 rounded-[var(--radius-md)] border border-[var(--color-accent-200)] bg-[var(--color-accent-50)] p-5"
+  >
+    <p class="font-[family-name:var(--font-heading)] font-bold text-[var(--color-brand-text)] mb-2">Quick Verdict</p>
+    <p class="text-[var(--color-neutral-700)] text-sm leading-relaxed">{bluf}</p>
+  </div>
+
+  <ComparisonTable
+    headers={["Feature", competitor.name, siteConfig.name]}
+    rows={comparisonRows}
+    highlightColumn={2}
+    verdict={`${siteConfig.name} offers Home at ${homePromoPrice.discountedPriceLabel} and Center Starter at ${centerStarterPromoPrice.discountedPriceLabel} while ${siteConfig.promoBanner.code} is active, with zero setup fees, vs. ${competitor.name} at ${competitor.pricing}${competitor.setupFee ? ` + ${competitor.setupFee} setup` : ""}.`}
+  />
+
+  <Content />
+
+  {proscons && proscons.map((pc) => (
+    <ProsConsBlock subject={pc.subject} pros={pc.pros} cons={pc.cons} />
+  ))}
+
+  {pricingStats && pricingStats.map((s) => (
+    <StatisticCitation stat={s.stat} source={s.source} sourceUrl={s.sourceUrl} />
+  ))}
+
+  {answers && answers.map((a) => (
+    <AnswerBlock question={a.q} answer={a.a} />
+  ))}
+
+  <FaqSection faqs={faqs} />
+
+  <FunnelCta
+    stage={buyerStage}
+    funnel={siteConfig.funnel}
+    sourcePage={canonicalPath}
+    heading="Ready to switch?"
+    subtitle={siteConfig.funnel.ctaSubtitle}
+    benefitBullets={siteConfig.copy?.funnelCta?.benefitBullets}
+  />
+
+  {resolvedRelatedPages.length > 0 && (
+    <RelatedPages
+      pages={resolvedRelatedPages}
+      heading="Related Comparisons"
+    />
+  )}
+</ComparisonLayout>

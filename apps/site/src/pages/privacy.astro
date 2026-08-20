@@ -1,0 +1,98 @@
+---
+import "../styles/global.css";
+import SiteFooter from "@pebbledesk/marketing/components/site-footer.astro";
+import SiteHeader from "@pebbledesk/marketing/components/site-header.astro";
+import { ThemeToggle } from "@pebbledesk/marketing/components/theme-toggle";
+import BaseLayout from "@pebbledesk/marketing/layouts/base-layout.astro";
+import { resolvePublicSignupCta } from "@pebbledesk/marketing/lib/public-signup-cta";
+import { siteConfig } from "@/config/site";
+
+const canonicalUrl = `https://${siteConfig.domain}/privacy`;
+const headerCta = resolvePublicSignupCta({
+  sourcePage: "/privacy",
+  explicitTarget: siteConfig.funnel.bofu.ctaTarget,
+  explicitText: siteConfig.funnel.bofu.ctaText,
+});
+---
+
+<BaseLayout
+  title={`Privacy Policy | ${siteConfig.name}`}
+  description={`Privacy policy for ${siteConfig.name}.`}
+  canonicalUrl={canonicalUrl}
+  siteName={siteConfig.name}
+  siteUrl={`https://${siteConfig.domain}`}
+  themeColor={siteConfig.theme.primary}
+  theme={siteConfig.theme}
+  fonts={siteConfig.theme.fonts}
+  preserveMetaTagCopy={siteConfig.preserveMetaTagCopy}
+  rssUrl="/rss.xml"
+>
+  <SiteHeader
+    slot="header"
+    siteName={siteConfig.name}
+    navItems={siteConfig.nav?.items}
+    signInHref={siteConfig.nav?.signInHref}
+    ctaText={siteConfig.nav?.ctaText ?? headerCta.text}
+    ctaHref={headerCta.target}
+    logoLight={siteConfig.logo?.light}
+    logoDark={siteConfig.logo?.dark}
+    promo={siteConfig.promoBanner}
+  >
+    <ThemeToggle client:load slot="theme-toggle" />
+  </SiteHeader>
+
+  <section class="px-4 py-20 sm:px-6 lg:px-8" style="background: var(--site-editorial-wash);">
+    <div class="mx-auto max-w-4xl rounded-[var(--radius-xl)] border border-[var(--site-panel-border)] bg-[var(--site-panel-bg)] px-4 py-10 sm:px-6 lg:px-8 shadow-[var(--shadow-lg)]">
+      <p class="font-mono text-sm uppercase tracking-[0.18em] text-[var(--color-accent-700)]">
+        Privacy
+      </p>
+      <h1 class="mt-4 text-4xl font-bold text-[var(--color-brand-text)]">
+        Privacy Policy
+      </h1>
+      <p class="mt-4 text-lg leading-8 text-[var(--color-brand-muted)]">
+        PebbleDesk collects only the information needed to run the site, support account creation and onboarding, and improve the product. We do not sell personal information.
+      </p>
+
+      <div class="prose prose-lg mt-10 max-w-none prose-p:max-w-[var(--content-measure)] prose-li:max-w-[var(--content-measure)]">
+        <h2>Information We Collect</h2>
+        <p>
+          We collect the details you submit through forms on this site, such as your name, work email, center information, and account-setup details. We also collect standard analytics and error-monitoring data that help us understand site performance and signup completion.
+        </p>
+
+        <h2>How We Use Information</h2>
+        <p>
+          We use submitted information to create your account, route you into the right onboarding flow, send transactional emails, and understand which product workflows matter most to prospective customers.
+        </p>
+
+        <h2>Service Providers</h2>
+        <p>
+          PebbleDesk uses third-party services to operate the site and support account creation, including infrastructure, email delivery, analytics, and signup tooling. Those providers process data only to support these functions.
+        </p>
+
+        <h2>Retention</h2>
+        <p>
+          We keep inquiry and survey data for as long as it remains relevant to product research, support, or compliance needs. We may remove data earlier when it is no longer needed.
+        </p>
+
+        <h2>Your Choices</h2>
+        <p>
+          You can request access, correction, or deletion of the personal information you submitted to PebbleDesk by emailing <a class="inline-flex min-h-[40px] items-center py-1" href={`mailto:${siteConfig.contactEmail}`}>{siteConfig.contactEmail}</a>.
+        </p>
+
+        <h2>Contact</h2>
+        <p>
+          If you have privacy questions about this site or an account-creation submission you made, contact <a class="inline-flex min-h-[40px] items-center py-1" href={`mailto:${siteConfig.contactEmail}`}>{siteConfig.contactEmail}</a>.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <SiteFooter
+    slot="footer"
+    siteName={siteConfig.name}
+    tagline={siteConfig.tagline}
+    linkGroups={siteConfig.footer?.linkGroups}
+    legalLinks={siteConfig.footer?.legalLinks}
+    contactEmail={siteConfig.contactEmail}
+  />
+</BaseLayout>

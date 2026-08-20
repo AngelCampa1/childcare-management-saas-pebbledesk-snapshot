@@ -1,0 +1,171 @@
+{
+	"date": "2026-05-29",
+	"theme": "Attendance as the source record for billing and compliance",
+	"posts": [
+		{
+			"index_in_day": 1,
+			"time_central": "04:00",
+			"pillar": "Attendance records",
+			"format": "Point of view",
+			"post_content": "Attendance is not just a morning task.\n\nIt is the source record for a lot of later questions:\n\nWho was present?\nWhen did care happen?\nWhich room counted the child?\nWhat should be billed?\nWhat supports the subsidy claim?\nWhat does licensing need to see?\n\nIf the attendance record is weak, every downstream answer gets harder.\n\nThat is why attendance deserves more respect than a clipboard by the door.",
+			"source": "apps/site/src/content/features/attendance-tracking.md",
+			"url": "https://pebbledesk.app/features/attendance-tracking/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Grounded in attendance feeding room status, ratio review, billing support, and audit prep."
+		},
+		{
+			"index_in_day": 2,
+			"time_central": "05:00",
+			"pillar": "CCDF documentation",
+			"format": "Practical explainer",
+			"post_content": "For CCDF billing, the attendance record has a specific job.\n\nIt has to connect the billed day to a real child, date of service, time in, time out, and the required verification.\n\nThat is not complicated in theory.\n\nIt is hard in practice because it has to happen every day, for every child, while the center is also running.\n\nThe strongest attendance system is the one that makes the required record part of the moment, not a month-end memory exercise.",
+			"source": "apps/site/src/content/guides/ccdf-attendance-documentation-requirements.md",
+			"url": "https://pebbledesk.app/resources/guides/ccdf-attendance-documentation-requirements/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Uses the guide's CCDF data elements and same-day verification principle."
+		},
+		{
+			"index_in_day": 3,
+			"time_central": "06:00",
+			"pillar": "Billing alignment",
+			"format": "Operator risk note",
+			"post_content": "One incomplete attendance day can create more than one problem.\n\nIt can affect the family invoice.\nIt can affect a subsidy claim.\nIt can weaken ratio documentation.\nIt can create cleanup work in the report.\n\nThat is the compounding error most centers feel but do not always name.\n\nAttendance is not a side record. It is the starting point for the financial and compliance story of the day.",
+			"source": "apps/site/src/content/guides/cost-of-manual-attendance-tracking.md",
+			"url": "https://pebbledesk.app/resources/guides/cost-of-manual-attendance-tracking/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Grounded in the guide's compounding error cycle from attendance to billing, subsidy, and reporting."
+		},
+		{
+			"index_in_day": 4,
+			"time_central": "07:00",
+			"pillar": "Morning operations",
+			"format": "Practical tip",
+			"post_content": "A good attendance habit for directors:\n\nDo not wait until the end of the day to find the missing morning record.\n\nIf a child was present, the record should be clear while the people who saw arrival still remember it.\n\nSame-day notes are stronger than retroactive cleanup.\nClear time stamps are stronger than rounded guesses.\nA complete record is stronger than a story everyone has to reconstruct later.",
+			"source": "apps/site/src/content/guides/ccdf-attendance-documentation-requirements.md",
+			"url": "https://pebbledesk.app/resources/guides/ccdf-attendance-documentation-requirements/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Grounded in same-day verification and retroactive signature risk."
+		},
+		{
+			"index_in_day": 5,
+			"time_central": "08:00",
+			"pillar": "Subsidy billing",
+			"format": "Plain-language warning",
+			"post_content": "Subsidy reimbursement work gets expensive when attendance and billing live in different realities.\n\nThe claim says one thing.\nThe attendance record says another.\nThe authorization document is in a third place.\nThe co-pay receipt is somewhere else.\n\nThat is where directors lose time: not because the care did not happen, but because the proof has to be stitched back together.\n\nThe cleaner path is one underlying attendance record that billing can point back to.",
+			"source": "apps/site/src/content/features/subsidy-billing.md",
+			"url": "https://pebbledesk.app/features/subsidy-billing/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Uses subsidy feature page's connected attendance, child records, billing, and reporting framing."
+		},
+		{
+			"index_in_day": 6,
+			"time_central": "09:00",
+			"pillar": "Family billing",
+			"format": "Director prompt",
+			"post_content": "When a family questions a charge, what does the office reach for first?\n\nThe invoice?\nThe attendance record?\nA note from the classroom?\nA message thread?\n\nBilling is easier to explain when the invoice is connected to the same child and family record the center already uses every day.\n\nAttendance does not answer every billing question by itself, but it is often the first piece of proof.",
+			"source": "apps/site/src/content/features/billing-payments.md",
+			"url": "https://pebbledesk.app/features/billing-payments/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Grounded in billing tied to child and family record, invoices, and payment status tracking."
+		},
+		{
+			"index_in_day": 7,
+			"time_central": "10:00",
+			"pillar": "Absence tracking",
+			"format": "Checklist",
+			"post_content": "Absences need records too.\n\nA useful attendance review asks:\n\n- Was the child absent or just not signed in?\n- Is there a same-day note?\n- Is the absence billable under the applicable program rules?\n- Is the reason code required?\n- Does the billing record match the attendance record?\n\nA blank attendance line is not the same as an absence record.\n\nThat difference matters when the claim is reviewed.",
+			"source": "apps/site/src/content/guides/ccdf-attendance-documentation-requirements.md",
+			"url": "https://pebbledesk.app/resources/guides/ccdf-attendance-documentation-requirements/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Uses absence documentation, absence reason codes, and billable absence guidance."
+		},
+		{
+			"index_in_day": 8,
+			"time_central": "11:00",
+			"pillar": "Licensing documentation",
+			"format": "Explainer",
+			"post_content": "Licensing and subsidy reviews look at attendance differently, but they both care about the record.\n\nLicensing wants to understand who was present, when, and whether ratios held.\n\nCCDF billing wants to understand which authorized children were present for the billed dates.\n\nThe same attendance record can support both if it captures the basics clearly.\n\nThat is the practical win: one clean record, fewer versions of the truth.",
+			"source": "apps/site/src/content/guides/ccdf-attendance-documentation-requirements.md",
+			"url": "https://pebbledesk.app/resources/guides/ccdf-attendance-documentation-requirements/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Grounded in the guide's distinction between CCDF and licensing attendance documentation."
+		},
+		{
+			"index_in_day": 9,
+			"time_central": "12:00",
+			"pillar": "Record quality",
+			"format": "Myth vs reality",
+			"post_content": "Myth: Digital attendance automatically solves the record problem.\n\nReality: The record still has to stay connected to the workflows that depend on it.\n\nA check-in screen is useful.\nBut directors also need room context, billing support, ratio review, reports, and child records that agree with the day.\n\nThe value is not just capturing a tap.\n\nThe value is keeping the day understandable when someone asks about it later.",
+			"source": "apps/site/src/content/features/attendance-tracking.md",
+			"url": "https://pebbledesk.app/features/attendance-tracking/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Uses attendance feature page's framing that digital capture is valuable because it feeds the broader operating record."
+		},
+		{
+			"index_in_day": 10,
+			"time_central": "13:00",
+			"pillar": "Manual attendance risk",
+			"format": "Operational observation",
+			"post_content": "Paper attendance can be legal and still be fragile.\n\nHandwriting gets unclear.\nTimes get rounded.\nSign-outs get missed.\nSheets get filed before someone checks them.\n\nThe risk is not only the paper.\nIt is the delay between what happened and when the record becomes complete.\n\nFor billing and compliance, the best record is the one captured close to the actual moment.",
+			"source": "apps/site/src/content/guides/cost-of-manual-attendance-tracking.md",
+			"url": "https://pebbledesk.app/resources/guides/cost-of-manual-attendance-tracking/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Grounded in manual attendance issues like unclear records, reconstructed entries, and downstream risk."
+		},
+		{
+			"index_in_day": 11,
+			"time_central": "14:00",
+			"pillar": "Audit reports",
+			"format": "Question post",
+			"post_content": "A useful attendance report should help answer more than \"who came today?\"\n\nIt should help answer:\n\nWho was present during the ratio question?\nWhich child record supports this billing item?\nWhat attendance history supports the subsidy claim?\nWhat changed after the original entry?\n\nReports become more useful when they point back to the same operating record instead of asking the director to reconcile separate exports.",
+			"source": "apps/site/src/content/features/audit-reports.md",
+			"url": "https://pebbledesk.app/features/audit-reports/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Grounded in audit reports connecting attendance, ratio, billing, and audit-log context."
+		},
+		{
+			"index_in_day": 12,
+			"time_central": "15:00",
+			"pillar": "Same-day cleanup",
+			"format": "Checklist",
+			"post_content": "Friday attendance cleanup before close:\n\n- Missing sign-ins\n- Missing sign-outs\n- Unclear absence notes\n- Room changes that never made it into the record\n- Staff verification notes for pickup misses\n- Billing exceptions that should not wait until Monday\n\nThis is not about making Friday pristine.\n\nIt is about protecting Monday morning from last week's loose ends.\n\nA missing sign-out is easier to fix while staff still remember pickup.\n\nA billing exception is easier to explain before the invoice run.\n\nAttendance cleanup gets harder every day it waits.",
+			"source": "apps/site/src/content/guides/ccdf-attendance-documentation-requirements.md",
+			"url": "https://pebbledesk.app/resources/guides/ccdf-attendance-documentation-requirements/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Rewritten to make the ending specific to Friday attendance cleanup."
+		},
+		{
+			"index_in_day": 13,
+			"time_central": "16:00",
+			"pillar": "Product positioning",
+			"format": "Founder POV",
+			"post_content": "PebbleDesk was built around a simple recordkeeping belief:\n\nThe daily childcare record should not split apart before billing, subsidy, ratios, and audit work begin.\n\nAttendance is the front door to that record.\n\nIf it stays tied to child, classroom, family, billing, and reporting context, the director has less to rebuild later.\n\nThat is the work PebbleDesk is designed to support.",
+			"source": "packages/shared/src/constants/offering.ts",
+			"url": "https://pebbledesk.app/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Safe product-thesis framing based on positioning and connected workflow claims."
+		},
+		{
+			"index_in_day": 14,
+			"time_central": "17:00",
+			"pillar": "Subsidy reimbursement",
+			"format": "Practical reminder",
+			"post_content": "Most subsidy work is easier when the supporting record is boring.\n\nThe child was authorized.\nThe child was present or absent with a clear record.\nThe attendance day matches the billed day.\nThe co-pay or payment context is traceable.\nThe report can be pulled without rebuilding the month.\n\nBoring records are underrated.\nThey are what keep reimbursement follow-up from becoming a research project.",
+			"source": "apps/site/src/content/guides/subsidy-reimbursement-tracking-guide.md",
+			"url": "https://pebbledesk.app/resources/guides/subsidy-reimbursement-tracking-guide/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Uses subsidy reimbursement tracking concepts; source was identified as relevant repo content."
+		},
+		{
+			"index_in_day": 15,
+			"time_central": "18:00",
+			"pillar": "Connected records",
+			"format": "End-of-day reflection",
+			"post_content": "A strong attendance record protects more than attendance.\n\nIt supports ratios.\nIt supports invoices.\nIt supports subsidy claims.\nIt supports licensing questions.\nIt supports families who need a clear answer.\n\nThat is why attendance deserves director-level attention, even when the day feels routine.\n\nThe routine days are where the audit-ready record is built.",
+			"source": "packages/shared/src/public-knowledge/data.ts",
+			"url": "https://pebbledesk.app/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Grounded in public knowledge about attendance, ratios, family records, billing context, messaging, and reports."
+		}
+	]
+}

@@ -1,0 +1,112 @@
+---
+import "../../../styles/global.css"
+import { getCollection, render } from "astro:content"
+import ComparisonTable from "@pebbledesk/marketing/components/comparison-table.astro"
+import FaqSection from "@pebbledesk/marketing/components/faq-section.astro"
+import FunnelCta from "@pebbledesk/marketing/components/funnel-cta.astro"
+import RelatedPages from "@pebbledesk/marketing/components/related-pages.astro"
+import ComparisonLayout from "@pebbledesk/marketing/layouts/comparison-layout.astro"
+import AnswerBlock from "@pebbledesk/marketing/seo/answer-block.astro"
+import DataTableBlock from "@pebbledesk/marketing/seo/data-table-block.astro"
+import ProsConsBlock from "@pebbledesk/marketing/seo/pros-cons-block.astro"
+import { inferPageTrack } from "@pebbledesk/marketing/lib/page-track"
+import { siteConfig } from "@/config/site"
+import { buildVersusBreadcrumbs } from "@/lib/breadcrumbs"
+import { buildVersusComparisonTable } from "@/lib/comparison-rows"
+import { buildContentMap, resolveRelatedLinksWithFallback } from "@/lib/page-helpers"
+
+export async function getStaticPaths() {
+  const entries = await getCollection("comparisons")
+  return entries
+    .filter((entry) => entry.data.competitorA.slug !== entry.data.competitorB.slug)
+    .map((entry) => ({
+      params: { slugA: entry.data.competitorA.slug, slugB: entry.data.competitorB.slug },
+      props: { entry },
+    }))
+}
+
+const { entry } = Astro.props
+const { Content } = await render(entry)
+const { title, description, bluf, buyerStage, publishedAt, updatedAt, competitorA, competitorB, verdict, faqs, relatedPages, tableData, proscons, answers, noindex } = entry.data
+const canonicalPath = entry.data.canonicalHref ?? `/compare/versus/${competitorA.slug}-vs-${competitorB.slug}`
+const track = inferPageTrack({ track: entry.data.track, pageType: "compare" })
+
+const [alternatives, comparisons, pricingBreakdowns, listicles, guides, statePages, leadMagnets, features] = await Promise.all([
+  getCollection("alternatives"),
+  getCollection("comparisons"),
+  getCollection("pricing-breakdowns"),
+  getCollection("listicles"),
+  getCollection("guides"),
+  getCollection("state-pages"),
+  getCollection("lead-magnets"),
+  getCollection("features"),
+])
+const contentMap = buildContentMap({ alternatives, comparisons, pricingBreakdowns, listicles, guides, statePages, leadMagnets, features })
+const resolvedRelatedPages = resolveRelatedLinksWithFallback({ currentPath: canonicalPath, relatedPages, contentMap })
+
+const breadcrumbs = buildVersusBreadcrumbs(competitorA.name, competitorB.name, canonicalPath)
+const comparisonTable = buildVersusComparisonTable(
+  competitorA,
+  competitorB,
+  siteConfig.name,
+  siteConfig.product.price,
+)
+---
+
+<ComparisonLayout
+  title={title}
+  description={description}
+  bluf={bluf}
+  buyerStage={buyerStage}
+  publishedAt={publishedAt}
+  updatedAt={updatedAt}
+  canonicalPath={canonicalPath}
+  config={siteConfig}
+  breadcrumbs={breadcrumbs}
+  answers={answers?.map(a => ({ question: a.q, answer: a.a }))}
+  noindex={noindex}
+  track={track}
+>
+  <ComparisonTable
+    headers={comparisonTable.headers}
+    rows={comparisonTable.rows}
+    highlightColumn={comparisonTable.highlightColumn}
+  />
+
+  <Content />
+
+  {tableData && (
+    <DataTableBlock
+      name={tableData.name}
+      description={tableData.description}
+      columns={tableData.columns}
+      rows={tableData.rows}
+    />
+  )}
+
+  {proscons && proscons.map((pc) => (
+    <ProsConsBlock subject={pc.subject} pros={pc.pros} cons={pc.cons} />
+  ))}
+
+  {answers && answers.map((a) => (
+    <AnswerBlock question={a.q} answer={a.a} />
+  ))}
+
+  <h2 class="text-2xl font-bold mt-12 mb-4">Verdict</h2>
+  <p class="text-lg text-[var(--color-brand-muted)] mb-8">{verdict}</p>
+
+  <FaqSection faqs={faqs} />
+  <FunnelCta
+    stage={buyerStage}
+    funnel={siteConfig.funnel}
+    sourcePage={canonicalPath}
+    subtitle={siteConfig.funnel.ctaSubtitle}
+  />
+
+  {resolvedRelatedPages.length > 0 && (
+    <RelatedPages
+      pages={resolvedRelatedPages}
+      heading="Related Comparisons"
+    />
+  )}
+</ComparisonLayout>

@@ -1,0 +1,104 @@
+---
+import "../styles/global.css";
+import SiteFooter from "@pebbledesk/marketing/components/site-footer.astro";
+import SiteHeader from "@pebbledesk/marketing/components/site-header.astro";
+import { ThemeToggle } from "@pebbledesk/marketing/components/theme-toggle";
+import BaseLayout from "@pebbledesk/marketing/layouts/base-layout.astro";
+import { resolvePublicSignupCta } from "@pebbledesk/marketing/lib/public-signup-cta";
+import { formatLimitedOfferTerms } from "@pebbledesk/shared/constants";
+import { siteConfig } from "@/config/site";
+
+const canonicalUrl = `https://${siteConfig.domain}/terms`;
+const headerCta = resolvePublicSignupCta({
+  sourcePage: "/terms",
+  explicitTarget: siteConfig.funnel.bofu.ctaTarget,
+  explicitText: siteConfig.funnel.bofu.ctaText,
+});
+---
+
+<BaseLayout
+  title={`Terms of Use | ${siteConfig.name}`}
+  description={`Terms of use for ${siteConfig.name}.`}
+  canonicalUrl={canonicalUrl}
+  siteName={siteConfig.name}
+  siteUrl={`https://${siteConfig.domain}`}
+  themeColor={siteConfig.theme.primary}
+  theme={siteConfig.theme}
+  fonts={siteConfig.theme.fonts}
+  preserveMetaTagCopy={siteConfig.preserveMetaTagCopy}
+  rssUrl="/rss.xml"
+>
+  <SiteHeader
+    slot="header"
+    siteName={siteConfig.name}
+    navItems={siteConfig.nav?.items}
+    signInHref={siteConfig.nav?.signInHref}
+    ctaText={siteConfig.nav?.ctaText ?? headerCta.text}
+    ctaHref={headerCta.target}
+    logoLight={siteConfig.logo?.light}
+    logoDark={siteConfig.logo?.dark}
+    promo={siteConfig.promoBanner}
+  >
+    <ThemeToggle client:load slot="theme-toggle" />
+  </SiteHeader>
+
+  <section class="px-4 py-20 sm:px-6 lg:px-8" style="background: var(--site-editorial-wash);">
+    <div class="mx-auto max-w-4xl rounded-[var(--radius-xl)] border border-[var(--site-panel-border)] bg-[var(--site-panel-bg)] px-4 py-10 sm:px-6 lg:px-8 shadow-[var(--shadow-lg)]">
+      <p class="font-mono text-sm uppercase tracking-[0.18em] text-[var(--color-accent-700)]">
+        Terms
+      </p>
+      <h1 class="mt-4 text-4xl font-bold text-[var(--color-brand-text)]">
+        Terms of Use
+      </h1>
+      <p class="mt-4 text-lg leading-8 text-[var(--color-brand-muted)]">
+        These terms govern use of the PebbleDesk website and any information or trial-request workflows provided through it.
+      </p>
+
+      <div class="prose prose-lg mt-10 max-w-none prose-p:max-w-[var(--content-measure)] prose-li:max-w-[var(--content-measure)]">
+        <h2>Use of the Site</h2>
+        <p>
+          You may use this site to review PebbleDesk information, request access, and communicate with us about the product. You agree not to misuse the site, interfere with its operation, or submit false information through forms.
+        </p>
+
+        <h2>Product Information</h2>
+        <p>
+          PebbleDesk publishes product, pricing, and research content in good faith, but site content may change over time. Nothing on this site creates a guarantee of product availability, specific features, or service levels unless confirmed separately in writing.
+        </p>
+
+        <h2 id="limited-offer">Limited Offer Details</h2>
+        <p>
+          {formatLimitedOfferTerms()}
+        </p>
+
+        <h2>Intellectual Property</h2>
+        <p>
+          The PebbleDesk name, branding, copy, design, and site content are owned by PebbleDesk or its licensors. You may not reuse them beyond normal browsing and internal evaluation without permission.
+        </p>
+
+        <h2>Third-Party Services</h2>
+        <p>
+          Some workflows on this site depend on third-party infrastructure, analytics, and communication providers. Their availability can affect parts of the site experience.
+        </p>
+
+        <h2>Disclaimer</h2>
+        <p>
+          This site is provided on an &quot;as is&quot; basis. To the extent permitted by law, PebbleDesk disclaims warranties regarding uninterrupted availability, completeness, or fitness for a particular purpose.
+        </p>
+
+        <h2>Contact</h2>
+        <p>
+          Questions about these terms can be sent to <a class="inline-flex min-h-[40px] items-center py-1" href={`mailto:${siteConfig.contactEmail}`}>{siteConfig.contactEmail}</a>.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <SiteFooter
+    slot="footer"
+    siteName={siteConfig.name}
+    tagline={siteConfig.tagline}
+    linkGroups={siteConfig.footer?.linkGroups}
+    legalLinks={siteConfig.footer?.legalLinks}
+    contactEmail={siteConfig.contactEmail}
+  />
+</BaseLayout>

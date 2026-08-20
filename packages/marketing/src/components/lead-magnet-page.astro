@@ -1,0 +1,276 @@
+---
+import BaseLayout from "../layouts/base-layout.astro"
+import { resolvePopupMagnetForSlug } from "../lib/resolve-popup-magnet"
+import { resolveExitPopupProps } from "../lib/exit-popup-props"
+import { buildFooterEmailCaptureProps } from "../lib/footer-utils"
+import { getLeadMagnetFaqItems } from "../lib/lead-magnet-faq"
+import { buildLeadMagnetBreadcrumbs } from "../lib/lead-magnet-breadcrumbs"
+import { splitContentAtGate, stripLeadingHeadingOne } from "../lib/lead-magnet-utils"
+import { resolveMarketingApiUrl } from "../lib/marketing-api-url"
+import { composeMetaTitle, ensureTrailingSlash } from "../lib/meta"
+import { resolvePublicSignupCta } from "../lib/public-signup-cta"
+import AnswerBlock from "../seo/answer-block.astro"
+import BlufBlock from "../seo/bluf-block.astro"
+import DefinitionBlock from "../seo/definition-block.astro"
+import type { RelatedPage, SiteConfig } from "../types"
+import BreadcrumbNav from "./breadcrumb-nav.astro"
+import { ExitIntentPopup } from "./exit-intent-popup"
+import { GatedContent } from "./gated-content"
+import SiteFooter from "./site-footer.astro"
+import SiteHeader from "./site-header.astro"
+import RelatedPages from "./related-pages.astro"
+
+interface LeadMagnetData {
+  title: string
+  description: string
+  publishedAt: string
+  updatedAt: string
+  bluf: string
+  freePreviewSections: number
+  ogImage?: string
+  tags?: string[]
+  relatedPages: string[]
+  noindex?: boolean
+  answers?: { q: string, a: string }[]
+  definitions: { term: string; definition: string }[]
+  bullets?: string[]
+  pdfCoverUrl?: string
+}
+
+interface Props {
+  entry: { data: LeadMagnetData; id: string }
+  config: SiteConfig
+  headings?: { depth: number; slug: string; text: string }[]
+  hubLabel?: string
+  hubHref?: string
+  relatedLinks?: RelatedPage[]
+  noindex?: boolean
+}
+
+const {
+  entry,
+  config,
+  hubLabel,
+  hubHref,
+  relatedLinks = [],
+  noindex = entry.data.noindex,
+} = Astro.props
+const { data } = entry
+const { answers, definitions } = data
+const magnetSlug = entry.id.replace(/\.mdx?$/, "").split(/[\\/]/).filter(Boolean).at(-1) ?? entry.id
+
+const renderedHtml = stripLeadingHeadingOne(await Astro.slots.render("default"))
+const { teaser } = splitContentAtGate(renderedHtml, data.freePreviewSections)
+
+const canonicalPath = entry.data.canonicalHref ?? `/free/${magnetSlug}`
+const canonicalUrl = ensureTrailingSlash(`https://${config.domain}${canonicalPath}`)
+const printPath = ensureTrailingSlash(`${canonicalPath.replace(/\/$/, "")}/print`)
+
+const breadcrumbs = buildLeadMagnetBreadcrumbs({
+  title: data.title,
+  canonicalPath,
+  hubLabel,
+  hubHref,
+})
+
+const exitPopupProps = config.exitPopup?.enabled !== false ? resolveExitPopupProps(config) : undefined
+const marketingApiUrl = resolveMarketingApiUrl(
+  import.meta.env.PUBLIC_API_URL as string | undefined,
+  Astro.url.origin,
+)
+const turnstileSiteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY as string | undefined
+const footerEmailCapture = buildFooterEmailCaptureProps(config, canonicalPath)
+const headerCta = resolvePublicSignupCta({
+  sourcePage: canonicalPath,
+  explicitTarget: config.funnel.bofu.ctaTarget,
+  explicitText: config.funnel.bofu.ctaText,
+})
+
+const ctaText = config.leadMagnet?.ctaText ?? "Get the Free Guide"
+const description = config.leadMagnet?.teaser ?? data.description
+
+// Use the magnet's own track to serve a relevant popup magnet
+const popupMagnet = resolvePopupMagnetForSlug(magnetSlug)
+
+const faqItems = getLeadMagnetFaqItems()
+---
+
+<BaseLayout
+  title={composeMetaTitle(data.title, config.name)}
+  description={data.description}
+  canonicalUrl={canonicalUrl}
+  siteName={config.name}
+  publishedAt={data.publishedAt}
+  updatedAt={data.updatedAt}
+  twitterSite={config.social?.twitterHandle}
+  themeColor={config.theme.primary}
+  theme={config.theme}
+  fonts={config.theme.fonts}
+  appleTouchIcon={config.appleTouchIcon}
+  ogImage={data.ogImage}
+  noindex={noindex}
+  siteUrl={`https://${config.domain}`}
+  analyticsEnabled={config.analytics?.enabled ?? true}
+  articleTags={data.tags}
+  rssUrl="/rss.xml"
+>
+  <Fragment slot="head">
+    <style>
+      [data-signed-up] .lead-magnet-gate { display: none; }
+      @media print {
+        .lead-magnet-gate, nav, footer { display: none; }
+      }
+    </style>
+  </Fragment>
+  <SiteHeader
+    slot="header"
+    siteName={config.name}
+    navItems={config.nav?.items}
+    signInHref={config.nav?.signInHref}
+    ctaText={config.nav?.ctaText ?? headerCta.text}
+    ctaHref={headerCta.target}
+    ctaVariant="primary"
+    logoLight={config.logo?.light}
+    logoDark={config.logo?.dark}
+    promo={config.promoBanner}
+  />
+  <BreadcrumbNav items={breadcrumbs} siteUrl={`https://${config.domain}`} />
+  <div class="px-4 py-[var(--section-py)] max-w-4xl mx-auto">
+    <h1 class="font-heading text-[length:var(--text-heading)] font-bold text-[var(--color-brand-text)] mb-4">{data.title}</h1>
+
+    {/* PDF cover + value preview side by side when cover is available */}
+    <div class="flex flex-col sm:flex-row gap-6 mb-6">
+      {data.pdfCoverUrl && (
+        <div class="flex-shrink-0">
+          <img
+            src={data.pdfCoverUrl}
+            alt={`Preview of ${data.title}`}
+            class="rounded-[var(--radius-md)] border border-[var(--color-neutral-200)] shadow-[var(--shadow-card)]"
+            style="max-width: 200px; width: 100%;"
+            loading="lazy"
+          />
+        </div>
+      )}
+      <div class="flex-1">
+        <section
+          data-lead-magnet-value-preview
+          class="rounded-[var(--radius-xl)] border border-[color-mix(in_srgb,var(--color-primary-200)_58%,transparent)] bg-[color-mix(in_srgb,var(--color-primary-50)_82%,white)] p-5 shadow-[var(--shadow-card)]"
+          aria-label="Lead magnet value preview"
+        >
+          <p class="text-[length:var(--text-caption)] font-semibold uppercase tracking-[0.12em] text-[var(--color-primary-700)]">
+            What's inside
+          </p>
+          {data.bullets && data.bullets.length > 0 ? (
+            <ul class="mt-3 space-y-2">
+              {data.bullets.map((bullet) => (
+                <li class="flex items-start gap-2 text-[var(--color-brand-muted)]" style="font-size: var(--text-body);">
+                  <span class="mt-1 flex-shrink-0 w-4 h-4 rounded-full bg-[var(--color-primary-100)] flex items-center justify-center" aria-hidden="true">
+                    <svg width="10" height="8" viewBox="0 0 10 8" fill="none">
+                      <path d="M1 4l2.5 2.5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="text-[var(--color-primary-600)]"/>
+                    </svg>
+                  </span>
+                  {bullet}
+                </li>
+              ))}
+            </ul>
+          ) : (
+            <p class="mt-3 max-w-[var(--content-measure)] text-[var(--color-brand-muted)]">
+              A clear preview of the checklist, template, or audit-prep resource so you know exactly what
+              will help your center before you create an account.
+            </p>
+          )}
+        </section>
+      </div>
+    </div>
+
+    <BlufBlock text={data.bluf} />
+    <script is:inline>
+      (function() {
+        try {
+          if (localStorage.getItem("exit-popup-signed-up") === "true") {
+            document.currentScript.parentElement.setAttribute("data-signed-up", "");
+          }
+        } catch(e) {}
+      })();
+    </script>
+    <GatedContent
+      client:load
+      apiUrl={marketingApiUrl}
+      leadMagnetTitle={data.title}
+      description={description}
+      ctaText={ctaText}
+      teaserHtml={teaser}
+      magnetSlug={magnetSlug}
+      sourcePage={canonicalPath}
+      turnstileSiteKey={turnstileSiteKey}
+    />
+
+    <p class="mt-4 text-[length:var(--text-body-sm)] text-[var(--color-brand-muted)]">
+      Prefer a plain version?
+      <a href={printPath} class="inline-flex min-h-[40px] items-center py-1 font-semibold text-[var(--color-primary-700)] underline-offset-4 hover:underline">
+        Open the printable resource
+      </a>
+    </p>
+
+    {/* FAQ section */}
+    <section class="mt-12" aria-labelledby="faq-heading">
+      <h2
+        id="faq-heading"
+        class="font-heading font-bold mb-6"
+        style="font-size: var(--text-subheading, 1.125rem); color: var(--color-brand-text);"
+      >
+        Frequently asked questions
+      </h2>
+      <div class="space-y-4">
+        {faqItems.map((item) => (
+          <details class="rounded-[var(--radius-md)] border border-[var(--color-neutral-200)] p-4">
+            <summary
+              class="font-medium cursor-pointer"
+              style="font-size: var(--text-body); color: var(--color-brand-text);"
+            >
+              {item.q}
+            </summary>
+            <p
+              class="mt-3"
+              style="font-size: var(--text-body); color: var(--color-brand-muted);"
+            >
+              {item.a}
+            </p>
+          </details>
+        ))}
+      </div>
+    </section>
+
+    {definitions && definitions.map((d) => (
+      <DefinitionBlock term={d.term} definition={d.definition} />
+    ))}
+    {answers && answers.map((a) => (
+      <AnswerBlock question={a.q} answer={a.a} />
+    ))}
+  </div>
+  {relatedLinks.length > 0 && (
+    <RelatedPages
+      pages={relatedLinks}
+      heading="Related Resources"
+    />
+  )}
+  {exitPopupProps && (
+    <ExitIntentPopup
+      client:load
+      apiUrl={marketingApiUrl}
+      siteName={config.name}
+      sourcePage={canonicalPath}
+      leadMagnet={popupMagnet}
+      turnstileSiteKey={turnstileSiteKey}
+      {...exitPopupProps}
+    />
+  )}
+  <SiteFooter
+    slot="footer"
+    siteName={config.name}
+    tagline={config.tagline}
+    linkGroups={config.footer?.linkGroups}
+    legalLinks={config.footer?.legalLinks}
+    emailCapture={footerEmailCapture}
+  />
+</BaseLayout>

@@ -1,0 +1,171 @@
+{
+	"date": "2026-05-10",
+	"theme": "Staff scheduling, credentials, and preventable inspection stress",
+	"posts": [
+		{
+			"index_in_day": 1,
+			"time_central": "04:00",
+			"pillar": "Staff scheduling and ratio coverage",
+			"format": "Practical tip",
+			"post_content": "A childcare staff schedule is not just a calendar.\n\nIt is a ratio plan.\n\nThat means the highest-risk parts of the day are often not the longest shifts. They are the small handoffs:\n\n- 7:15, when the second teacher is not in yet but arrivals are picking up\n- 12:45, when breaks start and the toddler room still needs coverage\n- 4:30, when one teacher leaves before the last pickup wave is done\n\nIf you are reviewing next week's schedule, try looking at it in 15-minute blocks instead of full shifts.\n\nAsk: where could one late arrival, one break, or one early departure put a room out of ratio?\n\nThat question catches problems a general scheduling calendar will miss.",
+			"source": "apps/site/src/content/guides/staff-scheduling-for-childcare-centers.md",
+			"url": "https://pebbledesk.app/resources/guides/staff-scheduling-for-childcare-centers/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Opens the day by reframing scheduling as ratio protection, directly sourced from the guide's central point."
+		},
+		{
+			"index_in_day": 2,
+			"time_central": "05:00",
+			"pillar": "Staff credentials and inspection readiness",
+			"format": "Risk reminder",
+			"post_content": "The staff credential binder can look organized and still fail you.\n\nA binder stores documents. It does not remind anyone that CPR expires next month, that a background check renewal needs lead time, or that annual training hours are falling behind.\n\nThat is where preventable inspection stress usually starts.\n\nNot because directors do not care.\n\nBecause the system is passive.\n\nA stronger credential process answers three questions at any moment:\n\n1. Who is current?\n2. What expires next?\n3. What documentation would we show if licensing walked in today?\n\nIf the answer requires flipping through paper, searching email, and asking staff to resend cards, the tracker needs attention before the inspection does.",
+			"source": "apps/site/src/content/features/staff-credentials.md",
+			"url": "https://pebbledesk.app/features/staff-credentials/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Turns the source's binder problem into a practical LinkedIn risk reminder."
+		},
+		{
+			"index_in_day": 3,
+			"time_central": "06:00",
+			"pillar": "Hiring and onboarding compliance",
+			"format": "Operator insight",
+			"post_content": "The hardest part of hiring childcare staff is not always finding someone who wants the job.\n\nIt is getting from \"we want to hire you\" to \"you can safely and compliantly be counted in ratio.\"\n\nThat path can include background checks, registry checks, fingerprinting, CPR and first aid documentation, health records, handbook acknowledgments, orientation, and role-specific qualifications.\n\nThe pressure to fill a classroom by Monday is real.\n\nBut a hiring process that skips documentation does not remove the risk. It moves the risk into the classroom.\n\nDirectors need a pipeline, not just a job post:\n\n- candidates in motion before the emergency\n- clear pre-day-one requirements\n- a checklist that separates \"submitted\" from \"received\"\n- a record that shows who is ready to be counted in ratio\n\nHiring is an operations problem. Onboarding is a compliance problem.",
+			"source": "apps/site/src/content/guides/childcare-staff-hiring-onboarding-guide.md",
+			"url": "https://pebbledesk.app/resources/guides/childcare-staff-hiring-onboarding-guide/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Uses onboarding documentation guidance and the risk of counting uncleared staff in ratio."
+		},
+		{
+			"index_in_day": 4,
+			"time_central": "07:00",
+			"pillar": "Staff scheduling and ratio coverage",
+			"format": "Practical tip",
+			"post_content": "Morning drop-off is where neat schedules meet real life.\n\nChildren do not arrive in tidy blocks. A classroom can go from calm to ratio-sensitive in minutes, especially when a second teacher is scheduled for \"around 8\" but families start arriving at 7:35.\n\nOne practical scheduling check:\n\nMap your arrivals in 15-minute increments for each room.\n\nThen compare the first staff start time, second staff start time, and floater availability against the actual attendance curve.\n\nYou are looking for the first moment the room crosses a ratio threshold, not the hour the schedule looks generally covered.\n\nThat small difference can prevent a very avoidable licensing conversation.",
+			"source": "apps/site/src/content/guides/staff-scheduling-for-childcare-centers.md",
+			"url": "https://pebbledesk.app/resources/guides/staff-scheduling-for-childcare-centers/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Focuses on 15-minute arrival mapping and staggered start times from the guide."
+		},
+		{
+			"index_in_day": 5,
+			"time_central": "08:00",
+			"pillar": "Staff credentials and inspection readiness",
+			"format": "Checklist",
+			"post_content": "A useful staff credential tracker is not complicated.\n\nIt just needs to answer the questions licensing and operations both care about:\n\n- Staff name and role\n- Active, on leave, or terminated status\n- Background check issue and expiration dates\n- FBI fingerprint clearance dates, if required\n- Child abuse registry check dates\n- CPR and first aid expiration dates\n- Annual training target and hours completed\n- Lead teacher or director qualification records\n- Notes for renewals already in progress\n\nThe key is ownership.\n\nOne director or designated administrator should maintain the master tracker, with backup access for another leader.\n\nWhen every staff member is expected to track their own paperwork, gaps appear exactly when the center is busiest.",
+			"source": "apps/site/src/content/lead-magnets/staff-credential-tracker.md",
+			"url": "https://pebbledesk.app/free/staff-credential-tracker/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Summarizes tracker fields and ownership guidance from the lead magnet."
+		},
+		{
+			"index_in_day": 6,
+			"time_central": "09:00",
+			"pillar": "Staff scheduling and ratio coverage",
+			"format": "Operator question",
+			"post_content": "Question for childcare directors:\n\nDo you schedule breaks based on staff convenience, classroom rhythm, or ratio risk?\n\nAll three matter. But if ratio risk is not part of the break plan, the day can fall apart in very ordinary ways.\n\nA lead teacher steps out.\n\nThe floater is already covering another room.\n\nA few children wake early from nap.\n\nNow the schedule looked fine on paper, but coverage is thin where it matters.\n\nA practical review before publishing the week:\n\nWhich rooms need qualified coverage during breaks, and which low-census windows make that easiest?\n\nBreak coverage is not a side note. In childcare, it is part of the compliance plan.",
+			"source": "apps/site/src/content/guides/staff-scheduling-for-childcare-centers.md",
+			"url": "https://pebbledesk.app/resources/guides/staff-scheduling-for-childcare-centers/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Applies the source's break coverage and low-census guidance in a discussion-friendly format."
+		},
+		{
+			"index_in_day": 7,
+			"time_central": "10:00",
+			"pillar": "Staff credentials and inspection readiness",
+			"format": "Practical tip",
+			"post_content": "Same-week credential reminders are usually too late.\n\nIf a CPR class needs to be scheduled, a fingerprint appointment is backed up, or a background check renewal is still processing, \"expires Friday\" is not an action plan.\n\nCredential tracking works best when it creates lead time.\n\nFor many centers, that means reviewing expirations monthly and flagging:\n\n- anything due within 90 days\n- anything due within 30 days\n- anything already expired\n- training hours that are behind pace for the year\n\nThe goal is not to make a prettier spreadsheet.\n\nThe goal is to give the director enough time to schedule renewal, arrange coverage, and keep the staff file ready before licensing asks for it.",
+			"source": "apps/site/src/content/lead-magnets/staff-credential-tracker.md",
+			"url": "https://pebbledesk.app/free/staff-credential-tracker/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Uses monthly review and 90/30-day reminder guidance without overstating compliance guarantees."
+		},
+		{
+			"index_in_day": 8,
+			"time_central": "11:00",
+			"pillar": "Product education",
+			"format": "Product positioning",
+			"post_content": "Scheduling is more useful when it sits close to classroom coverage.\n\nA standalone shift calendar can tell you who is supposed to work.\n\nIt usually cannot tell you whether the toddler room gets thin during pickup, whether the floater is double-booked during breaks, or whether a proposed change creates a ratio problem.\n\nPebbleDesk keeps staff scheduling near the daily operations context directors are already managing: rooms, ratios, and compliance follow-up.\n\nThat matters because the staffing decision and the compliance consequence are part of the same operating day.\n\nThe schedule is not separate from ratio review.\n\nIt is one of the inputs.",
+			"source": "apps/site/src/content/features/staff-scheduling.md",
+			"url": "https://pebbledesk.app/features/staff-scheduling/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Accurately reflects PebbleDesk's scheduling positioning without claiming payroll or time-approval features."
+		},
+		{
+			"index_in_day": 9,
+			"time_central": "12:00",
+			"pillar": "Hiring and onboarding compliance",
+			"format": "Checklist",
+			"post_content": "Before a new childcare staff member works with children, the checklist should distinguish between two very different statuses:\n\nSubmitted.\n\nReceived.\n\nA background check submitted is not the same as a clearance received.\n\nA CPR class scheduled is not the same as a current card on file.\n\nA training plan discussed is not the same as documented orientation.\n\nThat distinction matters because licensing looks for completed records, not good intentions.\n\nFor each new hire, directors need a clear record of what is complete before day one with children and what is allowed within the first 30 or 90 days under their state rules.\n\nThe safest onboarding process is boring in the best way: clear requirements, one owner, no guessing.",
+			"source": "apps/site/src/content/guides/childcare-staff-hiring-onboarding-guide.md",
+			"url": "https://pebbledesk.app/resources/guides/childcare-staff-hiring-onboarding-guide/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Draws from the source's onboarding documentation section and pre-day-one caution."
+		},
+		{
+			"index_in_day": 10,
+			"time_central": "13:00",
+			"pillar": "Staff credentials and inspection readiness",
+			"format": "Inspection readiness",
+			"post_content": "During a licensing visit, staff credentials become very concrete.\n\nThe question is not \"Do we think everyone is current?\"\n\nIt is:\n\nCan we show the clearance date?\nCan we show the CPR expiration?\nCan we show annual training hours?\nCan we show director qualification documentation?\nCan we find it without searching three inboxes?\n\nPebbleDesk tracks staff credentials by person, including background checks, CPR and first aid dates, training hours, director qualifications, and custom credential types a center needs for its state or program.\n\nThat does not replace knowing your licensing rules.\n\nIt helps keep the record ready so the director is not rebuilding the file while the inspector waits.",
+			"source": "apps/site/src/content/features/staff-credentials.md",
+			"url": "https://pebbledesk.app/features/staff-credentials/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Product-aware post based on credential types and inspection access described in the feature page."
+		},
+		{
+			"index_in_day": 11,
+			"time_central": "14:00",
+			"pillar": "Staff scheduling and ratio coverage",
+			"format": "Practical tip",
+			"post_content": "Floaters are not extra staff.\n\nIn many childcare centers, they are the difference between a schedule that works on paper and a day that works in classrooms.\n\nA floater covers the fragile moments:\n\n- bathroom breaks\n- teacher lunch breaks\n- late arrivals\n- early departures\n- transitions between rooms\n- unexpected absences\n\nThe useful question is not only \"Do we have a floater?\"\n\nIt is \"Where is the floater needed most, and when?\"\n\nMorning drop-off and afternoon pickup often create the sharpest coverage swings. Infant and toddler rooms can also need tighter protection because ratios are less forgiving.\n\nA strong schedule assigns floater coverage to risk windows, not leftover space.",
+			"source": "apps/site/src/content/guides/staff-scheduling-for-childcare-centers.md",
+			"url": "https://pebbledesk.app/resources/guides/staff-scheduling-for-childcare-centers/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Uses the guide's floater definition and transition window guidance."
+		},
+		{
+			"index_in_day": 12,
+			"time_central": "15:00",
+			"pillar": "Staff credentials and inspection readiness",
+			"format": "Risk reminder",
+			"post_content": "Training hours can become an inspection problem even when the training happened.\n\nIf the certificate was never collected, the hours were never logged, or the topic was not recorded clearly, the center may not be able to prove completion when asked.\n\nThat is a frustrating kind of stress because the work was already done.\n\nA simple habit helps:\n\nWhen staff complete training, require documentation within one week and update the tracker immediately.\n\nDo not save it for the end of the year.\n\nDo not rely on memory.\n\nDo not let certificates sit in separate inboxes.\n\nFor compliance records, \"we did it\" is weaker than \"here is where it is documented.\"",
+			"source": "apps/site/src/content/lead-magnets/staff-credential-tracker.md",
+			"url": "https://pebbledesk.app/free/staff-credential-tracker/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Covers documented training-hour risk from the common violation patterns section."
+		},
+		{
+			"index_in_day": 13,
+			"time_central": "16:00",
+			"pillar": "Hiring and onboarding compliance",
+			"format": "Operator insight",
+			"post_content": "The first 90 days of childcare onboarding should not be a sink-or-swim period.\n\nIt is where a center protects children, supports the new employee, and builds the documentation trail that licensing may later ask about.\n\nA practical structure:\n\nDays 1-5: required compliance content, emergency procedures, ratio responsibilities, reporting duties, center policies, and a mentor introduction.\n\nDays 6-30: supervised classroom practice with weekly debriefs.\n\nDays 31-60: more independence, but with coaching still visible.\n\nDays 61-90: independent function with support and a documented review.\n\nThat structure helps directors catch gaps early.\n\nIt also gives new staff a clearer path than \"here is your classroom, good luck.\"",
+			"source": "apps/site/src/content/guides/childcare-staff-hiring-onboarding-guide.md",
+			"url": "https://pebbledesk.app/resources/guides/childcare-staff-hiring-onboarding-guide/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Summarizes the source's 90-day onboarding model in LinkedIn-native form."
+		},
+		{
+			"index_in_day": 14,
+			"time_central": "17:00",
+			"pillar": "Product education",
+			"format": "Practical product note",
+			"post_content": "Credential alerts are most useful when they create time to act.\n\nPebbleDesk lets directors track staff credentials such as background check clearances, CPR and first aid certification, annual training hours, director qualification records, and custom credential types.\n\nIt can alert directors before a credential expires, with configurable reminder windows.\n\nThe practical value is not the alert itself.\n\nIt is what the alert makes possible:\n\n- scheduling recertification before the deadline\n- arranging classroom coverage for training time\n- starting background check renewal before processing time becomes a problem\n- keeping the staff file ready for inspection review\n\nThe best compliance tools are calm tools. They move the work earlier.",
+			"source": "apps/site/src/content/features/staff-credentials.md",
+			"url": "https://pebbledesk.app/features/staff-credentials/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Explains credential alert value using the feature page's supported credential and alert details."
+		},
+		{
+			"index_in_day": 15,
+			"time_central": "18:00",
+			"pillar": "Inspection stress prevention",
+			"format": "Closing reflection",
+			"post_content": "A lot of inspection stress is not caused by surprising rules.\n\nIt is caused by ordinary records being hard to prove at the exact moment someone asks for them.\n\nWho was scheduled?\nWho was actually covering the room?\nWhose CPR is current?\nWhich new hire clearances are complete?\nWho still needs annual training hours?\n\nNone of those questions should require a scramble.\n\nFor childcare directors, the goal is not perfect paperwork for its own sake.\n\nIt is a calmer operating day, where staffing, credentials, and classroom coverage are visible before they become findings.\n\nThat is the work PebbleDesk is built around: audit-ready records without the end-of-week scramble.",
+			"source": "apps/site/src/content/features/staff-credentials.md",
+			"url": "https://pebbledesk.app/features/staff-credentials/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Closes the day by tying scheduling and credentials back to PebbleDesk's audit-ready positioning."
+		}
+	]
+}

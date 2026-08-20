@@ -1,0 +1,1182 @@
+@plugin "@tailwindcss/typography";
+
+/* ===================================================================
+   TOKENS
+   =================================================================== */
+
+@theme {
+  /* -- Brand color aliases (site-overridable) -- */
+  --color-brand-primary: var(--site-primary, #2563eb);
+  --color-brand-accent: var(--site-accent, #f59e0b);
+  --color-brand-surface: var(--site-surface, #fffdfa);
+  --color-brand-text: var(--site-text, #1f2933);
+  --color-brand-muted: var(--site-muted, #66727f);
+
+  /* -- Primary (Blue) scale -- */
+  --color-primary-50: #eff6ff;
+  --color-primary-100: #dbeafe;
+  --color-primary-200: #bfdbfe;
+  --color-primary-300: #93c5fd;
+  --color-primary-400: #60a5fa;
+  --color-primary-500: #3b82f6;
+  --color-primary-600: #2563eb;
+  --color-primary-700: #1d4ed8;
+  --color-primary-800: #1e40af;
+  --color-primary-900: #1e3a8a;
+  --color-primary-950: #172554;
+
+  /* -- Accent (Amber) scale -- */
+  --color-accent-50: #fffbeb;
+  --color-accent-100: #fef3c7;
+  --color-accent-200: #fde68a;
+  --color-accent-300: #fcd34d;
+  --color-accent-400: #fbbf24;
+  --color-accent-500: #f59e0b;
+  --color-accent-600: #d97706;
+  --color-accent-700: #b45309;
+  --color-accent-800: #92400e;
+  --color-accent-900: #78350f;
+  --color-accent-950: #451a03;
+
+  /* -- Neutral (Slate) scale -- */
+  --color-neutral-50: #fbf8f4;
+  --color-neutral-100: #f5efe8;
+  --color-neutral-200: #e7ddd2;
+  --color-neutral-300: #d3c5b7;
+  --color-neutral-400: #ad9d8d;
+  --color-neutral-500: #7d6f63;
+  --color-neutral-600: #62574e;
+  --color-neutral-700: #483f39;
+  --color-neutral-800: #2f2824;
+  --color-neutral-900: #1f1a17;
+  --color-neutral-950: #120f0d;
+
+  /* -- Error (Red) scale -- */
+  --color-error-50: #fef2f2;
+  --color-error-100: #fee2e2;
+  --color-error-200: #fecaca;
+  --color-error-300: #fca5a5;
+  --color-error-400: #f87171;
+  --color-error-500: #ef4444;
+  --color-error-600: #dc2626;
+  --color-error-700: #b91c1c;
+  --color-error-800: #991b1b;
+  --color-error-900: #7f1d1d;
+  --color-error-950: #450a0a;
+
+  /* -- Success (Emerald) scale -- */
+  --color-success-50: #ecfdf5;
+  --color-success-100: #d1fae5;
+  --color-success-200: #a7f3d0;
+  --color-success-300: #6ee7b7;
+  --color-success-400: #34d399;
+  --color-success-500: #10b981;
+  --color-success-600: #059669;
+  --color-success-700: #047857;
+  --color-success-800: #065f46;
+  --color-success-900: #064e3b;
+  --color-success-950: #022c22;
+
+  /* ===================================================================
+     SURFACES
+     =================================================================== */
+
+  /* -- Surface system -- */
+  --surface-primary: #fffdfa;
+  --surface-secondary: var(--site-surface-secondary, #f7f1ea);
+  --surface-elevated: var(--site-surface-elevated, #fffefb);
+  --surface-sunken: var(--site-surface-sunken, #f1e8de);
+  --surface-overlay: rgba(15, 23, 42, 0.5);
+  --surface-frost: var(--site-surface-frost, rgba(255, 253, 250, 0.9));
+  --surface-frost-border: var(
+    --site-surface-frost-border,
+    rgba(255, 250, 244, 0.85)
+  );
+
+  /* ===================================================================
+     SECTION GRADIENTS
+     =================================================================== */
+
+  /* -- Section gradient backgrounds (match hero visual language) -- */
+  --section-gradient-a: linear-gradient(
+    135deg,
+    color-mix(in srgb, var(--color-primary-50) 28%, var(--surface-primary)) 0%,
+    color-mix(in srgb, var(--surface-primary) 92%, var(--color-accent-50)) 48%,
+    color-mix(in srgb, var(--color-accent-50) 24%, var(--surface-primary)) 100%
+  );
+  --section-gradient-b: linear-gradient(
+    135deg,
+    color-mix(in srgb, var(--color-accent-50) 28%, var(--surface-primary)) 0%,
+    color-mix(in srgb, var(--surface-primary) 90%, var(--color-primary-50)) 52%,
+    color-mix(in srgb, var(--color-primary-50) 22%, var(--surface-primary)) 100%
+  );
+  --section-gradient-cta: linear-gradient(
+    135deg,
+    color-mix(in srgb, var(--color-primary-100) 42%, var(--surface-primary)) 0%,
+    color-mix(in srgb, var(--surface-primary) 90%, var(--color-primary-50)) 48%,
+    color-mix(in srgb, var(--color-accent-50) 28%, var(--surface-primary)) 100%
+  );
+  --section-highlight-bg: var(
+    --site-section-highlight-bg,
+    color-mix(in srgb, var(--color-accent-50) 30%, var(--surface-secondary))
+  );
+
+  /* ===================================================================
+     SHADOWS
+     =================================================================== */
+
+  /* -- Shadow system (navy-tinted, never pure black) -- */
+  --shadow-color: rgba(42, 31, 24, 0.08);
+  --shadow-sm: 0 1px 2px 0 rgba(42, 31, 24, 0.05);
+  --shadow-md:
+    0 8px 18px -14px rgba(42, 31, 24, 0.18),
+    0 2px 6px -4px rgba(42, 31, 24, 0.12);
+  --shadow-lg: var(
+    --site-shadow-lg,
+    0 18px 40px -26px rgba(42, 31, 24, 0.22),
+    0 8px 18px -14px rgba(42, 31, 24, 0.14)
+  );
+  --shadow-xl:
+    0 28px 56px -30px rgba(42, 31, 24, 0.22),
+    0 12px 24px -18px rgba(42, 31, 24, 0.15);
+  --shadow-card: var(
+    --site-shadow-card,
+    0 14px 30px -26px rgba(42, 31, 24, 0.18),
+    0 4px 12px -10px rgba(42, 31, 24, 0.1)
+  );
+  --shadow-inner: inset 0 1px 2px 0 rgba(42, 31, 24, 0.08);
+  /* -- Ambient shadow for floating elements (modals, dropdowns) -- */
+  --shadow-ambient: var(
+    --site-shadow-ambient,
+    0 24px 48px rgba(42, 31, 24, 0.08)
+  );
+  --shadow-accent-soft:
+    0 12px 28px -24px
+      color-mix(in srgb, var(--color-brand-accent) 30%, transparent),
+    0 4px 10px -8px rgba(42, 31, 24, 0.1);
+  --shadow-glow-primary: 0 12px 28px -24px
+    color-mix(in srgb, var(--color-brand-primary) 24%, transparent);
+  --shadow-glass: 0 16px 32px -24px rgba(42, 31, 24, 0.16);
+
+  /* -- Exit popup tokens -- */
+  --exit-popup-overlay-bg: rgba(15, 23, 42, 0.6);
+
+  /* -- Border radii (industrial scale) -- */
+  --radius-sm: 4px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 20px;
+  --radius-full: 9999px;
+
+  /* -- Transition tokens -- */
+  --transition-fast: 150ms cubic-bezier(0.22, 1, 0.36, 1);
+  --transition-base: 220ms cubic-bezier(0.22, 1, 0.36, 1);
+  --transition-slow: 320ms cubic-bezier(0.22, 1, 0.36, 1);
+
+  /* -- Typography -- */
+  --font-heading: "Manrope", "Avenir Next", "Segoe UI", system-ui, sans-serif;
+  --font-body: "Manrope", "Avenir Next", "Segoe UI", system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+
+  /* -- Type scale (semantic, responsive) -- */
+  --text-hero: clamp(2.5rem, 2.5rem + 2 * (100vw - 20rem) / 60, 4.5rem);
+  --text-heading: clamp(1.75rem, 1.75rem + 0.75 * (100vw - 20rem) / 60, 2.5rem);
+  --text-subheading: clamp(1.25rem, 1.25rem + 0.25 * (100vw - 20rem) / 60, 1.5rem);
+  --text-body-lg: 1.125rem;
+  --text-body: 1rem;
+  --text-caption: 0.875rem;
+  --text-body-sm: 0.875rem;
+  --text-mono: 0.875rem;
+  --text-kicker: 0.875rem;
+  --text-editorial-title: clamp(2rem, 2rem + 1.25 * (100vw - 20rem) / 60, 3.25rem);
+  --content-measure: 68ch;
+  --content-measure-wide: 78ch;
+
+  /* -- Spacing rhythm -- */
+  --section-py: var(--site-section-py, clamp(3rem, 6vw, 6rem));
+  --section-py-sm: var(--site-section-py-sm, clamp(2rem, 4vw, 3rem));
+  --component-gap: var(--site-component-gap, clamp(1.5rem, 3vw, 2.5rem));
+  --component-gap-sm: var(--site-component-gap-sm, clamp(0.75rem, 1.5vw, 1rem));
+  --component-gap-md: 1.25rem;
+  --component-gap-lg: 2rem;
+  --spacing-4: 1rem;
+  --spacing-6: 1.5rem;
+
+  /* -- Interaction customization hooks -- */
+  --button-hover-scale: var(--site-button-hover-scale, 1.02);
+  --button-active-scale: var(--site-button-active-scale, 0.97);
+  --card-hover-lift: var(--site-card-hover-lift, 4px);
+  --card-hover-scale: var(--site-card-hover-scale, 1.004);
+  --cta-pulse-animation: var(
+    --site-cta-pulse-animation,
+    cta-pulse 3s ease-in-out infinite
+  );
+  --primary-button-bg: var(--site-primary-button-bg, var(--color-accent-500));
+  --primary-button-hover-bg: var(
+    --site-primary-button-hover-bg,
+    var(--color-accent-400)
+  );
+  --primary-button-fg: var(--site-primary-button-fg, var(--color-accent-950));
+  --primary-button-border: var(
+    --site-primary-button-border,
+    1px solid transparent
+  );
+  --primary-button-shadow: var(
+    --site-primary-button-shadow,
+    var(--shadow-accent-soft)
+  );
+  --primary-button-radius: var(--site-primary-button-radius, 9999px);
+
+  /* -- Icon sizes -- */
+  --icon-sm: 1rem;
+  --icon-md: 1.25rem;
+  --icon-lg: 1.5rem;
+
+  /* -- Animations -- */
+  --animate-fade-in: fade-in 0.5s ease-out;
+  --animate-slide-up: slide-up 0.5s ease-out;
+  --animate-scale-in: scale-in 0.2s ease-out;
+  --animate-accordion-open: accordion-open 0.25s ease-out;
+  --animate-slide-in-right: slide-in-right 0.3s ease-out;
+
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes slide-up {
+    from {
+      opacity: 0;
+      transform: translateY(1.5rem);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes scale-in {
+    from {
+      opacity: 0;
+      transform: scale(0.95);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  @keyframes accordion-open {
+    from {
+      grid-template-rows: 0fr;
+    }
+    to {
+      grid-template-rows: 1fr;
+    }
+  }
+
+  @keyframes slide-in-right {
+    from {
+      transform: translateX(100%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes shake {
+    0%,
+    100% {
+      transform: translateX(0);
+    }
+    20% {
+      transform: translateX(-6px);
+    }
+    40% {
+      transform: translateX(6px);
+    }
+    60% {
+      transform: translateX(-4px);
+    }
+    80% {
+      transform: translateX(4px);
+    }
+  }
+}
+
+/* ===================================================================
+   TYPOGRAPHY
+   =================================================================== */
+
+/* -- Font utility classes -- */
+.font-heading {
+  font-family: var(--font-heading);
+}
+.font-body {
+  font-family: var(--font-body);
+}
+.font-mono {
+  font-family: var(--font-mono);
+}
+
+/* ===================================================================
+   EDITORIAL SYSTEM
+   =================================================================== */
+
+.editorial-shell {
+  position: relative;
+}
+
+.editorial-shell::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(
+      circle at top left,
+      color-mix(in srgb, var(--color-accent-100) 45%, transparent) 0%,
+      transparent 42%
+    ),
+    linear-gradient(
+      180deg,
+      color-mix(in srgb, var(--surface-secondary) 55%, transparent) 0%,
+      transparent 45%
+    );
+  opacity: 0.65;
+}
+
+.editorial-shell > * {
+  position: relative;
+}
+
+.editorial-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.625rem;
+  font-family: var(--font-mono);
+  font-size: var(--text-kicker);
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--color-accent-700);
+}
+
+.editorial-kicker::before {
+  content: "";
+  width: 2.75rem;
+  height: 1px;
+  background: color-mix(in srgb, var(--color-accent-500) 55%, transparent);
+}
+
+.editorial-lede {
+  max-width: var(--content-measure);
+  font-size: clamp(1.05rem, 1.4vw, 1.2rem);
+  line-height: 1.8;
+  color: var(--color-brand-muted);
+}
+
+.editorial-panel {
+  border: 1px solid
+    color-mix(in srgb, var(--color-neutral-200) 78%, transparent);
+  border-radius: var(--radius-lg);
+  background: linear-gradient(
+    180deg,
+    color-mix(in srgb, var(--surface-elevated) 96%, white 4%) 0%,
+    var(--surface-primary) 100%
+  );
+  box-shadow: var(--shadow-card);
+}
+
+.editorial-panel--soft {
+  background: color-mix(in srgb, var(--surface-secondary) 84%, white 16%);
+  box-shadow: none;
+}
+
+.editorial-rule {
+  height: 1px;
+  border: 0;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    color-mix(in srgb, var(--color-neutral-300) 85%, transparent) 18%,
+    color-mix(in srgb, var(--color-neutral-300) 85%, transparent) 82%,
+    transparent 100%
+  );
+}
+
+.editorial-link {
+  color: var(--color-brand-primary);
+  text-decoration: none;
+  transition:
+    color var(--transition-fast),
+    transform var(--transition-fast);
+}
+
+.editorial-link:hover {
+  color: var(--color-primary-700);
+}
+
+.editorial-grid {
+  display: grid;
+  gap: var(--component-gap);
+}
+
+@media (min-width: 768px) {
+  .editorial-grid--2 {
+    grid-template-columns: minmax(0, 1.3fr) minmax(16rem, 0.7fr);
+    align-items: start;
+  }
+}
+
+/* ===================================================================
+   BUTTONS
+   =================================================================== */
+
+/* -- Button tier system -- */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.875rem 2rem;
+  font-size: var(--text-body-lg);
+  font-weight: 700;
+  font-family: var(--font-heading);
+  line-height: 1.25;
+  color: var(--primary-button-fg);
+  background-color: var(--primary-button-bg);
+  border: var(--primary-button-border);
+  border-radius: var(--primary-button-radius);
+  cursor: pointer;
+  transition:
+    transform var(--transition-fast),
+    box-shadow var(--transition-fast),
+    background-color var(--transition-fast),
+    border-color var(--transition-fast);
+}
+.btn-primary:hover {
+  background-color: var(--primary-button-hover-bg);
+  box-shadow: var(--primary-button-shadow);
+  transform: translateY(-1px) scale(var(--button-hover-scale));
+}
+.btn-primary:active {
+  transform: scale(var(--button-active-scale));
+  box-shadow: var(--shadow-sm);
+}
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.75rem;
+  font-size: var(--text-body);
+  font-weight: 600;
+  font-family: var(--font-heading);
+  line-height: 1.25;
+  color: var(--color-brand-primary);
+  background-color: color-mix(
+    in srgb,
+    var(--surface-elevated) 92%,
+    var(--color-primary-50)
+  );
+  border: 1px solid
+    color-mix(in srgb, var(--color-brand-primary) 18%, var(--color-neutral-300));
+  border-radius: 9999px;
+  cursor: pointer;
+  transition:
+    transform var(--transition-fast),
+    box-shadow var(--transition-fast),
+    background-color var(--transition-fast),
+    color var(--transition-fast);
+}
+.btn-secondary:hover {
+  background-color: color-mix(
+    in srgb,
+    var(--surface-elevated) 70%,
+    var(--color-primary-50)
+  );
+  box-shadow: var(--shadow-glow-primary);
+  transform: translateY(-1px) scale(var(--button-hover-scale));
+}
+.btn-secondary:active {
+  transform: scale(var(--button-active-scale));
+}
+
+.btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  font-size: var(--text-caption);
+  font-weight: 600;
+  font-family: var(--font-body);
+  line-height: 1.25;
+  color: var(--color-brand-primary);
+  background-color: transparent;
+  border: none;
+  border-radius: 9999px;
+  cursor: pointer;
+  position: relative;
+  text-decoration: none;
+}
+.btn-ghost::after {
+  content: "";
+  position: absolute;
+  bottom: 0.25rem;
+  left: 1rem;
+  right: 1rem;
+  height: 2px;
+  background-color: var(--color-brand-primary);
+  transform: scaleX(0);
+  transition: transform var(--transition-base);
+}
+.btn-ghost:hover::after {
+  transform: scaleX(1);
+}
+
+/* -- Pulse modifier for primary CTA (opt-in urgency signal) -- */
+.btn-primary--pulse {
+  animation: var(--cta-pulse-animation);
+}
+.btn-primary--pulse:hover,
+.btn-primary--pulse:active {
+  animation-play-state: paused;
+}
+
+@keyframes cta-pulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.015);
+  }
+}
+
+/* -- Button hover utilities (legacy, kept for backward compat) -- */
+.btn-lift {
+  cursor: pointer;
+  transition:
+    transform var(--transition-fast),
+    box-shadow var(--transition-fast);
+}
+.btn-lift:hover {
+  transform: scale(var(--button-hover-scale));
+  box-shadow: var(--shadow-accent-soft);
+}
+.btn-lift:active {
+  transform: scale(var(--button-active-scale));
+  box-shadow: var(--shadow-sm);
+}
+
+/* -- Button shimmer (single-pass gleam on hover) -- */
+.btn-shimmer {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+.btn-shimmer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.35) 50%,
+    transparent 100%
+  );
+  transform: translateX(-170%);
+  transition: transform var(--transition-base);
+  pointer-events: none;
+  z-index: 1;
+}
+.btn-shimmer:hover::before {
+  transform: translateX(230%);
+}
+
+/* Dark mode: reduce shimmer intensity on near-black surfaces.
+   Uses the staged --_dk-shimmer-bg var so the gradient is defined once. */
+:root {
+  --_dk-shimmer-bg: linear-gradient(
+    120deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.15) 50%,
+    transparent 100%
+  );
+}
+/* -- Pause cta-pulse animation on interaction so btn-lift transforms take over -- */
+.cta-pulse:hover,
+.cta-pulse:active {
+  animation-play-state: paused;
+}
+
+/* ===================================================================
+   INTERACTIONS
+   =================================================================== */
+
+/* -- Card hover utilities -- */
+.card-lift {
+  transition:
+    transform var(--transition-base),
+    box-shadow var(--transition-base);
+}
+.card-lift:hover {
+  transform: translateY(calc(var(--card-hover-lift) * -1))
+    scale(var(--card-hover-scale));
+  box-shadow: var(--shadow-lg);
+}
+
+/* -- Link underline slide-in -- */
+.link-slide {
+  position: relative;
+  text-decoration: none;
+}
+.link-slide::after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--color-brand-primary);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform var(--transition-base);
+}
+.link-slide:hover::after {
+  transform: scaleX(1);
+}
+
+/* ===================================================================
+   HORIVA SCOPED EDITORIAL OVERRIDES
+   =================================================================== */
+
+body[data-site-name="Horiva"] {
+  --horiva-glow-top: radial-gradient(
+    circle at top,
+    color-mix(in srgb, var(--color-accent-100) 28%, transparent) 0%,
+    transparent 38rem
+  );
+  --horiva-glow-bottom: radial-gradient(
+    circle at 50% 100%,
+    color-mix(in srgb, var(--color-primary-100) 18%, transparent) 0%,
+    transparent 32rem
+  );
+  --horiva-hairline: color-mix(
+    in srgb,
+    var(--color-accent-300) 44%,
+    transparent
+  );
+  --horiva-rule: color-mix(in srgb, var(--color-primary-200) 48%, transparent);
+  --horiva-soft-panel: color-mix(
+    in srgb,
+    var(--surface-primary) 88%,
+    var(--color-accent-50)
+  );
+  --horiva-soft-panel-strong: color-mix(
+    in srgb,
+    var(--surface-primary) 72%,
+    var(--color-accent-50)
+  );
+  background-color: var(--color-brand-surface);
+  background-image: var(--horiva-glow-top), var(--horiva-glow-bottom);
+  background-attachment: fixed;
+}
+
+body[data-site-name="Horiva"] #site-header {
+  background-color: color-mix(in srgb, var(--surface-primary) 82%, transparent);
+  border-color: color-mix(in srgb, var(--horiva-hairline) 70%, transparent);
+}
+
+body[data-site-name="Horiva"] [data-site-header-inner] {
+  min-height: 4.5rem;
+}
+
+body[data-site-name="Horiva"] [data-site-brand] {
+  gap: 0.75rem;
+}
+
+body[data-site-name="Horiva"] [data-site-nav] a {
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+body[data-site-name="Horiva"] [data-hero]::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 0;
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    color-mix(in srgb, var(--color-accent-300) 70%, transparent),
+    transparent
+  );
+  pointer-events: none;
+}
+
+body[data-site-name="Horiva"] [data-hero-content] {
+  max-width: 68rem;
+  padding-top: clamp(4.75rem, 9vw, 7rem);
+}
+
+body[data-site-name="Horiva"] [data-hero-title] {
+  max-width: 12ch;
+  letter-spacing: -0.04em !important;
+}
+
+body[data-site-name="Horiva"] [data-hero-copy] {
+  max-width: 41rem;
+  font-size: clamp(1.1rem, 2vw, 1.3rem);
+  line-height: 1.8;
+}
+
+body[data-site-name="Horiva"] [data-hero-benefits] {
+  max-width: 50rem;
+}
+
+body[data-site-name="Horiva"] [data-hero-benefits] li {
+  border-color: color-mix(in srgb, var(--horiva-hairline) 72%, transparent);
+  background: var(--horiva-soft-panel);
+  box-shadow: var(--shadow-card);
+}
+
+body[data-site-name="Horiva"] [data-hero-trust] {
+  border-color: color-mix(in srgb, var(--horiva-hairline) 90%, transparent);
+  background: color-mix(
+    in srgb,
+    var(--surface-primary) 78%,
+    var(--color-accent-50)
+  );
+  font-family: var(--font-body);
+  font-size: var(--text-body-sm);
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+body[data-site-name="Horiva"] [data-editorial-layout],
+body[data-site-name="Horiva"] [data-hub-layout] {
+  position: relative;
+}
+
+body[data-site-name="Horiva"] [data-editorial-article],
+body[data-site-name="Horiva"] [data-hub-hero],
+body[data-site-name="Horiva"] [data-content-card],
+body[data-site-name="Horiva"] [data-hub-card],
+body[data-site-name="Horiva"] [data-sidebar-cta-panel],
+body[data-site-name="Horiva"] [data-footer-email-capture],
+body[data-site-name="Horiva"] [data-footer-brand],
+body[data-site-name="Horiva"] [data-footer-link-group],
+body[data-site-name="Horiva"] [data-toc-panel],
+body[data-site-name="Horiva"] [data-funnel-shell] {
+  border-color: color-mix(in srgb, var(--horiva-hairline) 75%, transparent);
+  background: var(--horiva-soft-panel);
+  box-shadow: var(--shadow-card);
+}
+
+body[data-site-name="Horiva"] [data-editorial-article] {
+  max-width: 46rem;
+}
+
+body[data-site-name="Horiva"] [data-editorial-article] h1,
+body[data-site-name="Horiva"] [data-hub-hero] h1 {
+  max-width: 14ch;
+  letter-spacing: -0.035em;
+  line-height: 0.98;
+}
+
+body[data-site-name="Horiva"] [data-article-meta] {
+  margin-bottom: 2rem;
+  padding-block: 0.85rem;
+  border-top: 1px solid var(--horiva-rule);
+  border-bottom: 1px solid
+    color-mix(in srgb, var(--horiva-hairline) 70%, transparent);
+}
+
+body[data-site-name="Horiva"] [data-editorial-article] .prose {
+  font-size: 1.05rem;
+  line-height: 1.85;
+}
+
+body[data-site-name="Horiva"] [data-editorial-article] .prose > :where(h2, h3) {
+  scroll-margin-top: 6rem;
+}
+
+body[data-site-name="Horiva"] [data-content-card] {
+  display: flex;
+  min-height: 100%;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+body[data-site-name="Horiva"] [data-hub-card] {
+  min-height: 100%;
+}
+
+body[data-site-name="Horiva"] [data-content-card] h3 {
+  line-height: 1.08;
+  letter-spacing: -0.02em;
+}
+
+body[data-site-name="Horiva"] [data-content-card-meta] {
+  margin-top: auto;
+}
+
+body[data-site-name="Horiva"] [data-toc-panel] {
+  border-radius: var(--radius-lg);
+}
+
+body[data-site-name="Horiva"] [data-funnel-shell] {
+  max-width: 46rem;
+  border-radius: calc(var(--radius-xl) + 4px);
+  padding: clamp(1.75rem, 4vw, 2.75rem);
+}
+
+body[data-site-name="Horiva"] [data-sticky-cta] {
+  border-top-color: color-mix(in srgb, var(--horiva-hairline) 82%, transparent);
+  background: color-mix(
+    in srgb,
+    var(--surface-primary) 86%,
+    transparent
+  ) !important;
+}
+
+body[data-site-name="Horiva"] [data-site-footer] {
+  background: linear-gradient(
+    180deg,
+    color-mix(in srgb, var(--surface-secondary) 92%, transparent),
+    color-mix(in srgb, var(--surface-primary) 88%, var(--color-accent-50))
+  );
+}
+
+body[data-site-name="Horiva"] [data-footer-brand] span:last-child {
+  letter-spacing: 0.1em;
+}
+
+/* ===================================================================
+   ACCESSIBILITY
+   =================================================================== */
+
+/* -- Focus visible -- */
+:focus-visible {
+  outline: 2px solid
+    color-mix(in srgb, var(--color-brand-primary) 55%, var(--color-accent-500));
+  outline-offset: 3px;
+}
+
+/* -- Scroll-in animation -- */
+.scroll-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+:root.js .scroll-in {
+  opacity: 0;
+  transform: translateY(1.5rem);
+  transition:
+    opacity var(--transition-slow),
+    transform var(--transition-slow);
+}
+:root.js .scroll-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+:root.js .scroll-in.visible:nth-child(2) {
+  transition-delay: 100ms;
+}
+:root.js .scroll-in.visible:nth-child(3) {
+  transition-delay: 200ms;
+}
+:root.js .scroll-in.visible:nth-child(4) {
+  transition-delay: 300ms;
+}
+:root.js .scroll-in.visible:nth-child(5) {
+  transition-delay: 400ms;
+}
+
+/* ===================================================================
+   PROSE
+   =================================================================== */
+
+/* -- Heading overrides (scale down from page-title tokens) -- */
+.prose h2 {
+  font-family: var(--font-heading);
+  font-size: clamp(1.35rem, 2.5vw, 1.75rem);
+  margin-top: 2.5em;
+  margin-bottom: 0.75em;
+}
+
+.prose h3 {
+  font-family: var(--font-heading);
+  font-size: clamp(1.15rem, 2vw, 1.35rem);
+  margin-top: 2em;
+  margin-bottom: 0.5em;
+}
+
+.prose h4 {
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  margin-top: 1.75em;
+  margin-bottom: 0.5em;
+}
+
+/* -- Inline element overrides -- */
+.prose blockquote {
+  border-left: 3px solid
+    color-mix(
+      in srgb,
+      var(--color-accent-500, #f59e0b) 70%,
+      var(--surface-primary)
+    );
+  background-color: color-mix(
+    in srgb,
+    var(--surface-secondary, #f8fafc) 78%,
+    var(--surface-primary)
+  );
+  padding: 1rem 1.25rem;
+  margin: 1.5rem 0;
+  border-radius: 0 var(--radius-md, 12px) var(--radius-md, 12px) 0;
+}
+
+.prose code {
+  font-family: var(--font-mono, "IBM Plex Mono", ui-monospace, monospace);
+  background-color: var(--surface-sunken, #f1f5f9);
+  padding: 0.125rem 0.375rem;
+  border-radius: var(--radius-sm, 4px);
+  font-size: 0.875em;
+}
+
+.prose strong {
+  color: var(--color-brand-primary, #2563eb);
+}
+
+.prose a {
+  color: var(--color-brand-primary, #2563eb);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.prose a:hover {
+  color: var(--color-primary-800, #1e40af);
+}
+
+.prose a.btn-primary,
+.prose a.btn-primary:visited {
+  color: var(--primary-button-fg);
+  text-decoration: none;
+}
+
+/* -- Table styling -- */
+.prose table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+  font-size: 0.9em;
+  display: block;
+  overflow-x: auto;
+}
+
+.prose thead th {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  text-align: left;
+  padding: 0.75rem 1rem;
+  border-bottom: 2px solid var(--color-neutral-300, #cbd5e1);
+  color: var(--color-brand-text);
+}
+
+.prose tbody td {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid var(--color-neutral-200, #e2e8f0);
+  vertical-align: top;
+}
+
+.prose tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.prose tbody tr:nth-child(even) {
+  background-color: var(--surface-secondary, #f8fafc);
+}
+
+/* -- Horizontal rule -- */
+.prose hr {
+  border-color: var(--color-neutral-200, #e2e8f0);
+  margin-top: 2.5em;
+  margin-bottom: 2.5em;
+}
+
+/* -- List tightening -- */
+.prose ol > li,
+.prose ul > li {
+  margin-top: 0.375em;
+  margin-bottom: 0.375em;
+}
+
+/* -- Reduced motion -- */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+  .scroll-in {
+    opacity: 1;
+    transform: none;
+  }
+  .btn-lift:hover,
+  .btn-lift:active,
+  .card-lift:hover,
+  .btn-primary:hover,
+  .btn-primary:active,
+  .btn-secondary:hover,
+  .btn-secondary:active,
+  .btn-primary--pulse {
+    transform: none;
+    animation: none;
+  }
+}
+
+/* ===================================================================
+   DARK MODE
+   =================================================================== */
+
+/* -- Dark mode staging variables --
+ *
+ * Dark token VALUES are defined once below as --_dk-* staging variables on :root.
+ * Both dark mode triggers (system preference + manual .dark class) reference
+ * these staging vars instead of duplicating raw values.
+ *
+ * Section gradients cannot be staged because they reference other dark tokens
+ * (--surface-primary, --surface-secondary) that are only active inside the dark
+ * context blocks. They are defined inline via the --_dk-gradient-* pattern but
+ * still derive from the same staged surface values.
+ */
+
+:root {
+  /* ── Safe-area inset tokens (notch / Dynamic Island / home-bar support) ── */
+  --site-safe-px-left: env(safe-area-inset-left, 0px);
+  --site-safe-px-right: env(safe-area-inset-right, 0px);
+  --site-safe-pb: env(safe-area-inset-bottom, 0px);
+
+  /* ── Staged dark token values (single source of truth) ── */
+
+  /* Brand overrides */
+  /* Surfaces */
+  --_dk-surface-frost-border: var(
+    --site-surface-frost-border-dark,
+    rgba(113, 99, 86, 0.36)
+  );
+
+  /* Shadows */
+  --_dk-shadow-md:
+    0 4px 6px -1px rgba(0, 0, 0, 0.4), 0 2px 4px -2px rgba(0, 0, 0, 0.3);
+  --_dk-shadow-lg: var(
+    --site-shadow-lg-dark,
+    0 10px 15px -3px rgba(0, 0, 0, 0.4),
+    0 4px 6px -4px rgba(0, 0, 0, 0.3)
+  );
+  --_dk-shadow-xl:
+    0 20px 25px -5px rgba(0, 0, 0, 0.4), 0 8px 10px -6px rgba(0, 0, 0, 0.3);
+  --_dk-shadow-card: var(
+    --site-shadow-card-dark,
+    0 4px 12px -2px rgba(0, 0, 0, 0.3),
+    0 2px 6px -2px rgba(0, 0, 0, 0.2)
+  );
+  --_dk-shadow-accent-soft:
+    0 4px 20px color-mix(in srgb, var(--color-brand-accent) 25%, transparent),
+    0 2px 4px rgba(0, 0, 0, 0.2);
+  --_dk-shadow-glow-primary: 0 4px 16px
+    color-mix(in srgb, var(--color-brand-primary) 30%, transparent);
+  --_dk-shadow-ambient: var(
+    --site-shadow-ambient-dark,
+    0 20px 40px rgba(0, 0, 0, 0.2)
+  );
+
+  /* Misc */
+  --_dk-section-highlight-bg: var(
+    --site-section-highlight-bg-dark,
+    var(--_dk-surface-secondary)
+  );
+  --_dk-primary-button-bg: var(
+    --site-primary-button-bg-dark,
+    var(--site-accent)
+  );
+  --_dk-primary-button-hover-bg: var(
+    --site-primary-button-hover-bg-dark,
+    color-mix(in srgb, var(--site-accent) 88%, white 12%)
+  );
+  --_dk-primary-button-fg: var(
+    --site-primary-button-fg-dark,
+    var(--site-surface)
+  );
+  --_dk-primary-button-border: var(
+    --site-primary-button-border-dark,
+    1px solid transparent
+  );
+  --_dk-primary-button-shadow: var(
+    --site-primary-button-shadow-dark,
+    0 12px 26px -18px color-mix(in srgb, var(--site-accent) 55%, transparent),
+    0 4px 12px rgba(0, 0, 0, 0.28)
+  );
+
+  /* Neutral scale (inverted) */
+  /* Primary/accent dark steps */
+}
+
+/* -- Dark mode activation --
+ *
+ * Both blocks below map semantic tokens to the staged --_dk-* values.
+ * Section gradients are defined inline because they reference tokens
+ * (--surface-primary, --surface-secondary) that only resolve correctly
+ * inside an active dark context.
+ *
+ * Block 1: system preference (OS dark + user has not forced light)
+ * Block 2: manual .dark class (user explicitly selected dark)
+ */
+
+/*
+ * Theme-aware visibility utilities
+ *
+ * These respect BOTH the media-query dark mode (@media prefers-color-scheme)
+ * AND the class-based toggle (:root.dark / :root.light). Tailwind's built-in
+ * dark: variant only handles the media query, so when a user's OS prefers dark
+ * but they manually toggle to light (.light class), Tailwind still thinks it's
+ * dark - causing logo swap mismatches.
+ *
+ * .theme-light-only - visible in light mode, hidden in dark mode
+ * .theme-dark-only  - hidden in light mode, visible in dark mode
+ */
+
+/* Default (light): show light-only, hide dark-only */
+.theme-light-only {
+  display: block;
+}
+/* System dark preference (OS dark + user has NOT forced light) */
+/* Manual dark toggle (user explicitly selected dark) */
+/* Manual light toggle overrides system dark preference */
+/* ===================================================================
+   TAP TARGET ENFORCEMENT
+   =================================================================== */
+
+/* -- Minimum tap-target size for interactive elements (WCAG 2.5.5 / mobile UX) -- */
+@layer utilities {
+  .cta-min-target {
+    min-height: 2.75rem;
+    min-width: 2.75rem;
+  }
+}

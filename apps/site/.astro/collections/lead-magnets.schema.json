@@ -1,0 +1,199 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "publishedAt": {
+      "type": "string"
+    },
+    "updatedAt": {
+      "type": "string"
+    },
+    "lastReviewed": {
+      "type": "string"
+    },
+    "bluf": {
+      "type": "string"
+    },
+    "freePreviewSections": {
+      "default": 2,
+      "type": "number"
+    },
+    "ogImage": {
+      "type": "string"
+    },
+    "tags": {
+      "default": [],
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "relatedPages": {
+      "minItems": 1,
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "canonicalHref": {
+      "type": "string",
+      "pattern": "^\\/.*"
+    },
+    "redirectFrom": {
+      "default": [],
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^\\/.*"
+      }
+    },
+    "summaryFacts": {
+      "default": [],
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "publicKnowledge": {
+      "type": "boolean"
+    },
+    "noPublicKnowledge": {
+      "default": false,
+      "type": "boolean"
+    },
+    "noindex": {
+      "default": false,
+      "type": "boolean"
+    },
+    "answers": {
+      "type": "array",
+      "items": {
+        "anyOf": [
+          {
+            "type": "object",
+            "properties": {
+              "q": {
+                "type": "string"
+              },
+              "a": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "q",
+              "a"
+            ]
+          },
+          {
+            "type": "object",
+            "properties": {
+              "question": {
+                "type": "string"
+              },
+              "answer": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "question",
+              "answer"
+            ]
+          }
+        ]
+      }
+    },
+    "definitions": {
+      "default": [],
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "term": {
+            "type": "string"
+          },
+          "definition": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "term",
+          "definition"
+        ]
+      }
+    },
+    "buyerStage": {
+      "default": "tofu",
+      "type": "string",
+      "enum": [
+        "tofu",
+        "mofu",
+        "bofu"
+      ]
+    },
+    "faqs": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "q": {
+            "type": "string"
+          },
+          "a": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "q",
+          "a"
+        ]
+      }
+    },
+    "schema": {
+      "default": "Article",
+      "type": "string",
+      "enum": [
+        "Article",
+        "FAQPage",
+        "HowTo",
+        "Product",
+        "ItemList"
+      ]
+    },
+    "bullets": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "pdfCoverUrl": {
+      "type": "string"
+    },
+    "track": {
+      "description": "Author override for the lead magnet track on this page. Inferred automatically when absent.",
+      "type": "string",
+      "enum": [
+        "compliance",
+        "billing",
+        "buying",
+        "hr"
+      ]
+    },
+    "$schema": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "title",
+    "description",
+    "publishedAt",
+    "updatedAt",
+    "bluf",
+    "relatedPages"
+  ]
+}

@@ -1,0 +1,100 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme {
+  --color-background: #ffffff;
+  --color-foreground: #1c1917;
+  --color-card: #ffffff;
+  --color-card-foreground: #1c1917;
+  --color-popover: #ffffff;
+  --color-popover-foreground: #1c1917;
+  --color-primary: #c2410c;
+  --color-primary-foreground: #ffffff;
+  --color-secondary: #f5f1ea;
+  --color-secondary-foreground: #1c1917;
+  --color-muted: #f5f1ea;
+  --color-muted-foreground: #57534e;
+  --color-success: #166534;
+  --color-success-foreground: #052e16;
+  --color-success-soft: #ecfdf5;
+  --color-success-border: #a7f3d0;
+  --color-warning: #b45309;
+  --color-warning-foreground: #78350f;
+  --color-warning-soft: #fffbeb;
+  --color-warning-border: #fde68a;
+  --color-accent: #f59e0b;
+  --color-accent-foreground: #1c1917;
+  --color-destructive: #b91c1c;
+  --color-destructive-foreground: #ffffff;
+  --color-destructive-soft: #fef2f2;
+  --color-destructive-border: #fecaca;
+  --color-brand: #4f6b5f;
+  --color-border: #e7e2d6;
+  --color-input: #e7e2d6;
+  --color-ring: #c2410c;
+  --color-sidebar-background: #faf7f2;
+  --color-sidebar-foreground: #1c1917;
+  --color-sidebar-primary: #c2410c;
+  --color-sidebar-primary-foreground: #ffffff;
+  --color-sidebar-accent: #f1ece0;
+  --color-sidebar-accent-foreground: #1c1917;
+  --color-sidebar-border: #e7e2d6;
+  --radius: 0.5rem;
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+  --animate-skeleton-shimmer: skeleton-shimmer 1.5s ease-in-out infinite;
+  --animate-ratio-flash: ratio-flash 0.4s ease-out;
+  --animate-pulse-subtle: pulse-subtle 2s ease-in-out infinite;
+  --animate-fade-in: fade-in-row 0.2s ease-out forwards;
+
+  @keyframes skeleton-shimmer {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(100%);
+    }
+  }
+
+  @keyframes ratio-flash {
+    0% {
+      opacity: 0.5;
+      transform: scale(0.97);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  @keyframes pulse-subtle {
+    50% {
+      opacity: 0.75;
+    }
+  }
+
+  @keyframes fade-in-row {
+    from {
+      opacity: 0;
+      transform: translateY(4px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+@layer base {
+	* {
+		@apply border-border;
+	}
+	body {
+		@apply bg-background text-foreground;
+		font-family: var(--font-sans);
+	}
+}
+
+.animate-pulse-subtle { animation: var(--animate-pulse-subtle); }
+.animate-fade-in { animation: var(--animate-fade-in); }

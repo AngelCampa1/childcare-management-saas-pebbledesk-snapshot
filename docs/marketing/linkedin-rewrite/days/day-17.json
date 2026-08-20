@@ -1,0 +1,171 @@
+{
+	"date": "2026-05-22",
+	"theme": "Pricing transparency, hidden fees, and evaluating true software cost",
+	"posts": [
+		{
+			"index_in_day": 1,
+			"time_central": "04:00",
+			"pillar": "Pricing transparency and buyer confidence",
+			"format": "Opening thought",
+			"post_content": "The hardest childcare software price to budget for is not always the highest one.\n\nIt is the unclear one.\n\nA director should not need three demos, two follow-up calls, and a spreadsheet built after bedtime just to answer:\n\nWhat will this cost my center this year?\nWhat changes if enrollment grows?\nAre payment fees separate?\nIs setup included?\nCan I cancel without getting surprised by renewal terms?\nWill I pay more for the compliance records I actually need?\n\nPricing transparency matters because childcare budgets are already tight. A center still has payroll, food, substitutes, supplies, insurance, rent, and families asking careful questions about tuition.\n\nThe software line item should be explainable before a director signs.\n\nA simple test for any childcare platform:\n\nCan you write the first-year cost on one page, including subscription, payment processing, setup, training, hardware, contract term, and renewal rules?\n\nIf the answer is no, you do not have the real price yet.",
+			"source": "apps/site/src/content/lead-magnets/childcare-software-pricing-comparison.md",
+			"url": "https://pebbledesk.app/free/childcare-software-pricing-comparison/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Frames the day around the pricing comparison lead magnet's point that subscription price alone does not show total cost."
+		},
+		{
+			"index_in_day": 2,
+			"time_central": "05:00",
+			"pillar": "Total cost of ownership",
+			"format": "Practical checklist",
+			"post_content": "When comparing childcare software, build the total-cost line before you compare features.\n\nNot just the monthly subscription.\n\nThe real cost can include:\n\nSubscription fee.\nPayment processing fees.\nSetup or onboarding charges.\nData migration support.\nTraining sessions.\nCheck-in tablets or kiosks.\nCard readers or scanners.\nSupport tier upgrades.\nPaid integrations.\nContract increases at renewal.\nExtra charges for locations, children, rooms, or users.\n\nThen add the operational cost that does not appear on the invoice:\n\nStaff retraining.\nManual subsidy workarounds.\nExtra export cleanup before an audit.\nTime spent reconciling attendance against billing.\n\nThe cheapest quote can become expensive if it leaves the director rebuilding records every Friday.\n\nA better buying question is:\n\nWhat will this system cost us in dollars, staff time, and audit-prep effort over the next 12 months?",
+			"source": "apps/site/src/content/lead-magnets/childcare-software-pricing-comparison.md",
+			"url": "https://pebbledesk.app/free/childcare-software-pricing-comparison/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Turns the hidden-cost sections into a director checklist without over-indexing on any one competitor."
+		},
+		{
+			"index_in_day": 3,
+			"time_central": "06:00",
+			"pillar": "Payment processing fee awareness",
+			"format": "Risk callout",
+			"post_content": "Payment processing is where childcare software pricing can quietly stop feeling flat.\n\nIf tuition collection runs through the platform, ask for the processing rate before you compare quotes.\n\nA subscription might look manageable.\nA percentage on every credit-card tuition payment can change the annual cost.\n\nOur Brightwheel pricing breakdown notes that Brightwheel publishes payment processing terms of 2.9% plus $0.30 per credit card transaction and 0.6% per ACH transfer.\n\nThat does not mean every center will pay the same total. It depends on tuition volume, card mix, ACH use, and how families pay.\n\nBut it does mean directors should calculate the fee exposure before signing.\n\nUse your own numbers:\n\nMonthly tuition collected.\nPercent paid by credit card.\nPercent paid by ACH.\nAverage number of transactions.\nSubscription cost.\nAny setup or training costs.\n\nThe real comparison is not subscription versus subscription.\n\nIt is subscription plus processing plus the work still left on the director's desk.",
+			"source": "apps/site/src/content/pricing-breakdowns/brightwheel-pricing.md",
+			"url": "https://pebbledesk.app/compare/pricing/brightwheel/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Uses the Brightwheel source's published processing-fee claim while avoiding unsupported blanket cost claims."
+		},
+		{
+			"index_in_day": 4,
+			"time_central": "07:00",
+			"pillar": "Software ROI and admin time",
+			"format": "Practical tip",
+			"post_content": "Most childcare software ROI math forgets the director's time.\n\nThat is a costly omission.\n\nIf you spend three hours reconciling attendance against invoices, that is not free because you did it yourself.\n\nIf you spend Friday afternoon checking subsidy attendance records, that is not free because it happened after lunch.\n\nIf you rebuild staff credential reports before licensing visits, that is not free because it has always been part of the job.\n\nStart with a simple calculation:\n\nWeekly admin hours spent on billing, subsidy reconciliation, attendance cleanup, staff records, and reports.\nMultiplied by your real hourly cost.\nMultiplied by 52 weeks.\n\nThen compare that annual number to the software cost.\n\nA center buying software is not choosing between software and zero cost.\n\nIt is choosing between visible software cost and the hidden cost already being paid in director time, staff interruptions, billing rework, and audit-prep stress.",
+			"source": "apps/site/src/content/guides/childcare-software-roi-calculator-guide.md",
+			"url": "https://pebbledesk.app/resources/guides/childcare-software-roi-calculator-guide/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Draws from the ROI guide's core point that directors often undervalue their own time."
+		},
+		{
+			"index_in_day": 5,
+			"time_central": "08:00",
+			"pillar": "Flat pricing and center budgeting",
+			"format": "Product education",
+			"post_content": "One reason we publish PebbleDesk pricing plainly:\n\nChildcare directors need numbers they can put into a budget.\n\nThe pricing page lists the current plans from the same shared pricing source the app uses.\n\nIt shows which plans are flat-rate, which plans are self-serve, and when a custom rollout conversation is needed.\n\nMonthly billing is available.\n\nSelf-serve plans have no setup fee, and center plans do not add a surprise per-child charge.\n\nThat matters because software should not make a director guess whether adding three children in September changes the bill.\n\nThe work of running a center already has enough moving parts.\n\nThe pricing page should not be another one.",
+			"source": "apps/site/src/config/site.ts",
+			"url": "https://pebbledesk.app/pricing/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Points to the live pricing page and shared pricing source instead of freezing exact plan amounts in the draft."
+		},
+		{
+			"index_in_day": 6,
+			"time_central": "09:00",
+			"pillar": "Contract negotiation and renewal risk",
+			"format": "Risk callout",
+			"post_content": "A childcare software contract can look harmless because the monthly price fits the budget.\n\nThen the renewal terms do the real damage.\n\nBefore signing, ask:\n\nDoes the contract auto-renew?\nHow much notice do we get before renewal?\nCan the price increase during the term?\nCan we export all historical records if we cancel?\nHow long do we retain read-only access after cancellation?\nWhat support response time is promised when attendance or billing is affected?\n\nThese are not dramatic legal questions.\n\nThey are operational questions.\n\nA childcare center may need attendance, payment, subsidy, staff, and incident records long after a software switch. A licensing or billing review does not care that the vendor relationship ended.\n\nThe best time to ask for data portability, a price lock, and a clearer renewal window is before the first signature.\n\nAfter staff are trained and billing is running, your negotiating position is weaker because switching costs are real.",
+			"source": "apps/site/src/content/guides/childcare-software-contract-negotiation.md",
+			"url": "https://pebbledesk.app/resources/guides/childcare-software-contract-negotiation/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Uses the contract guide's clauses that matter: auto-renewal, price lock, data portability, support, and negotiation timing."
+		},
+		{
+			"index_in_day": 7,
+			"time_central": "10:00",
+			"pillar": "Data portability and audit readiness",
+			"format": "Director habit",
+			"post_content": "The most important pricing clause may not mention price.\n\nIt may be data portability.\n\nFor a childcare center, export rights are not a nice-to-have. They protect the record after a software switch.\n\nAsk every vendor:\n\nCan we export all child records?\nAll historical attendance?\nAll billing history?\nAll subsidy documentation?\nAll staff credential records?\nAll incident records?\nIn what format?\nAt what point during the subscription?\nFor how long after cancellation?\n\nA contract that only promises current-record export can leave a director exposed when a past-period licensing, subsidy, or billing question appears.\n\nThe center owns the operational story.\n\nThe vendor stores it.\n\nThose are different things, and the contract should make that difference clear.",
+			"source": "apps/site/src/content/guides/childcare-software-contract-negotiation.md",
+			"url": "https://pebbledesk.app/resources/guides/childcare-software-contract-negotiation/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Expands the contract guide's data portability clause into a childcare-specific audit-readiness post."
+		},
+		{
+			"index_in_day": 8,
+			"time_central": "11:00",
+			"pillar": "Quote-based pricing and evaluation discipline",
+			"format": "Operator question",
+			"post_content": "Quote-based pricing is not automatically bad.\n\nFor a multi-site childcare operator with complex migration, integrations, state reporting, and rollout support, a custom quote can make sense.\n\nThe problem is when quote-based pricing hides the basics from a director who is trying to compare options.\n\nBefore a sales call, write down your evaluation questions:\n\nWhat is the base subscription?\nWhat fees are usage-based?\nWhat happens if enrollment grows?\nAre payment processing fees required or optional?\nIs setup included?\nIs staff training included?\nIs migration included?\nWhat contract term is required?\nWhat happens at renewal?\nCan we export all records if we leave?\n\nThen ask for the answer in writing.\n\nA quote should clarify the cost of your center's real operating needs.\n\nIt should not make the director feel like she is negotiating in the dark.",
+			"source": "apps/site/src/content/lead-magnets/childcare-software-pricing-comparison.md",
+			"url": "https://pebbledesk.app/free/childcare-software-pricing-comparison/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Keeps a balanced view of quote-based pricing while using the comparison guide's sales-call friction framing."
+		},
+		{
+			"index_in_day": 9,
+			"time_central": "12:00",
+			"pillar": "Compliance value beyond pricing",
+			"format": "Practical reminder",
+			"post_content": "A pricing comparison will not tell you whether a platform can defend your records.\n\nIt will tell you:\n\nSubscription cost.\nPayment fees.\nContract term.\nSetup cost.\nMaybe the renewal pattern.\n\nIt will not prove:\n\nWhether ratio records match attendance.\nWhether subsidy claims tie back to care delivered.\nWhether staff credentials are easy to produce.\nWhether licensing reports are usable.\nWhether historical records export cleanly.\nWhether your state-specific workflow is actually supported.\n\nThat is why directors evaluating childcare software need two spreadsheets:\n\nOne for cost.\nOne for proof.\n\nThe cost spreadsheet asks, \"What will we pay?\"\n\nThe proof spreadsheet asks, \"When licensing, subsidy billing, or a parent account question comes up, can this system show what happened?\"\n\nThe second question is often the one that decides whether the first price is worth it.",
+			"source": "apps/site/src/content/lead-magnets/childcare-software-pricing-comparison.md",
+			"url": "https://pebbledesk.app/free/childcare-software-pricing-comparison/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Uses the lead magnet's compliance-gap section and reframes it as an evaluation habit."
+		},
+		{
+			"index_in_day": 10,
+			"time_central": "13:00",
+			"pillar": "Software ROI and subsidy billing",
+			"format": "Educational framework",
+			"post_content": "If your center bills subsidies, software ROI is not only about saving time.\n\nIt is also about reducing billing confusion before it becomes lost revenue or rework.\n\nThe ROI guide suggests looking at four buckets:\n\nAdmin hours saved.\nBilling error reduction.\nSubsidy reconciliation time saved.\nLicensing risk reduction.\n\nFor subsidy-heavy centers, that third bucket deserves its own line.\n\nHow many hours do you spend each month checking eligibility, matching attendance, preparing claims, tracking status, and responding to documentation questions?\n\nHow many claim issues come from records living in different places?\n\nHow often does the director have to explain why an attendance record, invoice, and reimbursement do not line up cleanly?\n\nA lower software price is helpful only if the subsidy record still holds together.\n\nIf the system saves $50 a month but leaves hours of reconciliation behind, it may not be cheaper.",
+			"source": "apps/site/src/content/guides/childcare-software-roi-calculator-guide.md",
+			"url": "https://pebbledesk.app/resources/guides/childcare-software-roi-calculator-guide/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Uses the ROI guide's four-bucket formula and focuses it on subsidy reconciliation."
+		},
+		{
+			"index_in_day": 11,
+			"time_central": "14:00",
+			"pillar": "Transparent trial and commitment terms",
+			"format": "Product education",
+			"post_content": "A free trial should reduce pressure, not create a surprise bill.\n\nPebbleDesk's pricing page keeps trial and billing terms plain.\n\nIt tells directors whether a card is required, when reminders go out, how billing works, and what happens after the first paid charge.\n\nThose details matter because directors are often evaluating software while the center is open, staff are asking questions, and billing still has to go out.\n\nA trial should give a director room to test the jobs that matter:\n\nAttendance.\nRatios.\nSubsidy records.\nBilling.\nStaff records.\nAudit exports.\n\nNot room to wonder when the card will be charged.",
+			"source": "apps/site/src/config/site.ts",
+			"url": "https://pebbledesk.app/pricing/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "References the live pricing/trial disclosure source instead of freezing exact trial terms in the draft."
+		},
+		{
+			"index_in_day": 12,
+			"time_central": "15:00",
+			"pillar": "Annual versus multi-year buying decisions",
+			"format": "Practical tip",
+			"post_content": "Do not sign a multi-year childcare software contract just because the discount looks tidy.\n\nFirst prove the system works in your center.\n\nOne full billing cycle tells you more than a polished demo:\n\nCan staff record attendance consistently?\nDo classroom records support ratio review?\nDoes billing match the care record?\nDo subsidy claims have the documentation they need?\nCan the director find reports without rebuilding them?\nDo families understand the payment and communication changes?\nDoes support respond when a real issue appears?\n\nThe contract negotiation guide recommends treating annual as the safer first default for most childcare software buyers. Multi-year can make sense later, after the rollout is solid and subsidy billing has been validated.\n\nA discount is useful.\n\nBut getting locked into the wrong record system is expensive in a way that does not fit neatly on the quote.",
+			"source": "apps/site/src/content/guides/childcare-software-contract-negotiation.md",
+			"url": "https://pebbledesk.app/resources/guides/childcare-software-contract-negotiation/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Based on the contract guide's warning to validate operations before multi-year commitments."
+		},
+		{
+			"index_in_day": 13,
+			"time_central": "16:00",
+			"pillar": "Competitor pricing evaluation",
+			"format": "Balanced comparison",
+			"post_content": "When a competitor does not publish pricing, treat every number as a starting point.\n\nNot proof.\nNot a promise.\nNot the final answer for your center.\n\nFor example, our Brightwheel pricing page separates estimated subscription ranges from Brightwheel's published payment processing terms because Brightwheel does not publicly list subscription prices.\n\nThat distinction matters.\n\nEstimated subscription cost: confirm with the vendor.\nPublished processing rate: calculate against your own tuition volume.\nAnecdotal pricing context: use it as a question to ask, not as a verdict.\n\nThis is the fair way to evaluate any childcare software vendor, including us.\n\nGet the written quote.\nAsk what is included.\nAsk what is optional.\nAsk what happens at renewal.\nAsk whether the compliance records your center needs are part of the core product or an extra workaround.\n\nCareful comparison is not cynicism.\n\nIt is how directors protect the budget and the record.",
+			"source": "apps/site/src/content/pricing-breakdowns/brightwheel-pricing.md",
+			"url": "https://pebbledesk.app/compare/pricing/brightwheel/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Explicitly qualifies Brightwheel subscription figures as estimates and separates them from published processing terms."
+		},
+		{
+			"index_in_day": 14,
+			"time_central": "17:00",
+			"pillar": "Evaluation worksheet and buyer discipline",
+			"format": "End-of-day checklist",
+			"post_content": "Before a childcare software demo, bring your own pricing worksheet.\n\nFill in these lines during the call:\n\nBase monthly price.\nAnnual price.\nContract length.\nAuto-renewal notice window.\nSetup fee.\nMigration fee.\nTraining cost.\nPayment processing rate.\nHardware requirements.\nSupport tier included.\nCost for extra children, users, rooms, or locations.\nCost for integrations.\nPrice-lock terms.\nData export rights.\nRead-only access after cancellation.\n\nThen add one more section:\n\nCompliance proof.\n\nCan the platform show attendance by room?\nCan it support ratio review?\nCan it tie subsidy billing back to attendance?\nCan it export audit-ready records?\nCan it keep historical records accessible?\n\nA demo is useful, but a worksheet keeps the conversation honest.\n\nDirectors should leave with a cost they can budget and a record process they can trust.",
+			"source": "apps/site/src/content/guides/childcare-software-contract-negotiation.md",
+			"url": "https://pebbledesk.app/resources/guides/childcare-software-contract-negotiation/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Combines contract guide clauses with pricing-comparison hidden costs into a practical demo worksheet."
+		},
+		{
+			"index_in_day": 15,
+			"time_central": "18:00",
+			"pillar": "Pricing transparency and operational relief",
+			"format": "Closing thought",
+			"post_content": "Transparent pricing is not just a buyer preference.\n\nFor childcare directors, it is a form of operational relief.\n\nA clear price lets the director plan the budget.\nA clear contract lets the owner understand the commitment.\nClear processing fees prevent a surprise after tuition runs.\nClear export rights protect records after a switch.\nClear support terms matter when billing, attendance, or ratio records are affected.\nClear compliance scope prevents paying for a parent app while still running subsidy reconciliation in a spreadsheet.\n\nThe goal is not to buy the cheapest software.\n\nThe goal is to buy software whose true cost matches the work it removes.\n\nFor PebbleDesk, that work is keeping attendance, ratios, subsidy billing, family records, and reports connected so directors are not rebuilding the story before licensing visits or payment reviews.\n\nThe right price should make that job easier to understand before the first account is created.",
+			"source": "apps/site/src/config/site.ts",
+			"url": "https://pebbledesk.app/pricing/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Closes with current PebbleDesk positioning and the day's pricing-transparency theme."
+		}
+	]
+}

@@ -1,0 +1,171 @@
+{
+	"date": "2026-05-19",
+	"theme": "State-specific licensing and ratio support: be useful without overclaiming",
+	"posts": [
+		{
+			"index_in_day": 1,
+			"time_central": "04:00",
+			"pillar": "State licensing and ratio documentation",
+			"format": "Practical tip",
+			"post_content": "A staff-to-child ratio is not just a number on a state chart.\n\nIt is a daily operating record.\n\nThe part that trips centers up is usually not knowing the published ratio. Directors often know that part by heart.\n\nThe harder part is proving the ratio held through the real day:\n\nMorning arrivals.\nTeacher breaks.\nRoom changes.\nMixed-age grouping.\nLunch coverage.\nNap transitions.\nAfternoon pickup.\n\nThat is why state-specific support needs to be discussed carefully.\n\nA system can say it tracks ratios. That does not automatically mean it understands your state's age bands, inspection records, subsidy documentation, or local reporting formats.\n\nA useful vendor question:\n\n\"Show me how the ratio record is created at 10:15 AM, not just at check-in. Then show me the report I would hand to licensing.\"\n\nIf the answer stays abstract, keep asking.\n\nDirectors do not need dramatic compliance promises. They need records that match the way their state actually reviews care.",
+			"source": "apps/site/src/config/site.ts",
+			"url": "https://pebbledesk.app/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Opens the day with the site-wide positioning around attendance, ratio checks, and audit-ready records while avoiding a state-specific product claim."
+		},
+		{
+			"index_in_day": 2,
+			"time_central": "05:00",
+			"pillar": "Texas compliance and subsidy records",
+			"format": "Teaching post",
+			"post_content": "Texas ratio tracking has two layers directors should keep separate.\n\nFirst: Chapter 746 ratios.\n\nTexas steps through age groups from infants at 1:4 through 5-6 year-olds at 1:22. Those ratios have to hold through the operating day, not only at arrival and departure.\n\nSecond: subsidy documentation.\n\nCenters billing TWC-funded Child Care Services work through Local Workforce Development Boards, and the reporting expectations can vary by Board. Texas also uses TX3C for electronic attendance and billing for subsidy providers.\n\nThat combination is where generic exports can get painful.\n\nA director may have a clean attendance record and still spend time reformatting it for the Board or matching it to TX3C requirements.\n\nBefore choosing software, ask for a real Texas example:\n\nHow does it calculate Chapter 746 ratios by age group?\nHow does it document room changes and breaks?\nWhat export supports subsidy attendance review?\nHow does the TX3C step get handled?\n\nUseful support is specific enough to demonstrate.",
+			"source": "apps/site/src/content/state-pages/texas.md",
+			"url": "https://pebbledesk.app/childcare-software/texas/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Uses the Texas page's Chapter 746, Local Workforce Board, and TX3C guidance without promising guaranteed compliance."
+		},
+		{
+			"index_in_day": 3,
+			"time_central": "06:00",
+			"pillar": "California CCLD readiness",
+			"format": "Risk callout",
+			"post_content": "California directors do not get to treat the three-year inspection cycle as a documentation vacation.\n\nCCLD inspections are unannounced.\n\nThat means the useful question is not, \"When is our next inspection?\"\n\nIt is:\n\n\"If CCLD walked in today, could we show current children's files, personnel records, and ratio documentation without rebuilding the month?\"\n\nTitle 22 ratio records are not just headcounts. For the 2-5 age group, staff qualification matters because the 1:12 ratio depends on a qualified teacher being present.\n\nThat creates a practical recordkeeping issue:\n\nRatio logs and staff qualification files need to tell the same story.\n\nIf one system tracks classroom counts and another folder holds teacher qualifications, the director becomes the person stitching proof together under pressure.\n\nCalifornia compliance work is not about looking ready once every few years.\n\nIt is about staying ready because the visit is not scheduled for your convenience.",
+			"source": "apps/site/src/content/state-pages/california.md",
+			"url": "https://pebbledesk.app/childcare-software/california/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Based on the California page's CCLD, Title 22, unannounced inspection, and qualified teacher documentation sections."
+		},
+		{
+			"index_in_day": 4,
+			"time_central": "07:00",
+			"pillar": "Florida billing and ratio operations",
+			"format": "Practical tip",
+			"post_content": "Florida centers often have two billing stories running at the same time.\n\nSchool Readiness is year-round and administered through regional Early Learning Coalitions.\n\nVPK runs on its own August-through-June track.\n\nFor a 4-year-old, the center may need to know which hours belong to VPK, which hours belong to School Readiness, and what documentation supports each claim.\n\nThat is not a small detail. It is the monthly reconciliation job.\n\nAdd DCF ratio requirements on top: 1:4 for infants, 1:6 for 1-year-olds, then looser ratios as children age. Mixed-age classrooms use the most restrictive ratio in the room.\n\nA practical Florida software check:\n\nCan the system separate SR and VPK billing clearly?\nCan it produce attendance records your Coalition accepts?\nCan it identify the governing ratio from the actual children in the room?\nCan it show what happened during breaks and transitions?\n\nFlorida support should be visible in the daily record, not only in a sales slide.",
+			"source": "apps/site/src/content/state-pages/florida.md",
+			"url": "https://pebbledesk.app/childcare-software/florida/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Draws from the Florida page's DCF ratios, mixed-age rule, School Readiness, VPK, and Coalition guidance."
+		},
+		{
+			"index_in_day": 5,
+			"time_central": "08:00",
+			"pillar": "Verified product support and claim discipline",
+			"format": "Product education",
+			"post_content": "A quick note on how we talk about state support at PebbleDesk.\n\nWe would rather be precise than impressive.\n\nPebbleDesk supports generic attendance, records, billing, messaging, and ratio workflows nationally.\n\nVerified state-specific ratio and licensing report support today is for Texas, California, and Florida.\n\nThat means TX, CA, and FL directors can ask us to show the state-specific ratio and licensing report workflows we have verified.\n\nFor other states, we do not claim parity we have not checked. We scope state-specific needs during rollout, look at the licensing and subsidy documentation requirements, and confirm what can be supported.\n\nThat matters because childcare compliance is local in practice.\n\nA director in Texas may be dealing with Chapter 746 and TX3C.\nA director in California may be dealing with Title 22, CCLD, and Alternative Payment agencies.\nA director in Florida may be balancing DCF, School Readiness, and VPK.\n\nThe honest answer is more useful than the biggest answer.",
+			"source": "apps/site/src/config/site.ts",
+			"url": "https://pebbledesk.app/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Directly reflects the site config guardrail: generic workflows nationally, verified state-specific support today for Texas, California, and Florida only."
+		},
+		{
+			"index_in_day": 6,
+			"time_central": "09:00",
+			"pillar": "New York subsidy and historical records",
+			"format": "Teaching post",
+			"post_content": "New York is a good reminder that \"state support\" can mean several different jobs.\n\nOCFS Part 418 ratios are one job.\n\nCCAP billing through local Social Services districts is another.\n\nUpstate KinderConnect and New York City CAPS Online add another split.\n\nThen there is record retention. The New York state page notes a six-year childcare record retention requirement and an 80-absent-day annual limit that can trigger subsidy audit risk.\n\nThat is a lot of operational detail for one phrase like \"supports New York.\"\n\nDirectors should ask sharper questions:\n\nDoes the software calculate mixed-age rooms using the youngest child present?\nCan it retrieve historical records quickly?\nDoes it track absence counts for subsidized children?\nWhich CCAP submission system does the export actually support?\nWhat happens if a center operates in more than one region?\n\nA state page can list requirements.\n\nA center still needs proof that its daily system can carry them.",
+			"source": "apps/site/src/content/state-pages/new-york.md",
+			"url": "https://pebbledesk.app/childcare-software/new-york/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Uses New York-specific source details as vendor-evaluation education without making a PebbleDesk product support claim for New York."
+		},
+		{
+			"index_in_day": 7,
+			"time_central": "10:00",
+			"pillar": "Illinois licensing and staff records",
+			"format": "Risk callout",
+			"post_content": "Illinois directors have a simple ratio reminder that is easy to miss during a busy day:\n\nStaff off the floor do not count.\n\nUnder Part 407, ratios have to be maintained throughout operating hours. If a teacher is on break, in the office, in a meeting, or otherwise not present with children, that person cannot be used to cover the room on paper.\n\nThat is why arrival and departure logs are not enough.\n\nDCFS inspections can be announced or unannounced, and reviewers may look at ratio logs alongside staff files, CANTS background clearance documentation, and Illinois State Police clearances.\n\nA practical Illinois record check:\n\nCan you pick a room and see which staff were physically covering children at 11:30 AM?\nCan you see whether those staff had the required clearance documentation?\nCan the attendance record support the same headcount?\n\nCompliance breaks when those records live in different places and only match after someone fixes them.",
+			"source": "apps/site/src/content/state-pages/illinois.md",
+			"url": "https://pebbledesk.app/childcare-software/illinois/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Grounded in the Illinois page's Part 407, off-floor staff, unannounced inspections, CANTS, and clearance documentation language."
+		},
+		{
+			"index_in_day": 8,
+			"time_central": "11:00",
+			"pillar": "North Carolina star rating and subsidy records",
+			"format": "Operator question",
+			"post_content": "In North Carolina, ratio documentation can affect more than licensing confidence.\n\nThe NC Star Rated License system can affect subsidy reimbursement rates.\n\nThat changes the stakes for recordkeeping.\n\nA center is not only trying to show minimum compliance during a DCDEE inspection. It may also be trying to maintain the documentation that supports a stronger star rating: staff qualifications, consistent ratios, curriculum quality, and operating records.\n\nThen subsidy billing adds county-level variation. NC Child Care Subsidy runs through 100 county DSS offices, and submission schedules or formats can differ by county.\n\nA good North Carolina software evaluation should include these questions:\n\nCan it classify children by the correct NC age band?\nCan it document ratios across the full day?\nCan it keep staff qualification records findable?\nCan it export attendance in the format our county DSS accepts?\nCan it support star-rating documentation without creating a second filing project?\n\nThe star rating is not a decorative badge.\n\nFor many centers, it is tied to revenue.",
+			"source": "apps/site/src/content/state-pages/north-carolina.md",
+			"url": "https://pebbledesk.app/childcare-software/north-carolina/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Uses the North Carolina page's DCDEE, Star Rated License, county DSS, and age-band guidance without asserting PebbleDesk state-specific support."
+		},
+		{
+			"index_in_day": 9,
+			"time_central": "12:00",
+			"pillar": "Georgia licensing and CAPS documentation",
+			"format": "Teaching post",
+			"post_content": "Georgia is a useful contrast to states where subsidy runs through county offices.\n\nCAPS is administered by DECAL at the state level.\n\nThat can make requirements more uniform than county-administered models, but it does not make documentation optional or casual.\n\nGeorgia's state page makes the key point plainly: CAPS is attendance-based. The attendance record is billing documentation. A discrepancy between what a center submits for payment and what its attendance records show can become an audit finding.\n\nDECAL inspections also look at continuous ratio documentation under Rule 591-1-1, from infant rooms through school-age care.\n\nFor directors, the practical habit is to treat licensing and subsidy records as connected.\n\nIf the room count, attendance record, and CAPS billing record do not support the same day, the center has a story problem.\n\nAnd during an audit, the story has to be told by records, not memory.",
+			"source": "apps/site/src/content/state-pages/georgia.md",
+			"url": "https://pebbledesk.app/childcare-software/georgia/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Based on the Georgia page's DECAL, CAPS, attendance-based billing, and continuous ratio documentation sections."
+		},
+		{
+			"index_in_day": 10,
+			"time_central": "13:00",
+			"pillar": "Washington age-band ratio tracking",
+			"format": "Practical tip",
+			"post_content": "Washington directors have a ratio problem that a room label cannot solve.\n\nWAC 110-300 breaks the infant and toddler range into several age bands:\n\nUnder 12 months.\n12-18 months.\n18-30 months.\n30 months to 3 years.\n\nThat means a child's birthday can change the applicable ratio before the room assignment changes.\n\nIf software only knows \"infant room\" or \"toddler room,\" it can miss the actual compliance question:\n\nHow old is each child in the room today?\n\nThat matters in mixed-age care and in centers with children moving between rooms as slots open.\n\nWashington also requires WCCC subsidy providers to use KinderConnect for electronic attendance, so directors evaluating software should ask about the attendance export or integration path before relying on it for subsidy records.\n\nThe practical vendor test:\n\nEnter a child's birth date, move that child through age boundaries, then ask the system to recalculate the ratio record.\n\nIf it cannot show the change, the director will be doing that work manually.",
+			"source": "apps/site/src/content/state-pages/washington.md",
+			"url": "https://pebbledesk.app/childcare-software/washington/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Uses Washington's WAC 110-300 age subdivisions and KinderConnect mandate as practical evaluation guidance without a PebbleDesk claim."
+		},
+		{
+			"index_in_day": 11,
+			"time_central": "14:00",
+			"pillar": "State-specific software evaluation",
+			"format": "Practical checklist",
+			"post_content": "Before a childcare director accepts the phrase \"state-specific reporting,\" ask for the boring proof.\n\nThe proof is not a logo on a comparison table.\n\nIt is an export, a screen, or a report that matches your actual operating need.\n\nUseful questions:\n\nWhich licensing agency is this built around?\nWhich age bands does the ratio engine use?\nHow are mixed-age rooms handled?\nHow are teacher breaks and room transfers recorded?\nDoes staff qualification status affect the ratio record where the state requires it?\nWhich subsidy program does the export support?\nDoes the export match a state portal, county agency, regional coalition, or local board?\nCan we retrieve records from the period licensing may review?\nWhat happens when the state changes a form or rule?\n\nA vendor who understands childcare compliance should welcome those questions.\n\nThe director is not being difficult.\n\nThe director is protecting the license, the reimbursement record, and the staff who have to use the system at 8:05 on a Tuesday.",
+			"source": "apps/site/src/config/site.ts",
+			"url": "https://pebbledesk.app/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Turns the site config's careful state-support FAQ into a practical buyer checklist."
+		},
+		{
+			"index_in_day": 12,
+			"time_central": "15:00",
+			"pillar": "California subsidy documentation",
+			"format": "Risk callout",
+			"post_content": "California subsidy attendance sheets carry more weight than a normal sign-in sheet.\n\nFor subsidized care, monthly paper sign-in and sign-out sheets may be signed under penalty of perjury.\n\nThat makes the record a legal declaration, not just an admin form.\n\nThe risk is highest when attendance gets reconstructed at billing time.\n\nA missing signature.\nA corrected time.\nA child marked present when the source record is unclear.\nA room change that never made it into the attendance story.\n\nThose details can look small until someone has to sign the month.\n\nThe practical habit is to clean the record while the day is still fresh:\n\nConfirm sign-ins.\nFix missing timestamps.\nTie attendance to the child's funding source.\nKeep agency requirements visible.\nReview exceptions before the monthly sheet is prepared.\n\nCalifornia's fragmented subsidy system already asks directors to manage different agency formats.\n\nDo not add memory-based attendance reconstruction to the pile.",
+			"source": "apps/site/src/content/state-pages/california.md",
+			"url": "https://pebbledesk.app/childcare-software/california/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Uses California's penalty-of-perjury attendance documentation and regional agency variation to create a practical risk post."
+		},
+		{
+			"index_in_day": 13,
+			"time_central": "16:00",
+			"pillar": "Texas and Florida verified product support",
+			"format": "Product education",
+			"post_content": "For Texas, California, and Florida, PebbleDesk's state-specific support is meant to answer the questions directors actually bring to licensing and billing work.\n\nNot just:\n\n\"Can it track attendance?\"\n\nBut:\n\n\"Can it help me see ratio risk before the day gets away from us?\"\n\"Can the licensing report reflect the state format we have verified?\"\n\"Can attendance, room assignment, and billing support stay connected enough to answer review questions?\"\n\nIn Texas, that means verified support around state-specific ratio and licensing report needs tied to Chapter 746 and Texas reporting expectations.\n\nIn California, it means verified support around Title 22 and CCLD-oriented documentation.\n\nIn Florida, it means verified support around DCF ratio and licensing report needs while directors also manage SR and VPK records.\n\nThat still is not legal advice and it does not guarantee an inspection result.\n\nIt means the product claim is scoped to verified support, not stretched into a promise no software should make.",
+			"source": "apps/site/src/config/site.ts",
+			"url": "https://pebbledesk.app/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Carefully names only TX/CA/FL for verified PebbleDesk state-specific support and explicitly avoids compliance guarantees."
+		},
+		{
+			"index_in_day": 14,
+			"time_central": "17:00",
+			"pillar": "Multi-state operator compliance",
+			"format": "Operator question",
+			"post_content": "Multi-site childcare operators should be cautious with one-size-fits-all compliance dashboards.\n\nA Texas center may need Chapter 746 ratio logic and Local Workforce Board attendance expectations.\n\nA California center may need Title 22 ratio records, qualified teacher documentation, and regional Alternative Payment agency formats.\n\nA Florida center may need DCF ratio records plus separate School Readiness and VPK billing tracks.\n\nA Washington center may need birth-date-driven toddler ratio logic because WAC 110-300 has unusually granular age bands.\n\nThose are not interchangeable requirements.\n\nThe group-level question is not, \"Can we standardize everything?\"\n\nIt is:\n\n\"Which records should be standardized across our organization, and which records must bend to the state?\"\n\nGood standardization gives directors a common way to manage attendance, staff coverage, billing follow-up, and records.\n\nBad standardization flattens state requirements until local directors have to rebuild compliance outside the system.\n\nA multi-site tool should make differences visible, not pretend they are gone.",
+			"source": "apps/site/src/config/site.ts",
+			"url": "https://pebbledesk.app/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Uses site-config audience fit for multi-site operators and state-page examples to frame multi-state compliance safely."
+		},
+		{
+			"index_in_day": 15,
+			"time_central": "18:00",
+			"pillar": "Practical compliance mindset",
+			"format": "Closing thought",
+			"post_content": "The safest way to talk about childcare compliance software is also the most useful way:\n\nBe specific.\n\nSpecific about the state.\nSpecific about the age bands.\nSpecific about the licensing agency.\nSpecific about the report.\nSpecific about the subsidy program.\nSpecific about what is verified and what needs rollout scoping.\n\nDirectors are not helped by broad promises like \"handles all compliance.\"\n\nThey are helped by practical answers:\n\nHere is how the ratio is calculated.\nHere is how a mixed-age room is handled.\nHere is how staff coverage is documented.\nHere is the export your review may need.\nHere is what we support today.\nHere is what we should verify before you depend on it.\n\nThat kind of clarity may sound less flashy.\n\nFor a licensed childcare center, it is far more valuable.\n\nCompliance work is already stressful enough. The software conversation should reduce uncertainty, not add a new layer of guesswork.",
+			"source": "apps/site/src/config/site.ts",
+			"url": "https://pebbledesk.app/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Closes the day with a brand-aligned principle: careful state-specific claims, useful documentation, and no overclaiming."
+		}
+	]
+}

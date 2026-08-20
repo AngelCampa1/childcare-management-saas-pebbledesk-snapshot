@@ -1,0 +1,167 @@
+---
+import type { LeadMagnetTrack } from "@pebbledesk/shared/public-knowledge"
+import { ExitIntentPopup } from "../components/exit-intent-popup"
+import SiteFooter from "../components/site-footer.astro"
+import SiteHeader from "../components/site-header.astro"
+import { resolveExitPopupProps } from "../lib/exit-popup-props"
+import { resolvePopupMagnet } from "../lib/resolve-popup-magnet"
+import { buildFooterEmailCaptureProps } from "../lib/footer-utils"
+import { buildLandingProductOffers, buildLandingSoftwareApplicationProps } from "../lib/landing-schema"
+import { resolveMarketingApiUrl } from "../lib/marketing-api-url"
+import { ensureTrailingSlash, resolveLandingTitle, resolveSchemaAuthor } from "../lib/meta"
+import { resolvePublicSignupCta } from "../lib/public-signup-cta"
+import {
+  buildOrganizationSchema,
+  buildProductSchema,
+  buildSoftwareApplicationSchema,
+  buildWebSiteSchema,
+} from "../lib/schema-builders"
+import { buildGraph, withId } from "../lib/schema-graph"
+import SchemaMarkup from "../seo/schema-markup.astro"
+import type { SiteConfig } from "../types"
+import BaseLayout from "./base-layout.astro"
+
+type LandingSchemaMode = "brand" | "product"
+
+interface Props {
+  config: SiteConfig
+  canonicalPath: string
+  schemaMode: LandingSchemaMode
+  publishedAt?: string
+  updatedAt?: string
+  title?: string
+  description?: string
+  preferCategoryTitle?: boolean
+  noindex?: boolean
+  track?: LeadMagnetTrack
+}
+const {
+  config,
+  canonicalPath,
+  schemaMode,
+  publishedAt,
+  updatedAt,
+  title,
+  description,
+  preferCategoryTitle = false,
+  noindex = false,
+  track,
+} = Astro.props
+const popupMagnet = resolvePopupMagnet(track, config.leadMagnet)
+const exitPopupProps = config.exitPopup?.enabled !== false ? resolveExitPopupProps(config) : undefined
+const marketingApiUrl = resolveMarketingApiUrl(import.meta.env.PUBLIC_API_URL as string | undefined, Astro.url.origin)
+const turnstileSiteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY as string | undefined
+const sourcePage = canonicalPath
+const footerEmailCapture = buildFooterEmailCaptureProps(config, sourcePage)
+const headerCta = resolvePublicSignupCta({
+  sourcePage,
+  explicitTarget: config.funnel.bofu.ctaTarget,
+  explicitText: config.funnel.bofu.ctaText,
+})
+
+const siteUrl = `https://${config.domain}`
+const canonicalUrl = ensureTrailingSlash(`https://${config.domain}${canonicalPath}`)
+const orgId = `${siteUrl}/#organization`
+const productId = `${siteUrl}/#product`
+const softwareId = `${siteUrl}/#software`
+const websiteId = `${siteUrl}/#website`
+const pricingUrl = `${siteUrl}/pricing/`
+const schemaAuthor = resolveSchemaAuthor(config.author, config.domain)
+const landingSoftwareProps = buildLandingSoftwareApplicationProps(config, {
+  canonicalUrl,
+  imageUrl: `${siteUrl}${config.defaultOgImage}`,
+})
+
+const schemas = [
+  withId(buildOrganizationSchema({
+    name: config.name,
+    url: siteUrl,
+    founder: schemaAuthor,
+    ...(config.sameAs && { sameAs: config.sameAs }),
+    ...(config.contactEmail && { contactPoint: { email: config.contactEmail, type: "customer support" } }),
+    ...(config.areaServed && { areaServed: config.areaServed }),
+    ...(config.logo?.light && { logo: `${siteUrl}${config.logo.light}` }),
+  }), orgId),
+  withId(buildWebSiteSchema({
+    name: config.name,
+    url: siteUrl,
+    description: config.tagline,
+    ...(config.searchPathTemplate && {
+      searchAction: { siteUrl, searchPathTemplate: config.searchPathTemplate }
+    }),
+    publisherId: orgId,
+  }), websiteId),
+  ...(schemaMode === "product"
+    ? [
+        withId(buildProductSchema({
+          name: config.name,
+          description: config.tagline,
+          url: canonicalUrl,
+          image: `${siteUrl}${config.defaultOgImage}`,
+          category: config.product.category,
+          brand: { name: config.name },
+          offers: buildLandingProductOffers(config, pricingUrl),
+        }), productId),
+        withId(buildSoftwareApplicationSchema(landingSoftwareProps), softwareId),
+      ]
+    : []),
+]
+const graph = buildGraph(schemas)
+---
+
+<BaseLayout
+  title={resolveLandingTitle(config, title, preferCategoryTitle)}
+  description={description ?? config.metaDescription ?? config.tagline}
+  canonicalUrl={canonicalUrl}
+  siteName={config.name}
+  siteUrl={`https://${config.domain}`}
+  ogType="website"
+  ogImage={config.defaultOgImage}
+  twitterSite={config.social?.twitterHandle}
+  publishedAt={publishedAt}
+  updatedAt={updatedAt}
+  themeColor={config.theme.primary}
+  theme={config.theme}
+  fonts={config.theme.fonts}
+  preserveMetaTagCopy={config.preserveMetaTagCopy}
+  appleTouchIcon={config.appleTouchIcon}
+  analyticsEnabled={config.analytics?.enabled ?? true}
+  rssUrl="/rss.xml"
+  noindex={noindex}
+>
+  <SiteHeader
+    slot="header"
+    siteName={config.name}
+    navItems={config.nav?.items}
+    signInHref={config.nav?.signInHref}
+    ctaText={config.nav?.ctaText ?? headerCta.text}
+    ctaHref={headerCta.target}
+    logoLight={config.logo?.light}
+    logoDark={config.logo?.dark}
+    promo={config.promoBanner}
+  />
+  <div class="relative overflow-hidden">
+    <slot />
+  </div>
+  <SchemaMarkup graph={graph} />
+  {exitPopupProps && (
+    <ExitIntentPopup
+      client:load
+      apiUrl={marketingApiUrl}
+      siteName={config.name}
+      sourcePage={sourcePage}
+      leadMagnet={popupMagnet}
+      turnstileSiteKey={turnstileSiteKey}
+      {...exitPopupProps}
+    />
+  )}
+  <SiteFooter
+    slot="footer"
+    siteName={config.name}
+    tagline={config.tagline}
+    linkGroups={config.footer?.linkGroups}
+    legalLinks={config.footer?.legalLinks}
+    emailCapture={footerEmailCapture}
+    contactEmail={config.contactEmail}
+  />
+</BaseLayout>

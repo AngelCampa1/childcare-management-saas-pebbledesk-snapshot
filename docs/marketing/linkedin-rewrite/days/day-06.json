@@ -1,0 +1,171 @@
+{
+	"date": "2026-05-11",
+	"theme": "Licensing visits, inspection folders, and monthly self-audits",
+	"posts": [
+		{
+			"index_in_day": 1,
+			"time_central": "04:00",
+			"pillar": "Audit readiness and licensing confidence",
+			"format": "Practical tip",
+			"post_content": "The best time to build your inspection folder is not the night before a licensing visit.\n\nIt is the ordinary Tuesday when nothing is on fire.\n\nA useful inspection-ready folder should answer the questions inspectors ask most often:\n\n- Is the license current and posted?\n- Who is enrolled today?\n- Who is working today?\n- Are staff credentials current?\n- Can attendance records support the ratio story?\n- Can drill logs and emergency plans be found quickly?\n\nThe folder does not need to be fancy. It needs to be current.\n\nThe quiet test: if an inspector arrived during morning drop-off, could someone place the right records in front of the director in under five minutes?",
+			"source": "apps/site/src/content/guides/preparing-for-state-audit-childcare.md",
+			"url": "https://pebbledesk.app/resources/guides/preparing-for-state-audit-childcare/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Opens the day with the core inspection-folder behavior from the audit preparation guide."
+		},
+		{
+			"index_in_day": 2,
+			"time_central": "05:00",
+			"pillar": "Ratio compliance",
+			"format": "Operator question",
+			"post_content": "A monthly ratio self-audit does not need to be complicated.\n\nPick a few ordinary days from the last month and look for the pressure points:\n\nMorning arrival.\nLunch coverage.\nNap transitions.\nOutdoor time.\nAfternoon pickup.\n\nThose are the windows where staffing plans and real attendance often stop matching neatly.\n\nThe question is not only, \"Were we in ratio?\"\n\nIt is also, \"Could we prove who was present, where they were, and which qualified staff were supervising at that time?\"\n\nA ratio issue from three months ago can still matter during an annual inspection. Monthly review gives directors a chance to catch patterns while they can still fix the operating habit behind them.",
+			"source": "apps/site/src/content/guides/preparing-for-state-audit-childcare.md",
+			"url": "https://pebbledesk.app/resources/guides/preparing-for-state-audit-childcare/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Uses the source recommendation to audit ratio records monthly and names transition-period risk."
+		},
+		{
+			"index_in_day": 3,
+			"time_central": "06:00",
+			"pillar": "Staff records and credentials",
+			"format": "Practical tip",
+			"post_content": "Staff files are one of those compliance areas where a center can be doing the right thing and still look unprepared.\n\nThe teacher renewed CPR.\nThe background check cleared.\nThe training hours were completed.\n\nBut the proof is split between a paper folder, an email attachment, a wallet card, and someone's phone.\n\nFor monthly self-audits, pull one staff list and check four things for every employee:\n\n- Background check clearance and renewal date\n- CPR and First Aid expiration date\n- Required training hours and documentation\n- Any state-specific credential or health requirement\n\nA single missing document can slow an inspection. An expired credential can become a citation.\n\nThe practical goal is simple: one staff member, one complete file, current today.",
+			"source": "apps/site/src/content/guides/daycare-licensing-requirements-guide.md",
+			"url": "https://pebbledesk.app/resources/guides/daycare-licensing-requirements-guide/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Grounded in the licensing guide's staff qualification documentation requirements."
+		},
+		{
+			"index_in_day": 4,
+			"time_central": "07:00",
+			"pillar": "Audit readiness and licensing confidence",
+			"format": "Teaching post",
+			"post_content": "There are three different review moments childcare directors should prepare for:\n\n1. Licensing inspections\n2. Subsidy billing audits\n3. Complaint investigations\n\nThey are not the same event.\n\nA licensing inspector is usually checking ratios, staff credentials, child files, emergency documentation, and the physical environment.\n\nA subsidy auditor is matching billing claims to attendance, authorization periods, payments, and co-payment documentation.\n\nA complaint investigation is focused on a specific allegation, incident, child, staff member, or practice.\n\nThis matters because handing over extra records is not always helpful. The director's job is to understand the review type, produce the requested documentation, and keep staff focused on supervision.\n\nPreparation starts with knowing which folder belongs to which visit.",
+			"source": "apps/site/src/content/lead-magnets/state-audit-preparation-toolkit.md",
+			"url": "https://pebbledesk.app/free/state-audit-preparation-toolkit/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Explains the toolkit's three-audit framework in LinkedIn-native language."
+		},
+		{
+			"index_in_day": 5,
+			"time_central": "08:00",
+			"pillar": "Emergency preparedness",
+			"format": "Checklist",
+			"post_content": "A fire drill that happened but was not documented can still create a licensing problem.\n\nFor emergency preparedness, the drill log is the record inspectors review.\n\nA useful entry captures:\n\n- Date and time\n- Drill type\n- Number of children present\n- Number of staff present\n- Time from alarm to headcount confirmed\n- Issues found\n- Corrective action taken\n\nThat last line matters. Real drills surface real issues: a slow exit door, a new staff member unsure of the route, a classroom that needs a clearer headcount routine.\n\nMonthly self-audit idea: review the last 12 months of drill logs and look for gaps, repeated issues, or entries that say too little to prove what happened.",
+			"source": "apps/site/src/content/guides/childcare-emergency-preparedness-guide.md",
+			"url": "https://pebbledesk.app/resources/guides/childcare-emergency-preparedness-guide/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Pulls directly from the emergency preparedness guide's drill documentation requirements."
+		},
+		{
+			"index_in_day": 6,
+			"time_central": "09:00",
+			"pillar": "Child records and family documentation",
+			"format": "Practical tip",
+			"post_content": "Child files deserve the same monthly attention as ratios.\n\nA clean enrollment file is not just an admin preference. It is what helps staff act quickly during inspection, illness, injury, pickup questions, and emergencies.\n\nFor each enrolled child, check:\n\n- Enrollment agreement\n- Parent and emergency contacts\n- Authorized pickup list\n- Immunization record or allowed exemption documentation\n- Allergy or medical action plan, if needed\n- Emergency medical authorization\n- Custody or court order documentation, if applicable\n\nThe risk is not only a missing form. The risk is staff relying on outdated information when a child needs care or a caregiver arrives for pickup.\n\nMonthly file review is one of those quiet habits that makes licensing visits less dramatic.",
+			"source": "apps/site/src/content/lead-magnets/state-audit-preparation-toolkit.md",
+			"url": "https://pebbledesk.app/free/state-audit-preparation-toolkit/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Uses the toolkit's universal child documentation checklist with a practical safety framing."
+		},
+		{
+			"index_in_day": 7,
+			"time_central": "10:00",
+			"pillar": "Licensing operations",
+			"format": "Risk callout",
+			"post_content": "One of the easiest ways to get surprised during a licensing visit is to count the director in ratio when the director is not actually supervising.\n\nBeing in the building is not the same as being in ratio.\n\nIf the director is in an office handling a parent call, reviewing billing, or pulling files for an inspector, they are not directly supervising children.\n\nThis matters most during the busy parts of the day:\n\n- Staff breaks\n- Early arrivals\n- Late pickups\n- Mixed-age grouping\n- Lunch coverage\n\nA useful monthly self-audit question: where did our coverage plan depend on a person who was also expected to do administrative work?\n\nThat is not a staffing plan. That is a citation waiting for a busy morning.",
+			"source": "apps/site/src/content/lead-magnets/licensing-compliance-checklist.md",
+			"url": "https://pebbledesk.app/free/licensing-compliance-checklist/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Based on the checklist's ratio guidance that directors count only when directly supervising."
+		},
+		{
+			"index_in_day": 8,
+			"time_central": "11:00",
+			"pillar": "Audit readiness and licensing confidence",
+			"format": "Staff briefing",
+			"post_content": "When an inspector arrives, staff should not have to improvise.\n\nA simple annual briefing can prevent a nervous first five minutes from turning into a messy visit.\n\nStaff should know to:\n\n- Greet the inspector politely\n- Notify the director immediately\n- Keep supervising children\n- Answer direct questions honestly and briefly\n- Avoid guessing about records, incidents, or billing\n- Let the director handle documentation requests\n\nThis is not about hiding information. It is about keeping roles clear.\n\nTeachers keep children safe and supervised. Directors manage the inspection record.\n\nThat clarity helps the visit stay calm, accurate, and focused.",
+			"source": "apps/site/src/content/lead-magnets/state-audit-preparation-toolkit.md",
+			"url": "https://pebbledesk.app/free/state-audit-preparation-toolkit/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Adapts the toolkit's staff briefing template without overquoting or inventing policy."
+		},
+		{
+			"index_in_day": 9,
+			"time_central": "12:00",
+			"pillar": "Emergency preparedness",
+			"format": "Practical tip",
+			"post_content": "Your emergency binder should not live only in the director's office.\n\nDuring an actual evacuation, the records staff need are the records that travel with the group.\n\nAt minimum, the binder should make these items easy to find:\n\n- Current emergency plan\n- Evacuation maps\n- Staff emergency contacts\n- Current child roster\n- Child emergency contacts\n- Medical alerts and allergy action plans\n- Utility shutoff information\n- Local emergency and licensing contacts\n- Last 12 months of drill logs\n\nThen ask the practical question: if the building could not be re-entered, what information would staff still have in hand?\n\nThat is the difference between a binder that passes a desk review and a binder that helps in a real emergency.",
+			"source": "apps/site/src/content/guides/childcare-emergency-preparedness-guide.md",
+			"url": "https://pebbledesk.app/resources/guides/childcare-emergency-preparedness-guide/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Uses the guide's emergency binder contents and second-copy accessibility advice."
+		},
+		{
+			"index_in_day": 10,
+			"time_central": "13:00",
+			"pillar": "Subsidy billing audit readiness",
+			"format": "Teaching post",
+			"post_content": "If your center accepts subsidy payments, your attendance records are doing two jobs.\n\nThey support daily operations.\nThey support billing claims.\n\nDuring a subsidy audit, the question is not, \"Did the child usually attend?\"\n\nIt is more specific:\n\n- Was the child authorized for care on that date?\n- Was the child present?\n- Do sign-in and sign-out records include the required detail?\n- Did the claim match the attendance record?\n- Were co-payments handled according to the rules that apply?\n\nThis is why subsidy billing records should be organized separately from private-pay billing.\n\nWhen an auditor asks for a child and a period, the director should not have to rebuild the payment story from scattered attendance sheets, remittance notices, and spreadsheets.",
+			"source": "apps/site/src/content/lead-magnets/licensing-compliance-checklist.md",
+			"url": "https://pebbledesk.app/free/licensing-compliance-checklist/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Grounded in the checklist's subsidy billing requirements and record organization guidance."
+		},
+		{
+			"index_in_day": 11,
+			"time_central": "14:00",
+			"pillar": "Licensing operations",
+			"format": "Practical tip",
+			"post_content": "Mixed-age rooms can make a slow day feel efficient.\n\nThey can also create ratio risk if the room is not staffed for the youngest child present.\n\nThat is the monthly audit question:\n\nWhen rooms were combined during low-enrollment hours, which ratio did we use?\n\nNot the average age.\nNot the room's usual age group.\nNot the ratio that would apply if the toddler had already gone home.\n\nThe youngest child's ratio is often the standard that matters.\n\nThis is especially important during early morning and late afternoon coverage, when classrooms combine and staff are watching several transitions at once.\n\nA good ratio log should make those combined-room periods visible.",
+			"source": "apps/site/src/content/lead-magnets/licensing-compliance-checklist.md",
+			"url": "https://pebbledesk.app/free/licensing-compliance-checklist/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Focuses on the checklist's mixed-age ratio warning and common combined-room risk."
+		},
+		{
+			"index_in_day": 12,
+			"time_central": "15:00",
+			"pillar": "Audit readiness and licensing confidence",
+			"format": "Operator question",
+			"post_content": "A good self-audit is not a hunt for blame.\n\nIt is a way to find the fragile parts of the system before a licensing visit finds them for you.\n\nTry asking these once a month:\n\n- Which documents expired or will expire in the next 60 days?\n- Which days had the tightest classroom coverage?\n- Which child files are missing signatures, immunizations, or pickup updates?\n- Which drill logs are missing time, headcount, or corrective action notes?\n- Which subsidy records would be hard to match to attendance?\n\nThe best outcome is boring: a short list, assigned owners, and fixes completed before the next month starts.\n\nThat kind of boring is a gift to a childcare director.",
+			"source": "apps/site/src/content/guides/preparing-for-state-audit-childcare.md",
+			"url": "https://pebbledesk.app/resources/guides/preparing-for-state-audit-childcare/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Synthesizes the source's monthly self-audit habit across ratios, files, drills, and subsidy records."
+		},
+		{
+			"index_in_day": 13,
+			"time_central": "16:00",
+			"pillar": "Licensing documentation",
+			"format": "Risk callout",
+			"post_content": "Compliance and documentation of compliance are not the same thing.\n\nA center may have maintained ratios.\nA teacher may have completed training.\nA family may have submitted updated emergency contacts.\nA fire drill may have happened on schedule.\n\nBut if the record is missing, expired, inaccessible, or impossible to connect to the right date, the inspection conversation changes.\n\nThat is why monthly self-audits should focus on proof, not memory.\n\nCan the record show what happened?\nCan the director retrieve it quickly?\nCan a new assistant director understand it without a long explanation?\n\nGood programs do not need impressive binders. They need ordinary records that survive ordinary scrutiny.",
+			"source": "apps/site/src/content/guides/preparing-for-state-audit-childcare.md",
+			"url": "https://pebbledesk.app/resources/guides/preparing-for-state-audit-childcare/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Uses the guide's distinction between compliant operations and inspection-proof documentation."
+		},
+		{
+			"index_in_day": 14,
+			"time_central": "17:00",
+			"pillar": "Emergency preparedness",
+			"format": "Teaching post",
+			"post_content": "Reunification procedures are easy to underestimate until there are families arriving at once and staff are managing a stressful pickup location.\n\nThe written plan should answer four practical questions:\n\n- Where do families go?\n- What is the alternate location if the primary spot is unavailable?\n- How does staff verify the adult is authorized for pickup?\n- How is each release documented by child, time, and pickup person?\n\nThe weak point for many centers is verification.\n\nIf the authorized pickup list is only available in the office or only available through a system that requires internet, staff may not have what they need during an evacuation.\n\nA monthly emergency binder check should include the pickup list. Current, accessible, and usable outside the building.",
+			"source": "apps/site/src/content/guides/childcare-emergency-preparedness-guide.md",
+			"url": "https://pebbledesk.app/resources/guides/childcare-emergency-preparedness-guide/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Applies the emergency guide's reunification procedure guidance to monthly binder maintenance."
+		},
+		{
+			"index_in_day": 15,
+			"time_central": "18:00",
+			"pillar": "Audit readiness and licensing confidence",
+			"format": "Soft product positioning",
+			"post_content": "The end-of-week scramble usually starts long before Friday.\n\nIt starts when attendance lives in one place, staff schedules in another, subsidy notes in a spreadsheet, CPR renewal dates in someone's calendar, and inspection reports in a folder no one has opened since last year.\n\nLicensing visits expose those gaps quickly.\n\nThe practical standard for childcare admin software is not whether it has a long feature list.\n\nIt is whether it helps the director answer real inspection questions without rebuilding the story by hand:\n\nWho was present?\nWho was supervising?\nWere ratios maintained?\nAre staff files current?\nDo billing records match attendance?\nCan we find the emergency documentation?\n\nAudit-ready records without the end-of-week scramble is not flashy. It is relief.",
+			"source": "apps/site/src/content/guides/preparing-for-state-audit-childcare.md",
+			"url": "https://pebbledesk.app/resources/guides/preparing-for-state-audit-childcare/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Closes with PebbleDesk positioning while staying grounded in the audit guide's documentation system theme."
+		}
+	]
+}

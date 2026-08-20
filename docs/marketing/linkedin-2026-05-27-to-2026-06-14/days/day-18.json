@@ -1,0 +1,171 @@
+{
+	"date": "2026-06-13",
+	"theme": "Waitlist, enrollment operations, and capacity planning",
+	"posts": [
+		{
+			"index_in_day": 1,
+			"time_central": "04:00",
+			"pillar": "Waitlist operations",
+			"format": "Opening thought",
+			"post_content": "A childcare waitlist is not automatically enrollment demand.\n\nIt is potential demand.\n\nThe difference is follow-up.\n\nA family can be serious in March and unavailable in August. They can find care somewhere else. Their start date can move. Their schedule can change. Their child can age into a different classroom before a spot opens.\n\nThat is why a waitlist needs to work like a pipeline, not a parked list.\n\nAt minimum, directors need:\n\nChild date of birth.\nAge group or classroom fit.\nAnticipated start date.\nCare schedule needed.\nFamily contact preference.\nInquiry date.\nFollow-up history.\nCurrent interest status.\n\nWhen a spot opens, the question should not be, \"Where did we put that spreadsheet?\"\n\nIt should be, \"Who is the right next family for this room, and when did we last hear from them?\"",
+			"source": "apps/site/src/content/guides/managing-childcare-waitlist-guide.md",
+			"url": "https://pebbledesk.app/resources/guides/managing-childcare-waitlist-guide/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Grounded in the waitlist guide's pipeline framing and minimum information fields."
+		},
+		{
+			"index_in_day": 2,
+			"time_central": "05:00",
+			"pillar": "Waitlist follow-up",
+			"format": "Practical cadence",
+			"post_content": "Most waitlist leaks are not dramatic.\n\nThey are quiet.\n\nA family signs up.\nMonths pass.\nNobody checks in.\nA spot opens.\nThe director calls.\nThe family already enrolled somewhere else.\n\nA simple cadence helps:\n\nImmediate confirmation at sign-up.\nMonthly touchpoint.\nQuarterly confirmation that the family is still looking.\nMore personal contact during the 60 days before the expected start window.\nA phone call when a spot opens.\n\nThis does not need to be fancy.\n\nA short, consistent message beats an elaborate newsletter that never gets sent.\n\nWhen a real opening appears, the family should recognize your center, trust that the list is active, and respond quickly.",
+			"source": "apps/site/src/content/guides/managing-childcare-waitlist-guide.md",
+			"url": "https://pebbledesk.app/resources/guides/managing-childcare-waitlist-guide/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Rewritten to remove goal phrasing from waitlist follow-up post."
+		},
+		{
+			"index_in_day": 3,
+			"time_central": "06:00",
+			"pillar": "Capacity planning",
+			"format": "Capacity question",
+			"post_content": "A waitlist can answer a capacity question if the data is clean enough.\n\nNot just, \"How many families are waiting?\"\n\nA better set of questions:\n\nHow many infants are waiting?\nHow many toddlers?\nHow many preschoolers?\nWhat start dates are clustered together?\nHow many families need full-time care?\nHow many need part-time schedules that may not fit the open slot?\nHow long do families usually stay interested before finding another option?\nWhich rooms have demand but no near-term opening?\n\nAn infant-heavy list and an empty toddler list tell a different story from a full list across every age group.\n\nCapacity planning needs the shape of demand.\n\nA raw count can make the center feel full of opportunity while hiding the classroom bottleneck.",
+			"source": "apps/site/src/content/guides/managing-childcare-waitlist-guide.md",
+			"url": "https://pebbledesk.app/resources/guides/managing-childcare-waitlist-guide/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Based on the guide's capacity planning and age-group imbalance sections."
+		},
+		{
+			"index_in_day": 4,
+			"time_central": "07:00",
+			"pillar": "Enrollment records",
+			"format": "Operational-risk post",
+			"post_content": "Enrollment records do more than start a child file.\n\nThey set up the whole operating day.\n\nIf the child is tied to the wrong classroom, attendance gets noisy.\nIf the guardian record is stale, communication slows down.\nIf authorized pickup is unclear, release decisions get harder.\nIf the billing contact is wrong, finance follow-up lands with the wrong person.\nIf subsidy context is missing, reimbursement work starts with a search.\n\nA center can have good staff and still lose time because the basic record structure is split across forms, emails, spreadsheets, and memory.\n\nThe enrollment file is not background admin.\n\nIt is the place where attendance, billing, pickup, subsidy, and compliance either get easier or get messy.",
+			"source": "apps/site/src/content/features/enrollment-records.md",
+			"url": "https://pebbledesk.app/features/enrollment-records/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Grounded in the enrollment feature page's child, guardian, pickup, billing, and subsidy record structure."
+		},
+		{
+			"index_in_day": 5,
+			"time_central": "08:00",
+			"pillar": "Waitlist conversion",
+			"format": "Spot-offer checklist",
+			"post_content": "When a childcare spot opens, the offer needs to match the family's actual need.\n\nThat sounds obvious until the list is old.\n\nBefore offering the spot, check:\n\nChild's current age group.\nClassroom fit.\nStart date needed.\nFull-time or part-time schedule.\nDays needed.\nTuition rate the family last saw.\nSibling or priority status.\nLast contact date.\nAny notes from the tour or inquiry.\n\nIf the family asked for full-time care and the opening is Tuesday through Thursday, say that clearly. If the tuition changed since inquiry, say that before the enrollment contract.\n\nThe fastest way to turn waitlist goodwill into distrust is to offer a spot that feels different from what the family thought they were waiting for.\n\nClean waitlist notes protect the conversion moment.",
+			"source": "apps/site/src/content/guides/managing-childcare-waitlist-guide.md",
+			"url": "https://pebbledesk.app/resources/guides/managing-childcare-waitlist-guide/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Uses the guide's spot-offer failure points around schedule mismatch, price changes, and offer timing."
+		},
+		{
+			"index_in_day": 6,
+			"time_central": "09:00",
+			"pillar": "Product education",
+			"format": "PebbleDesk feature note",
+			"post_content": "A useful waitlist record answers a practical director question:\n\nWho should I call for this specific opening?\n\nNot just who is on the list.\n\nThe record needs family contact information, child date of birth, inquiry date, notes, age-group assignment, priority order, and follow-up history.\n\nThat matters because an opening is rarely generic.\n\nIt is an infant opening.\nA toddler opening.\nA room with a schedule constraint.\nA spot affected by sibling priority or program rules.\n\nThe director still needs to review the match and reach out.\n\nThe list should give her a better starting point before calling the family:\n\nIs this the right age group?\nDoes the schedule fit?\nIs the follow-up history current?\nIs the center ready to say yes?",
+			"source": "apps/site/src/content/features/waitlist-management.md",
+			"url": "https://pebbledesk.app/features/waitlist-management/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Rewritten ending to be warmer and more concrete about director review before family outreach."
+		},
+		{
+			"index_in_day": 7,
+			"time_central": "10:00",
+			"pillar": "Classroom capacity",
+			"format": "Director question",
+			"post_content": "Capacity planning gets clearer when classrooms, enrollment, and waitlist records speak the same language.\n\nA director planning the next month needs to know:\n\nLicensed capacity by room.\nCurrent enrollment by room.\nChildren aging into the next room.\nExpected withdrawals.\nOpen spots by date.\nWaitlisted children by age group.\nFamilies likely to accept.\n\nIf those pieces live in different places, planning turns into guesswork with a nice spreadsheet on top.\n\nCapacity is not just a sales number.\n\nIt affects staffing, ratios, enrollment timing, and whether the center can say yes to the next family without creating tomorrow's coverage problem.",
+			"source": "packages/shared/src/public-knowledge/app.ts",
+			"url": "https://pebbledesk.app/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Uses classroom setup context around capacity, age groups, attendance rosters, and ratio rules."
+		},
+		{
+			"index_in_day": 8,
+			"time_central": "11:00",
+			"pillar": "Waitlist fees and policy clarity",
+			"format": "Policy framing",
+			"post_content": "If a childcare center charges a waitlist fee, the policy needs to be clear before the family pays.\n\nDecide the hard questions in advance:\n\nIs the fee refundable?\nIs it partially applied to enrollment?\nWhat happens if no matching spot opens?\nWhat happens if the family declines a spot that matches their stated needs?\nWhat does \"matching\" mean for age group, schedule, and start date?\n\nA fee can filter for serious families, but vague terms create frustration later.\n\nThe policy should be written in language a busy parent can understand before joining the list.\n\nThat protects the family.\nIt protects the director.\nIt protects the reputation of the center when the list is long and emotions are high.",
+			"source": "apps/site/src/content/guides/managing-childcare-waitlist-guide.md",
+			"url": "https://pebbledesk.app/resources/guides/managing-childcare-waitlist-guide/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Based on the guide's waitlist fee range and refund-policy discussion, softened to avoid legal advice."
+		},
+		{
+			"index_in_day": 9,
+			"time_central": "12:00",
+			"pillar": "Enrollment workflow",
+			"format": "Practical sequence",
+			"post_content": "A cleaner enrollment workflow usually starts in a boring order.\n\nThat is a good thing.\n\nCreate classrooms.\nEnter capacity and ratio.\nEnroll the child.\nAdd guardians.\nReview pickup permission, subsidy status, and classroom before saving.\nThen use attendance once the record is ready.\n\nThe sequence matters because every later workflow depends on the setup.\n\nAttendance needs the right room.\nRatios need the right room capacity and rule.\nBilling needs the right family contact.\nPickup needs the right guardian and authorized adult record.\nReports need the operating record to make sense.\n\nEnrollment is not a form.\n\nIt is the first draft of the center's daily record.",
+			"source": "packages/shared/src/public-knowledge/app.ts",
+			"url": "https://pebbledesk.app/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Uses setup and enrollment steps without claiming unsupported outcomes."
+		},
+		{
+			"index_in_day": 10,
+			"time_central": "13:00",
+			"pillar": "Aging and room transitions",
+			"format": "Capacity planning tip",
+			"post_content": "A long waitlist changes while it waits.\n\nThat is easy to forget.\n\nA child who joined the list as an infant may be a toddler by the time a spot opens. A start date that looked far away may now be urgent. A part-time family may now need full-time care.\n\nThat is why date of birth and anticipated start date are not optional details.\n\nThey are planning fields.\n\nThis is where directors can catch a quiet mismatch before making the call.\n\nThe family may still be interested.\n\nBut the room they need may no longer be the room they originally joined the list for.",
+			"source": "apps/site/src/content/guides/managing-childcare-waitlist-guide.md",
+			"url": "https://pebbledesk.app/resources/guides/managing-childcare-waitlist-guide/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Draws from the guide's date-of-birth and long-wait classroom-fit guidance."
+		},
+		{
+			"index_in_day": 11,
+			"time_central": "14:00",
+			"pillar": "Enrollment and authorized pickup",
+			"format": "Risk reminder",
+			"post_content": "Authorized pickup belongs close to enrollment, not in a side note.\n\nA pickup record affects normal afternoons, emergency reunification, custody-sensitive situations, and staff confidence at the door.\n\nA center does not want staff solving pickup permission from memory.\n\nA clean record should answer:\n\nWho is authorized?\nWho is not?\nWhen was the list updated?\nWhich guardian provided the change?\nDoes staff know where to check before release?\n\nThe enrollment file has to be useful at 5:45 p.m., not just complete during intake.",
+			"source": "apps/site/src/content/features/enrollment-records.md",
+			"url": "https://pebbledesk.app/features/enrollment-records/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Uses the enrollment-record page's authorized pickup positioning and connects it to operational moments."
+		},
+		{
+			"index_in_day": 12,
+			"time_central": "15:00",
+			"pillar": "Demand review habit",
+			"format": "Quarterly review checklist",
+			"post_content": "A quarterly waitlist review can be short and still useful.\n\nPull the list and ask:\n\nWhich families confirmed they are still looking?\nWhich families have not responded twice?\nWhich age groups have the deepest demand?\nWhich rooms have openings coming up?\nWhich children may age into a different room before a spot opens?\nWhich families need part-time care that may not match current openings?\nWhich inquiry sources are producing serious families?\n\nA waitlist snapshot tells you what the list looks like today.\n\nA waitlist habit tells you whether demand is getting stronger, colder, younger, older, more full-time, or more seasonal.",
+			"source": "apps/site/src/content/guides/managing-childcare-waitlist-guide.md",
+			"url": "https://pebbledesk.app/resources/guides/managing-childcare-waitlist-guide/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Uses the guide's quarterly review and demand-intelligence recommendations."
+		},
+		{
+			"index_in_day": 13,
+			"time_central": "16:00",
+			"pillar": "Imports and migration",
+			"format": "Rollout note",
+			"post_content": "Existing enrollment records rarely move cleanly by accident.\n\nNames vary.\nPhone numbers are stale.\nGuardian roles are unclear.\nPickup permissions may be stored somewhere else.\nBilling contacts may not match family contacts.\nOld classroom labels may not match current rooms.\n\nPebbleDesk supports CSV import plus Brightwheel and Procare migration presets, but import is still a moment for review, not blind trust.\n\nA good migration question:\n\nWhat record fields must be clean before the first live attendance day?\n\nFor most centers, the answer includes children, guardians, classroom assignment, emergency contacts, authorized pickup, billing contacts, and subsidy status where applicable.\n\nThe import is not the finish line.\n\nThe finish line is a roster staff can use without rebuilding the record during pickup.",
+			"source": "apps/site/src/content/features/enrollment-records.md",
+			"url": "https://pebbledesk.app/features/enrollment-records/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Grounded in enrollment page import support and connected-record claims, with careful rollout framing."
+		},
+		{
+			"index_in_day": 14,
+			"time_central": "17:00",
+			"pillar": "Waitlist to enrollment handoff",
+			"format": "Conversion workflow",
+			"post_content": "The waitlist-to-enrollment handoff is where a lot of admin friction appears.\n\nA family says yes.\nThen the center asks for everything again.\n\nChild name.\nDate of birth.\nGuardian contacts.\nSchedule need.\nStart date.\nNotes from the tour.\nPriority status.\nPickup information.\nBilling contact.\n\nSome of that has already been collected.\n\nA cleaner process keeps the waitlist record connected enough to start the enrollment workflow instead of making the director copy details into a second system.\n\nA yes from a family should start onboarding, not a scavenger hunt.",
+			"source": "apps/site/src/content/features/waitlist-management.md",
+			"url": "https://pebbledesk.app/features/waitlist-management/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Uses the feature page's waitlist-to-enrollment workflow without overstating automation."
+		},
+		{
+			"index_in_day": 15,
+			"time_central": "18:00",
+			"pillar": "End-of-day enrollment recap",
+			"format": "Closing thought",
+			"post_content": "A strong enrollment operation does not feel dramatic.\n\nIt feels current.\n\nThe waitlist has real follow-up history.\nThe classroom capacity picture is visible.\nFamilies are grouped by age and start window.\nEnrollment records connect child, guardian, pickup, billing, subsidy, and classroom context.\nStaff know which record to trust.\nDirectors can see the next enrollment move before a room sits open too long.\n\nThat is the quiet value of connected enrollment work.\n\nA waitlist is not just a growth tool.\n\nIt is an operations tool for deciding when the center can responsibly say yes, when it should wait, and what the family needs to know next.",
+			"source": "apps/site/src/content/features/waitlist-management.md",
+			"url": "https://pebbledesk.app/features/waitlist-management/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Rewritten closing to remove over-stylized campaign ending."
+		}
+	]
+}

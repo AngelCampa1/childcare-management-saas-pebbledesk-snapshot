@@ -1,0 +1,147 @@
+---
+import "../../../styles/global.css"
+import { getCollection, render } from "astro:content"
+import ComparisonTable from "@pebbledesk/marketing/components/comparison-table.astro"
+import FaqSection from "@pebbledesk/marketing/components/faq-section.astro"
+import FunnelCta from "@pebbledesk/marketing/components/funnel-cta.astro"
+import RelatedPages from "@pebbledesk/marketing/components/related-pages.astro"
+import PricingBreakdownLayout from "@pebbledesk/marketing/layouts/pricing-breakdown-layout.astro"
+import AnswerBlock from "@pebbledesk/marketing/seo/answer-block.astro"
+import DataTableBlock from "@pebbledesk/marketing/seo/data-table-block.astro"
+import StatisticCitation from "@pebbledesk/marketing/seo/statistic-citation.astro"
+import { inferPageTrack } from "@pebbledesk/marketing/lib/page-track"
+import { siteConfig } from "@/config/site"
+import { buildPricingBreadcrumbs } from "@/lib/breadcrumbs"
+import { buildPricingComparisonRows } from "@/lib/comparison-rows"
+import { buildContentMap, resolveRelatedLinksWithFallback } from "@/lib/page-helpers"
+
+export async function getStaticPaths() {
+  const entries = await getCollection("pricing-breakdowns")
+  return entries.map((entry) => ({
+    params: { slug: entry.data.competitor.slug },
+    props: { entry },
+  }))
+}
+
+const { entry } = Astro.props
+const { Content } = await render(entry)
+const { title, description, bluf, buyerStage, publishedAt, updatedAt, competitor, tiers, hiddenCosts, faqs, relatedPages, tableData, pricingStats, answers, noindex } = entry.data
+const canonicalPath = entry.data.canonicalHref ?? `/compare/pricing/${competitor.slug}`
+const track = inferPageTrack({ track: entry.data.track, pageType: "compare" })
+
+const [alternatives, comparisons, pricingBreakdowns, listicles, guides, statePages, leadMagnets, features] = await Promise.all([
+  getCollection("alternatives"),
+  getCollection("comparisons"),
+  getCollection("pricing-breakdowns"),
+  getCollection("listicles"),
+  getCollection("guides"),
+  getCollection("state-pages"),
+  getCollection("lead-magnets"),
+  getCollection("features"),
+])
+const contentMap = buildContentMap({ alternatives, comparisons, pricingBreakdowns, listicles, guides, statePages, leadMagnets, features })
+const resolvedRelatedPages = resolveRelatedLinksWithFallback({ currentPath: canonicalPath, relatedPages, contentMap })
+
+const breadcrumbs = buildPricingBreadcrumbs(competitor.name, canonicalPath)
+const pricingComparisonRows = buildPricingComparisonRows(competitor.pricing, siteConfig.product.price)
+---
+
+<PricingBreakdownLayout
+  title={title}
+  description={description}
+  bluf={bluf}
+  publishedAt={publishedAt}
+  updatedAt={updatedAt}
+  canonicalPath={canonicalPath}
+  config={siteConfig}
+  breadcrumbs={breadcrumbs}
+  answers={answers?.map(a => ({ question: a.q, answer: a.a }))}
+  noindex={noindex}
+  track={track}
+>
+  <div class="flex flex-col sm:flex-row items-center justify-center gap-6 mb-10 py-8 rounded-[var(--radius-md)] bg-[var(--surface-secondary)] border border-[var(--color-neutral-200)]">
+    <div class="text-center">
+      <p class="font-[family-name:var(--font-mono)] text-[length:var(--text-kicker)] uppercase tracking-widest text-[var(--color-neutral-500)] mb-1">{competitor.name}</p>
+      <span class="font-[family-name:var(--font-mono)] text-[36px] font-bold text-[var(--color-primary-700)]">{competitor.pricing}</span>
+      <p class="text-sm text-[var(--color-neutral-500)] mt-1">per month</p>
+    </div>
+    <div class="font-[family-name:var(--font-mono)] text-2xl font-bold text-[var(--color-neutral-400)]">vs</div>
+    <div class="text-center">
+      <p class="font-[family-name:var(--font-mono)] text-[length:var(--text-kicker)] uppercase tracking-widest text-[var(--color-neutral-500)] mb-1">{siteConfig.name}</p>
+      <span class="font-[family-name:var(--font-mono)] text-[36px] font-bold text-[var(--color-accent-600)]">{siteConfig.product.price}</span>
+      <p class="text-sm text-[var(--color-neutral-500)] mt-1">per month, no setup fee</p>
+    </div>
+  </div>
+
+  <h2 class="text-2xl font-bold mb-6">{competitor.name} Pricing Tiers</h2>
+  <div class="overflow-x-auto mb-8">
+    <table class="w-full border-collapse text-left">
+      <thead>
+        <tr>
+          <th class="px-4 py-3 text-sm font-semibold border-b-2">Tier</th>
+          <th class="px-4 py-3 text-sm font-semibold border-b-2">Price</th>
+          <th class="px-4 py-3 text-sm font-semibold border-b-2">Includes</th>
+        </tr>
+      </thead>
+      <tbody>
+        {tiers.map((tier) => (
+          <tr class="border-b">
+            <td class="px-4 py-3 font-medium">{tier.name}</td>
+            <td class="px-4 py-3">{tier.price}</td>
+            <td class="px-4 py-3 text-sm text-[var(--color-brand-muted)]">{tier.features.join(", ")}</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+
+  <h2 class="text-2xl font-bold mb-4">Hidden Costs You Won't See on the Pricing Page</h2>
+  <ul class="space-y-3 mb-8">
+    {hiddenCosts.map((cost) => (
+      <li class="flex items-start gap-3">
+        <span class="text-[var(--color-error-600)] mt-1">&#9888;</span>
+        <span>{cost}</span>
+      </li>
+    ))}
+  </ul>
+
+  <Content />
+
+  {tableData && (
+    <DataTableBlock
+      name={tableData.name}
+      description={tableData.description}
+      columns={tableData.columns}
+      rows={tableData.rows}
+    />
+  )}
+
+  {pricingStats && pricingStats.map((s) => (
+    <StatisticCitation stat={s.stat} source={s.source} sourceUrl={s.sourceUrl} />
+  ))}
+
+  {answers && answers.map((a) => (
+    <AnswerBlock question={a.q} answer={a.a} />
+  ))}
+
+  <ComparisonTable
+    headers={["", competitor.name, siteConfig.name]}
+    rows={pricingComparisonRows}
+    highlightColumn={2}
+  />
+
+  <FaqSection faqs={faqs} />
+  <FunnelCta
+    stage={buyerStage}
+    funnel={siteConfig.funnel}
+    sourcePage={canonicalPath}
+    heading="See how much you could save"
+    subtitle={siteConfig.funnel.ctaSubtitle}
+  />
+
+  {resolvedRelatedPages.length > 0 && (
+    <RelatedPages
+      pages={resolvedRelatedPages}
+    />
+  )}
+</PricingBreakdownLayout>

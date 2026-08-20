@@ -1,0 +1,113 @@
+<h2>Section 5: Testing & Dev Tooling</h2>
+<p class="subtitle">Test strategy, dev workflow, and CI pipeline</p>
+
+<div class="section">
+  <h3>Testing Strategy</h3>
+  <div class="mockup">
+    <div class="mockup-header">Test Pyramid</div>
+    <div class="mockup-body" style="padding:24px">
+      <div style="display:flex;flex-direction:column;align-items:center;gap:4px">
+        <!-- E2E -->
+        <div style="background:#dc2626;color:white;padding:10px;border-radius:6px;width:140px;text-align:center;font-size:12px">
+          <div style="font-weight:700">E2E</div>
+          <div style="opacity:0.85;font-size:11px">Playwright</div>
+          <div style="opacity:0.7;font-size:10px">Later — not in scaffold</div>
+        </div>
+        <!-- Integration -->
+        <div style="background:#d97706;color:white;padding:10px;border-radius:6px;width:240px;text-align:center;font-size:12px">
+          <div style="font-weight:700">Integration</div>
+          <div style="opacity:0.85;font-size:11px">Vitest — API routes with real DB</div>
+          <div style="opacity:0.7;font-size:10px">Neon branch per test run</div>
+        </div>
+        <!-- Unit -->
+        <div style="background:#059669;color:white;padding:10px;border-radius:6px;width:360px;text-align:center;font-size:12px">
+          <div style="font-weight:700">Unit</div>
+          <div style="opacity:0.85;font-size:11px">Vitest — validators, domain logic, utilities</div>
+          <div style="opacity:0.7;font-size:10px">Fast, no DB needed</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <h3>What Gets Tested Where</h3>
+  <div class="mockup">
+    <div class="mockup-header">Test Distribution</div>
+    <div class="mockup-body" style="padding:16px;font-size:13px">
+      <table style="width:100%;border-collapse:collapse">
+        <thead>
+          <tr style="border-bottom:2px solid #e2e8f0">
+            <th style="text-align:left;padding:8px">Package</th>
+            <th style="text-align:left;padding:8px">Test Type</th>
+            <th style="text-align:left;padding:8px">What's Tested</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="border-bottom:1px solid #f1f5f9">
+            <td style="padding:8px;font-weight:600">packages/shared</td>
+            <td style="padding:8px">Unit</td>
+            <td style="padding:8px">Zod schema validation, domain helpers (ratio calculation, subsidy eligibility), constants</td>
+          </tr>
+          <tr style="border-bottom:1px solid #f1f5f9">
+            <td style="padding:8px;font-weight:600">packages/db</td>
+            <td style="padding:8px">Unit</td>
+            <td style="padding:8px">Schema exports compile, query builder helpers</td>
+          </tr>
+          <tr style="border-bottom:1px solid #f1f5f9">
+            <td style="padding:8px;font-weight:600">apps/api</td>
+            <td style="padding:8px">Integration</td>
+            <td style="padding:8px">API routes end-to-end: HTTP request → Hono handler → DB → response. Auth flows, permission checks, CRUD operations, ratio calculations</td>
+          </tr>
+          <tr>
+            <td style="padding:8px;font-weight:600">apps/web</td>
+            <td style="padding:8px">Unit</td>
+            <td style="padding:8px">Component rendering (Vitest + Testing Library), hook logic. No E2E in scaffold phase.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <h3>Dev Commands</h3>
+  <div class="mockup">
+    <div class="mockup-header">Turborepo Scripts</div>
+    <div class="mockup-body" style="font-family:monospace;font-size:12px;line-height:2.2">
+      <div style="color:#64748b"># Development</div>
+      <div>pnpm dev               <span style="color:#64748b"># runs apps/web + apps/api concurrently</span></div>
+      <div>pnpm --filter web dev  <span style="color:#64748b"># Vite dev server only</span></div>
+      <div>pnpm --filter api dev  <span style="color:#64748b"># Wrangler dev only</span></div>
+      <br>
+      <div style="color:#64748b"># Build & Type Check</div>
+      <div>pnpm build             <span style="color:#64748b"># turbo build (all packages + apps)</span></div>
+      <div>pnpm typecheck         <span style="color:#64748b"># turbo typecheck (tsc --noEmit across all)</span></div>
+      <br>
+      <div style="color:#64748b"># Testing</div>
+      <div>pnpm test              <span style="color:#64748b"># turbo test (vitest run across all)</span></div>
+      <div>pnpm test:watch        <span style="color:#64748b"># vitest watch (for TDD)</span></div>
+      <br>
+      <div style="color:#64748b"># Database</div>
+      <div>pnpm db:generate       <span style="color:#64748b"># drizzle-kit generate (new migration from schema diff)</span></div>
+      <div>pnpm db:migrate        <span style="color:#64748b"># drizzle-kit migrate (apply to Neon)</span></div>
+      <div>pnpm db:studio         <span style="color:#64748b"># drizzle-kit studio (visual DB explorer)</span></div>
+      <br>
+      <div style="color:#64748b"># Deploy</div>
+      <div>pnpm --filter web deploy   <span style="color:#64748b"># Cloudflare Pages</span></div>
+      <div>pnpm --filter api deploy   <span style="color:#64748b"># Cloudflare Workers</span></div>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <h3>Tooling Config</h3>
+  <ul style="line-height:1.8;font-size:14px">
+    <li><strong>Turborepo</strong> — orchestrates build, typecheck, test, lint across all packages. Caches outputs.</li>
+    <li><strong>pnpm workspaces</strong> — package manager with workspace protocol for internal deps.</li>
+    <li><strong>TypeScript</strong> — strict mode, composite projects with project references for cross-package type checking.</li>
+    <li><strong>Biome</strong> — linting + formatting (replaces ESLint + Prettier, faster, zero config).</li>
+    <li><strong>Vitest</strong> — test runner for all packages. Workspace config at root.</li>
+    <li><strong>Wrangler</strong> — Cloudflare CLI for Workers dev server and deployment.</li>
+  </ul>
+</div>

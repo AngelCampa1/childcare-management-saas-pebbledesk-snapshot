@@ -1,0 +1,171 @@
+{
+	"date": "2026-05-24",
+	"theme": "Sunday founder/company POV: audit-ready childcare records and warm practical product philosophy",
+	"posts": [
+		{
+			"index_in_day": 1,
+			"time_central": "04:00",
+			"pillar": "Founder POV and audit readiness",
+			"format": "Company point of view",
+			"post_content": "Audit-ready records are not about making childcare feel more regulated.\n\nChildcare is already regulated.\n\nThey are about making the evidence easier to find when a director is asked a simple question on a hard day:\n\nWho was here?\nWhich room were they in?\nWhich staff were assigned?\nWas the room in ratio?\nWhat was billed?\nWhat changed afterward?\n\nThose questions can come from licensing, a subsidy review, a parent billing question, or an internal cleanup after a busy week.\n\nOur point of view at PebbleDesk is practical:\n\nThe record should already tell the story.\n\nAttendance should not sit in one place, ratio checks in another, billing context in another, and reports somewhere else. That is how directors end up rebuilding the week from screenshots, notes, exports, and memory.\n\nAudit readiness is not a special event.\n\nIt is the result of ordinary records staying connected while the center is open.",
+			"source": "apps/site/src/config/site.ts",
+			"url": "https://pebbledesk.app/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Opens the Sunday theme with PebbleDesk's core tagline and connected-record positioning from siteConfig."
+		},
+		{
+			"index_in_day": 2,
+			"time_central": "05:00",
+			"pillar": "Attendance as compliance record",
+			"format": "Founder note",
+			"post_content": "Attendance looks like a simple daily task until someone asks for proof later.\n\nThen it becomes the foundation for almost everything else.\n\nA clean attendance record can support ratio review.\nIt can help with billing follow-up.\nIt can answer a parent account question.\nIt can become part of an audit report.\n\nThat is why we do not think of attendance as just check-in and check-out.\n\nFor childcare directors, attendance is part of the operating record.\n\nThe child, classroom, and day need to stay tied together. Edits need to be understandable. Reports need to pull from the same record the center used while care was happening.\n\nThe product philosophy is plain:\n\nDo not make the director retype the day in order to explain the day.\n\nIf attendance is captured clearly at the moment of care, it should keep helping long after pickup.",
+			"source": "apps/site/src/content/features/attendance-tracking.md",
+			"url": "https://pebbledesk.app/features/attendance-tracking/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Uses the attendance feature page's framing that attendance connects to classrooms, ratios, reports, and subsidy support."
+		},
+		{
+			"index_in_day": 3,
+			"time_central": "06:00",
+			"pillar": "Ratio visibility and director relief",
+			"format": "Practical product POV",
+			"post_content": "Every center has a ratio chart somewhere.\n\nThe hard part is not knowing the rule on paper.\n\nThe hard part is watching the day move.\n\nA toddler arrives early.\nA staff member is late.\nA child transitions rooms.\nA teacher takes a break.\nA parent pickup changes the count.\n\nRatio risk usually appears in motion, not during a calm review of the handbook.\n\nPebbleDesk is built around that reality. Ratio tracking belongs close to attendance and classroom activity because that is where the risk appears first.\n\nThe goal is not to make ratio work dramatic.\n\nThe goal is to make the current room picture easier to see while the director can still act, then preserve a cleaner record if someone asks what happened later.\n\nThat is the kind of software we believe childcare needs:\n\nLess theater.\nMore useful calm.",
+			"source": "apps/site/src/content/features/ratio-tracking.md",
+			"url": "https://pebbledesk.app/features/ratio-tracking/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Grounded in the ratio page's line that ratio risk happens as attendance and staffing shift during the day."
+		},
+		{
+			"index_in_day": 4,
+			"time_central": "07:00",
+			"pillar": "Audit reports and connected records",
+			"format": "Useful framing",
+			"post_content": "An audit report is only useful if the records behind it make sense.\n\nA pretty export does not help much when the director still has to explain why attendance, room coverage, billing, and edits do not line up.\n\nThis is why PebbleDesk treats reporting as a reflection of the operating record, not a last-minute document project.\n\nThe report should help answer:\n\nWhat happened?\nWho was present?\nWhich staff were assigned?\nWhat ratio context mattered?\nWhat was billed?\nWhat changed after the fact?\n\nThose answers are easier when they come from connected records instead of separate files stitched together the night before a licensing visit.\n\nOur product philosophy is not complicated.\n\nIf the center did the work during the day, the system should preserve enough context to explain that work later.",
+			"source": "apps/site/src/content/features/audit-reports.md",
+			"url": "https://pebbledesk.app/features/audit-reports/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Uses the audit reports page's core idea that reporting should preserve a coherent story across attendance, ratios, billing, and audit-log context."
+		},
+		{
+			"index_in_day": 5,
+			"time_central": "08:00",
+			"pillar": "Warm practical product philosophy",
+			"format": "Company belief",
+			"post_content": "We are not trying to make childcare administration feel impressive.\n\nWe are trying to make it feel dependable.\n\nThat difference matters.\n\nDirectors do not need a cockpit. They need to know whether ratios are okay, whether attendance is clean, whether billing has support, and whether records can be pulled when licensing or finance asks.\n\nA warm product is not soft on compliance.\n\nIt is clear.\nIt is organized.\nIt does not hide the important status.\nIt does not make a director learn new language just to run the center.\nIt keeps the record where the work already happened.\n\nPebbleDesk's design point of view is simple:\n\nA director should feel relief, not performance pressure, when opening the software.\n\nThe center is already busy enough.",
+			"source": ".impeccable.md",
+			"url": "https://pebbledesk.app/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Draws from the design context: warm, sturdy, practical, clarity over cleverness, and relief as the emotional goal."
+		},
+		{
+			"index_in_day": 6,
+			"time_central": "09:00",
+			"pillar": "Recordkeeping risk",
+			"format": "Risk callout",
+			"post_content": "The risky record is not always missing.\n\nSometimes it is just scattered.\n\nAttendance is in one export.\nRoom movement is in a note.\nRatio checks are in a spreadsheet.\nBilling support is in a folder.\nEdits are remembered by the person who made them.\n\nNothing looks broken until a question arrives.\n\nThen the director has to rebuild the story manually:\n\nWhich child was present?\nWhich classroom counted?\nWhich staff covered the room?\nWas the record changed later?\nWhich billing period did this support?\n\nThat is the avoidable scramble PebbleDesk is built to reduce.\n\nAudit-ready childcare records matter because the center should not have to prove normal operations from fragments.\n\nThe proof should be part of the daily record already.",
+			"source": "apps/site/src/content/features/audit-reports.md",
+			"url": "https://pebbledesk.app/features/audit-reports/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Uses the audit reports page's warning against separate exports and manual reconstruction."
+		},
+		{
+			"index_in_day": 7,
+			"time_central": "10:00",
+			"pillar": "Attendance and downstream trust",
+			"format": "Operator question",
+			"post_content": "A useful Sunday question for directors:\n\nIf someone asked about last Tuesday, how quickly could your center answer from the record?\n\nNot from memory.\nNot from a text thread.\nNot from the person who happened to be at the front desk.\n\nFrom the record.\n\nCould you show which children were present?\nWhich room they were tied to?\nWhether attendance changed after entry?\nHow that attendance supported ratio review?\nWhether the same record could help billing or audit follow-up?\n\nThis is where digital attendance either helps or disappoints.\n\nA tap-in record is good.\n\nA tap-in record that stays connected to classroom context, reporting, and follow-up is better.\n\nThat is the practical standard we are building toward with PebbleDesk.",
+			"source": "apps/site/src/content/features/attendance-tracking.md",
+			"url": "https://pebbledesk.app/features/attendance-tracking/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Turns the attendance page's connected-record claim into an operator question suitable for a Sunday company post."
+		},
+		{
+			"index_in_day": 8,
+			"time_central": "11:00",
+			"pillar": "State-specific humility",
+			"format": "Trust-building product note",
+			"post_content": "A compliance product should be careful with its promises.\n\nSo here is ours, plainly:\n\nPebbleDesk supports generic ratio workflows nationally, with verified state-specific ratio support today for Texas, California, and Florida.\n\nThat matters because childcare rules are local in the ways that count.\n\nA director should not have to guess whether a vendor is using a national claim to cover over state-specific gaps.\n\nOur preference is to be specific, build carefully, and avoid pretending software can make compliance automatic.\n\nSoftware can help directors see risk earlier.\nIt can keep attendance, classroom, ratio, and report context together.\nIt can make review easier.\nIt can reduce the manual work of proving what happened.\n\nBut it should not talk like a magic shield.\n\nChildcare deserves tools that are honest enough to be useful.",
+			"source": "apps/site/src/content/features/ratio-tracking.md",
+			"url": "https://pebbledesk.app/features/ratio-tracking/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Uses the ratio page's verified-state support language and reinforces the brief's careful compliance guardrail."
+		},
+		{
+			"index_in_day": 9,
+			"time_central": "12:00",
+			"pillar": "Audit-ready reports beyond inspections",
+			"format": "Practical reminder",
+			"post_content": "Audit readiness is not only for the day licensing walks in.\n\nThe same record discipline helps with ordinary questions too.\n\nA guardian asks about a charge.\nA subsidy claim needs support.\nA director reviews a staffing concern.\nA room count looks off after pickup.\nA past edit needs context.\n\nThese are not once-a-year moments. They are part of running a childcare center.\n\nThat is why PebbleDesk's reporting story is broader than inspection prep.\n\nAttendance, ratio status, billing context, and audit-log events are more useful when they can be reviewed together.\n\nThe director should not have to decide which version of the record is the real one.\n\nThe system should help the team answer normal questions with normal records.",
+			"source": "apps/site/src/content/features/audit-reports.md",
+			"url": "https://pebbledesk.app/features/audit-reports/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Based on the audit reports FAQ that reporting matters for billing follow-up, subsidy review, and internal operations cleanup, not only inspections."
+		},
+		{
+			"index_in_day": 10,
+			"time_central": "13:00",
+			"pillar": "Online-only honesty",
+			"format": "Transparent product note",
+			"post_content": "One practical product truth:\n\nPebbleDesk is online-only in V1.\n\nThat means if a center's internet drops, the safer operating habit is to keep a temporary paper fallback for attendance notes and enter the records once service returns.\n\nWe would rather say that clearly than blur the edge of the product.\n\nChildcare directors make real decisions from software claims. They need to know what is supported, what is not, and what backup habit the center should keep.\n\nAudit-ready records depend on consistency.\n\nSo if the day starts on paper because the connection is down, the important part is making sure those notes get entered later with enough context to support attendance, ratio review, billing, and reports.\n\nHonest software still needs honest center procedures.\n\nThe two work together.",
+			"source": "apps/site/src/content/features/attendance-tracking.md",
+			"url": "https://pebbledesk.app/features/attendance-tracking/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Uses the attendance feature page's V1 online-only FAQ and ties it to practical audit-ready procedure."
+		},
+		{
+			"index_in_day": 11,
+			"time_central": "14:00",
+			"pillar": "Director-centered software",
+			"format": "Company belief",
+			"post_content": "A director's day does not happen in software categories.\n\nIt happens in interruptions.\n\nA parent has a question at the door.\nA staff member calls out.\nA classroom count changes.\nA subsidy document needs attention.\nA licensing file has to be found.\nLunch arrives.\nPickup starts.\nThe phone rings again.\n\nThis is why PebbleDesk is built around connected daily records rather than isolated admin tasks.\n\nAttendance affects ratios.\nRatios affect staffing decisions.\nAttendance and billing need to support each other.\nReports need to pull from what actually happened.\n\nThe director should not have to hold the entire center in her head just because the software split the record into pieces.\n\nGood childcare software should respect the way the day actually feels.",
+			"source": ".impeccable.md",
+			"url": "https://pebbledesk.app/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Uses the design context's user profile: time-starved directors managing children, staff, parents, regulators, billing, and compliance at once."
+		},
+		{
+			"index_in_day": 12,
+			"time_central": "15:00",
+			"pillar": "Reports as memory support",
+			"format": "Founder POV",
+			"post_content": "We think audit reports should reduce memory work.\n\nThat sounds small until you look at the record burden inside a busy center office.\n\nMemory work is the director trying to recall who moved rooms, when the count changed, why an edit was made, which staff covered the gap, and where the supporting billing note went.\n\nIt is tiring because it asks one person to become the backup system for the whole building.\n\nPebbleDesk's reporting philosophy is different.\n\nPreserve the relationship between the records.\n\nAttendance, ratio status, billing context, and audit-log events should stay close enough that a director can review what happened without rebuilding it by hand.\n\nThat does not remove judgment from childcare administration.\n\nIt gives directors a cleaner place to use that judgment.",
+			"source": "apps/site/src/content/features/audit-reports.md",
+			"url": "https://pebbledesk.app/features/audit-reports/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Develops the audit reports page's coherent-story framing into a founder-level product philosophy."
+		},
+		{
+			"index_in_day": 13,
+			"time_central": "16:00",
+			"pillar": "Ratio tracking and operational calm",
+			"format": "Practical tip",
+			"post_content": "Ratio tracking should help before the problem becomes a report.\n\nThat is the timing that matters.\n\nIf a director only discovers a coverage gap during end-of-day cleanup, the system is mostly helping with regret.\n\nUseful ratio visibility stays near the live attendance and classroom picture.\n\nWho is checked in?\nWhich room are they in?\nWhich staff are assigned?\nWhat changed since the last count?\nWhere does coverage need attention now?\n\nThe goal is not to create alarm.\n\nThe goal is to make the next action obvious while there is still time to move a teacher, adjust a room, or look closer.\n\nAudit-ready records matter later.\n\nBut in ratio tracking, they also matter now.",
+			"source": "apps/site/src/content/features/ratio-tracking.md",
+			"url": "https://pebbledesk.app/features/ratio-tracking/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Uses the ratio feature page's emphasis on catching risk sooner and keeping room coverage close to attendance and classroom activity."
+		},
+		{
+			"index_in_day": 14,
+			"time_central": "17:00",
+			"pillar": "Evaluation question for directors",
+			"format": "Operator question",
+			"post_content": "When evaluating childcare software, ask one quiet question:\n\nWhat story will this system be able to tell six months from now?\n\nNot just what the demo looks like today.\n\nSix months from now, can it show attendance by child, classroom, and day?\nCan it support ratio review when staffing shifted?\nCan it help explain billing or subsidy follow-up?\nCan it produce reports without the director stitching together separate exports?\nCan it show changes after the fact?\n\nChildcare records have a long tail.\n\nA licensing question, parent billing question, or subsidy review can arrive after the week feels long over.\n\nThe system you choose should respect that.\n\nIt should help the center keep the story intact while the details are still fresh.",
+			"source": "apps/site/src/config/site.ts",
+			"url": "https://pebbledesk.app/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Uses PebbleDesk's siteConfig positioning around connected attendance, ratios, subsidy billing, family records, and reports."
+		},
+		{
+			"index_in_day": 15,
+			"time_central": "18:00",
+			"pillar": "Closing company POV",
+			"format": "Sunday closing thought",
+			"post_content": "The promise we keep coming back to is simple:\n\nAudit-ready records without the end-of-week scramble.\n\nNot because software should make childcare feel more corporate.\n\nBecause directors deserve records that hold together.\n\nAttendance should support ratio review.\nRatio history should support reports.\nBilling context should not be separated from the care record.\nEdits should not depend on memory.\nLicensing and payment questions should not require a weekend reconstruction project.\n\nPebbleDesk is built for the unglamorous part of childcare administration that makes the rest possible.\n\nThe daily record.\nThe room count.\nThe supporting note.\nThe report that still makes sense later.\n\nNo hype needed.\n\nJust warmer, sturdier recordkeeping for centers doing serious work.",
+			"source": "apps/site/src/config/site.ts",
+			"url": "https://pebbledesk.app/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Closes the day with the exact PebbleDesk tagline and warm practical company-page philosophy."
+		}
+	]
+}

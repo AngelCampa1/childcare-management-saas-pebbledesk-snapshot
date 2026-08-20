@@ -1,0 +1,19 @@
+---
+import "../../styles/global.css";
+import LandingLayout from "@pebbledesk/marketing/layouts/landing-layout.astro";
+import PersonaLanding from "@/components/persona-landing.astro";
+import { personaPagesBySlug } from "@/config/persona-pages";
+import { siteConfig } from "@/config/site";
+
+const page = personaPagesBySlug["in-home-daycare-providers"];
+---
+
+<LandingLayout
+	config={siteConfig}
+	canonicalPath={page.canonicalPath}
+	schemaMode="product"
+	title={page.title}
+	description={page.description}
+>
+	<PersonaLanding page={page} config={siteConfig} />
+</LandingLayout>

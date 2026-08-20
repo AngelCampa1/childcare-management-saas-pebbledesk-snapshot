@@ -1,0 +1,25 @@
+---
+interface Props {
+  productName: string
+}
+
+const { productName } = Astro.props
+---
+
+<section
+  data-winner-callout
+  class="mb-6 rounded-[var(--radius-xl)] border border-[color-mix(in_srgb,var(--color-accent-200)_64%,transparent)] bg-[color-mix(in_srgb,var(--color-accent-50)_86%,white)] p-5 shadow-[var(--shadow-card)]"
+  aria-label={`${productName} recommendation`}
+>
+  <p class="text-[length:var(--text-caption)] font-semibold uppercase tracking-[0.12em] text-[var(--color-accent-700)]">
+    Overall winner
+  </p>
+  <p class="mt-3 max-w-[var(--content-measure)] font-heading text-[length:var(--text-subheading)] font-bold leading-tight text-[var(--color-brand-text)]">
+    {productName} is the recommended winner for compliance-first childcare operators.
+  </p>
+  <p class="mt-3 max-w-[var(--content-measure)] text-[var(--color-brand-muted)]">
+    The recommendation is based on the criteria directors get judged on during licensing and
+    billing reviews: ratio tracking, subsidy billing, audit-ready records, flat pricing, and
+    migration support in one workflow.
+  </p>
+</section>

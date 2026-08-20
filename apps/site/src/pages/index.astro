@@ -1,0 +1,412 @@
+---
+import "../styles/global.css";
+import FaqSection from "@pebbledesk/marketing/components/faq-section.astro";
+import HeroSection from "@pebbledesk/marketing/components/hero-section.astro";
+import ProductDashboard from "@pebbledesk/marketing/components/product-dashboard.astro";
+import StickyMobileCta from "@pebbledesk/marketing/components/sticky-mobile-cta.astro";
+import LandingLayout from "@pebbledesk/marketing/layouts/landing-layout.astro";
+import { resolvePublicSignupCta } from "@pebbledesk/marketing/lib/public-signup-cta";
+import { buildEnterprisePricingNote, PEBBLEDESK_OFFERING } from "@pebbledesk/shared/constants";
+import { siteConfig } from "@/config/site";
+
+const pricingTiers = siteConfig.pricingTiers ?? [];
+const secondaryCta = siteConfig.copy?.funnelCta?.secondaryCta;
+const heroHeadline =
+	siteConfig.heroCopy?.headline ?? "Audit-ready records without the end-of-week scramble.";
+const heroSubheadline =
+	siteConfig.heroCopy?.subheadline ??
+	"Attendance, ratios, billing, family records, and audit exports in one childcare workflow.";
+const primarySignupCta = resolvePublicSignupCta({
+	sourcePage: "/",
+	explicitTarget: siteConfig.funnel.bofu.ctaTarget,
+	explicitText: siteConfig.funnel.bofu.ctaText,
+});
+const enterprisePricingNote = buildEnterprisePricingNote();
+const planFitCards = pricingTiers.map((tier) => ({
+	...tier,
+	cta: resolvePublicSignupCta({
+		sourcePage: "/",
+		explicitTarget: `/signup?plan=${tier.slug}&source=%2F`,
+		explicitText: tier.ctaText,
+	}),
+}));
+
+const workflowGroups = [
+	{
+		eyebrow: "1. Capture the day",
+		title: "Attendance, room changes, and staff coverage start in the same record.",
+		body: "Directors can see who is present, where children are assigned, and whether the room has the staff it needs while the day is still happening.",
+		bullets: [
+			"Attendance tied to room activity and audit history",
+			"Live ratio monitoring with history and reports",
+			"Staff scheduling built around room coverage",
+		],
+	},
+	{
+		eyebrow: "2. Keep context attached",
+		title: "Child, guardian, classroom, pickup, subsidy, and billing details stay with the record.",
+		body: "When a question comes up, the director is not hunting through separate systems to confirm who belongs where or which family detail matters.",
+		bullets: [
+			"Child enrollment and classroom assignment",
+			"Guardian, billing, and authorized pickup records",
+			"Subsidy eligibility and family contact detail",
+		],
+	},
+	{
+		eyebrow: "3. Turn records into proof",
+		title: "Invoices, subsidy claims, reports, and audit exports point back to the daily record.",
+		body: "The same information that runs the day supports the claim, invoice, licensing question, or report later.",
+		bullets: [
+			"Invoices, payment status tracking, and guardian payment links",
+			"Subsidy cases, claims, and reconciliation support",
+			"Audit exports, attendance reports, and audit log history",
+		],
+	},
+	{
+		eyebrow: "4. Start without a rebuild",
+		title: "CSV import, Brightwheel and Procare presets, and rollout support help teams move cleanly.",
+		body: "Single-site programs can start self-serve. Larger organizations can map migration, cross-center visibility, and qualifying integrations before rollout.",
+		bullets: [
+			"CSV import for children, guardians, invoices, and enrollment",
+			"Migration presets for Brightwheel and Procare data cleanup",
+			"QuickBooks support on qualifying plans and qualifying multi-location oversight",
+		],
+	},
+];
+
+const featurePillars = [
+	{
+		title: "Daily operations",
+		description:
+			"Attendance, ratios, and scheduling are the live operational loop directors monitor all day.",
+		links: [
+			{ label: "Attendance Tracking", href: "/features/attendance-tracking/" },
+			{ label: "Ratio Tracking", href: "/features/ratio-tracking/" },
+			{ label: "Staff Scheduling", href: "/features/staff-scheduling/" },
+		],
+	},
+	{
+		title: "Family and room records",
+		description:
+			"Enrollment, child records, guardian records, classrooms, pickup permissions, and subsidy eligibility are managed as one structured record set.",
+		links: [{ label: "Enrollment & Records", href: "/features/enrollment-records/" }],
+	},
+	{
+		title: "Billing and compliance",
+		description:
+			"Subsidy workflows, invoices, public payments, audit exports, and reporting stay tied to the daily record instead of a side spreadsheet.",
+		links: [
+			{ label: "Subsidy Billing", href: "/features/subsidy-billing/" },
+			{ label: "Billing & Payments", href: "/features/billing-payments/" },
+			{ label: "Audit Reports", href: "/features/audit-reports/" },
+		],
+	},
+	{
+		title: "Rollout and scale",
+		description:
+			"Migration support, outbound messaging, qualifying QuickBooks support, and cross-center visibility help PebbleDesk feel complete as the operation grows.",
+		links: [
+			{ label: "Imports & Migration", href: "/features/imports-migration/" },
+			{ label: "Messaging & Alerts", href: "/features/messaging-alerts/" },
+			{ label: "Multi-Location Oversight", href: "/features/multi-location-oversight/" },
+		],
+	},
+];
+
+const replaces = [
+	{ label: "Sign-in clipboard", replaced: true },
+	{ label: "Ratio spreadsheet", replaced: true },
+	{ label: "Subsidy binder", replaced: true },
+	{ label: "Email folder", replaced: true },
+	{ label: "QuickBooks", replaced: false },
+	{ label: "Your old childcare platform", replaced: true },
+];
+---
+
+<LandingLayout
+	config={siteConfig}
+	canonicalPath="/"
+	schemaMode="product"
+	title="PebbleDesk Audit-Ready Childcare Center Software"
+	description={`Audit-ready records, ratios, and subsidy billing for licensed childcare centers. ${PEBBLEDESK_OFFERING.trial.label} with no credit card required and a 3-day reminder email.`}
+>
+	<div id="features" data-hero>
+		<HeroSection
+			variant="collage"
+			eyebrow="The audit-ready childcare platform"
+			headline={heroHeadline}
+			subheadline={heroSubheadline}
+			trustSignal={siteConfig.heroTrustSignal}
+		>
+			<div class="flex flex-col gap-4">
+				<div class="flex flex-col gap-3 sm:flex-row">
+					<a href={primarySignupCta.target} class="btn-primary no-underline">
+						{primarySignupCta.text}
+					</a>
+					{secondaryCta && (
+						<a href={secondaryCta.target} class="btn-secondary no-underline">
+							{secondaryCta.text}
+						</a>
+					)}
+				</div>
+				<p class="text-[length:var(--text-caption)] text-[var(--color-brand-muted)]">
+					{PEBBLEDESK_OFFERING.claims.trialDisclosure}
+				</p>
+			</div>
+		</HeroSection>
+	</div>
+
+	<section data-replaces-strip class="border-y border-[var(--site-panel-border)] bg-[var(--surface-secondary)] px-4 py-6">
+		<div class="mx-auto flex max-w-6xl flex-wrap items-center gap-3">
+			<p class="mr-2 font-mono text-[length:var(--text-caption)] uppercase tracking-[0.18em] text-[var(--color-brand-muted)]">
+				Replaces
+			</p>
+			{replaces.map((item) => (
+				<span
+					class:list={[
+						"rounded-full border px-4 py-2 text-sm font-semibold",
+						item.replaced
+							? "border-[var(--color-accent-200)] bg-[var(--color-accent-50)] text-[var(--color-accent-800)] line-through decoration-[var(--color-accent-700)] decoration-2"
+							: "border-[var(--site-panel-border)] bg-[var(--surface-elevated)] text-[var(--color-brand-text)]",
+					]}
+				>
+					{item.label}
+				</span>
+			))}
+		</div>
+	</section>
+
+	<section class="bg-[var(--surface-primary)] px-4 py-20">
+		<div class="mx-auto grid max-w-6xl gap-10 lg:grid-cols-[minmax(0,0.9fr)_minmax(28rem,1.1fr)] lg:items-center">
+			<div class="max-w-3xl">
+				<p class="mb-3 font-mono text-[length:var(--text-caption)] uppercase tracking-widest text-[var(--color-accent-700)]">
+					What PebbleDesk solves
+				</p>
+				<h2 class="font-heading text-[length:var(--text-heading)] font-bold text-[var(--color-brand-text)]">
+					The daily childcare record is too important to live in five disconnected places.
+				</h2>
+				<p class="mt-4 text-[length:var(--text-body-lg)] leading-8 text-[var(--color-brand-muted)]">
+					Directors need to prove attendance, ratios, subsidy claims, billing history, and family details. PebbleDesk keeps those pieces connected from the start so audit prep is not a separate cleanup project.
+				</p>
+			</div>
+			<ProductDashboard />
+		</div>
+	</section>
+
+	<section class="bg-[var(--surface-secondary)] px-4 py-20">
+		<div class="mx-auto max-w-6xl">
+			<div class="max-w-3xl">
+				<p class="font-mono text-[length:var(--text-caption)] uppercase tracking-[0.18em] text-[var(--color-accent-700)]">
+					How PebbleDesk solves it
+				</p>
+				<h2 class="mt-2 font-heading text-[length:var(--text-heading)] font-bold text-[var(--color-brand-text)]">
+					Every workflow feeds the same audit-ready record.
+				</h2>
+			</div>
+			<div class="mt-10 grid gap-4 md:grid-cols-2">
+				{workflowGroups.map((group) => (
+					<article class="rounded-[var(--radius-xl)] border border-[var(--site-panel-border)] bg-[var(--site-panel-bg)] p-6 shadow-[var(--shadow-card)]">
+						<p class="mb-3 font-mono text-[length:var(--text-caption)] uppercase tracking-widest text-[var(--color-accent-700)]">
+							{group.eyebrow}
+						</p>
+						<h3 class="font-heading text-[length:var(--text-subheading)] font-bold text-[var(--color-brand-text)]">
+							{group.title}
+						</h3>
+						<p class="mt-3 leading-7 text-[var(--color-brand-muted)]">{group.body}</p>
+						<ul class="mt-4 space-y-2 text-sm leading-6 text-[var(--color-brand-muted)]">
+							{group.bullets.map((bullet) => (
+								<li class="flex gap-3">
+									<span class="mt-2 h-2 w-2 rounded-full bg-[var(--color-accent-700)]" aria-hidden="true"></span>
+									<span>{bullet}</span>
+								</li>
+							))}
+						</ul>
+					</article>
+				))}
+			</div>
+		</div>
+	</section>
+
+	<section class="bg-[var(--surface-primary)] px-4 py-20" aria-labelledby="feature-coverage-heading">
+		<div class="mx-auto max-w-6xl">
+			<div class="max-w-3xl">
+				<p class="font-mono text-[length:var(--text-caption)] uppercase tracking-[0.18em] text-[var(--color-accent-700)]">
+					Our promise
+				</p>
+				<h2 id="feature-coverage-heading" class="mt-2 font-heading text-[length:var(--text-heading)] font-bold text-[var(--color-brand-text)]">
+					Built around the four moments that make childcare admin painful.
+				</h2>
+				<p class="mt-4 text-[length:var(--text-body-lg)] leading-8 text-[var(--color-brand-muted)]">
+					We do not have a wall of customer logos yet. We are new. Here is what we are building toward instead.
+				</p>
+			</div>
+			<div class="mt-10 grid gap-4 md:grid-cols-2">
+				{featurePillars.map((pillar) => (
+					<article class="rounded-[var(--radius-xl)] border border-[var(--site-panel-border)] bg-[var(--site-panel-bg)] p-6 shadow-[var(--shadow-card)]">
+						<h3 class="font-heading text-[length:var(--text-subheading)] font-bold text-[var(--color-brand-text)]">
+							{pillar.title}
+						</h3>
+						<p class="mt-3 leading-7 text-[var(--color-brand-muted)]">{pillar.description}</p>
+						<ul class="mt-5 space-y-3">
+							{pillar.links.map((link) => (
+								<li>
+									<a class="-mx-2 flex min-h-11 items-center rounded-md px-2 py-2 font-medium text-[var(--color-brand-text)] no-underline transition-colors hover:bg-[var(--site-soft-surface)] hover:text-[var(--color-accent-700)]" href={link.href}>
+										{link.label}
+									</a>
+								</li>
+							))}
+						</ul>
+					</article>
+				))}
+			</div>
+		</div>
+	</section>
+
+	<section class="bg-[var(--surface-secondary)] px-4 py-20" id="pricing">
+		<div class="mx-auto max-w-5xl">
+			<div class="max-w-3xl">
+				<p class="font-mono text-[length:var(--text-caption)] uppercase tracking-[0.18em] text-[var(--color-accent-700)]">
+					Who PebbleDesk is for
+				</p>
+				<h2 class="mt-2 font-heading text-[length:var(--text-heading)] font-bold text-[var(--color-brand-text)]">
+					Built for childcare operators who own the record when licensing, billing, or staffing questions land.
+				</h2>
+				<p class="mt-4 text-[length:var(--text-body-lg)] leading-8 text-[var(--color-brand-muted)]">
+					PebbleDesk is for center directors, owner/operators, family childcare providers, administrators, and multi-site operators responsible for attendance, ratios, billing, licensing, and audit records.
+				</p>
+				<ul class="mt-6 space-y-2">
+					<li>
+						<a href="/for/childcare-center-directors/" class="-mx-2 flex min-h-11 items-center rounded-md px-2 py-2 font-medium text-[var(--color-brand-text)] no-underline transition-colors hover:bg-[var(--site-soft-surface)] hover:text-[var(--color-accent-700)]">
+							Center Directors &rarr;
+						</a>
+					</li>
+					<li>
+						<a href="/for/in-home-daycare-providers/" class="-mx-2 flex min-h-11 items-center rounded-md px-2 py-2 font-medium text-[var(--color-brand-text)] no-underline transition-colors hover:bg-[var(--site-soft-surface)] hover:text-[var(--color-accent-700)]">
+							In-Home Daycare Providers &rarr;
+						</a>
+					</li>
+					<li>
+						<a href="/for/multi-site-childcare-operators/" class="-mx-2 flex min-h-11 items-center rounded-md px-2 py-2 font-medium text-[var(--color-brand-text)] no-underline transition-colors hover:bg-[var(--site-soft-surface)] hover:text-[var(--color-accent-700)]">
+							Multi-Site Operators &rarr;
+						</a>
+					</li>
+				</ul>
+			</div>
+
+			<div class="mt-6 rounded-[var(--radius-lg)] border border-[var(--site-chip-border)] bg-[var(--site-chip-bg)] px-4 py-3 text-[length:var(--text-caption)] text-[var(--color-brand-text)] shadow-[var(--shadow-card)]">
+				<span class="font-semibold">Plan fit:</span> Home supports family childcare programs. Center Starter fits licensed single-site centers. Center Pro gives larger single-site teams more room. Group supports multi-site teams, with custom rollouts for migration and cross-center oversight.
+			</div>
+
+			<div class="mt-3 rounded-[var(--radius-lg)] border border-[var(--site-chip-border)] bg-[var(--site-chip-bg)] px-4 py-3 text-[length:var(--text-caption)] text-[var(--color-brand-text)] shadow-[var(--shadow-card)]">
+				{PEBBLEDESK_OFFERING.claims.trialDisclosure}
+			</div>
+
+			<div class="mt-6 grid gap-4 md:grid-cols-2 xl:grid-cols-4">
+				{planFitCards.map((tier) => (
+					<article
+						class:list={[
+							"rounded-[var(--radius-xl)] border bg-[var(--site-panel-bg)] p-6 shadow-[var(--shadow-card)]",
+							tier.highlighted
+								? "border-[var(--color-accent-700)] ring-1 ring-[var(--color-accent-200)]"
+								: "border-[var(--site-panel-border)]",
+						]}
+					>
+						<div class="flex items-start justify-between gap-3">
+							<div>
+								<p class="font-mono text-[length:var(--text-caption)] uppercase tracking-[0.18em] text-[var(--color-accent-700)]">
+									{tier.name}
+								</p>
+								<h3 class="mt-3 font-heading text-[length:var(--text-subheading)] font-bold text-[var(--color-brand-text)]">
+									{tier.price}
+								</h3>
+							</div>
+							{tier.highlighted && (
+								<span class="rounded-full bg-[var(--color-accent-50)] px-3 py-1 text-[length:var(--text-caption)] font-medium text-[var(--color-accent-700)]">
+									Best fit for licensed centers
+								</span>
+							)}
+						</div>
+						{tier.description && (
+							<p class="mt-4 text-sm leading-7 text-[var(--color-brand-muted)]">{tier.description}</p>
+						)}
+						<ul class="mt-5 space-y-2 text-[length:var(--text-caption)] leading-6 text-[var(--color-brand-muted)]">
+							{tier.features.map((feature) => (
+								<li>{feature}</li>
+							))}
+						</ul>
+						<a
+							href={tier.cta.target}
+							class:list={[
+								"mt-6 inline-flex w-full items-center justify-center rounded-full px-4 py-3 text-center font-medium no-underline transition-colors",
+								tier.highlighted
+									? "bg-[var(--color-accent-700)] text-white hover:bg-[var(--color-accent-800)]"
+									: "border border-[var(--site-panel-border)] text-[var(--color-brand-text)] hover:bg-[var(--site-soft-surface)]",
+							]}
+						>
+							{tier.cta.text}
+						</a>
+					</article>
+				))}
+			</div>
+			<aside class="mt-4 border-t border-[var(--site-panel-border)] pt-4 text-sm leading-6 text-[var(--color-brand-muted)]">
+				<span class="font-semibold text-[var(--color-brand-text)]">{enterprisePricingNote.label}</span>
+				<span class="mx-2 text-[var(--site-panel-border)]">|</span>
+				<span>{enterprisePricingNote.price}</span>
+				<span class="mx-2 text-[var(--site-panel-border)]">|</span>
+				<span>{enterprisePricingNote.summary}</span>
+				<span class="mx-2 text-[var(--site-panel-border)]">|</span>
+				<a class="font-medium text-[var(--color-brand-text)] underline underline-offset-4" href="/pricing/#contact">
+					{enterprisePricingNote.ctaText}
+				</a>
+			</aside>
+		</div>
+	</section>
+
+	<div class="bg-[var(--surface-primary)]">
+		<FaqSection faqs={siteConfig.faqs} />
+	</div>
+
+	<section class="px-4 py-24" style="background: var(--site-cta-band);" id="signup">
+		<div class="mx-auto max-w-5xl rounded-[var(--radius-xl)] border border-[var(--site-cta-band-border)] bg-[color-mix(in_srgb,var(--surface-primary)_14%,transparent)] px-6 py-8 text-center shadow-[var(--shadow-card)]">
+			<h2 class="mx-auto mt-3 max-w-3xl font-[family-name:var(--font-heading)] text-[32px] font-bold leading-tight text-[var(--site-cta-text)]">
+				Keep attendance, ratios, billing, and audit records ready before anyone asks for them.
+			</h2>
+			<p class="mx-auto mt-4 max-w-2xl text-lg leading-8 text-[var(--site-cta-muted)]">
+				Start your {PEBBLEDESK_OFFERING.trial.label} for Home, Center Starter, Center Pro, or Group. If you are mapping a larger rollout, use the pricing page to evaluate Enterprise support first.
+			</p>
+			<div class="mb-6 mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
+				<a href={primarySignupCta.target} class="btn-primary no-underline">
+					{primarySignupCta.text}
+				</a>
+				{secondaryCta && (
+					<a href={secondaryCta.target} class="btn-secondary cta-band-secondary no-underline">
+						{secondaryCta.text}
+					</a>
+				)}
+			</div>
+			<p class="font-[family-name:var(--font-mono)] text-[length:var(--text-kicker)] uppercase tracking-wider text-[var(--site-cta-muted)]">
+				{PEBBLEDESK_OFFERING.claims.trialDisclosure}
+			</p>
+		</div>
+	</section>
+
+	<StickyMobileCta
+		ctaText={primarySignupCta.text}
+		ctaTarget={primarySignupCta.target}
+		ctaAction="link"
+	/>
+</LandingLayout>
+
+<style>
+	.cta-band-secondary.btn-secondary {
+		color: var(--site-cta-text);
+		background-color: color-mix(in srgb, white 10%, transparent);
+		border-color: color-mix(in srgb, white 18%, transparent);
+	}
+
+	.cta-band-secondary.btn-secondary:hover {
+		color: var(--site-cta-text);
+		background-color: color-mix(in srgb, white 14%, transparent);
+		box-shadow: 0 12px 28px -24px rgba(248, 241, 233, 0.45);
+	}
+</style>

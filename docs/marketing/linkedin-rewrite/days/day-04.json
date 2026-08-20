@@ -1,0 +1,171 @@
+{
+	"date": "2026-05-09",
+	"theme": "Attendance records that support billing, licensing, and parent questions",
+	"posts": [
+		{
+			"index_in_day": 1,
+			"time_central": "04:00",
+			"pillar": "Audit readiness and licensing confidence",
+			"format": "Practical tip",
+			"post_content": "The hardest attendance question usually comes later.\n\nNot at drop-off.\nNot at pickup.\n\nLater, when licensing asks who was in Room 2 at 10:15.\nLater, when a subsidy claim needs backup.\nLater, when a parent asks why a full day was billed.\n\nA useful attendance record should show the child, date, time in, time out, room context, and verification without making the director rebuild the day from memory.\n\nThat is the standard worth designing around: not just \"Did someone tap check-in?\" but \"Can we answer the next question cleanly?\"",
+			"source": "apps/site/src/content/features/attendance-tracking.md",
+			"url": "https://pebbledesk.app/features/attendance-tracking/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Opens the day by framing attendance as a record used later across billing, licensing, and parent follow-up."
+		},
+		{
+			"index_in_day": 2,
+			"time_central": "05:00",
+			"pillar": "Subsidy billing and reimbursement",
+			"format": "Operator reminder",
+			"post_content": "For CCDF billing, attendance is not just a daily log.\n\nIt is the support for the claim.\n\nThat means the billed date needs to match the attendance date. The child identifier needs to match the authorization. The time record needs to support the day of care. Absences need a reason instead of becoming blank spaces.\n\nThe record does not have to be fancy. It does have to be consistent.\n\nMonth-end reimbursement gets much easier when every billed day already has its attendance proof attached.",
+			"source": "apps/site/src/content/guides/ccdf-attendance-documentation-requirements.md",
+			"url": "https://pebbledesk.app/resources/guides/ccdf-attendance-documentation-requirements/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Turns the CCDF documentation requirements into a practical billing checklist."
+		},
+		{
+			"index_in_day": 3,
+			"time_central": "06:00",
+			"pillar": "Parent communication and trust",
+			"format": "Practical tip",
+			"post_content": "A parent billing question is much easier to answer when attendance tells the whole story.\n\n\"Was my child there all day on Tuesday?\"\n\nThe helpful answer is not a shrug and a paper sheet search. It is a clear record: checked in at 8:07, assigned to the preschool room, checked out at 4:42, verified at pickup.\n\nFamilies do not need every operational detail.\n\nBut when they ask about a charge, directors need a record that is calm, specific, and easy to explain.",
+			"source": "apps/site/src/content/features/attendance-tracking.md",
+			"url": "https://pebbledesk.app/features/attendance-tracking/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Connects attendance detail to parent charge questions without overclaiming."
+		},
+		{
+			"index_in_day": 4,
+			"time_central": "07:00",
+			"pillar": "Daily operations",
+			"format": "Checklist",
+			"post_content": "Morning attendance cleanup should happen while the day is still fresh.\n\nA strong 9:30 check looks like this:\n\n- Expected children compared against actual arrivals\n- Unexplained absences flagged for follow-up\n- Room assignments checked against where children actually landed\n- Subsidy children reviewed for required documentation\n- Missing drop-off verification fixed same day\n\nThe mistake is waiting until Friday afternoon, when every small gap has turned into detective work.",
+			"source": "apps/site/src/content/guides/cost-of-manual-attendance-tracking.md",
+			"url": "https://pebbledesk.app/resources/guides/cost-of-manual-attendance-tracking/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Makes the manual mid-day reconciliation burden operational and specific."
+		},
+		{
+			"index_in_day": 5,
+			"time_central": "08:00",
+			"pillar": "Audit readiness and licensing confidence",
+			"format": "Myth correction",
+			"post_content": "Facility-level attendance is not the same as room-level attendance.\n\nA total headcount can tell you 42 children were present.\n\nIt cannot always answer which children were in the toddler room, when they moved, and whether the record supports the ratio story for that room.\n\nLicensing questions often happen at the classroom level.\n\nAttendance records should be able to follow the child into the room where care actually happened.",
+			"source": "apps/site/src/content/listicles/best-childcare-attendance-software.md",
+			"url": "https://pebbledesk.app/resources/best/best-childcare-attendance-software/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Highlights the source distinction between facility-level and room-level documentation."
+		},
+		{
+			"index_in_day": 6,
+			"time_central": "09:00",
+			"pillar": "Subsidy billing and reimbursement",
+			"format": "Risk callout",
+			"post_content": "The missed sign-out is small in the moment.\n\nA parent is rushing. A teacher is covering pickup. The line is moving. One child leaves without a completed departure record.\n\nFor private-pay billing, that can become a family question.\n\nFor subsidy billing, it can become an incomplete day of documentation.\n\nThe best fix is same-day resolution: staff note, parent or authorized adult verification when possible, and a record that explains what happened before memory gets fuzzy.",
+			"source": "apps/site/src/content/guides/ccdf-attendance-documentation-requirements.md",
+			"url": "https://pebbledesk.app/resources/guides/ccdf-attendance-documentation-requirements/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Uses the missed sign-out gap from the CCDF guide and gives a practical response."
+		},
+		{
+			"index_in_day": 7,
+			"time_central": "10:00",
+			"pillar": "Cost of manual administration",
+			"format": "Operational math",
+			"post_content": "Manual attendance has a cost even when the paper is free.\n\nSomeone sets up the sheet.\nSomeone checks it against the roster.\nSomeone follows up on absences.\nSomeone files it.\nSomeone searches it again when billing, licensing, or a parent needs an answer.\n\nThe source guide estimates a typical center can spend 50 to 70 minutes per day on attendance-specific administration.\n\nThat is not just clerical time. It is director attention that could have gone to staffing, families, and classrooms.",
+			"source": "apps/site/src/content/guides/cost-of-manual-attendance-tracking.md",
+			"url": "https://pebbledesk.app/resources/guides/cost-of-manual-attendance-tracking/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Uses a source-backed time estimate while keeping the post centered on director workload."
+		},
+		{
+			"index_in_day": 8,
+			"time_central": "11:00",
+			"pillar": "Audit readiness and licensing confidence",
+			"format": "Practical tip",
+			"post_content": "A good attendance export should not require a weekend project.\n\nWhen an inspector or subsidy reviewer asks for a date range, the director should not have to merge a parent app export, a classroom roster, a billing spreadsheet, and handwritten notes.\n\nThe useful record is already connected:\n\nChild. Date. Room. Time in. Time out. Verification. Absence note when needed.\n\nThe export is only as good as the daily capture behind it.",
+			"source": "apps/site/src/content/features/attendance-tracking.md",
+			"url": "https://pebbledesk.app/features/attendance-tracking/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Explains the PebbleDesk positioning around connected attendance, reporting, and audit prep."
+		},
+		{
+			"index_in_day": 9,
+			"time_central": "12:00",
+			"pillar": "Subsidy billing and reimbursement",
+			"format": "Practical tip",
+			"post_content": "Absences need documentation too.\n\nFor subsidy programs, an absent child is not just missing from the attendance sheet. The center may need to show the date, the reason code, and whether the absence falls within the state's allowed billing rules.\n\nLeaving the day blank creates ambiguity.\n\nA same-day absence note can save a month-end billing review from becoming a guessing session.",
+			"source": "apps/site/src/content/guides/ccdf-attendance-documentation-requirements.md",
+			"url": "https://pebbledesk.app/resources/guides/ccdf-attendance-documentation-requirements/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Focuses on absence records as a concrete part of subsidy documentation."
+		},
+		{
+			"index_in_day": 10,
+			"time_central": "13:00",
+			"pillar": "Software evaluation",
+			"format": "Buyer question",
+			"post_content": "When evaluating attendance software, ask one question that cuts through the demo:\n\n\"Can this record support licensing, subsidy billing, and parent questions without re-entry?\"\n\nParent notifications are useful.\nDigital check-in is useful.\nDaily reports are useful.\n\nBut licensed centers also need time-stamped, room-level documentation that can be searched and shared when someone asks for proof.\n\nThe best attendance tool is the one that reduces the number of side spreadsheets the director has to maintain.",
+			"source": "apps/site/src/content/listicles/best-childcare-attendance-software.md",
+			"url": "https://pebbledesk.app/resources/best/best-childcare-attendance-software/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Turns the listicle comparison into a practical buying question for directors."
+		},
+		{
+			"index_in_day": 11,
+			"time_central": "14:00",
+			"pillar": "Audit readiness and licensing confidence",
+			"format": "Risk callout",
+			"post_content": "Attendance gaps rarely stay in one lane.\n\nA missing check-in can affect the daily headcount.\nAn incomplete check-out can affect billing support.\nAn undocumented absence can affect subsidy reconciliation.\nA room assignment gap can affect ratio review.\n\nThat is why attendance records carry so much operational weight in childcare.\n\nThey are the starting point for several different questions a director may have to answer later.",
+			"source": "apps/site/src/content/guides/cost-of-manual-attendance-tracking.md",
+			"url": "https://pebbledesk.app/resources/guides/cost-of-manual-attendance-tracking/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Reflects the guide's compounding error cycle across billing, subsidy, reporting, and compliance."
+		},
+		{
+			"index_in_day": 12,
+			"time_central": "15:00",
+			"pillar": "Daily operations",
+			"format": "Operator reminder",
+			"post_content": "Same-day verification is a habit, not a paperwork preference.\n\nWhen signatures or electronic confirmations are added days later, the record becomes weaker. It may still describe what happened, but it no longer shows the same clean chain from care delivered to documentation captured.\n\nFor directors, the operational goal is simple:\n\nResolve missing attendance details before the day closes.\n\nTomorrow's memory is not as strong as today's record.",
+			"source": "apps/site/src/content/guides/ccdf-attendance-documentation-requirements.md",
+			"url": "https://pebbledesk.app/resources/guides/ccdf-attendance-documentation-requirements/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Grounded in the guide's warning about retroactive signatures and same-day verification."
+		},
+		{
+			"index_in_day": 13,
+			"time_central": "16:00",
+			"pillar": "Parent communication and trust",
+			"format": "Conversation starter",
+			"post_content": "A practical question for childcare directors:\n\nWhen a family questions a charge, where do you look first?\n\nThe billing screen may show the amount. But the attendance record explains the day behind the amount: arrival, departure, absence, room movement, and who verified pickup.\n\nGood records do not prevent every parent question.\n\nThey do make the answer easier to find, easier to explain, and less dependent on whoever remembers that afternoon.",
+			"source": "apps/site/src/content/features/attendance-tracking.md",
+			"url": "https://pebbledesk.app/features/attendance-tracking/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Invites operator reflection while staying specific to parent billing questions."
+		},
+		{
+			"index_in_day": 14,
+			"time_central": "17:00",
+			"pillar": "Subsidy billing and reimbursement",
+			"format": "Practical tip",
+			"post_content": "Authorized hours are easy to miss when attendance and billing live apart.\n\nA child arrives early.\nA pickup runs late.\nA schedule changes for one week.\n\nIf the subsidy authorization is tracked somewhere else, the billing risk may not show up until reconciliation.\n\nAttendance records are stronger when they can be checked against the authorization while the month is still open, not after the claim is already submitted.",
+			"source": "apps/site/src/content/listicles/best-childcare-attendance-software.md",
+			"url": "https://pebbledesk.app/resources/best/best-childcare-attendance-software/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Uses the listicle's authorized-hours and subsidy billing discussion in an operational scenario."
+		},
+		{
+			"index_in_day": 15,
+			"time_central": "18:00",
+			"pillar": "Audit-ready operations",
+			"format": "End-of-day reflection",
+			"post_content": "The end-of-day attendance question is not just \"Did everyone get checked out?\"\n\nIt is:\n\nCan we explain every child who was present?\nCan we explain every child who was absent?\nCan billing use the same record?\nCan licensing see room context?\nCan a parent question be answered without digging through paper?\n\nThat is the difference between attendance capture and attendance records.\n\nOne happens at the door. The other protects the director later.",
+			"source": "apps/site/src/content/features/attendance-tracking.md",
+			"url": "https://pebbledesk.app/features/attendance-tracking/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Closes the day with a concrete end-of-day record review tied to the theme."
+		}
+	]
+}

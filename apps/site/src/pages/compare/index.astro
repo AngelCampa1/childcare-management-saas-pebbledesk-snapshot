@@ -1,0 +1,113 @@
+---
+import "../../styles/global.css";
+import { getCollection } from "astro:content";
+import type { CategorySummary } from "@pebbledesk/marketing";
+import PublicSignupCta from "@pebbledesk/marketing/components/public-signup-cta";
+import ContentHub from "@pebbledesk/marketing/hubs/content-hub.astro";
+import { formatPlanCapacityClaim, getPromotionalPlanPrice } from "@pebbledesk/shared/constants";
+import { hubFaqs } from "@/config/hub-faqs";
+import { siteConfig } from "@/config/site";
+
+const alternatives = await getCollection("alternatives");
+const comparisons = await getCollection("comparisons");
+const pricingBreakdowns = await getCollection("pricing-breakdowns");
+const homePromoPrice = getPromotionalPlanPrice("home", "annual");
+const centerStarterPromoPrice = getPromotionalPlanPrice("center_starter", "annual");
+const starterCapacityClaim = formatPlanCapacityClaim("center_starter");
+
+const categories: CategorySummary[] = [
+  {
+    name: "Replacing an incumbent",
+    description: `Alternative pages for directors who already know which tool they are trying to replace and need a cleaner fit.`,
+    href: "/compare/alternatives",
+    count: alternatives.length,
+  },
+  {
+    name: "Shortlist decisions",
+    description:
+      "Head-to-head pages for the last two vendors still in the running when the buying decision is active.",
+    href: "/compare/versus",
+    count: comparisons.length,
+  },
+  {
+    name: "Quote and pricing review",
+    description:
+      "Pricing breakdowns that surface real contract shape, add-on costs, and where the paperwork burden still lands.",
+    href: "/compare/pricing",
+    count: pricingBreakdowns.length,
+  },
+];
+---
+
+<ContentHub
+  config={siteConfig}
+  title="Compare Childcare Software"
+  description="Compare childcare software by what directors need to prove later. Choose the path that matches the buying decision in front of you."
+  categories={categories}
+  canonicalUrl={`https://${siteConfig.domain}/compare`}
+  breadcrumbs={[
+    { label: "Home", href: "/" },
+    { label: "Compare", href: "/compare" },
+  ]}
+  browseLinkText="View decision path ->"
+  itemNoun="decision guide"
+  categoryNoun="path"
+  categoryNounPlural="paths"
+  faqs={hubFaqs["/compare"]}
+>
+  <div
+    slot="extra"
+    class="mt-12 grid gap-4 rounded-[var(--radius-xl)] border border-[var(--site-panel-border)] bg-[var(--site-panel-bg)] p-6 shadow-[var(--shadow-card)] lg:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)]"
+  >
+    <div>
+      <p class="font-mono text-[length:var(--text-caption)] uppercase tracking-[0.18em] text-[var(--color-accent-700)]">
+        Decision paths
+      </p>
+      <h2 class="mt-2 text-xl font-bold text-[var(--color-brand-text)]">
+        Use the comparison path that matches the buying decision in front of you.
+      </h2>
+      <p class="mt-4 text-[var(--color-brand-muted)] leading-7">
+        PebbleDesk solves vendor confusion for directors and owner/operators who need more than a
+        parent app. Each guide compares the daily record, ratio, billing, and audit support that
+        licensed centers, family childcare homes, and multi-site operators will rely on after signup.
+      </p>
+    </div>
+    <div class="rounded-[var(--radius-lg)] border border-[var(--site-soft-outline)] bg-[var(--site-soft-surface)] px-5 py-5">
+      <p class="font-mono text-[length:var(--text-caption)] uppercase tracking-[0.18em] text-[var(--color-brand-muted)]">
+        What to compare
+      </p>
+      <ul class="mt-3 space-y-3 text-[length:var(--text-caption)] leading-6 text-[var(--color-brand-muted)]">
+        <li>Check the day-to-day record first: attendance, ratios, and billing support.</li>
+        <li>Check the workflow burden next: what still gets rebuilt outside the platform.</li>
+        <li>Use pricing pages last to confirm the contract matches the operational fit.</li>
+      </ul>
+      <div class="mt-4 inline-flex items-center gap-2 rounded-full border border-[var(--site-chip-border)] bg-[var(--site-chip-bg)] px-3 py-2 text-sm text-[var(--color-brand-text)]">
+        <span class="font-semibold">{siteConfig.name}:</span>
+        <span>
+          Home {homePromoPrice.discountedPriceLabel}, Center Starter {centerStarterPromoPrice.discountedPriceLabel},
+          no setup fees while {siteConfig.promoBanner.code} is active
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <section slot="cta" class="mt-10" id="signup">
+    <div class="rounded-[var(--radius-xl)] border border-[var(--site-panel-border)] bg-[var(--site-editorial-wash)] px-6 py-8 text-center shadow-[var(--shadow-card)]">
+      <h2 class="text-2xl font-bold text-[var(--color-brand-text)]">
+        Ready to move from comparison mode into a cleaner operating system?
+      </h2>
+      <p class="mx-auto mb-6 mt-3 max-w-2xl text-[var(--color-brand-muted)] leading-7">
+        {siteConfig.name} starts at {homePromoPrice.discountedPriceLabel} for home providers, with
+        Center Starter at {centerStarterPromoPrice.discountedPriceLabel} for licensed centers with {starterCapacityClaim}
+        while {siteConfig.promoBanner.code} is active. Pick the plan that fits your program and continue into
+        account setup without annual-contract friction.
+      </p>
+      <PublicSignupCta
+        client:load
+        sourcePage="/compare"
+        buttonText={siteConfig.funnel.bofu.ctaText}
+        ctaTarget={siteConfig.funnel.bofu.ctaTarget}
+      />
+    </div>
+  </section>
+</ContentHub>

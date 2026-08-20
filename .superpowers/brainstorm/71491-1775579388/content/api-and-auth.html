@@ -1,0 +1,154 @@
+<h2>Section 3: API Routes & Auth Flow</h2>
+<p class="subtitle">Hono route structure, Better Auth integration, and permission model</p>
+
+<div class="section">
+  <h3>Auth Flow</h3>
+  <div class="mockup">
+    <div class="mockup-header">Better Auth on Hono</div>
+    <div class="mockup-body" style="padding:24px">
+      <div style="display:flex;gap:16px;flex-wrap:wrap;justify-content:center;margin-bottom:24px">
+        <div style="background:#4f46e5;color:white;padding:12px 20px;border-radius:8px;text-align:center;font-size:13px">
+          <div style="font-weight:700">Web (React)</div>
+          <div style="opacity:0.8;font-size:11px;margin-top:4px">Better Auth client</div>
+          <div style="opacity:0.7;font-size:11px">authClient.signIn()</div>
+        </div>
+        <div style="display:flex;align-items:center;color:#64748b;font-size:20px">→</div>
+        <div style="background:#059669;color:white;padding:12px 20px;border-radius:8px;text-align:center;font-size:13px">
+          <div style="font-weight:700">API (Hono)</div>
+          <div style="opacity:0.8;font-size:11px;margin-top:4px">/api/auth/* mounted</div>
+          <div style="opacity:0.7;font-size:11px">Better Auth handler</div>
+        </div>
+        <div style="display:flex;align-items:center;color:#64748b;font-size:20px">→</div>
+        <div style="background:#d97706;color:white;padding:12px 20px;border-radius:8px;text-align:center;font-size:13px">
+          <div style="font-weight:700">Neon (Postgres)</div>
+          <div style="opacity:0.8;font-size:11px;margin-top:4px">users, sessions, accounts</div>
+          <div style="opacity:0.7;font-size:11px">Drizzle adapter</div>
+        </div>
+      </div>
+      <div style="font-size:13px;color:#475569;line-height:1.8">
+        <strong>Login methods:</strong> Email + password, Google OAuth<br>
+        <strong>Session strategy:</strong> Cookie-based (httpOnly, secure, sameSite=lax)<br>
+        <strong>Auth middleware:</strong> Hono middleware that resolves session → user → membership → center_id + role<br>
+        <strong>Post-signup:</strong> New user creates a center (becomes Owner) OR accepts an invite (joins as Director/Staff)
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <h3>Permission Model</h3>
+  <div class="mockup">
+    <div class="mockup-header">Role → Permission Matrix</div>
+    <div class="mockup-body" style="padding:16px;font-size:13px">
+      <table style="width:100%;border-collapse:collapse;text-align:center">
+        <thead>
+          <tr style="border-bottom:2px solid #e2e8f0">
+            <th style="text-align:left;padding:8px">Action</th>
+            <th style="padding:8px;color:#4f46e5">Owner</th>
+            <th style="padding:8px;color:#059669">Director</th>
+            <th style="padding:8px;color:#d97706">Staff</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="border-bottom:1px solid #f1f5f9"><td style="text-align:left;padding:8px">Check in/out children</td><td>✓</td><td>✓</td><td>✓</td></tr>
+          <tr style="border-bottom:1px solid #f1f5f9"><td style="text-align:left;padding:8px">View own classroom ratios</td><td>✓</td><td>✓</td><td>✓</td></tr>
+          <tr style="border-bottom:1px solid #f1f5f9"><td style="text-align:left;padding:8px">Send messages to parents</td><td>✓</td><td>✓</td><td>✓ <span style="color:#94a3b8;font-size:11px">(own room)</span></td></tr>
+          <tr style="border-bottom:1px solid #f1f5f9"><td style="text-align:left;padding:8px">View all classrooms & ratios</td><td>✓</td><td>✓</td><td></td></tr>
+          <tr style="border-bottom:1px solid #f1f5f9"><td style="text-align:left;padding:8px">Manage children & guardians</td><td>✓</td><td>✓</td><td></td></tr>
+          <tr style="border-bottom:1px solid #f1f5f9"><td style="text-align:left;padding:8px">Manage classrooms & assignments</td><td>✓</td><td>✓</td><td></td></tr>
+          <tr style="border-bottom:1px solid #f1f5f9"><td style="text-align:left;padding:8px">Manage staff schedules</td><td>✓</td><td>✓</td><td></td></tr>
+          <tr style="border-bottom:1px solid #f1f5f9"><td style="text-align:left;padding:8px">View subsidy claims & reports</td><td>✓</td><td>✓</td><td></td></tr>
+          <tr style="border-bottom:1px solid #f1f5f9"><td style="text-align:left;padding:8px">Generate audit reports</td><td>✓</td><td>✓</td><td></td></tr>
+          <tr style="border-bottom:1px solid #f1f5f9"><td style="text-align:left;padding:8px">Manage subsidy cases & billing</td><td>✓</td><td></td><td></td></tr>
+          <tr style="border-bottom:1px solid #f1f5f9"><td style="text-align:left;padding:8px">Manage invoices & payments</td><td>✓</td><td></td><td></td></tr>
+          <tr style="border-bottom:1px solid #f1f5f9"><td style="text-align:left;padding:8px">Invite/remove staff</td><td>✓</td><td></td><td></td></tr>
+          <tr style="border-bottom:1px solid #f1f5f9"><td style="text-align:left;padding:8px">Center settings & billing plan</td><td>✓</td><td></td><td></td></tr>
+          <tr><td style="text-align:left;padding:8px">QuickBooks connection</td><td>✓</td><td></td><td></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <h3>API Route Structure</h3>
+  <div class="mockup">
+    <div class="mockup-header">Hono Routes — apps/api/src/routes/</div>
+    <div class="mockup-body" style="font-family:monospace;font-size:12px;line-height:2">
+      <div style="color:#64748b"># Auth (Better Auth handles these)</div>
+      <div>POST /api/auth/sign-up/email</div>
+      <div>POST /api/auth/sign-in/email</div>
+      <div>POST /api/auth/sign-in/social  <span style="color:#64748b">(Google)</span></div>
+      <div>POST /api/auth/sign-out</div>
+      <div>GET  /api/auth/session</div>
+      <br>
+      <div style="color:#64748b"># Center management</div>
+      <div>POST /api/centers  <span style="color:#64748b">(create center, user becomes Owner)</span></div>
+      <div>GET  /api/centers/:id</div>
+      <div>PATCH /api/centers/:id</div>
+      <br>
+      <div style="color:#64748b"># Team</div>
+      <div>GET  /api/centers/:id/members</div>
+      <div>POST /api/centers/:id/invites</div>
+      <div>DELETE /api/centers/:id/members/:memberId</div>
+      <br>
+      <div style="color:#64748b"># Classrooms</div>
+      <div>CRUD /api/classrooms</div>
+      <div>CRUD /api/classrooms/:id/assignments  <span style="color:#64748b">(children & staff)</span></div>
+      <br>
+      <div style="color:#64748b"># Children & Guardians</div>
+      <div>CRUD /api/children</div>
+      <div>CRUD /api/guardians</div>
+      <br>
+      <div style="color:#64748b"># Attendance & Ratios</div>
+      <div>POST /api/check-ins  <span style="color:#64748b">(child check-in)</span></div>
+      <div>PATCH /api/check-ins/:id/check-out</div>
+      <div>POST /api/staff-check-ins</div>
+      <div>PATCH /api/staff-check-ins/:id/clock-out</div>
+      <div>GET  /api/ratios  <span style="color:#64748b">(current ratios, all rooms)</span></div>
+      <div>GET  /api/ratios/history  <span style="color:#64748b">(snapshots for audit)</span></div>
+      <div>GET  /api/ratios/violations</div>
+      <br>
+      <div style="color:#64748b"># Subsidies</div>
+      <div>CRUD /api/subsidy-cases</div>
+      <div>CRUD /api/subsidy-claims</div>
+      <div>POST /api/subsidy-claims/:id/submit</div>
+      <div>GET  /api/subsidy-claims/reconciliation  <span style="color:#64748b">(attendance vs claims)</span></div>
+      <br>
+      <div style="color:#64748b"># Billing</div>
+      <div>CRUD /api/invoices</div>
+      <div>POST /api/invoices/:id/send</div>
+      <div>POST /api/payments</div>
+      <br>
+      <div style="color:#64748b"># Scheduling</div>
+      <div>CRUD /api/schedules</div>
+      <div>CRUD /api/shifts</div>
+      <div>GET  /api/time-entries</div>
+      <br>
+      <div style="color:#64748b"># Audit & Reports</div>
+      <div>POST /api/reports/generate</div>
+      <div>GET  /api/reports</div>
+      <div>GET  /api/audit-log</div>
+      <br>
+      <div style="color:#64748b"># Messaging</div>
+      <div>CRUD /api/messages</div>
+      <br>
+      <div style="color:#64748b"># QuickBooks</div>
+      <div>POST /api/quickbooks/connect</div>
+      <div>POST /api/quickbooks/disconnect</div>
+      <div>POST /api/quickbooks/sync</div>
+      <div>GET  /api/quickbooks/status</div>
+    </div>
+  </div>
+</div>
+
+<div class="section" style="margin-top:24px">
+  <h3>Key Patterns</h3>
+  <ul style="line-height:1.8;font-size:14px">
+    <li><strong>Auth middleware</strong> — resolves session cookie → user → active membership → injects <code>center_id</code> and <code>role</code> into Hono context. Every route after auth automatically scopes to the user's center.</li>
+    <li><strong>Permission middleware</strong> — <code>requireRole('owner')</code>, <code>requireRole('director')</code> etc. Checks membership role against route requirements.</li>
+    <li><strong>Validation</strong> — Zod schemas from <code>packages/shared</code> validate all request bodies. Hono's <code>zValidator</code> middleware.</li>
+    <li><strong>Audit logging</strong> — middleware that logs all mutations to <code>audit_log</code> with before/after JSONB diff.</li>
+    <li><strong>Error handling</strong> — global Hono error handler returns consistent JSON error responses with status codes.</li>
+  </ul>
+</div>

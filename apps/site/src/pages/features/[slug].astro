@@ -1,0 +1,128 @@
+---
+import "../../styles/global.css"
+import { getCollection, render } from "astro:content"
+import FaqSection from "@pebbledesk/marketing/components/faq-section.astro"
+import FunnelCta from "@pebbledesk/marketing/components/funnel-cta.astro"
+import InlineSignup from "@pebbledesk/marketing/components/inline-signup.astro"
+import RelatedPages from "@pebbledesk/marketing/components/related-pages.astro"
+import ArticleLayout from "@pebbledesk/marketing/layouts/article-layout.astro"
+import { buildSoftwareApplicationSchema } from "@pebbledesk/marketing/lib/schema-builders"
+import AnswerBlock from "@pebbledesk/marketing/seo/answer-block.astro"
+import DataTableBlock from "@pebbledesk/marketing/seo/data-table-block.astro"
+import ProsConsBlock from "@pebbledesk/marketing/seo/pros-cons-block.astro"
+import { inferPageTrack } from "@pebbledesk/marketing/lib/page-track"
+import { siteConfig } from "@/config/site"
+import { buildFeatureBreadcrumbs } from "@/lib/breadcrumbs"
+import { buildContentMap, entrySlug, resolveRelatedLinksWithFallback } from "@/lib/page-helpers"
+
+export async function getStaticPaths() {
+  const entries = await getCollection("features")
+  return entries.map((entry) => ({
+    params: { slug: entrySlug(entry) },
+    props: { entry },
+  }))
+}
+
+const { entry } = Astro.props
+const { Content, headings } = await render(entry)
+const { title, description, bluf, buyerStage, publishedAt, updatedAt, noindex, faqs, relatedPages, tableData, answers, proscons } = entry.data
+const canonicalPath = entry.data.canonicalHref ?? `/features/${entrySlug(entry)}`
+const track = inferPageTrack({ track: entry.data.track, pageType: "feature" })
+
+const [alternatives, comparisons, pricingBreakdowns, listicles, guides, statePages, leadMagnets, features] = await Promise.all([
+  getCollection("alternatives"),
+  getCollection("comparisons"),
+  getCollection("pricing-breakdowns"),
+  getCollection("listicles"),
+  getCollection("guides"),
+  getCollection("state-pages"),
+  getCollection("lead-magnets"),
+  getCollection("features"),
+])
+const contentMap = buildContentMap({ alternatives, comparisons, pricingBreakdowns, listicles, guides, statePages, leadMagnets, features })
+const resolvedRelatedPages = resolveRelatedLinksWithFallback({ currentPath: canonicalPath, relatedPages, contentMap })
+
+const breadcrumbs = buildFeatureBreadcrumbs(title, canonicalPath)
+const featureUrl = `https://${siteConfig.domain}${canonicalPath.endsWith("/") ? canonicalPath : `${canonicalPath}/`}`
+const schemaReadyTier = siteConfig.pricingTiers?.find((tier) => /\d/.test(tier.price))
+const featureSchemaOffer = {
+  price: schemaReadyTier?.price ?? "0",
+  url: `https://${siteConfig.domain}/pricing/`,
+}
+const featureSchemas = [
+  buildSoftwareApplicationSchema({
+    name: `${title} | PebbleDesk`,
+    description,
+    url: featureUrl,
+    brand: { name: siteConfig.name },
+    applicationCategory: "BusinessApplication",
+    operatingSystem: "Web",
+    featureList: [
+      title,
+      "Audit-ready childcare records",
+      "Attendance, ratio, billing, and compliance workflow support",
+    ],
+    offers: featureSchemaOffer,
+  }),
+]
+---
+
+<ArticleLayout
+  title={title}
+  description={description}
+  bluf={bluf}
+  buyerStage={buyerStage}
+  publishedAt={publishedAt}
+  updatedAt={updatedAt}
+  noindex={noindex}
+  canonicalPath={canonicalPath}
+  config={siteConfig}
+  breadcrumbs={breadcrumbs}
+  headings={headings}
+  schemas={featureSchemas}
+  answers={answers?.map(a => ({ question: a.q, answer: a.a }))}
+  track={track}
+>
+  <div id="feature-details" data-feature-landing>
+    <Content />
+  </div>
+
+  {tableData && (
+    <DataTableBlock
+      name={tableData.name}
+      description={tableData.description}
+      columns={tableData.columns}
+      rows={tableData.rows}
+    />
+  )}
+
+  {proscons && proscons.map((pc) => (
+    <ProsConsBlock subject={pc.subject} pros={pc.pros} cons={pc.cons} />
+  ))}
+
+  {answers && answers.map((a) => (
+    <AnswerBlock question={a.q} answer={a.a} />
+  ))}
+
+  <InlineSignup
+    sourcePage={canonicalPath}
+    heading="Ready to see it work?"
+    subtext={siteConfig.funnel.ctaSubtitle}
+  />
+
+  <FunnelCta
+    stage={buyerStage}
+    funnel={siteConfig.funnel}
+    sourcePage={canonicalPath}
+    heading="Want the full tour?"
+    subtitle={siteConfig.funnel.ctaSubtitle}
+  />
+
+  <FaqSection faqs={faqs} />
+
+  {resolvedRelatedPages.length > 0 && (
+    <RelatedPages
+      pages={resolvedRelatedPages}
+    />
+  )}
+</ArticleLayout>

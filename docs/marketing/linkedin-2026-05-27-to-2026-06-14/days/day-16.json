@@ -1,0 +1,171 @@
+{
+	"date": "2026-06-11",
+	"theme": "Parent communication, handbooks, fee policies, and billing clarity",
+	"posts": [
+		{
+			"index_in_day": 1,
+			"time_central": "04:00",
+			"pillar": "Parent communication",
+			"format": "Practical distinction",
+			"post_content": "Parent communication matters.\n\nIt just should not be the only thing your childcare software is good at.\n\nDaily reports, announcements, photos, and messages help families feel connected. That is real.\n\nBut directors also have to manage attendance, ratios, billing, subsidy records, staff credentials, child files, and audit reports.\n\nThat is the selection risk.\n\nA delayed daily report annoys a parent.\nA ratio gap, missing record, or billing error creates a different level of problem.\n\nThe best communication system for a center is one that lives close to the operating record.\n\nNot because every message is compliance evidence.\n\nBecause families usually ask about things tied to the record: pickup, billing, attendance, policies, balances, and what happened today.",
+			"source": "apps/site/src/content/guides/parent-communication-software-guide.md",
+			"url": "https://pebbledesk.app/resources/guides/parent-communication-software-guide/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Starts parent-communication day with the guide's central compliance-versus-communication distinction."
+		},
+		{
+			"index_in_day": 2,
+			"time_central": "05:00",
+			"pillar": "Messaging scope",
+			"format": "Product honesty",
+			"post_content": "PebbleDesk messaging is built for the operating record.\n\nOutbound announcements.\nAlerts.\nDirect messages.\nInbound guardian replies.\n\nThat matters because parent communication is one of the easiest categories to overclaim.\n\nA director comparing tools should know the difference between:\n\nBroadcasting a closure notice.\nSending a classroom reminder.\nFollowing up about a balance.\nSending a pickup note tied to a child record.\nKeeping guardian replies attached to the original message thread.\nRunning a broad parent-social feed.\n\nThose are related, but they are not the same job.\n\nPebbleDesk supports the operational reply inbox: the response tied to the message, guardian, classroom, or billing context.\n\nIt still does not try to be the whole parent-engagement category.\n\nClear scope is part of good communication too.",
+			"source": "apps/site/src/content/features/messaging-alerts.md",
+			"url": "https://pebbledesk.app/features/messaging-alerts/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Updates the messaging scope to include operational guardian replies while avoiding parent-social feed claims."
+		},
+		{
+			"index_in_day": 3,
+			"time_central": "06:00",
+			"pillar": "Fee policy clarity",
+			"format": "Policy-writing tip",
+			"post_content": "A fee policy should answer the question before the parent has to ask it at the front desk.\n\nWhat is tuition?\nWhen is it due?\nWhat happens after the due date?\nHow are late pickup fees charged?\nAre registration fees refundable?\nHow are returned payments handled?\nWhen do rate changes take effect?\nWhat notice do families receive?\n\nThat policy is both a finance tool and a communication tool.\n\nVague fee policies create awkward conversations later.\n\n\"Late fees may apply\" is not as useful as a specific amount, trigger date, and billing process.\n\nDirectors do not need harsher language.\n\nThey need clearer language.\n\nThe calmer billing conversation is usually written months before the balance becomes overdue.",
+			"source": "apps/site/src/content/lead-magnets/childcare-fee-policy-template.md",
+			"url": "https://pebbledesk.app/free/childcare-fee-policy-template/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Rewritten to remove internal template language and keep the fee-policy advice public-facing."
+		},
+		{
+			"index_in_day": 4,
+			"time_central": "07:00",
+			"pillar": "Enrollment contracts",
+			"format": "Operational document post",
+			"post_content": "An enrollment contract is not quiet paperwork.\n\nIt is the operating agreement between the center and the family.\n\nWhen tuition is due.\nWhat happens after an absence.\nHow late pickup is billed.\nWho can pick up the child.\nHow illness exclusions work.\nWhat notice is required for withdrawal.\nWhat happens after non-payment.\n\nThat matters because most disputes do not start with bad intent.\n\nThey start with different expectations.\n\nA parent thought sick days reduced tuition.\nThe center thought tuition held the spot.\nA parent thought a late pickup fee was flexible.\nThe center thought the policy was clear.\n\nThe contract is where those expectations should become plain before anyone is upset.",
+			"source": "apps/site/src/content/guides/childcare-enrollment-contract-guide.md",
+			"url": "https://pebbledesk.app/resources/guides/childcare-enrollment-contract-guide/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Echoes high-performing enrollment-record framing while staying source-grounded."
+		},
+		{
+			"index_in_day": 5,
+			"time_central": "08:00",
+			"pillar": "Late pickup policy",
+			"format": "Director moment",
+			"post_content": "Late pickup policies are not about turning five minutes into revenue.\n\nThey are about protecting staff time and making expectations clear.\n\nA teacher cannot leave until every child is picked up. If the policy is vague, the director ends up negotiating the same conversation over and over:\n\nWas it really late?\nDoes the fee apply this time?\nWill it be added to the next invoice?\nWhat happens if it keeps happening?\n\nPut the fee, trigger time, billing method, and repeated-lateness process in writing.\n\nThat is practical, not punitive.\n\nConsistency helps everyone:\n\nParents know the rule.\nStaff know the rule.\nThe director is not deciding from scratch while closing the building.\n\nA good policy makes the rare exception easier because the normal expectation is already clear.",
+			"source": "apps/site/src/content/guides/late-pickup-policy-daycare.md",
+			"url": "https://pebbledesk.app/resources/guides/late-pickup-policy-daycare/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Rewritten to remove remaining goal phrasing from late-pickup post."
+		},
+		{
+			"index_in_day": 6,
+			"time_central": "09:00",
+			"pillar": "Parent handbook",
+			"format": "Handbook structure",
+			"post_content": "A parent handbook earns its keep when the same question stops coming up at the front desk.\n\nArrival window.\nPickup authorization.\nLate pickup fees.\nIllness exclusions.\nMedication authorization.\nMeal rules.\nEmergency procedures.\nDaily communication expectations.\nPhoto privacy.\nHow non-urgent messages are handled.\n\nA useful handbook can be detailed without being unfriendly.\n\nFamilies do not need a policy maze.\n\nThey need predictable expectations in one place before a busy morning turns into a front-desk debate.\n\nPlain language helps:\n\nHere is how our center works.\nHere is what families can expect from us.\nHere is what we need from families.\nHere is what happens when something does not go as planned.",
+			"source": "apps/site/src/content/lead-magnets/parent-handbook-template.md",
+			"url": "https://pebbledesk.app/free/parent-handbook-template/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Rewritten to remove point/point handbook section."
+		},
+		{
+			"index_in_day": 7,
+			"time_central": "10:00",
+			"pillar": "Billing clarity",
+			"format": "Family balance post",
+			"post_content": "Most family billing tension gets worse when the record is hard to explain.\n\nA balance should have a plain story:\n\nTuition charged.\nRegistration or supply fees.\nSibling discount, if any.\nSubsidy portion, if any.\nFamily co-pay.\nPayments received.\nLate fee, if applied.\nRemaining balance.\nDue date.\n\nWhen that story lives across invoices, notes, payment processor screens, and a director's memory, even a small balance can take too long to answer.\n\nA parent does not ask about your accounting setup.\n\nThey ask, \"Why do I owe this?\"\n\nThe director needs a clear answer without opening five tabs.",
+			"source": "packages/shared/src/constants/offering.ts",
+			"url": "https://pebbledesk.app/features/billing-payments/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Billing clarity post grounded in PebbleDesk billing/family-record positioning."
+		},
+		{
+			"index_in_day": 8,
+			"time_central": "11:00",
+			"pillar": "Communication and compliance",
+			"format": "Selection advice",
+			"post_content": "A parent app can be beautiful and still leave the director exposed.\n\nThat sounds harsh, but it is the practical selection problem in childcare software.\n\nParents see:\n\nPhotos.\nDaily reports.\nMessages.\nPayment reminders.\nCalendar notes.\n\nDirectors also carry:\n\nRatios.\nAttendance proof.\nSubsidy documentation.\nStaff credential files.\nBilling records.\nEnrollment contracts.\nAudit reports.\n\nA center needs family communication that is warm and reliable.\n\nIt also needs the back-office record to hold up when licensing, billing, or subsidy questions arrive.\n\nThe best product choice is not parent experience versus compliance.\n\nIt is parent experience that does not pull the center away from the record it has to trust.",
+			"source": "apps/site/src/content/guides/parent-communication-software-guide.md",
+			"url": "https://pebbledesk.app/resources/guides/parent-communication-software-guide/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Clear selection guidance using guide's parent-app versus compliance point."
+		},
+		{
+			"index_in_day": 9,
+			"time_central": "12:00",
+			"pillar": "Policy reminders",
+			"format": "Message examples",
+			"post_content": "The best parent reminders are short because the policy should already be clear.\n\nExamples:\n\nTuition is due Monday by 5 PM.\nPlease update your authorized pickup list before Friday.\nRemember that late pickup fees begin after closing time.\nThe center will be closed Monday for the posted holiday.\nPlease send updated immunization records by June 20.\nYour child's subsidy authorization is approaching renewal.\n\nThose messages work when they point back to a written policy, handbook, contract, or billing record.\n\nThey work less well when the message itself is the first time the family hears the rule.\n\nPebbleDesk supports outbound announcements, alerts, direct messages, and inbound guardian replies today.\n\nThose outbound and reply workflows fit practical updates like these.\n\nBut the bigger lesson is broader than the tool:\n\nUse messaging to reinforce clear expectations, not to invent policy in the moment.",
+			"source": "apps/site/src/content/features/messaging-alerts.md",
+			"url": "https://pebbledesk.app/features/messaging-alerts/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Messaging use cases stay inside supported outbound and operational reply workflows."
+		},
+		{
+			"index_in_day": 10,
+			"time_central": "13:00",
+			"pillar": "Fee increases",
+			"format": "Director communication",
+			"post_content": "Rate increases go better when families are not surprised.\n\nWritten notice and an annual review rhythm are not just finance hygiene.\n\nThey are parent communication.\n\nA clear rate notice should answer:\n\nWhat is changing?\nWhen does it take effect?\nWhich age groups or schedules are affected?\nWhy is the center making the change?\nWhere can families see the updated fee schedule?\nWho can they contact with questions?\n\nDo not bury the actual number.\nDo not make families decode a paragraph.\nDo not leave the front desk to explain the change from memory.\n\nChildcare costs are emotional for families and real for providers.\n\nA clear notice may not make everyone happy, but it keeps the policy understandable and gives families a fair chance to plan.",
+			"source": "apps/site/src/content/lead-magnets/childcare-fee-policy-template.md",
+			"url": "https://pebbledesk.app/free/childcare-fee-policy-template/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Rewritten ending to remove goal/goal phrasing."
+		},
+		{
+			"index_in_day": 11,
+			"time_central": "14:00",
+			"pillar": "Enrollment records",
+			"format": "Record-risk post",
+			"post_content": "Authorized pickup records are not a minor admin detail.\n\nThey are one of the places where parent communication, child safety, and documentation meet.\n\nA center needs to know:\n\nWho is authorized to pick up.\nWho is not.\nWhether ID is required for an unfamiliar adult.\nHow changes are submitted.\nWhat happens when custody documentation applies.\nWhere the current record lives.\n\nPickup rules belong in written policy, not hallway memory.\n\nThat matters during the exact moment a staff member is busy, a parent is rushing, and someone unfamiliar arrives at the door.\n\nGood communication happens before that moment.\n\nThe family knows the process.\nThe staff can check the record.\nThe director is not being asked to improvise a safety decision from memory.",
+			"source": "apps/site/src/content/guides/childcare-enrollment-contract-guide.md",
+			"url": "https://pebbledesk.app/resources/guides/childcare-enrollment-contract-guide/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Concrete family-record moment linked to enrollment contract guidance."
+		},
+		{
+			"index_in_day": 12,
+			"time_central": "15:00",
+			"pillar": "Illness policy",
+			"format": "Handbook clarity",
+			"post_content": "Sick child policies create less tension when they are specific before anyone is sick.\n\nA useful parent handbook does not say, \"Keep children home when appropriate.\"\n\nIt names the practical rules:\n\nFever threshold.\nVomiting or diarrhea window.\nUndiagnosed rash.\nPink eye or contagious illness rules.\nReturn-to-care requirements.\nHow quickly a sick child must be picked up.\nWhether tuition is credited for sick days.\nWhat documentation is needed for medication.\n\nVague illness policies put directors in a hard spot.\n\nFamilies are juggling work.\nStaff are protecting the group.\nThe director is trying to be fair and consistent.\n\nClear language does not make every conversation easy.\n\nIt does give everyone the same reference point before emotions are high.",
+			"source": "apps/site/src/content/lead-magnets/parent-handbook-template.md",
+			"url": "https://pebbledesk.app/free/parent-handbook-template/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Handbook illness-policy post specific enough for directors."
+		},
+		{
+			"index_in_day": 13,
+			"time_central": "16:00",
+			"pillar": "Payment terms",
+			"format": "Billing policy post",
+			"post_content": "Payment terms should not depend on who is working the desk that morning.\n\nFamilies should know:\n\nDue date.\nAccepted payment methods.\nGrace period, if any.\nLate payment fee.\nReturned payment fee.\nAuto-pay process.\nWhat happens when an account becomes delinquent.\nWhether care can be suspended for non-payment.\nHow balances are communicated.\n\nWrite those pieces down clearly because billing clarity is not only about collecting money.\n\nIt protects consistency.\n\nA director should not have to decide case by case whether a fee applies because the policy was written softly to avoid discomfort.\n\nSpecific does not have to mean cold.\n\nIt means families receive the same explanation, staff follow the same process, and the billing record can explain itself later.",
+			"source": "apps/site/src/content/lead-magnets/childcare-fee-policy-template.md",
+			"url": "https://pebbledesk.app/free/childcare-fee-policy-template/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Billing clarity post tied to payment terms."
+		},
+		{
+			"index_in_day": 14,
+			"time_central": "17:00",
+			"pillar": "Parent-facing records",
+			"format": "Operational tip",
+			"post_content": "Parent communication gets easier when the center knows which record the message points to.\n\nA balance message points to billing.\nA pickup reminder points to the authorized pickup list.\nA closure alert points to the calendar or handbook.\nA late fee reminder points to the fee policy.\nAn illness pickup request points to the health policy.\nA subsidy renewal reminder points to the child's subsidy record.\n\nThis is why communication should live near the operational record.\n\nOtherwise staff end up sending messages from one place while checking facts somewhere else.\n\nPebbleDesk supports outbound communication today, with child, guardian, classroom, pickup, subsidy, billing, and reporting context kept close to the record.\n\nThe practical win is not fancier messaging.\n\nIt is fewer messages that start with, \"Let me check three places and get back to you.\"",
+			"source": "apps/site/src/pages/index.astro",
+			"url": "https://pebbledesk.app/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Rewritten to remove product-thesis phrasing and keep communication tied to operating records."
+		},
+		{
+			"index_in_day": 15,
+			"time_central": "18:00",
+			"pillar": "Communication clarity",
+			"format": "Closing reflection",
+			"post_content": "Good parent communication is not just friendly.\n\nIt is clear.\n\nClear about tuition.\nClear about pickup.\nClear about illness.\nClear about fees.\nClear about who may collect a child.\nClear about what the center will send, and what families need to provide.\n\nThe handbook, enrollment contract, fee policy, billing record, and messaging workflow all reduce the same daily friction:\n\nFewer surprises.\nFewer repeated explanations.\nFewer front-desk debates during the busiest part of the day.\n\nPebbleDesk is built for directors who need family communication to sit beside the operating record, not float away from it.\n\nAttendance, billing, guardian records, pickup notes, messages, and reports are connected because family questions usually cross those lines.\n\nThe warmer experience is not the nicer message by itself.\n\nIt is the director having the right answer when the family asks.",
+			"source": "packages/shared/src/constants/offering.ts",
+			"url": "https://pebbledesk.app/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Closes the day by tying parent communication to connected operational records."
+		}
+	]
+}

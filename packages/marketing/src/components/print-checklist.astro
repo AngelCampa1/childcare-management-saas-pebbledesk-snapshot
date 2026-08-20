@@ -1,0 +1,28 @@
+---
+interface Props {
+	title: string
+	subtitle?: string
+}
+
+const { title, subtitle } = Astro.props
+const checks = [
+	"Confirm attendance dates match room records.",
+	"Mark ratio notes that support licensing review.",
+	"Attach subsidy claim evidence before filing.",
+	"Keep guardian and pickup updates with the child record.",
+]
+---
+
+<section data-print-checklist class="print-checklist" aria-label="Audit-ready print checklist">
+	<p class="print-checklist__eyebrow">Audit-ready print checklist</p>
+	<h2>{title}</h2>
+	{subtitle && <p class="print-checklist__subtitle">{subtitle}</p>}
+	<ul>
+		{checks.map((check) => (
+			<li>
+				<span aria-hidden="true"></span>
+				{check}
+			</li>
+		))}
+	</ul>
+</section>

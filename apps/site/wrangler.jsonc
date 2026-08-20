@@ -1,0 +1,5 @@
+{
+	"$schema": "node_modules/wrangler/config-schema.json",
+	"decommissioned": true,
+	"note": "PebbleDesk has been decommissioned. Do not deploy Cloudflare Workers from this repo."
+}

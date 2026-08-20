@@ -1,0 +1,1 @@
+CREATE UNIQUE INDEX "scheduled_sends_lead_template_unique" ON "scheduled_sends" USING btree ("lead_id","template_key");

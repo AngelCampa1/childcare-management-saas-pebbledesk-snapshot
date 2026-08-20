@@ -1,0 +1,59 @@
+---
+import "../../styles/global.css"
+import { getCollection } from "astro:content"
+import PublicSignupCta from "@pebbledesk/marketing/components/public-signup-cta"
+import CategoryHub from "@pebbledesk/marketing/hubs/category-hub.astro"
+import { mapToContentItems, sortByUpdatedAtDesc } from "@pebbledesk/marketing/lib/collections"
+import { PEBBLEDESK_OFFERING } from "@pebbledesk/shared/constants"
+import { siteConfig } from "@/config/site"
+import { entrySlug } from "@/lib/page-helpers"
+
+const stateEntries = await getCollection("state-pages")
+const cityEntries = await getCollection("city-pages")
+const sortedStates = sortByUpdatedAtDesc(stateEntries)
+const sortedCities = sortByUpdatedAtDesc(cityEntries)
+const stateItems = mapToContentItems(
+  sortedStates,
+  (e) => `/childcare-software/${entrySlug(e)}/`,
+  () => ({ category: "State guide" }),
+)
+const cityItems = mapToContentItems(
+  sortedCities,
+  (e) => `/childcare-software/${entrySlug(e)}/`,
+  () => ({ category: "City guide" }),
+)
+const items = [...stateItems, ...cityItems]
+
+const page = {
+  data: items,
+  currentPage: 1,
+  lastPage: 1,
+  url: { prev: undefined, next: undefined },
+}
+---
+
+<CategoryHub
+  config={siteConfig}
+  title="Childcare Software by State"
+  description="State-by-state guidance for childcare operators comparing software, licensing, and CCDF billing for licensed centers and family childcare homes."
+  items={items}
+  page={page}
+  basePath="/childcare-software"
+  breadcrumbs={[
+    { label: "Home", href: "/" },
+    { label: "Childcare Software", href: "/childcare-software/" },
+  ]}
+  faqs={siteConfig.faqs.slice(0, 4)}
+>
+  <section slot="cta" class="mt-8 border-t border-[var(--color-neutral-200)] py-10 text-center" id="signup">
+    <h2 class="mb-2 text-2xl font-bold text-[var(--color-brand-text)]">See PebbleDesk in your state</h2>
+    <p class="mx-auto mb-6 max-w-md text-[var(--color-brand-muted)]">
+      Audit-ready ratio tracking, attendance, and CCDF subsidy billing in one place. Start your {PEBBLEDESK_OFFERING.trial.label}.
+    </p>
+    <PublicSignupCta
+      client:load
+      sourcePage="/childcare-software/"
+      buttonText={siteConfig.funnel.bofu.ctaText}
+    />
+  </section>
+</CategoryHub>

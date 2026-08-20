@@ -1,0 +1,171 @@
+{
+	"date": "2026-06-10",
+	"theme": "Pricing, trial evaluation, contracts, and ROI discipline",
+	"posts": [
+		{
+			"index_in_day": 1,
+			"time_central": "04:00",
+			"pillar": "Trial evaluation",
+			"format": "Practical trial plan",
+			"post_content": "A childcare software trial should not be a tour.\n\nIt should be a rehearsal.\n\nUse the trial to test the jobs your center cannot afford to get wrong:\n\nOne week of attendance.\nA billing run with real rate structures.\nA subsidy attendance report, if you accept subsidy-funded children.\nRatio visibility during a real rush period.\nA support question that sounds like your actual center.\n\nPlaceholder data tells you very little.\n\nA few fake children and a quick click-through may show whether the interface is pleasant.\n\nIt will not show whether billing matches your policies, whether staff can use check-in under pressure, or whether a subsidy report has the right shape.\n\nA good trial creates useful evidence.\n\nNot vibes.\n\nEvidence.",
+			"source": "apps/site/src/content/guides/childcare-software-free-trial-guide.md",
+			"url": "https://pebbledesk.app/resources/guides/childcare-software-free-trial-guide/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Starts pricing day with practical evaluation rather than sales copy."
+		},
+		{
+			"index_in_day": 2,
+			"time_central": "05:00",
+			"pillar": "Pricing transparency",
+			"format": "Buyer discipline",
+			"post_content": "Pricing should be easy to explain to yourself before you explain it to your board, partner, or bookkeeper.\n\nFor childcare software, ask:\n\nIs pricing published?\nIs it flat, per child, per classroom, or per location?\nIs annual billing the default?\nAre setup fees separate?\nAre payment processing fees separate?\nDoes the plan change when enrollment grows?\nDoes multi-site reporting require a different tier?\nCan you cancel without a long contract?\n\nPebbleDesk publishes flat childcare pricing with self-serve plans and no long-term contract requirement.\n\nThat still does not mean every center should skip evaluation.\n\nThe smart move is to compare total cost against the workflows that create the most admin risk:\n\nAttendance.\nRatios.\nBilling.\nSubsidy support.\nRecords.\nReporting.\n\nCheap software gets expensive fast when the director still has to rebuild the week by hand.",
+			"source": "apps/site/src/pages/pricing.astro",
+			"url": "https://pebbledesk.app/pricing/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Pricing evaluation grounded in public pricing page without overpromising savings."
+		},
+		{
+			"index_in_day": 3,
+			"time_central": "06:00",
+			"pillar": "Trial realism",
+			"format": "Red flag post",
+			"post_content": "A free trial red flag:\n\nThe billing total does not match your manual calculation, and nobody can explain why.\n\nThat is not a small inconvenience.\n\nFor a childcare center, billing has too many real-world rules to hand-wave:\n\nAge-group rates.\nPart-time schedules.\nSibling discounts.\nSubsidy co-pays.\nLate fees.\nRegistration fees.\nDeposits.\nProrated starts.\n\nDo not test billing with one fake child on one simple rate.\n\nUse the messy examples.\n\nThe toddler with three days.\nThe sibling discount.\nThe subsidy child with a co-pay.\nThe family with a registration fee.\n\nThe trial is the cheapest time to discover whether the math matches your policy.",
+			"source": "apps/site/src/content/guides/childcare-software-free-trial-guide.md",
+			"url": "https://pebbledesk.app/resources/guides/childcare-software-free-trial-guide/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Operational-risk post for trial billing tests."
+		},
+		{
+			"index_in_day": 4,
+			"time_central": "07:00",
+			"pillar": "Contract terms",
+			"format": "Contract checklist",
+			"post_content": "Before signing a childcare software contract, read the parts that become painful later.\n\nData export.\nPrice lock.\nAuto-renewal notice.\nSupport response time.\nUptime commitment.\nCancellation access.\nHistorical records after cancellation.\n\nChildcare centers may need historical attendance, payment, subsidy, incident, or licensing records years after a software switch.\n\nA contract that lets you export only current records is not enough.\n\nA practical ask:\n\nCan we export all historical records in a usable format during the subscription and for a defined period after cancellation?\n\nThat sentence is not legal advice.\n\nIt is operational common sense.\n\nThe time to ask is before the signature, not after migration, training, and billing history have made switching harder.",
+			"source": "apps/site/src/content/guides/childcare-software-contract-negotiation.md",
+			"url": "https://pebbledesk.app/resources/guides/childcare-software-contract-negotiation/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Contract-focused post with explicit no-legal-advice framing."
+		},
+		{
+			"index_in_day": 5,
+			"time_central": "08:00",
+			"pillar": "ROI discipline",
+			"format": "Cost-of-work post",
+			"post_content": "The ROI question for childcare software should start with repeated work.\n\nWhat gets copied from one place to another every week?\n\nAttendance into billing.\nAttendance into subsidy claims.\nRoom counts into ratio logs.\nCredential dates into reminder calendars.\nParent balances into follow-up messages.\nIncident notes into a separate report.\n\nDo not count imaginary savings.\n\nCount the work you can point to:\n\nHow often does it happen?\nWho does it?\nWhat does it cost in staff time?\nWhat happens when it is late or wrong?\n\nA software purchase should make those answers clearer.\n\nIf the ROI case depends on vague productivity language, it probably needs another pass.",
+			"source": "apps/site/src/content/guides/childcare-software-roi-calculator-guide.md",
+			"url": "https://pebbledesk.app/resources/guides/childcare-software-roi-calculator-guide/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "ROI post avoids invented numbers and focuses on source-backed evaluation discipline."
+		},
+		{
+			"index_in_day": 6,
+			"time_central": "09:00",
+			"pillar": "Free trial setup",
+			"format": "Tuesday test",
+			"post_content": "If your free trial uses fake data, at least make the fake data behave like your real center.\n\nDo not create one child named Test Child and call it enough.\n\nCreate examples that force the software to show its fit:\n\nAn infant and a preschooler.\nA full-time child and a part-time child.\nA subsidy-funded child.\nA child with an authorized pickup note.\nA family with a balance.\nA classroom close to ratio.\nA staff member with an upcoming credential expiration.\n\nDaily edge cases reveal more than the product tour.\n\nA director does not need to test every feature.\n\nShe needs to test the few moments where a bad fit will cost her real time later.",
+			"source": "apps/site/src/content/guides/childcare-software-free-trial-guide.md",
+			"url": "https://pebbledesk.app/resources/guides/childcare-software-free-trial-guide/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Specific trial setup advice with careful product-fit framing."
+		},
+		{
+			"index_in_day": 7,
+			"time_central": "10:00",
+			"pillar": "Scorecards",
+			"format": "Evaluation framework",
+			"post_content": "A childcare software scorecard should not reward the longest menu.\n\nIt should reward fit.\n\nFor many centers, the useful categories are plain:\n\nAttendance.\nBilling and invoicing.\nSubsidy management.\nParent communication.\nLicensing compliance.\nStaff scheduling.\nPricing model.\nMobile usability.\n\nThen weight them based on your actual operation.\n\nA center that accepts subsidies should not treat subsidy support as a side feature.\nA small home provider may not care as much about complex staff scheduling.\nA multi-site operator should weigh cross-location reporting differently than a single classroom program.\n\nA simple scorecard gets stronger when it reflects the jobs the director is responsible for, not the vendor's prettiest feature grid.",
+			"source": "apps/site/src/content/lead-magnets/childcare-software-scorecard.md",
+			"url": "https://pebbledesk.app/free/childcare-software-scorecard/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Rewritten to remove internal repo/lead-magnet language while keeping the source-backed scorecard framework."
+		},
+		{
+			"index_in_day": 8,
+			"time_central": "11:00",
+			"pillar": "Contract negotiation",
+			"format": "Pre-signature leverage",
+			"post_content": "Your leverage is highest before the childcare software contract is signed.\n\nNot after staff training.\nNot after migration.\nNot after a year of billing history is inside the system.\n\nBefore signing, ask about the terms that affect real operations:\n\nCan pricing be locked for the contract term?\nHow much notice comes before auto-renewal?\nWhat happens to data after cancellation?\nCan historical attendance and billing records be exported?\nWhat support response times are written down?\nAre onboarding or training fees separate?\nWhat changes if we add another location?\n\nThis is not being difficult.\n\nIt is protecting the center from finding out too late that the default terms were written around the vendor's convenience, not the director's records.",
+			"source": "apps/site/src/content/guides/childcare-software-contract-negotiation.md",
+			"url": "https://pebbledesk.app/resources/guides/childcare-software-contract-negotiation/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Rewritten to keep contract leverage idea without staged point/point close."
+		},
+		{
+			"index_in_day": 9,
+			"time_central": "12:00",
+			"pillar": "Pricing model",
+			"format": "Budget test",
+			"post_content": "The right childcare software pricing model depends on how your center actually grows.\n\nPer-child pricing can feel fair when enrollment is small.\n\nFlat center pricing can be easier to budget as classrooms fill.\n\nPer-location pricing may make sense for larger operators, but it can punish smaller sites.\n\nEnterprise flat fees need careful contract review because the headline number is only part of the story.\n\nA practical budget test:\n\nWhat does this cost at today's enrollment?\nWhat does it cost at licensed capacity?\nWhat does it cost if we add a classroom?\nWhat does it cost if we add a location?\nWhat fees sit outside the subscription?\n\nPricing clarity is not about finding the cheapest option.\n\nIt is about avoiding a surprise that shows up after the center has already built habits around the tool.",
+			"source": "apps/site/src/content/guides/childcare-software-for-multi-site-evaluation.md",
+			"url": "https://pebbledesk.app/resources/guides/childcare-software-for-multi-site-evaluation/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Pricing model post grounded in multi-site guide and kept broadly useful."
+		},
+		{
+			"index_in_day": 10,
+			"time_central": "13:00",
+			"pillar": "PebbleDesk pricing",
+			"format": "Product clarity",
+			"post_content": "A useful childcare software pricing page should answer the question buyers actually have:\n\nWhat kind of program am I buying for?\n\nFamily childcare home.\nLicensed single-site center.\nLarger single-site center.\nMulti-site operator.\nEnterprise rollout.\n\nThat is more useful than making directors decode a generic SaaS seat model.\n\nA practical fit test:\n\nDoes this plan match how your center actually operates today, including enrollment size, subsidy work, reporting needs, and whether you run one site or several?\n\nWhat happens during setup?\nWhat does import support look like?\nIs there a long-term contract?\nWhat changes if the center grows?\n\nIf the plan only makes sense in a sales script, keep asking questions.",
+			"source": "apps/site/src/pages/pricing.astro",
+			"url": "https://pebbledesk.app/pricing/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Rewritten with a concrete buyer fit test instead of point/point plan-fit language."
+		},
+		{
+			"index_in_day": 11,
+			"time_central": "14:00",
+			"pillar": "Support evaluation",
+			"format": "Trial support test",
+			"post_content": "Use the free trial to test support before support matters.\n\nAsk one real question.\n\nNot \"where is the button?\"\n\nSomething like:\n\nHow do we handle a subsidy authorization that changes mid-month?\nWhat happens if a parent disputes a late fee?\nCan we backdate an attendance correction, and is there an audit record?\nHow do we export historical records if licensing asks for a date range?\nHow should a multi-site group set location permissions?\n\nA fast answer that misses the childcare context is not enough.\n\nA help article that does not answer the question is not enough.\n\nDuring a billing deadline or inspection week, directors need support that understands the workflow.\n\nTrial support is a preview.\n\nTreat it like one.",
+			"source": "apps/site/src/content/guides/childcare-software-free-trial-guide.md",
+			"url": "https://pebbledesk.app/resources/guides/childcare-software-free-trial-guide/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Support responsiveness as part of evaluation, no unsupported SLA claims."
+		},
+		{
+			"index_in_day": 12,
+			"time_central": "15:00",
+			"pillar": "Data portability",
+			"format": "Records-first warning",
+			"post_content": "Data portability sounds like a contract detail until a licensing question points to last year.\n\nThen it becomes the whole issue.\n\nChildcare centers may need old attendance logs, billing history, subsidy documentation, incident records, family records, and staff files after they leave a system.\n\nAsk before signing:\n\nCan I export all historical attendance?\nCan I export billing and payment history?\nCan I export subsidy records?\nCan I export child and guardian records?\nCan I keep read-only access for a defined window after cancellation?\nWhat gets deleted, and when?\n\nThat is not a nice-to-have for childcare.\n\nIt is part of keeping the center's operating history usable.",
+			"source": "apps/site/src/content/guides/childcare-software-contract-negotiation.md",
+			"url": "https://pebbledesk.app/resources/guides/childcare-software-contract-negotiation/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Records-first contract post tied to childcare compliance needs."
+		},
+		{
+			"index_in_day": 13,
+			"time_central": "16:00",
+			"pillar": "ROI discipline",
+			"format": "No-fake-savings note",
+			"post_content": "Be suspicious of childcare software ROI that depends on round numbers and wishful thinking.\n\n\"Save hours every week\" is not a plan.\n\nA better model starts with named work:\n\nHow many minutes does daily attendance cleanup take?\nHow often does billing require manual correction?\nHow long does subsidy reconciliation take after care is delivered?\nHow often does the director chase staff credential dates?\nHow many parent billing questions require pulling separate records?\nHow long does audit prep take when records are scattered?\n\nThen compare the software cost against the work it can realistically reduce.\n\nNo imaginary savings.\nNo invented averages.\nNo sales math.\n\nJust the work your center can name.",
+			"source": "apps/site/src/content/guides/childcare-software-roi-calculator-guide.md",
+			"url": "https://pebbledesk.app/resources/guides/childcare-software-roi-calculator-guide/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Explicitly avoids invented stats while still giving a strong POV."
+		},
+		{
+			"index_in_day": 14,
+			"time_central": "17:00",
+			"pillar": "Trial closeout",
+			"format": "Decision checklist",
+			"post_content": "At the end of a childcare software trial, do not ask, \"Did we like it?\"\n\nAsk what the trial proved.\n\nDid attendance work during a real arrival window?\nDid the ratio view match the room count?\nDid billing match the center's rate policy?\nCould subsidy records support a sample claim or review?\nCould staff use the daily workflow without the director translating every step?\nDid support answer a real question clearly?\nCould records be exported in a usable way?\nDid pricing still make sense after setup details were visible?\n\nA nice interface helps.\n\nBut the software that belongs in a childcare center is the one that survives Tuesday morning, Friday billing, and the next licensing question.",
+			"source": "apps/site/src/content/guides/childcare-software-free-trial-guide.md",
+			"url": "https://pebbledesk.app/resources/guides/childcare-software-free-trial-guide/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Trial wrap-up checklist with concrete director moments."
+		},
+		{
+			"index_in_day": 15,
+			"time_central": "18:00",
+			"pillar": "Buying discipline",
+			"format": "Closing reflection",
+			"post_content": "The best childcare software buying process is a little boring.\n\nIt checks the trial.\nIt checks the contract.\nIt checks the pricing model.\nIt checks data export.\nIt checks the workflows that actually create risk.\n\nAttendance.\nRatios.\nBilling.\nSubsidy documentation.\nStaff credentials.\nParent balances.\nAudit reports.\n\nThat is not overthinking.\n\nIt is how directors avoid buying a tool that looked good in a demo but still leaves the hard work scattered.\n\nPebbleDesk is built from the opposite belief: the daily record should support the next question instead of forcing the director to rebuild it.\n\nPricing only makes sense in that context.\n\nThe right tool is not the one with the biggest promise.\n\nIt is the one whose cost is justified by the specific admin risk it helps remove from the center's week.",
+			"source": "packages/shared/src/constants/offering.ts",
+			"url": "https://pebbledesk.app/pricing/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Closes the day with disciplined buying criteria and PebbleDesk positioning."
+		}
+	]
+}

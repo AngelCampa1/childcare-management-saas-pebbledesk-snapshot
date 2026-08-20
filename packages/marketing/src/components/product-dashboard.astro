@@ -1,0 +1,90 @@
+---
+interface Props {
+	compact?: boolean
+}
+
+const { compact = false } = Astro.props
+
+const ratios = [
+	{ room: "Infants", count: 6, staff: 2, ratio: "3:1", max: "4:1", status: "Ready" },
+	{ room: "Toddlers", count: 10, staff: 2, ratio: "5:1", max: "6:1", status: "Watch" },
+	{ room: "Twos", count: 12, staff: 2, ratio: "6:1", max: "6:1", status: "Watch" },
+	{ room: "Preschool", count: 16, staff: 2, ratio: "8:1", max: "10:1", status: "Ready" },
+]
+
+const tasks = [
+	"Attendance captured",
+	"Subsidy claim support attached",
+	"Audit export ready",
+]
+---
+
+<div
+	data-product-dashboard
+	role="img"
+	aria-label="PebbleDesk director dashboard preview"
+	class:list={[
+		"overflow-hidden rounded-[var(--radius-xl)] border border-[var(--site-panel-border)] bg-[var(--surface-elevated)] shadow-[var(--shadow-xl)]",
+		compact ? "text-sm" : "",
+	]}
+>
+	<div class="flex items-center justify-between border-b border-[var(--site-panel-border)] bg-[var(--surface-secondary)] px-4 py-3">
+		<div>
+			<p class="font-mono text-[length:var(--text-kicker)] uppercase tracking-[0.16em] text-[var(--color-accent-700)]">
+				Director dashboard
+			</p>
+			<h3 class="mt-1 font-heading text-base font-bold text-[var(--color-brand-text)]">
+				Audit-ready today
+			</h3>
+		</div>
+		<span class="rounded-full bg-[var(--color-success-100)] px-3 py-1 text-xs font-semibold text-[var(--color-success-800)]">
+			All rooms covered
+		</span>
+	</div>
+	<div class="grid gap-0 md:grid-cols-[1.15fr_0.85fr]">
+		<div class="p-3 sm:p-4">
+			<div class="mb-3 flex items-center justify-between">
+				<p class="text-sm font-semibold text-[var(--color-brand-text)]">Live ratios</p>
+				<p class="font-mono text-xs text-[var(--color-brand-muted)]">Updated 9:42 AM</p>
+			</div>
+			<div class="space-y-2">
+				{ratios.map((ratio) => (
+					<div class="grid grid-cols-[1fr_auto] gap-3 rounded-[var(--radius-md)] border border-[var(--site-panel-border)] bg-[var(--surface-primary)] p-3">
+						<div>
+							<p class="text-sm font-semibold text-[var(--color-brand-text)]">{ratio.room}</p>
+							<p class="mt-1 text-xs text-[var(--color-brand-muted)]">
+								{ratio.count} children · {ratio.staff} staff · max {ratio.max}
+							</p>
+						</div>
+						<div class="text-right">
+							<p class="font-mono text-sm font-semibold text-[var(--color-brand-text)]">{ratio.ratio}</p>
+							<p class:list={[
+								"mt-1 text-xs font-semibold",
+								ratio.status === "Ready" ? "text-[var(--color-success-800)]" : "text-[var(--color-accent-700)]",
+							]}>
+								{ratio.status}
+							</p>
+						</div>
+					</div>
+				))}
+			</div>
+		</div>
+		<div class="border-t border-[var(--site-panel-border)] bg-[var(--surface-primary)] p-3 sm:p-4 md:border-l md:border-t-0">
+			<p class="text-sm font-semibold text-[var(--color-brand-text)]">Record trail</p>
+			<ul class="mt-4 space-y-3">
+				{tasks.map((task) => (
+					<li class="flex items-start gap-3 text-sm text-[var(--color-brand-muted)]">
+						<span class="mt-1 h-2 w-2 rounded-full bg-[var(--color-accent-500)]" aria-hidden="true"></span>
+						<span>{task}</span>
+					</li>
+				))}
+			</ul>
+			<div class="mt-5 rounded-[var(--radius-md)] bg-[var(--color-primary-100)] p-3 sm:p-4">
+				<p class="font-mono text-xs uppercase tracking-[0.14em] text-[var(--color-primary-700)]">Next export</p>
+				<p class="mt-2 text-sm font-semibold text-[var(--color-brand-text)]">
+					Licensing visit packet
+				</p>
+			</div>
+		</div>
+	</div>
+</div>

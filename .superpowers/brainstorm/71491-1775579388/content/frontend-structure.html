@@ -1,0 +1,136 @@
+<h2>Section 4: Frontend App Structure</h2>
+<p class="subtitle">React + Vite + TanStack Router + TanStack Query — apps/web</p>
+
+<div class="section">
+  <h3>Route Tree</h3>
+  <div class="mockup">
+    <div class="mockup-header">TanStack Router — File-based routes</div>
+    <div class="mockup-body" style="font-family:monospace;font-size:12px;line-height:2">
+      <div style="color:#64748b"># Public (no auth)</div>
+      <div>/login</div>
+      <div>/signup</div>
+      <div>/invite/:token</div>
+      <div>/onboarding  <span style="color:#64748b">(create center after signup)</span></div>
+      <br>
+      <div style="color:#64748b"># Authenticated — layout with sidebar + header</div>
+      <div>/dashboard  <span style="color:#64748b">(overview: today's attendance, ratio status, alerts)</span></div>
+      <br>
+      <div style="color:#4f46e5"># Attendance & Ratios</div>
+      <div>/attendance  <span style="color:#64748b">(check-in/out interface, today's log)</span></div>
+      <div>/ratios  <span style="color:#64748b">(multi-room ratio dashboard, live polling)</span></div>
+      <div>/ratios/history  <span style="color:#64748b">(ratio snapshots & violations)</span></div>
+      <br>
+      <div style="color:#059669"># People</div>
+      <div>/children  <span style="color:#64748b">(roster list)</span></div>
+      <div>/children/:id  <span style="color:#64748b">(profile, attendance history, subsidy info)</span></div>
+      <div>/children/new</div>
+      <div>/guardians  <span style="color:#64748b">(parent/guardian directory)</span></div>
+      <div>/guardians/:id</div>
+      <br>
+      <div style="color:#7c3aed"># Classrooms</div>
+      <div>/classrooms  <span style="color:#64748b">(room list with current counts)</span></div>
+      <div>/classrooms/:id  <span style="color:#64748b">(room detail, assigned children & staff)</span></div>
+      <br>
+      <div style="color:#dc2626"># Subsidies</div>
+      <div>/subsidies  <span style="color:#64748b">(active cases list)</span></div>
+      <div>/subsidies/:id  <span style="color:#64748b">(case detail, linked claims)</span></div>
+      <div>/subsidies/claims  <span style="color:#64748b">(claims list, reconciliation view)</span></div>
+      <div>/subsidies/claims/:id</div>
+      <br>
+      <div style="color:#d97706"># Billing</div>
+      <div>/billing  <span style="color:#64748b">(invoices list)</span></div>
+      <div>/billing/:id  <span style="color:#64748b">(invoice detail)</span></div>
+      <div>/billing/payments  <span style="color:#64748b">(payment history)</span></div>
+      <br>
+      <div style="color:#0891b2"># Scheduling</div>
+      <div>/scheduling  <span style="color:#64748b">(weekly schedule grid)</span></div>
+      <div>/scheduling/time  <span style="color:#64748b">(time entries & hours)</span></div>
+      <br>
+      <div style="color:#be185d"># Reports & Audit</div>
+      <div>/reports  <span style="color:#64748b">(generate & download audit reports)</span></div>
+      <div>/reports/audit-log  <span style="color:#64748b">(activity feed)</span></div>
+      <br>
+      <div style="color:#ea580c"># Messaging</div>
+      <div>/messages  <span style="color:#64748b">(inbox, compose announcements)</span></div>
+      <div>/messages/:id</div>
+      <br>
+      <div style="color:#475569"># Settings (Owner/Director)</div>
+      <div>/settings  <span style="color:#64748b">(center profile)</span></div>
+      <div>/settings/team  <span style="color:#64748b">(invite, manage members)</span></div>
+      <div>/settings/quickbooks  <span style="color:#64748b">(connect, sync status)</span></div>
+      <div>/settings/billing  <span style="color:#64748b">(PebbleDesk subscription plan)</span></div>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <h3>App Shell Layout</h3>
+  <div class="mockup">
+    <div class="mockup-header">Authenticated Layout</div>
+    <div class="mockup-body" style="padding:0;min-height:300px;display:flex">
+      <!-- Sidebar -->
+      <div style="width:220px;background:#0f172a;color:#e2e8f0;padding:16px;font-size:12px;flex-shrink:0">
+        <div style="font-weight:700;font-size:14px;color:white;margin-bottom:16px">🪨 PebbleDesk</div>
+        <div style="margin-bottom:12px">
+          <div style="color:#64748b;font-size:10px;text-transform:uppercase;margin-bottom:6px">Main</div>
+          <div style="padding:6px 8px;background:#1e293b;border-radius:4px;margin-bottom:2px">Dashboard</div>
+          <div style="padding:6px 8px;margin-bottom:2px">Attendance</div>
+          <div style="padding:6px 8px;margin-bottom:2px">Ratios</div>
+        </div>
+        <div style="margin-bottom:12px">
+          <div style="color:#64748b;font-size:10px;text-transform:uppercase;margin-bottom:6px">Manage</div>
+          <div style="padding:6px 8px;margin-bottom:2px">Children</div>
+          <div style="padding:6px 8px;margin-bottom:2px">Guardians</div>
+          <div style="padding:6px 8px;margin-bottom:2px">Classrooms</div>
+          <div style="padding:6px 8px;margin-bottom:2px">Scheduling</div>
+        </div>
+        <div style="margin-bottom:12px">
+          <div style="color:#64748b;font-size:10px;text-transform:uppercase;margin-bottom:6px">Finance</div>
+          <div style="padding:6px 8px;margin-bottom:2px">Subsidies</div>
+          <div style="padding:6px 8px;margin-bottom:2px">Billing</div>
+        </div>
+        <div style="margin-bottom:12px">
+          <div style="color:#64748b;font-size:10px;text-transform:uppercase;margin-bottom:6px">Compliance</div>
+          <div style="padding:6px 8px;margin-bottom:2px">Reports</div>
+          <div style="padding:6px 8px;margin-bottom:2px">Messages</div>
+        </div>
+        <div style="border-top:1px solid #1e293b;padding-top:12px;margin-top:auto">
+          <div style="padding:6px 8px">Settings</div>
+        </div>
+      </div>
+      <!-- Main content -->
+      <div style="flex:1;display:flex;flex-direction:column">
+        <!-- Header -->
+        <div style="padding:12px 24px;border-bottom:1px solid #e2e8f0;display:flex;justify-content:space-between;align-items:center;font-size:13px">
+          <div>
+            <span style="font-weight:600">Sunshine Kids Learning Center</span>
+            <span style="color:#64748b;margin-left:8px;font-size:11px">Austin, TX</span>
+          </div>
+          <div style="display:flex;gap:16px;align-items:center">
+            <div style="background:#dcfce7;color:#166534;padding:4px 10px;border-radius:12px;font-size:11px;font-weight:600">All Ratios OK</div>
+            <div style="width:28px;height:28px;background:#4f46e5;border-radius:50%;color:white;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:600">AC</div>
+          </div>
+        </div>
+        <!-- Page content area -->
+        <div style="flex:1;padding:24px;color:#64748b;display:flex;align-items:center;justify-content:center">
+          <div style="text-align:center">
+            <div style="font-size:14px">Page content renders here</div>
+            <div style="font-size:12px;margin-top:4px">TanStack Router outlet</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <h3>Key Frontend Patterns</h3>
+  <ul style="line-height:1.8;font-size:14px">
+    <li><strong>TanStack Router</strong> — file-based routing, type-safe route params, route-level data loading</li>
+    <li><strong>TanStack Query</strong> — all API calls go through query hooks. <code>refetchInterval: 15000</code> on ratio queries for polling.</li>
+    <li><strong>Auth guard</strong> — root authenticated layout checks session via TanStack Query. Redirects to /login if no session.</li>
+    <li><strong>Role-based UI</strong> — sidebar items and page access filtered by user's role. Staff sees only their classroom + attendance. Directors see everything except billing/settings. Owners see all.</li>
+    <li><strong>Shadcn/UI</strong> — data tables, forms, dialogs, command palette, toasts. New-york style from packages/ui.</li>
+    <li><strong>API client</strong> — typed fetch wrapper using Hono's RPC client (<code>hc</code>) for end-to-end type safety from API routes to React components.</li>
+  </ul>
+</div>

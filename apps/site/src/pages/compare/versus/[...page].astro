@@ -1,0 +1,52 @@
+---
+import "../../../styles/global.css"
+import { getCollection } from "astro:content"
+import PublicSignupCta from "@pebbledesk/marketing/components/public-signup-cta"
+import CategoryHub from "@pebbledesk/marketing/hubs/category-hub.astro"
+import { mapToContentItems, sortByUpdatedAtDesc } from "@pebbledesk/marketing/lib/collections"
+import type { GetStaticPathsOptions } from "astro"
+import { hubFaqs } from "@/config/hub-faqs"
+import { PEBBLEDESK_OFFERING } from "@pebbledesk/shared/constants"
+import { siteConfig } from "@/config/site"
+
+export async function getStaticPaths({ paginate }: GetStaticPathsOptions) {
+  const entries = await getCollection("comparisons")
+  const sorted = sortByUpdatedAtDesc(entries)
+  const items = mapToContentItems(
+    sorted,
+    (e) => `/compare/versus/${e.data.competitorA.slug}-vs-${e.data.competitorB.slug}`,
+  )
+  return paginate(items, { pageSize: 12 })
+}
+
+const { page } = Astro.props
+const sourcePage =
+  page.currentPage > 1 ? `/compare/versus/${page.currentPage}` : "/compare/versus"
+---
+
+<CategoryHub
+  config={siteConfig}
+  title="Head-to-Head Comparisons"
+  description="Side-by-side breakdowns of childcare software; features, pricing, and honest assessments."
+  items={page.data}
+  page={page}
+  basePath="/compare/versus"
+  breadcrumbs={[
+    { label: "Home", href: "/" },
+    { label: "Compare", href: "/compare" },
+    { label: "Head-to-Head", href: "/compare/versus" },
+  ]}
+  faqs={hubFaqs["/compare/versus"]}
+>
+  <section slot="cta" class="mt-8 py-10 text-center border-t border-[var(--color-neutral-200)]" id="signup">
+    <h2 class="text-2xl font-bold text-[var(--color-brand-text)] mb-2">Need help deciding?</h2>
+    <p class="text-[var(--color-brand-muted)] mb-6 max-w-md mx-auto">
+      Pick a plan to see pricing details and next steps. {PEBBLEDESK_OFFERING.claims.trialDisclosure}
+    </p>
+    <PublicSignupCta
+      client:load
+      sourcePage={sourcePage}
+      buttonText={siteConfig.funnel.bofu.ctaText}
+    />
+  </section>
+</CategoryHub>

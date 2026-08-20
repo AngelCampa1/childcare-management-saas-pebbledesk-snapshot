@@ -1,0 +1,55 @@
+---
+import "../../../styles/global.css"
+import { getCollection } from "astro:content"
+import PublicSignupCta from "@pebbledesk/marketing/components/public-signup-cta"
+import CategoryHub from "@pebbledesk/marketing/hubs/category-hub.astro"
+import { mapToContentItems, sortByUpdatedAtDesc } from "@pebbledesk/marketing/lib/collections"
+import type { GetStaticPathsOptions } from "astro"
+import { hubFaqs } from "@/config/hub-faqs"
+import { PEBBLEDESK_OFFERING } from "@pebbledesk/shared/constants"
+import { siteConfig } from "@/config/site"
+
+export async function getStaticPaths({ paginate }: GetStaticPathsOptions) {
+  const entries = await getCollection("alternatives")
+  const sorted = sortByUpdatedAtDesc(entries)
+  const items = mapToContentItems(
+    sorted,
+    (e) => `/compare/alternatives/${e.data.competitor.slug}`,
+    (e) => ({ competitor: e.data.competitor.name }),
+  )
+  return paginate(items, { pageSize: 12 })
+}
+
+const { page } = Astro.props
+const sourcePage =
+  page.currentPage > 1
+    ? `/compare/alternatives/${page.currentPage}`
+    : "/compare/alternatives"
+---
+
+<CategoryHub
+  config={siteConfig}
+  title="Software Alternatives"
+  description={`See how ${siteConfig.name} compares to the big names; real pricing, real tradeoffs.`}
+  items={page.data}
+  page={page}
+  basePath="/compare/alternatives"
+  breadcrumbs={[
+    { label: "Home", href: "/" },
+    { label: "Compare", href: "/compare" },
+    { label: "Alternatives", href: "/compare/alternatives" },
+  ]}
+  faqs={hubFaqs["/compare/alternatives"]}
+>
+  <section slot="cta" class="mt-8 py-10 text-center border-t border-[var(--color-neutral-200)]" id="signup">
+    <h2 class="text-2xl font-bold text-[var(--color-brand-text)] mb-2">Ready to stop overpaying?</h2>
+    <p class="text-[var(--color-brand-muted)] mb-6 max-w-md mx-auto">
+      Pick a plan to see pricing details and next steps. {PEBBLEDESK_OFFERING.claims.trialDisclosure}
+    </p>
+    <PublicSignupCta
+      client:load
+      sourcePage={sourcePage}
+      buttonText={siteConfig.funnel.bofu.ctaText}
+    />
+  </section>
+</CategoryHub>

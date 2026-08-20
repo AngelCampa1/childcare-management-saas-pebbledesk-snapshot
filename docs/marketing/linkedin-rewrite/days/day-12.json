@@ -1,0 +1,171 @@
+{
+	"date": "2026-05-17",
+	"theme": "Migration from Excel, Brightwheel, Procare, and CSV cleanup",
+	"posts": [
+		{
+			"index_in_day": 1,
+			"time_central": "04:00",
+			"pillar": "Data migration and implementation planning",
+			"format": "Practical tip",
+			"post_content": "A childcare software switch should not start with the import button.\n\nIt should start with a small sample export.\n\nFive children.\nA few guardians.\nOne staff record.\nOne billing example.\nOne subsidy example, if you accept assistance.\n\nThat small file tells you what the real migration will feel like:\n\nWhich columns are clear.\nWhich fields are missing.\nWhich dates are formatted oddly.\nWhich family records are duplicated.\nWhich old enrollments are still marked active.\n\nPebbleDesk supports CSV import, plus Brightwheel and Procare migration presets, but a preset is not a substitute for director judgment. It helps with mapping. It does not know that the emergency contact from 2021 moved away.\n\nThe safest first step is boring on purpose:\n\nExport a sample.\nMap the fields.\nPreview the import.\nFix the data before it becomes daily operating data.\n\nA clean migration is usually won before the full roster ever moves.",
+			"source": "apps/site/src/content/features/imports-migration.md",
+			"url": "https://pebbledesk.app/features/imports-migration/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Opens the day with the imports page guidance: sample export, field mapping, duplicate review, and preview before commit."
+		},
+		{
+			"index_in_day": 2,
+			"time_central": "05:00",
+			"pillar": "Excel replacement and compliance risk",
+			"format": "Risk callout",
+			"post_content": "Excel is not the villain.\n\nFor many childcare centers, it handles static lists just fine:\n\nEnrollment rosters.\nEmergency contacts.\nRate sheets.\nVendor lists.\nBasic summaries.\n\nThe trouble starts when a spreadsheet is asked to prove time-sensitive care.\n\nRatios need real attendance and qualified staff coverage.\nSubsidy billing needs records that match the claim period.\nCredential tracking needs renewal dates before they become lapses.\nIncident records need consistent fields and timing.\n\nThose are the jobs where a spreadsheet can look organized while still leaving the director exposed.\n\nA practical test:\n\nIf licensing asked for proof of ratio coverage at 10:15 AM on a Tuesday three months ago, would your Excel file answer cleanly?\n\nIf not, the next step is not shame. It is deciding which records need to move into software and which spreadsheets can stay as historical archives.",
+			"source": "apps/site/src/content/guides/migrating-from-excel-to-childcare-software.md",
+			"url": "https://pebbledesk.app/resources/guides/migrating-from-excel-to-childcare-software/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Uses the Excel guide's honest framing: Excel is useful for static data but risky for ratio, subsidy, credential, and incident documentation."
+		},
+		{
+			"index_in_day": 3,
+			"time_central": "06:00",
+			"pillar": "Excel replacement and data scope",
+			"format": "Practical checklist",
+			"post_content": "When moving from Excel to childcare software, do not try to migrate every spreadsheet your center has ever created.\n\nMove the records that need to run the center tomorrow:\n\nCurrent child records.\nClassroom assignments.\nEmergency contacts and authorized pickups.\nCurrent family billing contacts and rates.\nStaff records and certification dates.\nActive subsidy eligibility documentation.\n\nKeep the rest as history:\n\nOld payment spreadsheets.\nOne-off notes.\nInterim trackers created as workarounds.\nArchived attendance and billing files from before go-live.\n\nThat split matters because migration is not a storage project. It is an operations project.\n\nYour new system needs the live records that support attendance, ratios, billing, staff credentials, and audit questions from the cutover date forward.\n\nYour old Excel files still matter, but they become frozen records for the period before the switch.\n\nTrying to import everything usually creates more cleanup, not more confidence.",
+			"source": "apps/site/src/content/guides/migrating-from-excel-to-childcare-software.md",
+			"url": "https://pebbledesk.app/resources/guides/migrating-from-excel-to-childcare-software/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Turns the Excel guide's migrate/do-not-migrate distinction into a practical checklist."
+		},
+		{
+			"index_in_day": 4,
+			"time_central": "07:00",
+			"pillar": "Historical records and audit readiness",
+			"format": "Director habit",
+			"post_content": "Switching software does not erase your old records.\n\nThat sounds obvious until an audit question comes in for a period before your go-live date.\n\nYour historical Excel files, Brightwheel exports, or Procare reports may still be the official story for that earlier period.\n\nBefore you move on, organize the archive:\n\nYear.\nRecord type.\nAttendance.\nBilling.\nEnrollment.\nStaff.\nSubsidy, if applicable.\n\nThen leave those files frozen. Do not keep editing them after the cutover. They are history, not a second operating system.\n\nThe goal is simple: if a licensing, billing, or subsidy question points to a pre-migration date, the director can find the source record without reconstructing the past from memory.\n\nA migration is only calm if the old system has a clear resting place.",
+			"source": "apps/site/src/content/guides/migrating-from-excel-to-childcare-software.md",
+			"url": "https://pebbledesk.app/resources/guides/migrating-from-excel-to-childcare-software/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Uses the Excel guide's archive guidance and broadens it carefully to old-system exports."
+		},
+		{
+			"index_in_day": 5,
+			"time_central": "08:00",
+			"pillar": "Brightwheel migration planning",
+			"format": "Practical tip",
+			"post_content": "If you are switching off Brightwheel, request historical attendance early.\n\nNot on cutover day.\nNot after staff training.\nNot when billing is already half moved.\n\nThe Brightwheel guide in our site notes that child rosters, family contacts, and billing records are CSV-friendly, while historical attendance may require a support request and several business days.\n\nThat matters because attendance is not just old data.\n\nIt supports ratio review.\nIt supports subsidy questions.\nIt helps explain billing history.\nIt protects the continuity of the record.\n\nA cleaner Brightwheel migration usually starts with these exports:\n\nChild roster.\nFamily contacts.\nBilling records.\nSubsidy documentation, if applicable.\nHistorical attendance.\n\nThen clean the files before import: withdrawn children, duplicate families, stale emergency contacts, and old billing notes can all follow you into the new system if nobody checks.",
+			"source": "apps/site/src/content/guides/switching-from-brightwheel.md",
+			"url": "https://pebbledesk.app/resources/guides/switching-from-brightwheel/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Uses the Brightwheel guide's export list and specific warning that historical attendance may require a support request."
+		},
+		{
+			"index_in_day": 6,
+			"time_central": "09:00",
+			"pillar": "Billing continuity and subsidy reconciliation",
+			"format": "Risk callout",
+			"post_content": "One migration rule is worth writing on a sticky note:\n\nDo not split a subsidy claim across two systems if you can avoid it.\n\nClose the current claim period in the old system.\nStart the new platform on the first day of the next claim period.\nKeep the old system available as reference until the new record has been checked.\n\nWhen a subsidy month is split, the director has to prove one billing story from two places.\n\nAttendance here.\nClaim notes there.\nInvoices in one export.\nCorrections in another.\nPayment follow-up somewhere else.\n\nThat is manageable only until it is not.\n\nThe safer plan is to make the cutover line easy to explain:\n\nBefore this date, records live in the old system archive.\nStarting this date, daily attendance and subsidy billing live in the new system.\n\nClean lines make cleaner reviews.",
+			"source": "apps/site/src/content/guides/switching-childcare-software-checklist.md",
+			"url": "https://pebbledesk.app/resources/guides/switching-childcare-software-checklist/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Grounded in the switching checklist and Brightwheel/Procare guidance to avoid mid-claim or mid-cycle cutovers."
+		},
+		{
+			"index_in_day": 7,
+			"time_central": "10:00",
+			"pillar": "Procare migration planning",
+			"format": "Operator question",
+			"post_content": "A Procare migration question directors should ask early:\n\nWhere does our data actually live?\n\nFor some centers, Procare data spans desktop modules, cloud services, custom reports, and older database structures. That does not make migration impossible. It does mean the export step deserves more respect.\n\nBefore setting a cutover date, confirm how you will get:\n\nChild and family records.\nBilling history.\nStaff records and credentials.\nTimecards, if needed.\nSubsidy authorizations and reconciliation records.\nCACFP records, if applicable.\nA backup archive, if your setup supports it.\n\nThe risk is not that a field is hard to export.\n\nThe risk is discovering that after you have trained staff, told families, and cancelled access.\n\nFor Procare, a written export plan is not extra paperwork. It is the safety rail for the whole switch.",
+			"source": "apps/site/src/content/guides/switching-from-procare.md",
+			"url": "https://pebbledesk.app/resources/guides/switching-from-procare/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Uses the Procare guide's warning about mixed desktop/cloud modules and the export checklist."
+		},
+		{
+			"index_in_day": 8,
+			"time_central": "11:00",
+			"pillar": "Staff training and change management",
+			"format": "Practical tip",
+			"post_content": "Staff training is where software migrations quietly succeed or fail.\n\nA new system can be configured well and still stumble if teachers first touch it under morning drop-off pressure.\n\nPlan training before the parallel run, not the day before cutover.\n\nFor Brightwheel migrations, the daily motions may feel familiar but parent communication habits change.\nFor Procare migrations, staff coming from an older setup may need more practice because muscle memory runs deep.\nFor Excel migrations, staff may be learning both the tool and a new standard for when records get completed.\n\nA simple training structure works:\n\nOne session for daily attendance, check-in, classroom movement, and incident records.\nOne session for admin tasks like billing, subsidy documentation, and staff records.\nOne internal go-to person per role or classroom.\n\nThe first week should feel supported, not improvised.",
+			"source": "apps/site/src/content/guides/switching-childcare-software-checklist.md",
+			"url": "https://pebbledesk.app/resources/guides/switching-childcare-software-checklist/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Combines checklist training guidance with source-backed Brightwheel, Procare, and Excel training realities."
+		},
+		{
+			"index_in_day": 9,
+			"time_central": "12:00",
+			"pillar": "Parent communication during migration",
+			"format": "Practical tip",
+			"post_content": "Parents do not experience your software migration as a data project.\n\nThey experience it as:\n\nWhere do I log in?\nWhere did billing move?\nWill I still get messages?\nWhat happens to photos?\nWho do I ask when something looks different?\n\nThat is especially true when leaving Brightwheel, where the family app is part of the daily relationship.\n\nA calmer parent rollout usually has three messages:\n\nTwo weeks before: what is changing and why.\nFive to seven days before: login timing and what parents need to do.\nCutover day: short instructions, support contact, and reassurance about billing and communication.\n\nKeep the language plain. Parents do not need a feature tour. They need to know the practical next step.\n\nA good migration protects the front desk from avoidable phone calls.",
+			"source": "apps/site/src/content/guides/switching-from-brightwheel.md",
+			"url": "https://pebbledesk.app/resources/guides/switching-from-brightwheel/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Uses the Brightwheel guide's emphasis on parent communication and suggested messaging cadence."
+		},
+		{
+			"index_in_day": 10,
+			"time_central": "13:00",
+			"pillar": "CSV cleanup and data quality",
+			"format": "Practical checklist",
+			"post_content": "CSV cleanup is not glamorous childcare administration.\n\nIt is also where many migrations are saved.\n\nBefore importing a roster, scan for:\n\nDuplicate family records.\nWithdrawn children still marked active.\nMissing dates of birth.\nOld classroom assignments.\nStale emergency contacts.\nGuardian names split across inconsistent columns.\nBilling rates that no longer match current tuition.\nSubsidy eligibility dates that are expired or incomplete.\nStaff credentials without expiration dates.\n\nNone of those issues are rare. They are what happens when a center has been doing real work for years.\n\nPebbleDesk's import preview helps directors see potential duplicates before records are committed. That preview step is the moment to slow down.\n\nThe goal is not a perfect spreadsheet.\n\nThe goal is to avoid turning yesterday's messy export into tomorrow's operating problem.",
+			"source": "apps/site/src/content/features/imports-migration.md",
+			"url": "https://pebbledesk.app/features/imports-migration/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Draws from the imports page duplicate preview and migration cleanup framing, with specific childcare data examples from the guides."
+		},
+		{
+			"index_in_day": 11,
+			"time_central": "14:00",
+			"pillar": "Parallel running and go-live safety",
+			"format": "Risk callout",
+			"post_content": "Parallel running feels like double work because it is.\n\nFor a short time.\n\nBut it is much less work than finding a missing billing rule or attendance gap after the old system is gone.\n\nDuring a parallel run, use the new system as primary and keep the old system as reference. Then check the records that can hurt you later:\n\nDaily attendance counts.\nClassroom assignments.\nBilling rates.\nSubsidy payer setup.\nStaff credentials.\nParent contact records.\nIncident and attendance notes.\n\nFor centers with complex subsidy billing, one billing cycle of parallel running is a useful minimum; a second cycle may be worth it.\n\nThe point is not to operate two systems forever.\n\nThe point is to catch migration gaps while you still have both versions of the truth in reach.",
+			"source": "apps/site/src/content/guides/switching-childcare-software-checklist.md",
+			"url": "https://pebbledesk.app/resources/guides/switching-childcare-software-checklist/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Uses the switching checklist's parallel running guidance and practical validation targets."
+		},
+		{
+			"index_in_day": 12,
+			"time_central": "15:00",
+			"pillar": "Data migration and product education",
+			"format": "Product education",
+			"post_content": "Migration support matters because directors are not buying software in a vacuum.\n\nThey are buying a path from the system they already have.\n\nSometimes that system is Excel.\nSometimes it is Brightwheel.\nSometimes it is Procare.\nSometimes it is a folder of CSV exports, paper notes, and a director who knows which column means what.\n\nPebbleDesk supports CSV import for core records including children, guardians, invoices, and enrollment-related data. It also includes Brightwheel and Procare migration presets to make common source formats easier to map.\n\nThe important word is supports.\n\nA good import tool can help with structure, preview, and duplicate review. It cannot decide whether your old emergency contacts are current or whether a subsidy authorization should still be active.\n\nThat is why the best migrations pair tooling with director review.\n\nMove the data. Clean the record. Start from something you trust.",
+			"source": "apps/site/src/content/features/imports-migration.md",
+			"url": "https://pebbledesk.app/features/imports-migration/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Direct product education using the imports page FAQ and methodology without over-promising."
+		},
+		{
+			"index_in_day": 13,
+			"time_central": "16:00",
+			"pillar": "Cutover timing and billing continuity",
+			"format": "Director habit",
+			"post_content": "The calendar can make a childcare software switch easier or harder.\n\nAvoid the messy windows when you can:\n\nMiddle of the month.\nMiddle of a subsidy claim period.\nFall enrollment rush.\nFinal month of the fiscal year.\nThe weeks right before a licensing renewal visit.\n\nThose are not moral rules. They are practical ways to keep records clean.\n\nA first-of-month go-live gives billing one clear starting line.\nA post-claim cutover keeps subsidy documentation from splitting.\nA quieter enrollment period gives staff more room to learn.\nA clean archive keeps old reports findable.\n\nDirectors already carry enough complexity. The migration date should not add more.\n\nBefore choosing the day, ask:\n\nWill this date make the next audit, billing review, or parent question easier to answer?",
+			"source": "apps/site/src/content/guides/switching-childcare-software-checklist.md",
+			"url": "https://pebbledesk.app/resources/guides/switching-childcare-software-checklist/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Uses the checklist's timing guidance and the Procare guide's warning about inspection timing."
+		},
+		{
+			"index_in_day": 14,
+			"time_central": "17:00",
+			"pillar": "Go-live readiness and validation",
+			"format": "End-of-day checklist",
+			"post_content": "Before calling a migration finished, test the jobs your center cannot afford to get wrong.\n\nNot every menu.\nNot every setting.\nThe jobs.\n\nCan staff check children in and out?\nDo classroom counts match expected ratios?\nAre current children in the correct rooms?\nCan the billing administrator produce a test invoice?\nCan subsidy records support a test claim or review?\nAre staff credentials entered with expiration dates?\nCan the director find historical reports from before cutover?\nDo parents know where to log in and who to ask for help?\n\nA go-live checklist should be that plain.\n\nThe work is not complete when data imports.\n\nIt is complete when the center can run tomorrow morning without the director holding the whole migration in her head.",
+			"source": "apps/site/src/content/guides/switching-childcare-software-checklist.md",
+			"url": "https://pebbledesk.app/resources/guides/switching-childcare-software-checklist/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Uses the checklist's system configuration, data validation, staff training, subsidy output, and backup-plan sections."
+		},
+		{
+			"index_in_day": 15,
+			"time_central": "18:00",
+			"pillar": "Migration strategy and operational relief",
+			"format": "Closing thought",
+			"post_content": "The best childcare software migration has a clear before and after.\n\nBefore the cutover:\n\nExport the records.\nClean the CSVs.\nArchive the old system.\nTrain the staff.\nTell the parents.\nClose the billing or subsidy period cleanly.\n\nAfter the cutover:\n\nRun attendance in one place.\nKeep ratios tied to real classroom coverage.\nLet billing connect back to the care record.\nTrack staff credentials before they expire.\nUse historical exports only when a past-period question comes up.\n\nWhether a center is leaving Excel, Brightwheel, Procare, or a patchwork of files, the goal is not just to move data.\n\nThe goal is to stop rebuilding the operating story every time licensing, subsidy billing, or a parent question asks for proof.\n\nMigration is setup work.\n\nRelief is the reason to do it carefully.",
+			"source": "apps/site/src/content/features/imports-migration.md",
+			"url": "https://pebbledesk.app/features/imports-migration/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Closes the migration day by connecting CSV import and source-system migration to PebbleDesk's audit-ready positioning."
+		}
+	]
+}

@@ -1,0 +1,171 @@
+{
+	"date": "2026-05-06",
+	"theme": "Audit-ready records without the end-of-week scramble",
+	"posts": [
+		{
+			"index_in_day": 1,
+			"time_central": "04:00",
+			"pillar": "Audit readiness and licensing confidence",
+			"format": "Practical tip",
+			"post_content": "The best audit prep does not happen the Friday before a licensing visit.\n\nIt happens in the ordinary moments:\n\nA child checks in.\nA staff member clocks in.\nA classroom moves outside.\nA ratio changes during pickup.\nAn incident report is filed before the day gets away from everyone.\n\nState licensing reviews usually ask for a predictable set of records: attendance, ratios, staff credentials, incident documentation, and other operating proof for a date range.\n\nThe scramble starts when those records live in five different places.\n\nA useful test for directors this morning:\n\nCould you pull attendance, room coverage, and staff documentation for a random Tuesday in March without rebuilding the day from memory?\n\nIf the answer is no, that is not a character flaw. It is a system problem.\n\nAudit-ready records are built one normal day at a time.",
+			"source": "apps/site/src/content/guides/childcare-licensing-audit-prep-guide.md",
+			"url": "https://pebbledesk.app/resources/guides/childcare-licensing-audit-prep-guide/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Opens the day with the core theme from the licensing audit guide: predictable records become stressful when scattered."
+		},
+		{
+			"index_in_day": 2,
+			"time_central": "05:00",
+			"pillar": "Audit readiness and licensing confidence",
+			"format": "Operator question",
+			"post_content": "A practical audit-readiness question for childcare directors:\n\nWhere does your center keep proof of what happened at 8:15 AM?\n\nNot the planned staff schedule.\nNot the paper attendance sheet someone will total later.\nNot a best guess from the director's memory.\n\nThe actual operating record:\n\nWho was present?\nWhich qualified staff were in the room?\nWhat ratio applied?\nWas anyone transitioning in or out?\n\nLicensing citations often come from the gap between compliant care and provable care. The room may have been covered, but if the documentation cannot show it, the director is left explaining instead of answering.\n\nThat is why monthly self-audits are worth the time. Pick a few dates, especially busy transition windows, and check whether the records tell the same story.\n\nThe goal is not a prettier binder.\n\nThe goal is a record that survives inspection.",
+			"source": "apps/site/src/content/guides/preparing-for-state-audit-childcare.md",
+			"url": "https://pebbledesk.app/resources/guides/preparing-for-state-audit-childcare/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Uses the state audit guide's distinction between compliant operations and documentation that proves compliance."
+		},
+		{
+			"index_in_day": 3,
+			"time_central": "06:00",
+			"pillar": "Ratio tracking and classroom coverage",
+			"format": "Risk callout",
+			"post_content": "Ratio problems do not usually announce themselves dramatically.\n\nThey show up in the normal pressure points:\n\nMorning drop-off.\nBathroom breaks.\nStaff lunches.\nPlayground transitions.\nEnd-of-day pickup.\n\nA center can be staffed well overall and still have a short window where documentation gets thin.\n\nThat is why ratio records need to reflect the day as it actually happened, not just the morning plan. Auditors may ask for evidence across a date range and at specific points in time. A clean daily headcount is helpful, but it may not answer the question they are really asking.\n\nFor directors, the useful habit is simple:\n\nReview transition windows before the week ends.\n\nIf a room was close to the limit, make the record clear while the day is still fresh. If a pattern repeats, fix the coverage plan before it becomes a licensing issue.",
+			"source": "apps/site/src/content/guides/childcare-licensing-audit-prep-guide.md",
+			"url": "https://pebbledesk.app/resources/guides/childcare-licensing-audit-prep-guide/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Turns the guide's transition-window ratio risk into a useful daily management post."
+		},
+		{
+			"index_in_day": 4,
+			"time_central": "07:00",
+			"pillar": "Staff records and licensing documentation",
+			"format": "Practical checklist",
+			"post_content": "Staff files are one of those compliance areas that can feel fine until someone asks to see them.\n\nA director may know the CPR renewal happened.\nA teacher may have the card.\nThe background check may be in an email thread.\nTraining hours may be in a spreadsheet from last quarter.\n\nBut during a licensing review, scattered proof still creates work.\n\nA sturdy staff credential file should make these answers easy to find:\n\nCurrent CPR and First Aid documentation.\nBackground check clearance.\nRequired training hours.\nState-specific credentials, if applicable.\nRenewal dates before they become urgent.\n\nThe risk is not only whether the staff member is qualified. It is whether the center can show the record quickly and clearly.\n\nOne small habit that helps: review upcoming expirations at the start of each month, not when an inspector is already in the building.",
+			"source": "apps/site/src/content/guides/preparing-for-state-audit-childcare.md",
+			"url": "https://pebbledesk.app/resources/guides/preparing-for-state-audit-childcare/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Source-backed staff credential guidance with practical monthly maintenance advice."
+		},
+		{
+			"index_in_day": 5,
+			"time_central": "08:00",
+			"pillar": "Attendance records and daily operations",
+			"format": "Practical tip",
+			"post_content": "Attendance records do more than show who came to care.\n\nThey support ratio review.\nThey support subsidy billing.\nThey support emergency accountability.\nThey help answer licensing questions months after the day is over.\n\nThat is a lot to ask of a paper sheet with rounded times and hard-to-read handwriting.\n\nPaper can be legally accepted in many settings, but directors know the practical problem: the record has to be complete, legible, findable, and connected to the rest of the day.\n\nA good end-of-day attendance check is short:\n\nAre every child's arrival and departure times recorded?\nDo room moves match the coverage story?\nDo absences or partial days have the notes needed for billing review?\nIs there anything that will be harder to explain next week than it is today?\n\nAudit readiness is often just today's record getting finished today.",
+			"source": "apps/site/src/content/guides/childcare-licensing-audit-prep-guide.md",
+			"url": "https://pebbledesk.app/resources/guides/childcare-licensing-audit-prep-guide/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Connects attendance to audit, ratios, and subsidy review without overclaiming."
+		},
+		{
+			"index_in_day": 6,
+			"time_central": "09:00",
+			"pillar": "Audit reporting and connected records",
+			"format": "Product education",
+			"post_content": "An audit-ready report should answer more than, \"Can we export a PDF?\"\n\nThe better question is:\n\nCan the report preserve the story?\n\nFor a childcare center, that story usually includes:\n\nWho was present.\nWhich staff were assigned.\nWhat ratio applied.\nWhat was billed.\nWhat changed after the fact.\n\nWhen attendance, ratios, billing notes, and audit-log context are disconnected, the director becomes the bridge. That means manual cross-checking, screenshots, spreadsheets, and a lot of \"let me pull one more thing.\"\n\nPebbleDesk's reporting surface is built around connected operating records: attendance, ratio status, subsidy context, licensing support, and audit-log review belong together.\n\nReports matter during inspections, yes.\n\nThey also matter during billing follow-up, subsidy review, parent questions, and the quiet Friday cleanup no one puts on the brochure.",
+			"source": "apps/site/src/content/features/audit-reports.md",
+			"url": "https://pebbledesk.app/features/audit-reports/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Uses the audit reports page to explain the product's reporting value without promising agency-specific outcomes."
+		},
+		{
+			"index_in_day": 7,
+			"time_central": "10:00",
+			"pillar": "Audit readiness and licensing confidence",
+			"format": "Director habit",
+			"post_content": "A monthly self-audit does not need to be fancy.\n\nPick a few operating days.\nChoose one busy transition window on each day.\nThen ask:\n\nDid attendance show who was actually present?\nDid staff time records match classroom coverage?\nCan we see whether ratios were maintained?\nWere incident reports, if any, filed and findable?\nAre staff credentials current for the people who were counted in ratio?\n\nThe point is not to catch people doing something wrong.\n\nThe point is to catch documentation gaps while they are still small enough to fix through training, scheduling, or a cleaner daily routine.\n\nA licensing visit can look back at earlier dates. A ratio issue from months ago is still discoverable if the records show it.\n\nMonthly review turns audit prep from a panic project into ordinary center hygiene.",
+			"source": "apps/site/src/content/guides/preparing-for-state-audit-childcare.md",
+			"url": "https://pebbledesk.app/resources/guides/preparing-for-state-audit-childcare/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Grounded in the source recommendation to audit ratio records monthly and check documentation patterns."
+		},
+		{
+			"index_in_day": 8,
+			"time_central": "11:00",
+			"pillar": "Subsidy billing and audit support",
+			"format": "Risk callout",
+			"post_content": "If your center accepts subsidy funding, your attendance record is also part of your billing record.\n\nThat connection matters.\n\nA funding review may ask which children were enrolled, which days they attended, what was billed, what was paid, and how discrepancies were resolved.\n\nIf those answers live in separate places, the director has to rebuild the chain by hand.\n\nAttendance sheet here.\nInvoice there.\nPortal note somewhere else.\nPayment reconciliation in a spreadsheet.\n\nThat is where end-of-week scramble turns into real risk. Not because the care was wrong, but because the proof is fragile.\n\nFor subsidy programs, audit-ready means the billing story can trace back to the attendance story without heroic spreadsheet work.\n\nSmall test: choose one subsidized child from last month and follow the record from attendance to billing to payment status.\n\nIf that takes too long, the process is asking too much of your future self.",
+			"source": "apps/site/src/content/guides/preparing-for-state-audit-childcare.md",
+			"url": "https://pebbledesk.app/resources/guides/preparing-for-state-audit-childcare/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Uses the state audit guide's subsidy billing auditability section and keeps claims careful."
+		},
+		{
+			"index_in_day": 9,
+			"time_central": "12:00",
+			"pillar": "Audit readiness and licensing confidence",
+			"format": "Midday reflection",
+			"post_content": "The most useful audit folder is not the one assembled in a rush.\n\nIt is the one that stays current while the center runs.\n\nA practical inspection-ready folder might include:\n\nCurrent license and conditions.\nMost recent inspection report.\nCurrent enrolled children list.\nCurrent staff list.\nStaff qualification documentation.\nCurrent staff schedule.\nAttendance records for the required retention window.\n\nThe exact list varies by state, but the principle is steady: records should be accessible before someone asks for them.\n\nFor directors, the emotional difference is huge.\n\n\"Let me spend the afternoon finding that\" feels very different from \"It's here.\"\n\nAudit readiness is not about being perfect. It is about making the ordinary proof of care easy to produce.",
+			"source": "apps/site/src/content/guides/preparing-for-state-audit-childcare.md",
+			"url": "https://pebbledesk.app/resources/guides/preparing-for-state-audit-childcare/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Reframes the source's inspection-ready folder guidance into a human, midday post."
+		},
+		{
+			"index_in_day": 10,
+			"time_central": "13:00",
+			"pillar": "Brand positioning and product fit",
+			"format": "Positioning post",
+			"post_content": "PebbleDesk's tagline is simple because the job is simple to name:\n\nAudit-ready records without the end-of-week scramble.\n\nFor childcare directors, the scramble usually starts when daily work is split apart.\n\nAttendance in one place.\nRatios in another.\nSubsidy billing in a spreadsheet.\nFamily records in a folder.\nReports rebuilt only when someone asks.\n\nPebbleDesk is childcare center administration software for licensed centers, family childcare homes, and multi-site operators that need those records to stay connected.\n\nThe goal is not to make directors love software.\n\nThe goal is to make Friday afternoon feel less like a records rescue mission.",
+			"source": "apps/site/src/config/site.ts",
+			"url": "https://pebbledesk.app/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Uses the site config tagline, category, target audience, and core promise without over-promoting."
+		},
+		{
+			"index_in_day": 11,
+			"time_central": "14:00",
+			"pillar": "Audit readiness and licensing confidence",
+			"format": "Practical tip",
+			"post_content": "One way to reduce audit stress: stop organizing records by where they came from.\n\nStart organizing them by the question they answer.\n\nFor example:\n\nWho was in care that day?\nAttendance records.\n\nWere ratios maintained?\nAttendance plus staff coverage and classroom movement.\n\nWere staff qualified to count in ratio?\nCredential and background check documentation.\n\nWas an incident handled and documented on time?\nIncident report and parent notification record.\n\nWas subsidy billing supported?\nAttendance, enrollment, billing, and payment records.\n\nLicensing and finance reviews are usually question-driven. They do not care that your center's proof is split across a binder, inbox, spreadsheet, and portal.\n\nA record system that answers the question directly gives the director fewer loose ends to tie together under pressure.",
+			"source": "apps/site/src/content/features/audit-reports.md",
+			"url": "https://pebbledesk.app/features/audit-reports/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Builds from the audit reports page's emphasis on answering what happened, what was billed, and what changed."
+		},
+		{
+			"index_in_day": 12,
+			"time_central": "15:00",
+			"pillar": "Incident reports and audit documentation",
+			"format": "Risk callout",
+			"post_content": "Incident reports are easy to delay because the day is loud.\n\nA child needs comfort.\nA parent needs a call.\nA teacher needs coverage.\nLunch is starting.\nPickup is coming.\n\nBut in an audit, the question is not only whether the center responded appropriately. It is whether the documentation exists, was completed on time, and shows parent notification when required.\n\nA practical center habit:\n\nTreat incident documentation as part of the response, not an admin task for later.\n\nThat means the report is filed while details are fresh, the required notification is documented, and the record is stored where it can be found with the rest of the day.\n\nThe goal is not more paperwork for staff.\n\nThe goal is fewer gaps for the director to reconstruct after everyone has gone home.",
+			"source": "apps/site/src/content/guides/childcare-licensing-audit-prep-guide.md",
+			"url": "https://pebbledesk.app/resources/guides/childcare-licensing-audit-prep-guide/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Uses the licensing audit guide's incident report section and keeps it operational."
+		},
+		{
+			"index_in_day": 13,
+			"time_central": "16:00",
+			"pillar": "State-specific compliance and honest scope",
+			"format": "Trust-building note",
+			"post_content": "Compliance software should be careful with its promises.\n\nEvery state has its own licensing rules, ratio requirements, forms, and review habits. A tool can support strong recordkeeping without pretending every state-specific workflow is identical.\n\nPebbleDesk supports generic attendance, records, billing, messaging, and ratio workflows nationally. Verified state-specific ratio and licensing report support today covers Texas, California, and Florida.\n\nThat distinction matters.\n\nDirectors do not need vague confidence. They need to know what is supported, what needs a paper fallback, and where their state rules still need local judgment.\n\nAudit-ready records help you answer licensing and finance questions faster.\n\nThey do not replace reading your state's requirements or keeping temporary paper notes if the internet drops.",
+			"source": "apps/site/src/config/site.ts",
+			"url": "https://pebbledesk.app/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Uses site config guardrails on state-specific support and online-only V1 to build trust without fake claims."
+		},
+		{
+			"index_in_day": 14,
+			"time_central": "17:00",
+			"pillar": "Audit readiness and daily closeout",
+			"format": "End-of-day checklist",
+			"post_content": "Before the day disappears into tomorrow, a five-minute record check can save a lot of Friday cleanup.\n\nAsk:\n\nAre attendance times complete?\nDid room moves get captured?\nDo staff time records match who was counted in coverage?\nAre incident reports filed and parent notifications documented?\nAre subsidy notes connected to the child and date they support?\nDid anything happen today that will be harder to explain next week?\n\nThis is not about perfectionism.\n\nIt is about preserving the facts while the facts are still easy to remember.\n\nLicensing audits, subsidy reviews, and billing questions all get easier when the daily record is finished close to the day itself.\n\nThe quiet win is not a dramatic dashboard.\n\nIt is a director who does not have to rebuild Tuesday from scraps on Friday afternoon.",
+			"source": "apps/site/src/content/guides/childcare-licensing-audit-prep-guide.md",
+			"url": "https://pebbledesk.app/resources/guides/childcare-licensing-audit-prep-guide/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Directly fits the day theme with a useful end-of-day closeout checklist."
+		},
+		{
+			"index_in_day": 15,
+			"time_central": "18:00",
+			"pillar": "Audit reporting and operational relief",
+			"format": "Closing thought",
+			"post_content": "Audit readiness is not a binder.\n\nIt is a habit.\n\nIt is attendance recorded when children arrive and leave.\nIt is ratios checked during real transition windows.\nIt is staff credentials reviewed before they expire.\nIt is incident reports completed while details are fresh.\nIt is subsidy billing tied back to the care that was actually delivered.\n\nAnd yes, it is reporting that helps the director answer questions without stitching together five separate records by hand.\n\nPebbleDesk exists for that kind of ordinary relief: attendance, ratios, subsidy billing, family records, and reports connected so the operating story is already there when licensing or payment review questions come up.\n\nLess scramble.\nMore proof.\nA calmer close to the week.",
+			"source": "apps/site/src/config/site.ts",
+			"url": "https://pebbledesk.app/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Closes the day by tying the tagline and connected-record positioning back to practical audit readiness."
+		}
+	]
+}

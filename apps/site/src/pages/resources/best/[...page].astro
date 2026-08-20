@@ -1,0 +1,54 @@
+---
+import "../../../styles/global.css"
+import { getCollection } from "astro:content"
+import PublicSignupCta from "@pebbledesk/marketing/components/public-signup-cta"
+import CategoryHub from "@pebbledesk/marketing/hubs/category-hub.astro"
+import { mapToContentItems, sortByUpdatedAtDesc } from "@pebbledesk/marketing/lib/collections"
+import type { GetStaticPathsOptions } from "astro"
+import { hubFaqs } from "@/config/hub-faqs"
+import { PEBBLEDESK_OFFERING } from "@pebbledesk/shared/constants"
+import { siteConfig } from "@/config/site"
+import { entrySlug } from "@/lib/page-helpers"
+
+export async function getStaticPaths({ paginate }: GetStaticPathsOptions) {
+  const entries = await getCollection("listicles")
+  const sorted = sortByUpdatedAtDesc(entries)
+  const items = mapToContentItems(
+    sorted,
+    (e) => `/resources/best/${entrySlug(e)}`,
+    (e) => ({ category: e.data.category }),
+  )
+  return paginate(items, { pageSize: 12 })
+}
+
+const { page } = Astro.props
+const sourcePage =
+  page.currentPage > 1 ? `/resources/best/${page.currentPage}` : "/resources/best"
+---
+
+<CategoryHub
+  config={siteConfig}
+  title="Software Roundups"
+  description="Ranked lists of childcare software, tested, compared, and reviewed for centers of all sizes."
+  items={page.data}
+  page={page}
+  basePath="/resources/best"
+  breadcrumbs={[
+    { label: "Home", href: "/" },
+    { label: "Resources", href: "/resources" },
+    { label: "Software Roundups", href: "/resources/best" },
+  ]}
+  faqs={hubFaqs["/resources/best"]}
+>
+  <section slot="cta" class="mt-8 py-10 text-center border-t border-[var(--color-neutral-200)]" id="signup">
+    <h2 class="text-2xl font-bold text-[var(--color-brand-text)] mb-2">Want a personalized recommendation?</h2>
+    <p class="text-[var(--color-brand-muted)] mb-6 max-w-md mx-auto">
+      Pick a plan to see pricing details and next steps. {siteConfig.promoBanner.code} gives {siteConfig.promoBanner.label}. {siteConfig.promoBanner.renewalLabel}. You also get a {PEBBLEDESK_OFFERING.guarantee.label} after billing starts.
+    </p>
+    <PublicSignupCta
+      client:load
+      sourcePage={sourcePage}
+      buttonText={siteConfig.funnel.bofu.ctaText}
+    />
+  </section>
+</CategoryHub>

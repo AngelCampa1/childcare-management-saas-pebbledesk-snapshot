@@ -1,0 +1,348 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "publishedAt": {
+      "type": "string"
+    },
+    "updatedAt": {
+      "type": "string"
+    },
+    "lastReviewed": {
+      "type": "string"
+    },
+    "buyerStage": {
+      "type": "string",
+      "enum": [
+        "tofu",
+        "mofu",
+        "bofu"
+      ]
+    },
+    "ctaMode": {
+      "type": "string",
+      "enum": [
+        "educate",
+        "evaluate",
+        "convert"
+      ]
+    },
+    "schema": {
+      "default": "Article",
+      "type": "string",
+      "enum": [
+        "Article",
+        "FAQPage",
+        "HowTo",
+        "Product",
+        "ItemList"
+      ]
+    },
+    "bluf": {
+      "type": "string"
+    },
+    "faqs": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "q": {
+            "type": "string"
+          },
+          "a": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "q",
+          "a"
+        ]
+      }
+    },
+    "relatedPages": {
+      "minItems": 1,
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "canonicalHref": {
+      "type": "string",
+      "pattern": "^\\/.*"
+    },
+    "redirectFrom": {
+      "default": [],
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^\\/.*"
+      }
+    },
+    "summaryFacts": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "statistics": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "stat": {
+            "type": "string"
+          },
+          "source": {
+            "type": "string"
+          },
+          "sourceUrl": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "stat",
+          "source"
+        ]
+      }
+    },
+    "publicKnowledge": {
+      "type": "boolean"
+    },
+    "noPublicKnowledge": {
+      "default": false,
+      "type": "boolean"
+    },
+    "noindex": {
+      "default": false,
+      "type": "boolean"
+    },
+    "ogImage": {
+      "type": "string"
+    },
+    "tags": {
+      "default": [],
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "targetPersona": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "track": {
+      "description": "Author override for the lead magnet track on this page. Inferred automatically when absent.",
+      "type": "string",
+      "enum": [
+        "compliance",
+        "billing",
+        "buying",
+        "hr"
+      ]
+    },
+    "steps": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string"
+          },
+          "content": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "title",
+          "content"
+        ]
+      }
+    },
+    "timeEstimate": {
+      "type": "string"
+    },
+    "difficulty": {
+      "type": "string"
+    },
+    "definitions": {
+      "default": [],
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "term": {
+            "type": "string"
+          },
+          "definition": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "term",
+          "definition"
+        ]
+      }
+    },
+    "answers": {
+      "type": "array",
+      "items": {
+        "anyOf": [
+          {
+            "type": "object",
+            "properties": {
+              "q": {
+                "type": "string"
+              },
+              "a": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "q",
+              "a"
+            ]
+          },
+          {
+            "type": "object",
+            "properties": {
+              "question": {
+                "type": "string"
+              },
+              "answer": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "question",
+              "answer"
+            ]
+          }
+        ]
+      }
+    },
+    "proscons": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "subject": {
+            "type": "string"
+          },
+          "pros": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "cons": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "required": [
+          "subject",
+          "pros",
+          "cons"
+        ]
+      }
+    },
+    "expertQuotes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "quote": {
+            "type": "string"
+          },
+          "personName": {
+            "type": "string"
+          },
+          "jobTitle": {
+            "type": "string"
+          },
+          "organization": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "quote",
+          "personName"
+        ]
+      }
+    },
+    "tableData": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "columns": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "rows": {
+          "type": "array",
+          "items": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "required": [
+        "name",
+        "columns",
+        "rows"
+      ]
+    },
+    "pricingStats": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "stat": {
+            "type": "string"
+          },
+          "source": {
+            "type": "string"
+          },
+          "sourceUrl": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "stat",
+          "source"
+        ]
+      }
+    },
+    "$schema": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "title",
+    "description",
+    "publishedAt",
+    "updatedAt",
+    "buyerStage",
+    "bluf",
+    "relatedPages"
+  ]
+}

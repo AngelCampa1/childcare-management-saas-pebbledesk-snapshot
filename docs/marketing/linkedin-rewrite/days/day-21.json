@@ -1,0 +1,171 @@
+{
+	"date": "2026-05-26",
+	"theme": "Final recap day: connected attendance, ratios, subsidy, billing, records, migration, and audit reports",
+	"posts": [
+		{
+			"index_in_day": 1,
+			"time_central": "04:00",
+			"pillar": "Connected childcare records",
+			"format": "Product POV",
+			"post_content": "One perfect form will not carry a childcare center through a review.\n\nThe strength is in the connections.\n\nAttendance shows who was present.\nRoom assignments explain where children were.\nRatio tracking shows whether coverage matched the moment.\nBilling explains what was charged.\nSubsidy records support what was claimed.\nReports help the director answer later questions.\n\nWhen those pieces live apart, the office becomes the connector.\n\nExport this.\nCompare that.\nAsk a teacher why a child moved rooms.\nCheck whether the invoice matched the care.\nRebuild the week before licensing or finance asks again.\n\nPebbleDesk is built around a plainer idea: keep the daily record together while the day is happening.\n\nDirectors should not have to turn attendance, ratios, subsidy, billing, and reports into one story by hand every Friday.",
+			"source": "apps/site/src/config/site.ts",
+			"url": "https://pebbledesk.app/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Opens the final day with PebbleDesk's core promise from site config: connected attendance, ratios, subsidy billing, family records, and reports."
+		},
+		{
+			"index_in_day": 2,
+			"time_central": "05:00",
+			"pillar": "Attendance as source record",
+			"format": "Practical director advice",
+			"post_content": "Attendance is not just a check-in record.\n\nFor a childcare director, it becomes evidence for almost everything else.\n\nA parent asks about a charge.\nA subsidy claim needs support.\nA ratio question comes up after lunch.\nA licensing reviewer asks what happened on a specific day.\n\nIf attendance only proves that a child tapped in, it is incomplete.\n\nThe better question is:\n\nCan your attendance record still explain the day later?\n\nWhich child was present.\nWhich classroom they were tied to.\nWhat date and operating day the record belongs to.\nHow that attendance connects to ratios, billing, and reports.\nWhat changed after the fact, if anything changed.\n\nPebbleDesk treats attendance as part of the center's compliance record, not a separate kiosk event.\n\nThat distinction matters.\n\nThe goal is not more data entry. It is fewer moments where the director has to reconstruct basic facts from memory, screenshots, and staff notes.",
+			"source": "apps/site/src/content/features/attendance-tracking.md",
+			"url": "https://pebbledesk.app/features/attendance-tracking/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Uses the attendance feature page to teach that attendance should support compliance, billing, and later review."
+		},
+		{
+			"index_in_day": 3,
+			"time_central": "06:00",
+			"pillar": "Ratio visibility",
+			"format": "Product POV",
+			"post_content": "Ratio risk rarely announces itself at 8:00 a.m. on a clean schedule.\n\nIt shows up in motion.\n\nA child arrives early.\nA teacher steps out.\nA classroom combines.\nA floater gets pulled to cover a different room.\nA nap room shifts the count.\n\nEvery director knows the ratio chart. The hard part is seeing coverage while the day is changing and keeping a record that still makes sense later.\n\nThat is why PebbleDesk keeps ratio tracking close to attendance and classroom activity.\n\nThe point is not to replace director judgment.\n\nThe point is to make room coverage easier to review while there is still time to fix the room, and easier to explain if someone asks later.\n\nPebbleDesk supports generic ratio workflows nationally, with verified state-specific ratio support today for Texas, California, and Florida.\n\nFor directors evaluating tools, that qualification matters.\n\nAsk vendors where state-specific support is verified today, and where they are speaking generally.",
+			"source": "apps/site/src/content/features/ratio-tracking.md",
+			"url": "https://pebbledesk.app/features/ratio-tracking/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Recaps ratio tracking with source-backed state support language and an evaluation question."
+		},
+		{
+			"index_in_day": 4,
+			"time_central": "07:00",
+			"pillar": "Subsidy reconciliation",
+			"format": "Practical director advice",
+			"post_content": "Subsidy billing gets harder when the claim is far away from the daily record.\n\nThe center delivers care.\nTeachers record attendance.\nThe office checks authorizations.\nSomeone creates or reviews a claim.\nPayments arrive later.\nA short-pay or denial needs follow-up.\n\nIf each step lives in a different place, the director becomes the bridge.\n\nThat is where preventable revenue problems begin.\n\nPebbleDesk's subsidy billing story is intentionally practical: keep subsidy work connected to attendance, child records, billing, and reporting so reconciliation does not depend on a spreadsheet held together at month-end.\n\nIt does not replace every state portal.\n\nIt helps keep the supporting record cleaner before and after portal work.\n\nFor subsidy-heavy centers, that is the question to ask of any system:\n\nWhen a claim is questioned, can we trace it back to attendance, child records, invoice context, and reports without rebuilding the month by hand?",
+			"source": "apps/site/src/content/features/subsidy-billing.md",
+			"url": "https://pebbledesk.app/features/subsidy-billing/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Connects subsidy billing to the feature page's core point: reducing distance between daily records and reimbursement records."
+		},
+		{
+			"index_in_day": 5,
+			"time_central": "08:00",
+			"pillar": "Billing and payments",
+			"format": "Evaluation question",
+			"post_content": "A childcare billing tool has to do more than send an invoice.\n\nDirectors also need the record around the invoice:\n\nWhich child and family is tied to the charge?\nWhat changed if the invoice was edited?\nCan families pay from a public link without entering the admin side?\nCan payment status be reviewed near the account context?\nAre QuickBooks details clear for the plan or rollout setup?\n\nBilling is where family trust, cash flow, and documentation meet.\n\nWhen invoices sit outside the center record, the office has to reconcile by hand:\n\nAttendance over here.\nFamily balance over there.\nSubsidy notes somewhere else.\nPayment status in another tool.\n\nPebbleDesk keeps invoices, payment status, guardian payment links, and accounting context close to the child and family record.\n\nA good buying question:\n\nDoes billing explain the record, or create another record the director has to explain?",
+			"source": "apps/site/src/content/features/billing-payments.md",
+			"url": "https://pebbledesk.app/features/billing-payments/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Uses billing feature claims, including qualified QuickBooks language, as a vendor evaluation framework."
+		},
+		{
+			"index_in_day": 6,
+			"time_central": "09:00",
+			"pillar": "Audit-ready reporting",
+			"format": "Product POV",
+			"post_content": "Audit reports are useful only if the inputs are trustworthy.\n\nA polished export cannot fix a messy record.\n\nIf attendance is incomplete, ratio history is separate, billing context is disconnected, and edits are hard to trace, the report becomes the beginning of the cleanup project.\n\nIt should be the end of it.\n\nPebbleDesk's reporting surface is built around the questions directors actually get:\n\nWho was present?\nWhich staff were assigned?\nWhat ratio applied?\nWhat was billed?\nWhat changed after the fact?\nWhich records support the answer?\n\nThose questions show up during licensing visits, subsidy reviews, parent billing disputes, and internal cleanup after a busy week.\n\nSo the report should not be a detached PDF.\n\nIt should reflect a daily record that was connected all along.\n\nThat is the difference between audit prep as a scramble and audit prep as a normal part of operations.",
+			"source": "apps/site/src/content/features/audit-reports.md",
+			"url": "https://pebbledesk.app/features/audit-reports/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Recaps audit reporting as connected answers across attendance, ratios, billing, subsidy, and audit log context."
+		},
+		{
+			"index_in_day": 7,
+			"time_central": "10:00",
+			"pillar": "Migration and rollout",
+			"format": "Practical director advice",
+			"post_content": "The first test of childcare software is not the demo.\n\nIt is the data move.\n\nCan the center bring over real records without retyping everything?\nCan staff see duplicates before they become daily confusion?\nCan child, guardian, invoice, and enrollment data be mapped clearly enough to trust the first week?\nCan the director start with a small sample instead of betting the whole rollout on one giant import?\n\nPebbleDesk supports CSV import plus Brightwheel and Procare migration presets.\n\nThat does not mean every center's data is magically clean.\n\nNo honest migration promise should say that.\n\nIt means the product gives teams a practical starting path: export, map, preview, review duplicates, then commit the data when it looks right.\n\nFor directors evaluating a switch, ask this before feature depth:\n\nWhat exactly happens to our current records in week one?",
+			"source": "apps/site/src/content/features/imports-migration.md",
+			"url": "https://pebbledesk.app/features/imports-migration/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Uses import support claims and turns migration into an evaluation question for final-week buyers."
+		},
+		{
+			"index_in_day": 8,
+			"time_central": "11:00",
+			"pillar": "Multi-location oversight",
+			"format": "Evaluation question",
+			"post_content": "Multi-site childcare operations do not need one big shared filing cabinet.\n\nThey need center visibility without mixing center records.\n\nFor owner-operators, the useful questions are practical:\n\nCan leaders switch between centers without asking for screenshots?\nCan reporting be reviewed across locations where the plan supports it?\nDoes each center's data stay scoped to that center?\nCan rollout be staged instead of forcing every location into the same first week?\nCan migration needs be mapped before the group is live?\n\nPebbleDesk supports multi-center operations with cross-center visibility and center switching in Group and Enterprise-oriented setups.\n\nGroup checkout is self-serve. Enterprise rollout support is sales-led when migration, permissions, or cross-center reporting need implementation planning.\n\nThat qualification matters.\n\nMulti-site buyers need to know what is self-serve, what needs rollout help, and what is included for their plan.",
+			"source": "apps/site/src/content/features/multi-location-oversight.md",
+			"url": "https://pebbledesk.app/features/multi-location-oversight/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Recaps multi-location support with center scoping and qualified plan language from the source."
+		},
+		{
+			"index_in_day": 9,
+			"time_central": "12:00",
+			"pillar": "Product evaluation",
+			"format": "Evaluation checklist",
+			"post_content": "If you are evaluating childcare software this week, do not start with the longest feature list.\n\nStart with the record chain.\n\nAsk:\n\nDoes attendance connect to classrooms and operating days?\nDoes ratio tracking stay close to live attendance and room context?\nCan subsidy work reference the records that support the claim?\nDo invoices and payment status stay near the family record?\nCan reports answer licensing and finance questions without manual reconstruction?\nCan existing data move through CSV, Brightwheel, or Procare presets?\nCan multi-site leaders review center-level information without blurring center boundaries?\n\nA feature list can look complete while the director still does the connecting work.\n\nThat is the trap.\n\nPebbleDesk's point of view is that attendance, ratios, subsidy billing, family records, and reports should stay connected so the center is not rebuilding the story before a review.\n\nThe best buying question may be the simplest one:\n\nWhen something is questioned later, where does the truth live?",
+			"source": "apps/site/src/config/site.ts",
+			"url": "https://pebbledesk.app/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "A final-week buyer checklist tied to the site config's connected-record positioning."
+		},
+		{
+			"index_in_day": 10,
+			"time_central": "13:00",
+			"pillar": "Operational cleanup",
+			"format": "Practical director advice",
+			"post_content": "A useful Friday habit for directors:\n\nPick one child and follow the record all the way through.\n\nAttendance for the week.\nClassroom or room context.\nAny ratio-relevant moments.\nInvoice or tuition status.\nSubsidy support, if applicable.\nGuardian record and contacts.\nAny report you would need if licensing or finance asked.\n\nThen ask one question:\n\nHow many places did we have to check?\n\nOne or two is manageable.\nFive or six is a warning sign.\nA staff member's memory is not a record system.\n\nThis exercise does not require a full audit. It is a fast way to see where the center is carrying admin risk.\n\nPebbleDesk is built for centers that want those pieces closer together: attendance, ratio checks, subsidy records, billing context, family records, migration, and audit reports.\n\nThe less the office has to stitch together later, the more useful the record is while the week is still fresh.",
+			"source": "apps/site/src/config/site.ts",
+			"url": "https://pebbledesk.app/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Turns the product's connected-record promise into a practical weekly self-audit for directors."
+		},
+		{
+			"index_in_day": 11,
+			"time_central": "14:00",
+			"pillar": "Offline and reliability expectations",
+			"format": "Risk callout",
+			"post_content": "One honest software question every childcare center should ask:\n\nWhat happens if the internet drops?\n\nPebbleDesk is online-only in V1.\n\nThat means centers should keep a temporary paper fallback for outages and enter records once service returns.\n\nThat answer may sound less shiny than a broad offline promise, but clarity matters.\n\nDirectors need procedures they can train:\n\nWhere paper attendance lives during an outage.\nWho records temporary notes.\nWhen records get entered afterward.\nHow the team checks that attendance, ratios, billing, and reports still line up.\n\nOnline-only does not remove the need for audit-ready records.\n\nIt makes the fallback plan part of the recordkeeping discipline.\n\nWhen evaluating any system, ask vendors to explain failure mode in plain language.\n\nNot just what works on a normal day.\n\nWhat the director should do on the messy day.",
+			"source": "apps/site/src/config/site.ts",
+			"url": "https://pebbledesk.app/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Uses the source's online-only V1 guardrail and turns it into practical reliability advice."
+		},
+		{
+			"index_in_day": 12,
+			"time_central": "15:00",
+			"pillar": "Pricing and plan evaluation",
+			"format": "Evaluation question",
+			"post_content": "Pricing is part of operational trust.\n\nChildcare directors should not need a spreadsheet just to understand whether a tool fits the center.\n\nUseful questions:\n\nIs pricing flat by plan or does it grow with every child?\nIs there a setup fee on self-serve plans?\nIs the trial clear?\nAre billing features, subsidy support, reports, migration, and multi-site needs explained by plan fit?\nAre claims like QuickBooks support or state-specific reporting qualified where rollout details matter?\n\nPebbleDesk uses tiered flat pricing, no setup fee on self-serve plans, and no surprise per-child add-on for center plans.\n\nThe product is built for licensed centers, family childcare homes, and multi-site operators that need attendance, ratio, subsidy, billing, and audit records to stay together.\n\nA fair evaluation does not only ask: can we afford this?\n\nIt also asks: will this reduce the recordkeeping work that currently costs the director time, cash-flow clarity, and audit confidence?",
+			"source": "apps/site/src/config/site.ts",
+			"url": "https://pebbledesk.app/pricing/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Uses site config pricing posture and keeps the CTA/evaluation angle soft and practical."
+		},
+		{
+			"index_in_day": 13,
+			"time_central": "16:00",
+			"pillar": "Director relief",
+			"format": "Soft CTA",
+			"post_content": "The PebbleDesk promise is plain on purpose:\n\nAudit-ready records without the end-of-week scramble.\n\nChildcare directors do not need more impressive software words.\n\nThey need fewer moments like these:\n\nWho was here that Tuesday?\nWas the room covered after lunch?\nWhat did we bill?\nWhere is the subsidy support?\nWho changed the record?\nWhat can we show licensing?\n\nWhen records are scattered, those questions become office archaeology.\n\nWhen records stay connected, the director can answer from evidence instead of memory.\n\nThat is the kind of product we are trying to build:\n\nWarm enough for a busy childcare office.\nPractical enough for compliance work.\nSturdy enough for the review no one planned for.",
+			"source": "apps/site/src/config/site.ts",
+			"url": "https://pebbledesk.app/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Soft brand CTA built from the tagline, hero copy, and brand promise in site config."
+		},
+		{
+			"index_in_day": 14,
+			"time_central": "17:00",
+			"pillar": "Implementation readiness",
+			"format": "Practical director advice",
+			"post_content": "Before changing childcare software, make a one-page rollout map.\n\nKeep it boring. Boring is useful here.\n\nWhat records must move first?\nChildren, guardians, invoices, enrollment data, subsidy details, staff records.\n\nWhat format do we have today?\nCSV, Brightwheel export, Procare export, manual cleanup, or mixed sources.\n\nWhat must be reviewed before import?\nDuplicates, missing guardian contacts, old balances, inactive children, classroom names, subsidy authorization fields.\n\nWhat must be true before the first live week?\nAttendance works. Rooms are usable. Billing records make sense. Reports can be pulled. Staff know the outage fallback.\n\nWhat needs rollout planning?\nMulti-site reporting, complex migration, permissions, or enterprise setup.\n\nPebbleDesk supports CSV import plus Brightwheel and Procare migration presets, with Group self-serve and Enterprise rollout support when setup needs more planning.\n\nA good rollout starts with clean-enough data, not excitement.",
+			"source": "apps/site/src/content/features/imports-migration.md",
+			"url": "https://pebbledesk.app/features/imports-migration/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Combines migration and multi-site rollout guidance into a practical final-week implementation post."
+		},
+		{
+			"index_in_day": 15,
+			"time_central": "18:00",
+			"pillar": "Final recap and conversion",
+			"format": "Soft CTA",
+			"post_content": "For directors comparing childcare software, the demo is not the whole test.\n\nThe real test is a Tuesday.\n\nA child arrives late.\nA room gets tight on ratio.\nA subsidy claim needs support.\nA parent asks about a balance.\nAn old record has to move cleanly.\nA regional leader needs center visibility.\nLicensing asks for the story behind a report.\n\nPebbleDesk brings the pieces directors usually have to stitch together:\n\nAttendance tracking.\nRatio visibility.\nSubsidy billing support.\nInvoices and payment status.\nCSV import with Brightwheel and Procare presets.\nMulti-location oversight on qualifying setups.\nAudit reports connected to the operating record.\n\nThe goal is less rebuilding and more evidence.\n\nA calmer office when someone asks, \"Can you show me that record?\"",
+			"source": "apps/site/src/config/site.ts",
+			"url": "https://pebbledesk.app/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Closes the 21-day series with a concise final recap across every requested feature area and a soft CTA."
+		}
+	]
+}

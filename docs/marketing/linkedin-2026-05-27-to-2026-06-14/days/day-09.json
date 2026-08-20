@@ -1,0 +1,171 @@
+{
+	"date": "2026-06-04",
+	"theme": "CACFP, meal counts, and claim documentation",
+	"posts": [
+		{
+			"index_in_day": 1,
+			"time_central": "04:00",
+			"pillar": "CACFP documentation",
+			"format": "Practical tip",
+			"post_content": "CACFP risk usually starts in a small moment: lunch ends, the room moves on, and someone plans to fill in the count later.\n\nThat is the habit to break.\n\nA safer routine is simple:\n\n1. Count at the point of service.\n2. Record by meal type and age group.\n3. Remove absent children from the count.\n4. File the count with the menu record for that day.\n\nThe count does not have to be dramatic to matter. It just has to be made while the meal is actually happening.",
+			"source": "apps/site/src/content/guides/cacfp-food-program-compliance-guide.md",
+			"url": "https://pebbledesk.app/resources/guides/cacfp-food-program-compliance-guide/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Opens the day with the core point-of-service habit from the CACFP compliance guide."
+		},
+		{
+			"index_in_day": 2,
+			"time_central": "05:00",
+			"pillar": "Claim documentation",
+			"format": "Director checklist",
+			"post_content": "Before a CACFP claim goes in, a director should be able to answer three questions without hunting.\n\nDid the meal count stay within attendance for each day?\n\nDid the menu record show what was actually served, including substitutions?\n\nAre income eligibility forms current for children claimed at the higher tier?\n\nThat is the monthly claim review in plain English. Not a binder ritual. A proof check.",
+			"source": "apps/site/src/content/guides/cacfp-claim-reimbursement-guide.md",
+			"url": "https://pebbledesk.app/resources/guides/cacfp-claim-reimbursement-guide/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Grounded in the guide's required documentation and reconciliation steps."
+		},
+		{
+			"index_in_day": 3,
+			"time_central": "06:00",
+			"pillar": "Attendance proof",
+			"format": "Operational risk post",
+			"post_content": "Meal counts and attendance are separate records in a lot of centers.\n\nThat is where the trouble starts.\n\nIf attendance says 18 children were present at lunch, the claim cannot safely show 20 lunches for that same group. The numbers need to agree before anyone submits the month.\n\nA five-minute daily check is easier than a month-end reconstruction.",
+			"source": "apps/site/src/content/guides/cacfp-claim-reimbursement-guide.md",
+			"url": "https://pebbledesk.app/resources/guides/cacfp-claim-reimbursement-guide/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Uses the guide's attendance-versus-meal-count reconciliation example."
+		},
+		{
+			"index_in_day": 4,
+			"time_central": "07:00",
+			"pillar": "CACFP operations",
+			"format": "Habit prompt",
+			"post_content": "The best CACFP habit is not at the end of the month.\n\nIt is at the table.\n\nWho counted? Which children were present? Which age group? Which meal type? Did the menu match what was served?\n\nThose answers are easiest while breakfast, lunch, or snack is still happening. Every hour after that, the record depends a little more on memory.",
+			"source": "apps/site/src/content/lead-magnets/cacfp-compliance-checklist.md",
+			"url": "https://pebbledesk.app/free/cacfp-compliance-checklist/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Pulls from checklist fields for daily meal count and menu documentation."
+		},
+		{
+			"index_in_day": 5,
+			"time_central": "08:00",
+			"pillar": "Eligibility records",
+			"format": "Practical warning",
+			"post_content": "CACFP eligibility forms deserve a calendar, not a pile.\n\nForms expire. Families change status. New children start midyear. A center can serve the right meals and still create claim risk if the eligibility file behind the meal is stale.\n\nOne practical move: review forms weekly for children who attended, then flag anything expiring in the next 30 days.\n\nIt is boring work. That is exactly why it needs a repeatable routine.",
+			"source": "apps/site/src/content/lead-magnets/cacfp-compliance-checklist.md",
+			"url": "https://pebbledesk.app/free/cacfp-compliance-checklist/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Based on weekly income eligibility verification checklist items."
+		},
+		{
+			"index_in_day": 6,
+			"time_central": "09:00",
+			"pillar": "Menu documentation",
+			"format": "Specific scenario",
+			"post_content": "A menu substitution is not a problem by itself.\n\nAn undocumented substitution can become one.\n\nIf the posted menu says peaches and the kitchen serves applesauce, the record should say applesauce and why the change happened. CACFP documentation is not only about the count. It is also about showing what was served and whether the meal pattern was met.\n\nTiny note. Big difference later.",
+			"source": "apps/site/src/content/lead-magnets/cacfp-compliance-checklist.md",
+			"url": "https://pebbledesk.app/free/cacfp-compliance-checklist/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Uses the checklist's menu substitution guidance."
+		},
+		{
+			"index_in_day": 7,
+			"time_central": "10:00",
+			"pillar": "CACFP product fit",
+			"format": "Product philosophy",
+			"post_content": "PebbleDesk's CACFP tracking idea is straightforward: meal counts should not float away from attendance.\n\nIf a child is present for a meal service, that participation belongs next to the daily attendance record. If the claim is later reviewed, the director should not have to compare a paper food log, a sign-in sheet, and a spreadsheet just to explain one day.\n\nThe daily record should already carry the story.",
+			"source": "apps/site/src/content/features/cacfp-tracking.md",
+			"url": "https://pebbledesk.app/features/cacfp-tracking/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Product-positioned but grounded in the CACFP tracking feature page."
+		},
+		{
+			"index_in_day": 8,
+			"time_central": "11:00",
+			"pillar": "Claim timing",
+			"format": "Cash flow reminder",
+			"post_content": "CACFP reimbursement is not same-month cash.\n\nThe center serves meals first, submits the claim, then waits through review and payment timing.\n\nThat delay is easier to manage when the claim file is clean:\n\nMeal counts match attendance.\nMenus are complete.\nEligibility records are current.\nCorrections are explained.\nThe submission is not held together by one person's memory.\n\nA delayed claim with questions is harder to absorb than a clean claim submitted on time.",
+			"source": "apps/site/src/content/guides/cacfp-claim-reimbursement-guide.md",
+			"url": "https://pebbledesk.app/resources/guides/cacfp-claim-reimbursement-guide/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Rewritten as a director-facing CACFP cash-flow point without internal source language."
+		},
+		{
+			"index_in_day": 9,
+			"time_central": "12:00",
+			"pillar": "Daily records",
+			"format": "Question post",
+			"post_content": "A useful CACFP self-check:\n\nCould someone pick a random meal from three months ago and find the count, menu, attendance record, and eligibility support without asking the person who was there?\n\nIf the answer depends on one staff member's memory, the system is too fragile.\n\nRecords should survive turnover, busy weeks, and ordinary human forgetfulness.",
+			"source": "apps/site/src/content/lead-magnets/cacfp-compliance-checklist.md",
+			"url": "https://pebbledesk.app/free/cacfp-compliance-checklist/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Uses the quarterly documentation readiness test from the checklist."
+		},
+		{
+			"index_in_day": 10,
+			"time_central": "13:00",
+			"pillar": "Audit readiness",
+			"format": "Common mistake",
+			"post_content": "One CACFP mistake hides in good intentions: using enrollment as a shortcut.\n\nEnrollment tells you who could have eaten.\nAttendance tells you who was there.\nPoint-of-service meal counts tell you who actually received the meal.\n\nThose are not interchangeable records. Treating them as the same thing is where a clean-looking spreadsheet can become a weak claim file.",
+			"source": "apps/site/src/content/guides/cacfp-food-program-compliance-guide.md",
+			"url": "https://pebbledesk.app/resources/guides/cacfp-food-program-compliance-guide/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Grounded in point-of-service count and actual-presence requirements."
+		},
+		{
+			"index_in_day": 11,
+			"time_central": "14:00",
+			"pillar": "Monthly reconciliation",
+			"format": "Mini checklist",
+			"post_content": "A monthly CACFP claim review can be small and still useful.\n\nCheck:\n\nMeal counts do not exceed attendance.\nMenus include required components and substitutions.\nTier 1 documentation is current.\nThe claim deadline is on the calendar.\nThe expected reimbursement is compared to what later posts.\n\nNone of that requires panic. It requires a rhythm.",
+			"source": "apps/site/src/content/lead-magnets/cacfp-compliance-checklist.md",
+			"url": "https://pebbledesk.app/free/cacfp-compliance-checklist/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Summarizes monthly claim and financial reconciliation checklist items."
+		},
+		{
+			"index_in_day": 12,
+			"time_central": "15:00",
+			"pillar": "Staff training",
+			"format": "Operational habit",
+			"post_content": "If only one person understands the CACFP process, the center has a single point of failure.\n\nThe count person should know what point-of-service means. The backup should know where forms live. The director should know how to pull last month's meal records quickly.\n\nTraining is not just for new software. It is for keeping the claim process alive when the usual person is out.",
+			"source": "apps/site/src/content/lead-magnets/cacfp-compliance-checklist.md",
+			"url": "https://pebbledesk.app/free/cacfp-compliance-checklist/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Based on checklist guidance around responsible staff and review readiness."
+		},
+		{
+			"index_in_day": 13,
+			"time_central": "16:00",
+			"pillar": "Connected records",
+			"format": "Product POV",
+			"post_content": "CACFP records should not become a second version of the day.\n\nIf attendance says one thing, meal counts say another, and billing has a third version, the director has to reconcile the center's history after the fact.\n\nPebbleDesk is built around a different premise: the daily record should support operations first, then claims and audit questions later.",
+			"source": "packages/shared/src/constants/offering.ts",
+			"url": "https://pebbledesk.app/features/cacfp-tracking/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Uses connected attendance, billing, records, and reports positioning."
+		},
+		{
+			"index_in_day": 14,
+			"time_central": "17:00",
+			"pillar": "Review preparation",
+			"format": "Preparedness test",
+			"post_content": "A practical CACFP review drill:\n\nPick one week from the prior quarter.\nPull meal counts.\nPull menus.\nPull attendance.\nCheck eligibility forms.\nConfirm counts do not exceed attendance.\n\nIf that takes all afternoon, the problem is not the review. The problem is the filing system the review exposed.",
+			"source": "apps/site/src/content/lead-magnets/cacfp-compliance-checklist.md",
+			"url": "https://pebbledesk.app/free/cacfp-compliance-checklist/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Uses the checklist's documentation readiness test."
+		},
+		{
+			"index_in_day": 15,
+			"time_central": "18:00",
+			"pillar": "Director relief",
+			"format": "End-of-day reflection",
+			"post_content": "CACFP documentation is not about prettier paperwork.\n\nIt is the director being able to say, calmly:\n\nThis child was present.\nThis meal was served.\nThis count was taken at service.\nThis menu supports it.\nThis eligibility record is current.\n\nThat is the kind of administrative calm childcare directors deserve more often.",
+			"source": "apps/site/src/content/guides/cacfp-claim-reimbursement-guide.md",
+			"url": "https://pebbledesk.app/resources/guides/cacfp-claim-reimbursement-guide/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Closes the day with source-backed proof elements and brand voice."
+		}
+	]
+}

@@ -1,0 +1,51 @@
+{
+	"name": "@pebbledesk/web",
+	"version": "0.0.1",
+	"private": true,
+	"type": "module",
+	"scripts": {
+		"dev": "vite",
+		"build": "vite build",
+		"preview": "vite preview",
+		"deploy": "powershell -NoProfile -ExecutionPolicy Bypass -File ../../scripts/cloudflare/deploy-web.ps1",
+		"typecheck": "tsc --noEmit",
+		"test": "node scripts/run-tests.mjs",
+		"test:watch": "vitest watch",
+		"test:coverage": "node scripts/run-tests.mjs --coverage"
+	},
+	"dependencies": {
+		"@pebbledesk/auth": "workspace:*",
+		"@pebbledesk/shared": "workspace:*",
+		"@pebbledesk/ui": "workspace:*",
+		"@sentry/browser": "^10.46.0",
+		"@tanstack/react-query": "^5.96",
+		"@tanstack/react-router": "^1.168",
+		"@ventora/ai-cs": "0.6.0",
+		"@zxcvbn-ts/core": "^3.0.4",
+		"@zxcvbn-ts/language-common": "^3.0.4",
+		"hono": "^4.12",
+		"lucide-react": "^0.475",
+		"papaparse": "^5.5.3",
+		"react": "^19",
+		"react-dom": "^19",
+		"sonner": "^2.0.7",
+		"zod": "4.3.6"
+	},
+	"devDependencies": {
+		"@tailwindcss/vite": "^4.2.2",
+		"@tanstack/router-plugin": "^1",
+		"@testing-library/jest-dom": "^6",
+		"@testing-library/react": "^16",
+		"@types/papaparse": "^5.5.2",
+		"@types/react": "^19",
+		"@types/react-dom": "^19",
+		"@vitejs/plugin-react": "4.7.0",
+		"@vitest/coverage-v8": "4.1.5",
+		"jsdom": "29.0.2",
+		"tailwindcss": "^4",
+		"typescript": "6.0.3",
+		"vite": "^6.4.2",
+		"vitest": "4.1.5",
+		"wrangler": "^4"
+	}
+}

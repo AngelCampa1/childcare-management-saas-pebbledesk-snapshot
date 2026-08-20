@@ -1,0 +1,106 @@
+<h2>Monorepo Architecture Approaches</h2>
+<p class="subtitle">How to organize packages, shared code, and deploy targets</p>
+
+<div class="options">
+  <div class="option" data-choice="a" onclick="toggleSelect(this)">
+    <div class="letter">A</div>
+    <div class="content">
+      <h3>Apps + Packages (Recommended)</h3>
+      <p>Separate <code>apps/</code> for deployable targets and <code>packages/</code> for shared libraries. Standard Turborepo convention.</p>
+      <div class="mockup" style="margin-top:12px">
+        <div class="mockup-header">pebbledesk/</div>
+        <div class="mockup-body" style="font-family:monospace;font-size:13px;line-height:1.7">
+          <div>├── <strong>apps/</strong></div>
+          <div>│   ├── <strong>web/</strong> — React + Vite SPA (dashboard)</div>
+          <div>│   └── <strong>api/</strong> — Hono on Cloudflare Workers</div>
+          <div>├── <strong>packages/</strong></div>
+          <div>│   ├── <strong>db/</strong> — Drizzle schema, migrations, Neon client</div>
+          <div>│   ├── <strong>auth/</strong> — Better Auth config, shared auth utilities</div>
+          <div>│   ├── <strong>shared/</strong> — types, validators (Zod), constants</div>
+          <div>│   └── <strong>ui/</strong> — Shadcn components, Tailwind config</div>
+          <div>├── turbo.json</div>
+          <div>├── package.json</div>
+          <div>└── pnpm-workspace.yaml</div>
+        </div>
+      </div>
+      <div class="pros-cons" style="margin-top:12px">
+        <div class="pros"><h4>Pros</h4><ul>
+          <li>Clear separation: deployables vs libraries</li>
+          <li>Standard Turborepo pattern — well-documented</li>
+          <li>Easy to add marketing site later as apps/marketing</li>
+          <li>DB package reusable if you ever add a cron worker</li>
+        </ul></div>
+        <div class="cons"><h4>Cons</h4><ul>
+          <li>More packages to configure initially</li>
+          <li>Import paths need package.json exports setup</li>
+        </ul></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="option" data-choice="b" onclick="toggleSelect(this)">
+    <div class="letter">B</div>
+    <div class="content">
+      <h3>Flat Packages</h3>
+      <p>Everything under <code>packages/</code> — no <code>apps/</code> distinction. Deployables and libraries are siblings.</p>
+      <div class="mockup" style="margin-top:12px">
+        <div class="mockup-header">pebbledesk/</div>
+        <div class="mockup-body" style="font-family:monospace;font-size:13px;line-height:1.7">
+          <div>├── <strong>packages/</strong></div>
+          <div>│   ├── <strong>web/</strong> — React + Vite SPA</div>
+          <div>│   ├── <strong>api/</strong> — Hono on Workers</div>
+          <div>│   ├── <strong>db/</strong> — Drizzle schema + migrations</div>
+          <div>│   ├── <strong>auth/</strong> — Better Auth config</div>
+          <div>│   ├── <strong>shared/</strong> — types, validators</div>
+          <div>│   └── <strong>ui/</strong> — Shadcn + Tailwind</div>
+          <div>├── turbo.json</div>
+          <div>├── package.json</div>
+          <div>└── pnpm-workspace.yaml</div>
+        </div>
+      </div>
+      <div class="pros-cons" style="margin-top:12px">
+        <div class="pros"><h4>Pros</h4><ul>
+          <li>Simpler — one directory, no apps/packages split</li>
+          <li>Fewer nesting levels</li>
+        </ul></div>
+        <div class="cons"><h4>Cons</h4><ul>
+          <li>No visual distinction between deployables and libraries</li>
+          <li>Less conventional — new contributors need to figure out what deploys</li>
+        </ul></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="option" data-choice="c" onclick="toggleSelect(this)">
+    <div class="letter">C</div>
+    <div class="content">
+      <h3>Minimal (API Inside Web)</h3>
+      <p>The API lives as a route handler inside the Vite app. One deployable, shared code is just <code>src/</code> directories.</p>
+      <div class="mockup" style="margin-top:12px">
+        <div class="mockup-header">pebbledesk/</div>
+        <div class="mockup-body" style="font-family:monospace;font-size:13px;line-height:1.7">
+          <div>├── <strong>src/</strong></div>
+          <div>│   ├── <strong>app/</strong> — React SPA routes & components</div>
+          <div>│   ├── <strong>api/</strong> — Hono routes (mounted via Vite plugin)</div>
+          <div>│   ├── <strong>db/</strong> — Drizzle schema</div>
+          <div>│   ├── <strong>auth/</strong> — Better Auth</div>
+          <div>│   └── <strong>shared/</strong> — types, validators</div>
+          <div>├── package.json</div>
+          <div>└── vite.config.ts</div>
+        </div>
+      </div>
+      <div class="pros-cons" style="margin-top:12px">
+        <div class="pros"><h4>Pros</h4><ul>
+          <li>Simplest possible setup — one package.json</li>
+          <li>No cross-package imports to configure</li>
+          <li>Fastest to scaffold</li>
+        </ul></div>
+        <div class="cons"><h4>Cons</h4><ul>
+          <li>API and frontend are coupled — can't deploy independently</li>
+          <li>Can't share DB/auth with a future cron worker or marketing site</li>
+          <li>Doesn't match the graduation stack architecture</li>
+        </ul></div>
+      </div>
+    </div>
+  </div>
+</div>

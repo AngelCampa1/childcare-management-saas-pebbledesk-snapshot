@@ -1,0 +1,175 @@
+<h2>Section 2: Database Schema</h2>
+<p class="subtitle">Full data model for Center plan — all tables, row-level tenancy via center_id</p>
+
+<!-- Core -->
+<div class="section">
+  <h3>Core: Centers, Users, Memberships</h3>
+  <div class="mockup">
+    <div class="mockup-header">Identity & Tenancy</div>
+    <div class="mockup-body" style="font-family:monospace;font-size:12px;line-height:1.8">
+      <div><strong style="color:#4f46e5">centers</strong></div>
+      <div style="padding-left:16px">id, name, slug, address, city, state, zip, phone, license_number, licensed_capacity, timezone, created_at, updated_at</div>
+      <br>
+      <div><strong style="color:#4f46e5">users</strong> <span style="color:#64748b">(managed by Better Auth)</span></div>
+      <div style="padding-left:16px">id, name, email, email_verified, image, created_at, updated_at</div>
+      <br>
+      <div><strong style="color:#4f46e5">sessions</strong> <span style="color:#64748b">(managed by Better Auth)</span></div>
+      <div style="padding-left:16px">id, user_id → users, token, expires_at, ip_address, user_agent, created_at, updated_at</div>
+      <br>
+      <div><strong style="color:#4f46e5">accounts</strong> <span style="color:#64748b">(managed by Better Auth — OAuth providers)</span></div>
+      <div style="padding-left:16px">id, user_id → users, account_id, provider_id, access_token, refresh_token, expires_at, ...</div>
+      <br>
+      <div><strong style="color:#4f46e5">memberships</strong> <span style="color:#64748b">(links users to centers with roles)</span></div>
+      <div style="padding-left:16px">id, center_id → centers, user_id → users, role (owner|director|staff), invited_at, accepted_at, created_at</div>
+    </div>
+  </div>
+</div>
+
+<!-- Classrooms & People -->
+<div class="section">
+  <h3>Classrooms, Children, Staff Assignments</h3>
+  <div class="mockup">
+    <div class="mockup-header">People & Rooms</div>
+    <div class="mockup-body" style="font-family:monospace;font-size:12px;line-height:1.8">
+      <div><strong style="color:#059669">classrooms</strong></div>
+      <div style="padding-left:16px">id, center_id → centers, name, age_group (infant|toddler|preschool|school_age), max_capacity, min_ratio_staff, min_ratio_children, created_at</div>
+      <br>
+      <div><strong style="color:#059669">children</strong></div>
+      <div style="padding-left:16px">id, center_id → centers, first_name, last_name, date_of_birth, age_group, enrollment_status (active|inactive|waitlist), subsidy_eligible, subsidy_program, subsidy_case_number, enrolled_at, withdrawn_at, created_at</div>
+      <br>
+      <div><strong style="color:#059669">guardians</strong></div>
+      <div style="padding-left:16px">id, center_id → centers, first_name, last_name, email, phone, relationship, created_at</div>
+      <br>
+      <div><strong style="color:#059669">child_guardians</strong> <span style="color:#64748b">(many-to-many)</span></div>
+      <div style="padding-left:16px">child_id → children, guardian_id → guardians, is_primary, authorized_pickup</div>
+      <br>
+      <div><strong style="color:#059669">classroom_assignments</strong> <span style="color:#64748b">(children → classrooms)</span></div>
+      <div style="padding-left:16px">id, center_id, child_id → children, classroom_id → classrooms, effective_date, end_date</div>
+      <br>
+      <div><strong style="color:#059669">staff_assignments</strong> <span style="color:#64748b">(staff → classrooms)</span></div>
+      <div style="padding-left:16px">id, center_id, membership_id → memberships, classroom_id → classrooms, effective_date, end_date</div>
+    </div>
+  </div>
+</div>
+
+<!-- Attendance & Ratios -->
+<div class="section">
+  <h3>Attendance & Ratio Tracking</h3>
+  <div class="mockup">
+    <div class="mockup-header">The Core Value Prop</div>
+    <div class="mockup-body" style="font-family:monospace;font-size:12px;line-height:1.8">
+      <div><strong style="color:#dc2626">check_ins</strong> <span style="color:#64748b">(child attendance)</span></div>
+      <div style="padding-left:16px">id, center_id, child_id → children, classroom_id → classrooms, checked_in_at, checked_out_at, checked_in_by → memberships, checked_out_by → memberships, notes</div>
+      <br>
+      <div><strong style="color:#dc2626">staff_check_ins</strong> <span style="color:#64748b">(staff clock in/out)</span></div>
+      <div style="padding-left:16px">id, center_id, membership_id → memberships, classroom_id → classrooms, clocked_in_at, clocked_out_at</div>
+      <br>
+      <div><strong style="color:#dc2626">ratio_snapshots</strong> <span style="color:#64748b">(periodic ratio state per room)</span></div>
+      <div style="padding-left:16px">id, center_id, classroom_id → classrooms, recorded_at, children_count, staff_count, ratio_required, ratio_actual, in_compliance (bool)</div>
+      <br>
+      <div><strong style="color:#dc2626">ratio_violations</strong> <span style="color:#64748b">(flagged breaches)</span></div>
+      <div style="padding-left:16px">id, center_id, classroom_id → classrooms, started_at, resolved_at, children_count, staff_count, ratio_required, ratio_actual, resolved_by → memberships, resolution_notes</div>
+    </div>
+  </div>
+</div>
+
+<!-- Subsidies & Billing -->
+<div class="section">
+  <h3>Subsidy Management & Billing</h3>
+  <div class="mockup">
+    <div class="mockup-header">Revenue & Compliance</div>
+    <div class="mockup-body" style="font-family:monospace;font-size:12px;line-height:1.8">
+      <div><strong style="color:#7c3aed">subsidy_cases</strong> <span style="color:#64748b">(child's subsidy enrollment)</span></div>
+      <div style="padding-left:16px">id, center_id, child_id → children, program (ccdf|state_voucher|head_start|other), case_number, agency_name, authorized_hours_weekly, rate_daily, rate_weekly, effective_date, end_date, status (active|pending|expired|denied)</div>
+      <br>
+      <div><strong style="color:#7c3aed">subsidy_claims</strong> <span style="color:#64748b">(monthly billing to agencies)</span></div>
+      <div style="padding-left:16px">id, center_id, subsidy_case_id → subsidy_cases, period_start, period_end, days_attended, hours_attended, amount_claimed, amount_paid, status (draft|submitted|paid|denied|appealed), submitted_at, paid_at, denial_reason</div>
+      <br>
+      <div><strong style="color:#7c3aed">invoices</strong> <span style="color:#64748b">(parent billing)</span></div>
+      <div style="padding-left:16px">id, center_id, guardian_id → guardians, period_start, period_end, subtotal, subsidy_credit, amount_due, status (draft|sent|paid|overdue|void), due_date, paid_at, created_at</div>
+      <br>
+      <div><strong style="color:#7c3aed">invoice_line_items</strong></div>
+      <div style="padding-left:16px">id, invoice_id → invoices, description, quantity, unit_price, amount, child_id → children</div>
+      <br>
+      <div><strong style="color:#7c3aed">payments</strong></div>
+      <div style="padding-left:16px">id, center_id, invoice_id → invoices, amount, method (card|ach|check|cash), reference, paid_at</div>
+    </div>
+  </div>
+</div>
+
+<!-- Staff Scheduling -->
+<div class="section">
+  <h3>Staff Scheduling</h3>
+  <div class="mockup">
+    <div class="mockup-header">Shifts & Hours</div>
+    <div class="mockup-body" style="font-family:monospace;font-size:12px;line-height:1.8">
+      <div><strong style="color:#0891b2">schedules</strong> <span style="color:#64748b">(weekly schedule templates)</span></div>
+      <div style="padding-left:16px">id, center_id, name, effective_from, effective_until, created_at</div>
+      <br>
+      <div><strong style="color:#0891b2">shifts</strong></div>
+      <div style="padding-left:16px">id, center_id, schedule_id → schedules, membership_id → memberships, classroom_id → classrooms, day_of_week (0-6), start_time, end_time</div>
+      <br>
+      <div><strong style="color:#0891b2">time_entries</strong> <span style="color:#64748b">(actual hours worked, derived from staff_check_ins or manual)</span></div>
+      <div style="padding-left:16px">id, center_id, membership_id → memberships, date, hours_worked, hours_scheduled, overtime_hours, status (auto|manual|approved)</div>
+    </div>
+  </div>
+</div>
+
+<!-- Audit & Reports -->
+<div class="section">
+  <h3>Audit Trail & Reports</h3>
+  <div class="mockup">
+    <div class="mockup-header">Audit-Ready Records</div>
+    <div class="mockup-body" style="font-family:monospace;font-size:12px;line-height:1.8">
+      <div><strong style="color:#be185d">audit_reports</strong> <span style="color:#64748b">(generated compliance exports)</span></div>
+      <div style="padding-left:16px">id, center_id, report_type (attendance|ratio|subsidy|licensing), period_start, period_end, generated_by → memberships, file_url, generated_at</div>
+      <br>
+      <div><strong style="color:#be185d">audit_log</strong> <span style="color:#64748b">(system-wide change tracking)</span></div>
+      <div style="padding-left:16px">id, center_id, user_id → users, action (create|update|delete), entity_type, entity_id, changes (jsonb), ip_address, created_at</div>
+    </div>
+  </div>
+</div>
+
+<!-- Messages -->
+<div class="section">
+  <h3>Parent Messaging</h3>
+  <div class="mockup">
+    <div class="mockup-header">Communication</div>
+    <div class="mockup-body" style="font-family:monospace;font-size:12px;line-height:1.8">
+      <div><strong style="color:#ea580c">messages</strong></div>
+      <div style="padding-left:16px">id, center_id, sender_id → users, subject, body, message_type (announcement|direct|alert), classroom_id → classrooms (nullable, for room-scoped), created_at</div>
+      <br>
+      <div><strong style="color:#ea580c">message_recipients</strong></div>
+      <div style="padding-left:16px">id, message_id → messages, guardian_id → guardians, read_at, delivered_at</div>
+    </div>
+  </div>
+</div>
+
+<!-- QuickBooks -->
+<div class="section">
+  <h3>QuickBooks Sync</h3>
+  <div class="mockup">
+    <div class="mockup-header">Accounting Integration</div>
+    <div class="mockup-body" style="font-family:monospace;font-size:12px;line-height:1.8">
+      <div><strong style="color:#475569">quickbooks_connections</strong></div>
+      <div style="padding-left:16px">id, center_id, realm_id, access_token (encrypted), refresh_token (encrypted), token_expires_at, connected_at, last_sync_at</div>
+      <br>
+      <div><strong style="color:#475569">quickbooks_sync_log</strong></div>
+      <div style="padding-left:16px">id, center_id, connection_id → quickbooks_connections, entity_type (invoice|payment), entity_id, qb_id, direction (push|pull), status (success|error), error_message, synced_at</div>
+    </div>
+  </div>
+</div>
+
+<div class="section" style="margin-top:24px;padding:16px;background:#f8fafc;border-radius:8px;border:1px solid #e2e8f0">
+  <h3 style="margin-top:0">Table Count: 23</h3>
+  <p style="margin:8px 0 0;color:#64748b;font-size:14px">
+    5 core (centers, users, sessions, accounts, memberships) ·
+    6 people (classrooms, children, guardians, child_guardians, classroom_assignments, staff_assignments) ·
+    4 attendance (check_ins, staff_check_ins, ratio_snapshots, ratio_violations) ·
+    5 billing (subsidy_cases, subsidy_claims, invoices, invoice_line_items, payments) ·
+    3 scheduling (schedules, shifts, time_entries) ·
+    2 audit (audit_reports, audit_log) ·
+    2 messaging (messages, message_recipients) ·
+    2 quickbooks (quickbooks_connections, quickbooks_sync_log)
+  </p>
+</div>

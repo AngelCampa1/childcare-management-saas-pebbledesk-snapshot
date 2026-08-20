@@ -1,0 +1,6 @@
+# Add URL redirects here
+# Format: /old-path  /new-path  301
+/sitemap.xml /sitemap-index.xml 301
+/customers /about/ 301
+/customers/ /about/ 301
+/customers/* /about/ 301

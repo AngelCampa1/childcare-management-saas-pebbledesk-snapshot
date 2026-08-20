@@ -1,0 +1,20 @@
+---
+import { buildDefinedTermSchema } from "../lib/schema-builders"
+import SchemaMarkup from "./schema-markup.astro"
+
+interface Props {
+  term: string
+  definition: string
+  label?: string
+  emitSchema?: boolean
+}
+const { term, definition, label = "DEFINITION", emitSchema = true } = Astro.props
+const schema = buildDefinedTermSchema({ term, definition })
+---
+
+<dl class="rounded-[var(--radius-md)] border-l-4 border-[var(--color-brand-primary)] bg-[var(--color-primary-50)] px-6 py-4 mb-8" itemscope itemtype="https://schema.org/DefinedTerm">
+  <p class="font-mono text-[length:var(--text-caption)] uppercase tracking-widest text-[var(--color-primary-700)] mb-1.5">{label}</p>
+  <dt class="font-bold text-brand-text text-[length:var(--text-subheading)]" itemprop="name">{term}</dt>
+  <dd class="mt-1 text-brand-muted text-[length:var(--text-body)]" itemprop="description">{definition}</dd>
+</dl>
+{term && definition && emitSchema && <SchemaMarkup schemas={[schema]} />}

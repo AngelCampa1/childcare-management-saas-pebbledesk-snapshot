@@ -1,0 +1,80 @@
+# PebbleDesk API — local dev secrets
+# Copy this file to apps/api/.dev.vars and fill in real values.
+# .dev.vars is gitignored. Never commit real credentials.
+#
+# Production secrets are set via: wrangler secret put <NAME> --env production
+
+DATABASE_URL=REPLACE_WITH_DATABASE_URL
+
+# Local transactional writes (check-in/out, billing, import, subsidies) require the postgres-js
+# driver, which only activates when a Hyperdrive binding is present. wrangler.jsonc declares a
+# LOCAL-DEV-ONLY Hyperdrive binding whose connection string is supplied — NOT here, but in the
+# gitignored apps/api/.env (a wrangler process env var, not a Worker var) — as:
+#   CLOUDFLARE_HYPERDRIVE_LOCAL_CONNECTION_STRING_HYPERDRIVE=REPLACE_WITH_DATABASE_URL
+# Point it ONLY at a local/e2e Neon branch, NEVER at the production database. Without it, every
+# db.transaction() route returns HTTP 500 locally (neon-http has no transaction support).
+
+BETTER_AUTH_SECRET=your-dev-secret-min-32-chars
+
+# BETTER_AUTH_URL, APP_URL, and QUICKBOOKS_REDIRECT_URI are already set in wrangler.jsonc
+# vars for each environment and only need to be in .dev.vars if you want to override
+# the wrangler defaults (e.g. to point at a non-standard local port).
+BETTER_AUTH_URL=http://localhost:8790
+APP_URL=http://localhost:3040
+QUICKBOOKS_REDIRECT_URI=http://localhost:8790/api/quickbooks/connect/callback
+
+GOOGLE_CLIENT_ID=your-google-client-id.apps.googleusercontent.com
+GOOGLE_CLIENT_SECRET=your-google-client-secret
+
+PUBLIC_LINK_SECRET=your-public-link-signing-secret-min-32-chars
+
+RESEND_API_KEY=re_test_your_resend_api_key
+RESEND_FROM_EMAIL=billing@pebbledesk.test
+RESEND_WEBHOOK_SECRET=whsec_your_resend_inbound_webhook_secret
+# Optional. Defaults to the RESEND_FROM_EMAIL domain.
+RESEND_INBOUND_REPLY_DOMAIN=pebbledesk.test
+
+STRIPE_SECRET_KEY=sk_test_your_stripe_secret_key
+STRIPE_WEBHOOK_SECRET=whsec_your_stripe_webhook_secret
+STRIPE_SUBSCRIPTION_WEBHOOK_SECRET=whsec_your_stripe_subscription_webhook_secret
+STRIPE_PUBLISHABLE_KEY=pk_test_your_stripe_publishable_key
+STRIPE_PRICE_HOME_MONTHLY=price_your_home_monthly_price_id
+STRIPE_PRICE_HOME_ANNUAL=price_your_home_annual_price_id
+STRIPE_PRICE_CENTER_STARTER_MONTHLY=price_your_center_starter_monthly_price_id
+STRIPE_PRICE_CENTER_STARTER_ANNUAL=price_your_center_starter_annual_price_id
+STRIPE_PRICE_CENTER_PRO_MONTHLY=price_your_center_pro_monthly_price_id
+STRIPE_PRICE_CENTER_PRO_ANNUAL=price_your_center_pro_annual_price_id
+STRIPE_PRICE_GROUP_MONTHLY=price_your_group_monthly_price_id
+STRIPE_PRICE_GROUP_ANNUAL=price_your_group_annual_price_id
+
+# Optional browser/server error tracking
+SENTRY_DSN=https://examplePublicKey@o0.ingest.sentry.io/0
+
+# Token for local/deploy database readiness probes. In production, set the same value as
+# Worker secret API_READINESS_TOKEN and local/root PEBBLEDESK_API_READINESS_TOKEN.
+API_READINESS_TOKEN=your-database-readiness-probe-token
+
+# Optional PostHog server-side lifecycle analytics.
+# Set POSTHOG_PROJECT_API_KEY as a secret in production; do not commit real keys.
+POSTHOG_PROJECT_API_KEY=
+POSTHOG_HOST=https://us.i.posthog.com
+
+# QuickBooks is optional for GA. Leave these blank until Intuit production is ready.
+QUICKBOOKS_CLIENT_ID=your_quickbooks_client_id
+QUICKBOOKS_CLIENT_SECRET=your_quickbooks_client_secret
+QB_TOKEN_ENC_KEY=your-32-char-minimum-encryption-key
+
+# Lead magnets / marketing
+MARKETING_FROM_EMAIL=angel.campa@pebbledesk.app
+R2_PUBLIC_URL=https://cdn.pebbledesk.app
+UNSUBSCRIBE_SECRET=your-unsubscribe-hmac-secret-min-32-chars
+
+# Optional production E2E signup bucket token. Do not expose this in browser code.
+# E2E scripts can send it as X-PebbleDesk-E2E-Signup when creating disposable
+# accounts on configured test email domains.
+E2E_SIGNUP_RATE_LIMIT_TOKEN=your-e2e-signup-rate-limit-token
+
+# AI-CS support widget BFF
+AI_CS_CLIENT_ASSERTION_SECRET=your-ai-cs-client-assertion-secret
+AI_CS_WORKER_ORIGIN=https://ventora-ai-cs-worker.REPLACE_WITH_ACCOUNT_SUBDOMAIN.workers.dev
+AI_CS_CONTEXT_SECRET=your-ai-cs-context-secret

@@ -1,0 +1,216 @@
+---
+import { PUBLIC_BRAND_KNOWLEDGE } from "@pebbledesk/shared/public-knowledge"
+import PrintChecklist from "./print-checklist.astro"
+
+/**
+ * Standalone print-optimized layout for lead magnet PDFs.
+ *
+ * Renders its own <html> shell with NO site header/nav/footer chrome. Inline
+ * CSS is tuned for Letter paper at ~7.5in content width (assumes Playwright
+ * applies 0.75in page margins). A cover page is rendered first, followed by
+ * the full body content from the default slot.
+ *
+ * Intentionally austere: white background, no gradients, no shadows,
+ * generous whitespace, serif body / sans-serif headings.
+ */
+interface Props {
+  title: string
+  subtitle?: string
+  magnetSlug: string
+}
+
+const { title, subtitle, magnetSlug } = Astro.props
+const hasCoverSlot = Astro.slots.has("cover")
+const publicDomain = new URL(PUBLIC_BRAND_KNOWLEDGE.publicOrigin).hostname
+---
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex,nofollow" />
+    <title>{title}</title>
+    <style is:global>
+      *, *::before, *::after { box-sizing: border-box; }
+      html, body {
+        margin: 0;
+        padding: 0;
+        background: #ffffff;
+        color: #1f2937;
+      }
+      body {
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 16px;
+        line-height: 1.6;
+        -webkit-font-smoothing: antialiased;
+      }
+      h1, h2, h3, h4, h5, h6 {
+        font-family: -apple-system, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+        color: #111827;
+        line-height: 1.25;
+        margin: 1.6em 0 0.6em;
+        break-inside: avoid;
+        break-after: avoid;
+      }
+      h1 { font-size: 2.25rem; }
+      h2 { font-size: 1.5rem; }
+      h3 { font-size: 1.2rem; }
+      p { margin: 0 0 1em; }
+      a { color: #1d4ed8; text-decoration: none; }
+      ul, ol { margin: 0 0 1em 1.25em; padding: 0; break-inside: avoid; }
+      li { margin: 0.25em 0; }
+      blockquote {
+        margin: 1em 0;
+        padding: 0.75em 1em;
+        border-left: 3px solid #d1d5db;
+        color: #374151;
+        background: #f9fafb;
+        break-inside: avoid;
+      }
+      pre, code {
+        font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+        font-size: 0.9rem;
+      }
+      pre {
+        padding: 0.75em 1em;
+        border: 1px solid #e5e7eb;
+        border-radius: 4px;
+        overflow: hidden;
+        break-inside: avoid;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 1em 0;
+        break-inside: avoid;
+      }
+      th, td {
+        padding: 0.5em 0.75em;
+        border: 1px solid #e5e7eb;
+        text-align: left;
+        vertical-align: top;
+      }
+      th { background: #f3f4f6; font-family: -apple-system, "Segoe UI", sans-serif; }
+      hr { border: 0; border-top: 1px solid #e5e7eb; margin: 1.5em 0; }
+      img { max-width: 100%; height: auto; }
+
+      .lm-cover {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 0.5in 0;
+        break-after: page;
+        page-break-after: always;
+      }
+      .lm-cover__eyebrow {
+        font-family: -apple-system, "Segoe UI", sans-serif;
+        text-transform: uppercase;
+        letter-spacing: 0.18em;
+        font-size: 0.75rem;
+        color: #6b7280;
+        margin-bottom: 1.5rem;
+      }
+      .lm-cover__title {
+        font-size: 2.75rem;
+        margin: 0 0 1rem;
+        max-width: 6in;
+      }
+      .lm-cover__subtitle {
+        font-size: 1.15rem;
+        color: #4b5563;
+        max-width: 5.5in;
+        margin: 0 0 2rem;
+      }
+      .lm-cover__rule {
+        width: 3in;
+        border: 0;
+        border-top: 1px solid #d1d5db;
+        margin: 1.5rem 0;
+      }
+      .lm-cover__brand {
+        font-family: -apple-system, "Segoe UI", sans-serif;
+        font-size: 0.9rem;
+        color: #374151;
+        letter-spacing: 0.04em;
+      }
+
+      .lm-body {
+        max-width: 7in;
+        margin: 0 auto;
+        padding: 0 0 0.5in;
+      }
+      .lm-body > :first-child { margin-top: 0; }
+      .print-checklist {
+        margin: 0 0 1.5rem;
+        padding: 1rem;
+        border: 1px solid #d7cbbb;
+        border-radius: 10px;
+        background: #faf3e7;
+        break-inside: avoid;
+      }
+      .print-checklist__eyebrow {
+        font-family: -apple-system, "Segoe UI", sans-serif;
+        margin: 0 0 0.5rem;
+        text-transform: uppercase;
+        letter-spacing: 0.14em;
+        font-size: 0.72rem;
+        color: #8e4a38;
+      }
+      .print-checklist h2 { margin-top: 0; }
+      .print-checklist__subtitle { color: #4b5563; }
+      .print-checklist ul { margin-left: 0; list-style: none; }
+      .print-checklist li {
+        display: grid;
+        grid-template-columns: 0.2in 1fr;
+        gap: 0.35rem;
+        align-items: start;
+      }
+      .print-checklist li span {
+        width: 0.16in;
+        height: 0.16in;
+        margin-top: 0.2rem;
+        border: 1px solid #6b7280;
+        background: #ffffff;
+      }
+
+      .lm-footer {
+        margin-top: 2in;
+        padding-top: 1rem;
+        border-top: 1px solid #e5e7eb;
+        text-align: center;
+        font-family: -apple-system, "Segoe UI", sans-serif;
+        font-size: 0.75rem;
+        color: #6b7280;
+      }
+
+      @page {
+        size: Letter;
+      }
+      @media print {
+        html, body { background: #ffffff; }
+      }
+    </style>
+  </head>
+  <body data-lead-magnet-print-slug={magnetSlug}>
+    <section class="lm-cover" aria-label="Cover page">
+      {hasCoverSlot ? (
+        <slot name="cover" />
+      ) : (
+        <>
+          <p class="lm-cover__eyebrow">{PUBLIC_BRAND_KNOWLEDGE.name} · Free Resource</p>
+          <h1 class="lm-cover__title">{title}</h1>
+          {subtitle && <p class="lm-cover__subtitle">{subtitle}</p>}
+          <hr class="lm-cover__rule" />
+          <p class="lm-cover__brand">{PUBLIC_BRAND_KNOWLEDGE.name} · {publicDomain}</p>
+        </>
+      )}
+    </section>
+    <main class="lm-body">
+      <PrintChecklist title={title} subtitle={subtitle} />
+      <slot />
+      <footer class="lm-footer">© 2026 {PUBLIC_BRAND_KNOWLEDGE.name} · {publicDomain}</footer>
+    </main>
+  </body>
+</html>

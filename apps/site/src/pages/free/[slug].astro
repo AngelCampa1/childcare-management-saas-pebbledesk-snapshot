@@ -1,0 +1,40 @@
+---
+export const prerender = true;
+import "../../styles/global.css"
+import { getCollection, render } from "astro:content"
+import LeadMagnetPage from "@pebbledesk/marketing/components/lead-magnet-page.astro"
+import { siteConfig } from "@/config/site"
+import { buildContentMap, entrySlug, resolveRelatedLinksWithFallback } from "@/lib/page-helpers"
+
+export async function getStaticPaths() {
+  const entries = await getCollection("lead-magnets")
+  return entries.map((entry) => ({
+    params: { slug: entrySlug(entry) },
+    props: { entry },
+  }))
+}
+
+const { entry } = Astro.props
+const { Content } = await render(entry)
+const canonicalPath = entry.data.canonicalHref ?? `/free/${entrySlug(entry)}`
+const { noindex } = entry.data
+const [alternatives, comparisons, pricingBreakdowns, listicles, guides, statePages, leadMagnets, features] = await Promise.all([
+  getCollection("alternatives"),
+  getCollection("comparisons"),
+  getCollection("pricing-breakdowns"),
+  getCollection("listicles"),
+  getCollection("guides"),
+  getCollection("state-pages"),
+  getCollection("lead-magnets"),
+  getCollection("features"),
+])
+const contentMap = buildContentMap({ alternatives, comparisons, pricingBreakdowns, listicles, guides, statePages, leadMagnets, features })
+const relatedLinks = resolveRelatedLinksWithFallback({
+  currentPath: canonicalPath,
+  relatedPages: entry.data.relatedPages,
+  contentMap,
+})
+---
+<LeadMagnetPage entry={entry} config={siteConfig} relatedLinks={relatedLinks} noindex={noindex}>
+  <Content />
+</LeadMagnetPage>

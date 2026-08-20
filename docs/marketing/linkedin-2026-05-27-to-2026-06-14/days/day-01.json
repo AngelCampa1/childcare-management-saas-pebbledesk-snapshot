@@ -1,0 +1,171 @@
+{
+	"date": "2026-05-27",
+	"theme": "Audit-ready records for a midweek reset",
+	"posts": [
+		{
+			"index_in_day": 1,
+			"time_central": "04:00",
+			"pillar": "Audit readiness and licensing confidence",
+			"format": "Practical reminder",
+			"post_content": "A midweek record reset is a good time to check the records that usually drift.\n\nNot the big binder. The small things:\n\n- Did every child who returned have a clean attendance record?\n- Did any family update pickup permissions over the weekend?\n- Did staff schedules match who actually opened each room?\n- Are absence notes clear enough that billing and licensing will still understand them later?\n\nAudit-ready work is not only what happens during an inspection. It is the quiet cleanup that keeps today from becoming Friday's paperwork problem.",
+			"source": "apps/site/src/content/guides/preparing-for-state-audit-childcare.md",
+			"url": "https://pebbledesk.app/resources/guides/preparing-for-state-audit-childcare/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Grounded in the guide's inspection-ready folder and documentation-before-visit advice."
+		},
+		{
+			"index_in_day": 2,
+			"time_central": "05:00",
+			"pillar": "Enrollment records",
+			"format": "Operator checklist",
+			"post_content": "Enrollment files are not quiet paperwork.\n\nThey decide who can pick up a child, who receives billing follow-up, which classroom the child belongs to, and whether subsidy context is attached when attendance is reviewed.\n\nAt the start of a new operating stretch, one practical director habit is a 10-minute enrollment pass:\n\n1. New starts and withdrawals\n2. Classroom assignment changes\n3. Authorized pickup updates\n4. Guardian contact changes\n5. Subsidy eligibility notes\n\nBy the next opening record check, the file should match the center you are actually operating.",
+			"source": "apps/site/src/content/features/enrollment-records.md",
+			"url": "https://pebbledesk.app/features/enrollment-records/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Rewritten to remove goal phrasing while preserving enrollment-record cleanup advice."
+		},
+		{
+			"index_in_day": 3,
+			"time_central": "06:00",
+			"pillar": "Attendance records",
+			"format": "Point of view",
+			"post_content": "The attendance record has to do more than say a child was here.\n\nIt may need to support a ratio question, a billing question, a subsidy review, or a licensing request weeks later.\n\nThat is why the strongest attendance habit is not just \"take attendance.\"\n\nIt is:\n\nCapture the child, the room, the time, and the day in a way that still makes sense when someone asks what happened later.\n\nShort weeks make this more important, not less. Absences, schedule changes, and family updates can cluster when routines shift.",
+			"source": "apps/site/src/content/features/attendance-tracking.md",
+			"url": "https://pebbledesk.app/features/attendance-tracking/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Reflects attendance tied to child, classroom, day, ratio review, billing support, and audit prep."
+		},
+		{
+			"index_in_day": 4,
+			"time_central": "07:00",
+			"pillar": "Audit readiness",
+			"format": "Director prompt",
+			"post_content": "A useful midweek audit-readiness question:\n\nIf licensing asked for last Thursday's record, would the answer be one clean pull or a scavenger hunt?\n\nAttendance in one place.\nStaff coverage somewhere else.\nA family note in an inbox.\nA billing adjustment in a spreadsheet.\n\nThat split is where audit prep gets heavy.\n\nThe practical fix is not a prettier binder. It is making sure the daily record keeps the pieces together while the day is happening.",
+			"source": "apps/site/src/pages/index.astro",
+			"url": "https://pebbledesk.app/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Grounded in homepage workflow language about attendance, room changes, staff coverage, context, and proof."
+		},
+		{
+			"index_in_day": 5,
+			"time_central": "08:00",
+			"pillar": "Licensing inspections",
+			"format": "Practical tip",
+			"post_content": "A licensing visit rarely starts with a complicated question.\n\nIt often starts with a date range.\n\nShow attendance for these days.\nShow staff coverage for the same period.\nShow ratio support.\nShow staff qualification documentation.\nShow enrollment files for currently enrolled children.\n\nThat is why the daily habit matters. If each record is current as the day happens, the date range request is routine. If the record lives across binders, exports, and memory, the same request becomes a scramble.",
+			"source": "apps/site/src/content/guides/childcare-licensing-audit-prep-guide.md",
+			"url": "https://pebbledesk.app/resources/guides/childcare-licensing-audit-prep-guide/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Uses the guide's typical auditor document categories and date-based retrieval concept."
+		},
+		{
+			"index_in_day": 6,
+			"time_central": "09:00",
+			"pillar": "Family records",
+			"format": "Operational risk note",
+			"post_content": "Pickup permissions deserve a fresh look in a short week.\n\nFamilies travel. Schedules change. Grandparents help. Custody notes sometimes get updated in a hurry.\n\nThe risk is not that staff do not care. The risk is that the current pickup answer lives somewhere other than the record staff are using at the door.\n\nA practical rule: if a pickup decision could happen today, the authorized pickup record needs to be current today.\n\nNot at enrollment.\nNot at month-end.\nToday.",
+			"source": "apps/site/src/content/features/enrollment-records.md",
+			"url": "https://pebbledesk.app/features/enrollment-records/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Grounded in authorized pickup and guardian record positioning."
+		},
+		{
+			"index_in_day": 7,
+			"time_central": "10:00",
+			"pillar": "Subsidy and billing records",
+			"format": "Plain-language explainer",
+			"post_content": "Subsidy billing gets harder when the attendance record and reimbursement record stop agreeing.\n\nThat mismatch does not always show up right away. It can surface later, when someone asks which children were enrolled, which days they were present, what was billed, what was paid, and how a discrepancy was resolved.\n\nBefore billing work begins, the cleanest habit is to close attendance gaps while the day is still fresh.\n\nA missing sign-out today can become a claim-support problem later.",
+			"source": "apps/site/src/content/guides/preparing-for-state-audit-childcare.md",
+			"url": "https://pebbledesk.app/resources/guides/preparing-for-state-audit-childcare/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Uses the guide's subsidy billing auditability requirements without adding unsupported outcomes."
+		},
+		{
+			"index_in_day": 8,
+			"time_central": "11:00",
+			"pillar": "Staff records",
+			"format": "Checklist",
+			"post_content": "A quick midweek staff-file check:\n\n- Any CPR or first aid dates coming up?\n- Any background check document still sitting in email?\n- Any annual training hours recorded outside the staff file?\n- Any new hire who should not be counted in ratio yet?\n- Any substitute coverage that needs a note attached?\n\nStaff files do not need drama. They need deadlines, documents, and one place to look.",
+			"source": "apps/site/src/content/features/staff-credentials.md",
+			"url": "https://pebbledesk.app/features/staff-credentials/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Grounded in credential tracking for background checks, CPR, first aid, training hours, and expiration alerts."
+		},
+		{
+			"index_in_day": 9,
+			"time_central": "12:00",
+			"pillar": "Audit reports",
+			"format": "Question post",
+			"post_content": "What makes an audit report useful?\n\nNot length.\nNot a polished PDF.\nNot a folder name that sounds official.\n\nA useful report answers ordinary questions clearly:\n\nWho was present?\nWhich staff were assigned?\nWhat ratio applied?\nWhat was billed?\nWhat changed after the fact?\n\nIf those answers come from disconnected exports, the director still has to rebuild the story. The value is in preserving the relationship between the records before anyone asks.",
+			"source": "apps/site/src/content/features/audit-reports.md",
+			"url": "https://pebbledesk.app/features/audit-reports/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Based on the audit reports page's questions and connected record framing."
+		},
+		{
+			"index_in_day": 10,
+			"time_central": "13:00",
+			"pillar": "Emergency readiness",
+			"format": "Operational reminder",
+			"post_content": "Emergency binders go stale quietly.\n\nA child enrolls.\nA phone number changes.\nA medical alert gets added.\nA staff member leaves.\nA drill happens but the note never makes it into the log.\n\nOne small readiness habit is to check whether the emergency roster still matches the children and staff in the building today.\n\nIn an inspection, documentation matters.\nIn an actual emergency, current documentation matters even more.",
+			"source": "apps/site/src/content/guides/childcare-emergency-preparedness-guide.md",
+			"url": "https://pebbledesk.app/resources/guides/childcare-emergency-preparedness-guide/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Grounded in emergency binder, roster, medical alerts, staff contacts, and drill log guidance."
+		},
+		{
+			"index_in_day": 11,
+			"time_central": "14:00",
+			"pillar": "Audit readiness",
+			"format": "Founder POV",
+			"post_content": "PebbleDesk is built around a practical recordkeeping idea:\n\nChildcare compliance work should be captured during normal operations, not reconstructed when someone asks for proof.\n\nAttendance should feed ratios.\nEnrollment records should support pickup, billing, and subsidy context.\nReports should point back to the daily record.\n\nThat is the difference between \"we did the work\" and \"we can show the work.\"\n\nDirectors should not have to rebuild the week from five different record trails.",
+			"source": "packages/shared/src/constants/offering.ts",
+			"url": "https://pebbledesk.app/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Rewritten to remove internal product-thesis phrasing while preserving connected-record positioning."
+		},
+		{
+			"index_in_day": 12,
+			"time_central": "15:00",
+			"pillar": "Ratio records",
+			"format": "Practical observation",
+			"post_content": "A ratio record from last week should not depend on memory.\n\nThe question is not only whether the room was covered. It is whether the center can show who was present, which staff were assigned, and what changed during the day.\n\nThat is why short-week cleanup should include ratio review, especially around arrival, lunch, nap, and pickup.\n\nThose are the moments where the schedule on paper and the room in real life can part ways.",
+			"source": "apps/site/src/content/guides/staff-scheduling-for-ratio-compliance.md",
+			"url": "https://pebbledesk.app/resources/guides/staff-scheduling-for-ratio-compliance/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Grounded in high-risk transition windows and documenting actual ratio compliance."
+		},
+		{
+			"index_in_day": 13,
+			"time_central": "16:00",
+			"pillar": "Record cleanup",
+			"format": "Short checklist",
+			"post_content": "End-of-day audit-ready check:\n\n1. Missing attendance times resolved\n2. Absences noted with a reason\n3. Room moves reflected in the record\n4. Staff coverage matched to the actual day\n5. Family or pickup updates entered where staff will see them\n6. Billing exceptions noted before the week gets busy\n\nThis is not extra admin for the sake of admin.\n\nIt is how a center keeps the day from becoming a reconstruction project.",
+			"source": "apps/site/src/content/features/attendance-tracking.md",
+			"url": "https://pebbledesk.app/features/attendance-tracking/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Grounded in attendance connected to rooms, billing, ratios, and audit prep."
+		},
+		{
+			"index_in_day": 14,
+			"time_central": "17:00",
+			"pillar": "Licensing confidence",
+			"format": "Myth vs reality",
+			"post_content": "Myth: Audit readiness is something directors prepare for before an inspection.\n\nReality: Audit readiness is mostly built on ordinary days.\n\nThe attendance record is complete.\nThe staff file is current.\nThe drill log is dated.\nThe pickup list matches the family record.\nThe ratio history is not a guess.\n\nA surprise visit is stressful enough. The record should not add a second emergency.",
+			"source": "apps/site/src/content/guides/childcare-licensing-audit-prep-guide.md",
+			"url": "https://pebbledesk.app/resources/guides/childcare-licensing-audit-prep-guide/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Uses the guide's audit-as-routine framing and core audit record categories."
+		},
+		{
+			"index_in_day": 15,
+			"time_central": "18:00",
+			"pillar": "Connected records",
+			"format": "End-of-day reflection",
+			"post_content": "The best record system for a childcare center is not the one with the most tabs.\n\nIt is the one where today's work still makes sense tomorrow.\n\nAttendance connects to rooms.\nRooms connect to ratios.\nFamily records connect to pickup and billing.\nSubsidy work connects back to the attendance record.\nReports connect to what actually happened.\n\nThat connection is what keeps directors out of the end-of-week scramble.",
+			"source": "packages/shared/src/public-knowledge/data.ts",
+			"url": "https://pebbledesk.app/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Grounded in public knowledge record/audit readiness sections about connected childcare records."
+		}
+	]
+}

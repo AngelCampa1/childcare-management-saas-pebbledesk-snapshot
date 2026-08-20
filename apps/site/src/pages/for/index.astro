@@ -1,0 +1,93 @@
+---
+import "../../styles/global.css";
+import RelatedPages from "@pebbledesk/marketing/components/related-pages.astro";
+import StickyMobileCta from "@pebbledesk/marketing/components/sticky-mobile-cta.astro";
+import BreadcrumbNav from "@pebbledesk/marketing/components/breadcrumb-nav.astro";
+import LandingLayout from "@pebbledesk/marketing/layouts/landing-layout.astro";
+import { resolvePublicSignupCta } from "@pebbledesk/marketing/lib/public-signup-cta";
+import { PEBBLEDESK_OFFERING } from "@pebbledesk/shared/constants";
+import { siteConfig } from "@/config/site";
+import { personaPages } from "@/config/persona-pages";
+
+const siteUrl = `https://${siteConfig.domain}`;
+
+const primaryCta = resolvePublicSignupCta({
+	sourcePage: "/for/",
+	explicitTarget: siteConfig.funnel.bofu.ctaTarget,
+	explicitText: siteConfig.funnel.bofu.ctaText,
+});
+
+const personaLinks = personaPages.map((p) => ({
+	title: p.navLabel,
+	href: p.route,
+	description: p.trustSignal,
+}));
+---
+
+<LandingLayout
+	config={siteConfig}
+	canonicalPath="/for"
+	schemaMode="product"
+	title="Who PebbleDesk Is For | Childcare Software"
+	description="PebbleDesk is for center directors, in-home providers, and multi-site operators. You own the record at audit time."
+>
+	<BreadcrumbNav
+		items={[
+			{ label: "Home", href: "/" },
+			{ label: "Who it's for", href: "/for/" },
+		]}
+		siteUrl={siteUrl}
+	/>
+
+	<section class="bg-[var(--surface-primary)] px-4 py-20" data-hero>
+		<div class="mx-auto max-w-4xl">
+			<p class="font-mono text-[length:var(--text-caption)] uppercase tracking-[0.18em] text-[var(--color-accent-700)]">
+				Who PebbleDesk is for
+			</p>
+			<h1 class="mt-4 font-heading text-[length:var(--text-heading)] font-bold text-[var(--color-brand-text)] text-balance">
+				Built for the people who own the record.
+			</h1>
+			<p class="mt-4 text-[length:var(--text-body-lg)] leading-8 text-[var(--color-brand-muted)] max-w-2xl">
+				PebbleDesk is for licensed center directors, in-home providers, and multi-site
+				operators. You handle attendance, ratios, billing, and audit records.
+			</p>
+			<div class="mt-8 flex flex-col gap-3 sm:flex-row">
+				<a href={primaryCta.target} class="btn-primary no-underline">
+					{primaryCta.text}
+				</a>
+			</div>
+			<p class="mt-4 text-[length:var(--text-caption)] text-[var(--color-brand-muted)]">
+				{PEBBLEDESK_OFFERING.claims.trialDisclosure}
+			</p>
+		</div>
+	</section>
+
+	<div class="bg-[var(--surface-secondary)]">
+		<RelatedPages pages={personaLinks} heading="Choose your program type" />
+	</div>
+
+	<section class="px-4 py-24" style="background: var(--site-cta-band);" id="signup">
+		<div class="mx-auto max-w-5xl rounded-[var(--radius-xl)] border border-[var(--site-cta-band-border)] bg-[color-mix(in_srgb,var(--surface-primary)_14%,transparent)] px-6 py-8 text-center shadow-[var(--shadow-card)]">
+			<h2 class="mx-auto mt-3 max-w-3xl font-[family-name:var(--font-heading)] text-[32px] font-bold leading-tight text-[var(--site-cta-text)]">
+				Keep your records ready before anyone asks.
+			</h2>
+			<p class="mx-auto mt-4 max-w-2xl text-lg leading-8 text-[var(--site-cta-muted)]">
+				Start your {PEBBLEDESK_OFFERING.trial.label}. No credit card required.
+			</p>
+			<div class="mb-6 mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
+				<a href={primaryCta.target} class="btn-primary no-underline">
+					{primaryCta.text}
+				</a>
+			</div>
+			<p class="font-[family-name:var(--font-mono)] text-[length:var(--text-kicker)] uppercase tracking-wider text-[var(--site-cta-muted)]">
+				{PEBBLEDESK_OFFERING.claims.trialDisclosure}
+			</p>
+		</div>
+	</section>
+
+	<StickyMobileCta
+		ctaText={primaryCta.text}
+		ctaTarget={primaryCta.target}
+		ctaAction="link"
+	/>
+</LandingLayout>

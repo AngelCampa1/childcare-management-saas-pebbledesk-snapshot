@@ -1,0 +1,44 @@
+{
+	"$schema": "https://turbo.build/schema.json",
+	"tasks": {
+		"build": {
+			"dependsOn": ["^build"],
+			"outputs": ["dist/**"]
+		},
+		"dev": {
+			"cache": false,
+			"persistent": true
+		},
+		"typecheck": {
+			"dependsOn": ["^build"]
+		},
+		"test": {
+			"dependsOn": ["^build"]
+		},
+		"test:watch": {
+			"cache": false,
+			"persistent": true
+		},
+		"lint": {},
+		"public-knowledge:generate": {
+			"outputs": [
+				"$TURBO_ROOT$/packages/shared/src/public-knowledge/generated/app-help.json",
+				"$TURBO_ROOT$/packages/shared/src/public-knowledge/generated/content-index.json",
+				"$TURBO_ROOT$/packages/shared/src/public-knowledge/generated/email-lifecycle.json",
+				"$TURBO_ROOT$/packages/shared/src/public-knowledge/generated/full.json",
+				"$TURBO_ROOT$/packages/shared/src/public-knowledge/generated/lead-magnets.json",
+				"$TURBO_ROOT$/packages/shared/src/public-knowledge/generated/manifest.json",
+				"$TURBO_ROOT$/packages/shared/src/public-knowledge/generated/marketing.json"
+			]
+		},
+		"public-knowledge:check": {
+			"outputs": []
+		},
+		"build:assets": {
+			"dependsOn": ["build"],
+			"inputs": ["scripts/**", "src/content/lead-magnets/**"],
+			"outputs": ["public/lead-magnets/**"],
+			"env": ["BASE_URL"]
+		}
+	}
+}

@@ -1,0 +1,41 @@
+{
+	"name": "@pebbledesk/shared",
+	"version": "0.0.1",
+	"private": true,
+	"type": "module",
+	"exports": {
+		".": "./src/index.ts",
+		"./types": "./src/types/index.ts",
+		"./validators": "./src/validators/index.ts",
+		"./constants": "./src/constants/index.ts",
+		"./public-knowledge": "./src/public-knowledge/index.ts",
+		"./public-knowledge/marketing": "./src/public-knowledge/marketing.ts",
+		"./public-knowledge/brand": "./src/public-knowledge/brand.ts",
+		"./public-knowledge/offers": "./src/public-knowledge/offers.ts",
+		"./public-knowledge/competitors": "./src/public-knowledge/competitors.ts",
+		"./public-knowledge/lead-magnets": "./src/public-knowledge/lead-magnets.ts",
+		"./public-knowledge/emails": "./src/public-knowledge/emails.ts",
+		"./public-knowledge/marketing-surfaces": "./src/public-knowledge/marketing-surfaces.ts",
+		"./public-knowledge/app": "./src/public-knowledge/app.ts",
+		"./public-knowledge/content-index": "./src/public-knowledge/content-index.ts",
+		"./public-knowledge/ai": "./src/public-knowledge/ai.ts"
+	},
+	"scripts": {
+		"typecheck": "tsc --noEmit",
+		"test": "vitest run --maxWorkers=1 --pool=forks --no-file-parallelism",
+		"test:watch": "vitest watch",
+		"public-knowledge:generate": "tsx scripts/generate-public-knowledge.ts",
+		"public-knowledge:check": "tsx scripts/generate-public-knowledge.ts --check"
+	},
+	"dependencies": {
+		"zod": "4.3.6"
+	},
+	"devDependencies": {
+		"@types/node": "25.6.0",
+		"@vitest/coverage-v8": "4.1.5",
+		"tsx": "^4.21.0",
+		"typescript": "6.0.3",
+		"vitest": "4.1.5",
+		"yaml": "^2.8.3"
+	}
+}

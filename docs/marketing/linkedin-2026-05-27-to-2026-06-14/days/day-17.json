@@ -1,0 +1,171 @@
+{
+	"date": "2026-06-12",
+	"theme": "Emergency preparedness, drills, binders, and staff readiness",
+	"posts": [
+		{
+			"index_in_day": 1,
+			"time_central": "04:00",
+			"pillar": "Emergency preparedness",
+			"format": "Opening operational reminder",
+			"post_content": "Emergency preparedness is one of those childcare jobs that can look finished until someone opens the binder.\n\nThe drill happened.\nThe staff knew where to go.\nThe children were counted.\n\nBut the record still needs to show what happened:\n\nDate.\nTime.\nType of drill.\nChildren present.\nStaff present.\nEvacuation time.\nIssues found.\nCorrective action.\n\nThat last line matters. Real drills find small problems: a door that sticks, a new staff member who hesitates, a class that takes longer than expected.\n\nA drill log that says \"no issues\" every single month may be technically tidy, but it is not always convincing.\n\nA stronger record says:\n\nHere is what we practiced.\nHere is what we learned.\nHere is what we fixed.\n\nThat is the kind of preparedness directors can actually use when licensing asks for the binder.",
+			"source": "apps/site/src/content/guides/childcare-emergency-preparedness-guide.md",
+			"url": "https://pebbledesk.app/resources/guides/childcare-emergency-preparedness-guide/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Grounded in drill-log fields and the warning that documentation is the compliance record."
+		},
+		{
+			"index_in_day": 2,
+			"time_central": "05:00",
+			"pillar": "Emergency binder management",
+			"format": "Director checklist",
+			"post_content": "A useful Friday binder check for childcare directors:\n\nIf you had to leave the building in three minutes, would the emergency binder help outside the office?\n\nCheck for the basics:\n\nCurrent signed emergency plan.\nEvacuation maps for each route.\nStaff emergency contacts with cell numbers.\nCurrent child roster.\nEmergency contacts for each enrolled child.\nMedical alerts and emergency medication notes.\nUtility shutoff locations.\nPolice, fire, poison control, licensing, and insurance contacts.\nLast 12 months of drill logs.\n\nThen ask the harder question:\n\nIs there a second copy of the child roster and emergency contacts that can travel with the group?\n\nA binder that only works while it sits in the office is not enough for the kind of emergency that makes the office unavailable.",
+			"source": "apps/site/src/content/guides/childcare-emergency-preparedness-guide.md",
+			"url": "https://pebbledesk.app/resources/guides/childcare-emergency-preparedness-guide/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Uses the guide's emergency binder sections and second-copy recommendation."
+		},
+		{
+			"index_in_day": 3,
+			"time_central": "06:00",
+			"pillar": "Emergency contact records",
+			"format": "Risk callout",
+			"post_content": "Emergency contacts are not quiet enrollment fields.\n\nThey become operational records the moment something goes wrong.\n\nA parent changes phone numbers.\nA custody arrangement changes.\nA grandparent is removed from pickup permission.\nA child gets a new allergy plan.\n\nIf that update lives in one person's memory, it is not ready for an emergency.\n\nContact information has to be accessible to staff during an emergency, not locked in an office or available only through a system that needs internet.\n\nThat does not mean every center must abandon digital records.\n\nIt means the emergency process needs a fallback:\n\nCurrent roster.\nCurrent emergency contacts.\nCurrent medical alerts.\nA clear habit for printing or exporting the version staff would use if the building, office, or internet were unavailable.\n\nThe emergency record is only useful if it can leave with the children.",
+			"source": "apps/site/src/content/guides/childcare-emergency-preparedness-guide.md",
+			"url": "https://pebbledesk.app/resources/guides/childcare-emergency-preparedness-guide/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Connects the guide's emergency contact accessibility rule to practical enrollment-record maintenance."
+		},
+		{
+			"index_in_day": 4,
+			"time_central": "07:00",
+			"pillar": "Reunification readiness",
+			"format": "Practical scenario",
+			"post_content": "Reunification sounds simple until thirty adults arrive at the same time.\n\nThat is why the written procedure matters.\n\nFor childcare centers, reunification is not just \"parents pick up children after an emergency.\"\n\nIt needs answers before the parking lot gets loud:\n\nWhere do families go?\nWhat is the alternate location?\nWho checks photo ID?\nWhich record shows authorized pickup contacts?\nHow is each release documented?\nWhat happens if the listed contacts cannot be reached?\nWhat should staff do if a non-authorized adult insists on pickup?\n\nThe weak point is usually verification.\n\nIn a normal afternoon, staff can ask the office. During an evacuation, the office may not be available.\n\nThat is why pickup permissions belong in the emergency-ready record, not just in the enrollment file no one can reach.",
+			"source": "apps/site/src/content/guides/childcare-emergency-preparedness-guide.md",
+			"url": "https://pebbledesk.app/resources/guides/childcare-emergency-preparedness-guide/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Based on the guide's reunification procedure requirements and authorized-pickup verification section."
+		},
+		{
+			"index_in_day": 5,
+			"time_central": "08:00",
+			"pillar": "Staff readiness",
+			"format": "Staff briefing tip",
+			"post_content": "A drill is not only a child movement exercise.\n\nIt is also a staff readiness test.\n\nAfter the next emergency drill, ask each room lead three plain questions:\n\nWhere did you go?\nHow many children were with you?\nWhat would you do if one child was in the bathroom, office, or playground when the alarm sounded?\n\nThen check the log.\n\nDid the record capture the number of children and staff present?\nDid it note how long the drill took?\nDid it capture any issue that staff noticed?\nDid someone own the follow-up?\n\nThat small follow-up is what keeps a drill from becoming a monthly interruption everyone forgets by lunch.\n\nA useful drill leaves two things behind:\n\nA team that can explain the procedure.\nA record that shows what the center learned from practice.",
+			"source": "apps/site/src/content/guides/childcare-emergency-preparedness-guide.md",
+			"url": "https://pebbledesk.app/resources/guides/childcare-emergency-preparedness-guide/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Rewritten to remove operating-system and goal phrasing."
+		},
+		{
+			"index_in_day": 6,
+			"time_central": "09:00",
+			"pillar": "Medical alerts and child records",
+			"format": "Recordkeeping reminder",
+			"post_content": "Medical alerts should not be buried inside a child file during an emergency.\n\nA practical emergency binder should include a separate page or section for children with medical conditions, allergies, or emergency medications.\n\nThat is a practical detail, not paperwork theater.\n\nIn a real evacuation, staff may not have time to sort through individual files.\n\nThey need to know:\n\nWhich child has an allergy.\nWhich child has emergency medication.\nWhat the action plan says.\nWho to call.\nWhere the medication is kept.\n\nThis is where enrollment records and emergency preparedness meet.\n\nIf a family updates a medical plan, the update cannot stop at the enrollment record. The emergency copy needs to change too.\n\nOne director habit worth keeping:\n\nAny time a child medical field changes, ask, \"What emergency record also needs to be updated?\"",
+			"source": "apps/site/src/content/guides/childcare-emergency-preparedness-guide.md",
+			"url": "https://pebbledesk.app/resources/guides/childcare-emergency-preparedness-guide/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Grounded in the guide's medical-alert binder section and enrollment-record update implications."
+		},
+		{
+			"index_in_day": 7,
+			"time_central": "10:00",
+			"pillar": "Family communication",
+			"format": "Director habit",
+			"post_content": "Emergency family communication should not be written for the first time during the emergency.\n\nA practical center habit:\n\nKeep three message templates ready.\n\nEvacuation notice.\nShelter-in-place notice.\nAll-clear notice.\n\nEach one should answer the same core questions in plain language:\n\nWhere are the children?\nAre they safe?\nWhat should families do now?\nWhen will the center send the next update?\n\nDesignate one person for parent notification before the emergency happens. That detail prevents the classic problem where three people assume someone else sent the message.\n\nPreparedness is not only exits and headcounts.\n\nIt is also clear communication when families are scared and staff are busy.",
+			"source": "apps/site/src/content/guides/childcare-emergency-preparedness-guide.md",
+			"url": "https://pebbledesk.app/resources/guides/childcare-emergency-preparedness-guide/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Uses the guide's emergency communication plan and template recommendations."
+		},
+		{
+			"index_in_day": 8,
+			"time_central": "11:00",
+			"pillar": "Licensing inspection readiness",
+			"format": "Audit-readiness framing",
+			"post_content": "Emergency preparedness gets reviewed like a recordkeeping system.\n\nAn inspector may observe the building, but the preparedness review often comes back to documents:\n\nWritten emergency plan.\nPosted routes.\nDrill logs.\nChild emergency contacts.\nMedical alerts.\nStaff contact information.\nReunification procedure.\n\nEmergency preparedness belongs beside other facility documents, not in a side binder everyone hopes is current.\n\nThe question is not only, \"Would we know what to do?\"\n\nIt is also, \"Could we show that our team has a current plan, practices it, and fixes what the drills reveal?\"\n\nDirectors already carry enough in their heads.\n\nEmergency preparedness should live in records staff can actually use.",
+			"source": "apps/site/src/content/lead-magnets/state-audit-preparation-toolkit.md",
+			"url": "https://pebbledesk.app/free/state-audit-preparation-toolkit/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Uses the audit toolkit's universal documentation checklist and facility document framing."
+		},
+		{
+			"index_in_day": 9,
+			"time_central": "12:00",
+			"pillar": "Credential readiness",
+			"format": "Operational-risk post",
+			"post_content": "Emergency readiness also depends on staff credentials.\n\nIf CPR or first aid certification expires for the only certified person on a shift, the problem is not theoretical. It affects who can be counted on the schedule and what happens during an emergency.\n\nA simple monthly review helps:\n\nSort staff credentials by expiration date.\nFlag anything expiring within 90 days.\nTreat anything inside 30 days as urgent.\nConfirm CPR and first aid cards are on file.\nCheck annual training hours.\nMake sure the backup administrator can find the tracker.\n\nA binder holds documents, but it does not remind anyone of deadlines.\n\nThat is the gap directors need to close before inspection day or emergency day.",
+			"source": "apps/site/src/content/lead-magnets/staff-credential-tracker.md",
+			"url": "https://pebbledesk.app/free/staff-credential-tracker/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Connects emergency readiness to the staff credential tracker's monthly review and expiration process."
+		},
+		{
+			"index_in_day": 10,
+			"time_central": "13:00",
+			"pillar": "Shelter-in-place and lockdown",
+			"format": "Clarifying post",
+			"post_content": "Shelter-in-place and lockdown are not the same drill.\n\nStaff need that distinction clear before the day gets stressful.\n\nShelter-in-place is for external hazards such as severe weather, hazardous materials, or air quality emergencies. Children and staff move to the designated interior location and stay away from windows and exterior walls.\n\nLockdown is for security threats. Staff secure the room, cover windows where required, and no one enters or exits until law enforcement gives the all-clear.\n\nBoth procedures need to be written, posted, and practiced.\n\nA useful staff check:\n\nCan each room lead explain the difference without reading the manual?\n\nIf not, the next drill is not just about speed.\n\nIt is about vocabulary, confidence, and making the first decision correctly.",
+			"source": "apps/site/src/content/guides/childcare-emergency-preparedness-guide.md",
+			"url": "https://pebbledesk.app/resources/guides/childcare-emergency-preparedness-guide/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Based on the guide's shelter-in-place and lockdown protocol distinctions."
+		},
+		{
+			"index_in_day": 11,
+			"time_central": "14:00",
+			"pillar": "Incident and emergency records",
+			"format": "Preparedness checklist",
+			"post_content": "After any emergency drill or real incident, the most useful question may be:\n\nWhat record do we need while the details are still fresh?\n\nFor a drill, that may be the drill log and corrective action note.\nFor a medical event, it may be an incident report and parent notification record.\nFor an evacuation, it may be the headcount, reunification sign-out, and all-clear message.\nFor a facility issue, it may be the utility shutoff note and maintenance follow-up.\n\nDifferent reviews ask for different proof.\n\nEmergency events can touch licensing, parent communication, complaint response, facility safety, and billing context.\n\nThat is why the record should be written close to the moment, not reconstructed next week from memory.",
+			"source": "apps/site/src/content/lead-magnets/state-audit-preparation-toolkit.md",
+			"url": "https://pebbledesk.app/free/state-audit-preparation-toolkit/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Uses the toolkit's three-audit framework and documentation discipline without inventing legal requirements."
+		},
+		{
+			"index_in_day": 12,
+			"time_central": "15:00",
+			"pillar": "Connected child records",
+			"format": "Product-adjacent education",
+			"post_content": "Emergency preparedness starts earlier than the emergency binder.\n\nIt starts when the child record is created.\n\nDate of birth.\nGuardians.\nEmergency contacts.\nAuthorized pickup.\nMedical alerts.\nClassroom assignment.\nSubsidy or billing contacts where relevant.\n\nEmergency readiness depends on that foundation.\n\nIf pickup permission is wrong in enrollment, reunification gets harder.\nIf medical alerts are stale, evacuation support gets riskier.\nIf emergency contacts are outdated, family communication slows down.\n\nClean records are not just admin neatness.\n\nThey are preparedness infrastructure.",
+			"source": "apps/site/src/content/features/enrollment-records.md",
+			"url": "https://pebbledesk.app/features/enrollment-records/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Links the emergency theme to the enrollment-record source's connected child and guardian record structure."
+		},
+		{
+			"index_in_day": 13,
+			"time_central": "16:00",
+			"pillar": "Staff role clarity",
+			"format": "Audit prep tip",
+			"post_content": "When an inspector or auditor arrives, staff do not need a speech.\n\nThey need role clarity.\n\nBrief staff on the first few minutes:\n\nGreet politely.\nAsk the inspector to sign in.\nNotify the director.\nKeep supervising children.\nAnswer basic role questions accurately.\nDo not leave children to retrieve files.\nDo not guess about records, children, incidents, or billing.\n\nThat same clarity helps during emergencies.\n\nWho takes the binder?\nWho leads each room?\nWho sends the family message?\nWho verifies pickup at reunification?\nWho documents the release log?\n\nPreparedness breaks when everyone assumes someone else owns the next step.\n\nDirectors can reduce that risk by making roles explicit before the stressful moment.",
+			"source": "apps/site/src/content/lead-magnets/state-audit-preparation-toolkit.md",
+			"url": "https://pebbledesk.app/free/state-audit-preparation-toolkit/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Adapts the toolkit's staff briefing guidance to emergency-role clarity."
+		},
+		{
+			"index_in_day": 14,
+			"time_central": "17:00",
+			"pillar": "Digital and paper fallback",
+			"format": "Transparent product note",
+			"post_content": "Because PebbleDesk is currently online-only, emergency planning still needs a paper fallback.\n\nIf the internet is down or the building is unavailable, staff may need records they can reach without logging in:\n\nCurrent roster.\nEmergency contacts.\nMedical alerts.\nAuthorized pickup list.\nReunification sign-out log.\n\nDigital records can keep enrollment, attendance, guardians, pickup permissions, billing context, and reports connected during normal operations.\n\nEmergency planning still needs the version that can travel.\n\nGood center procedures make sure the right records are available when software is not the first tool staff can reach.",
+			"source": "apps/site/src/config/site.ts",
+			"url": "https://pebbledesk.app/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Uses siteConfig's online-only V1 truth rule and connects it to emergency fallback planning."
+		},
+		{
+			"index_in_day": 15,
+			"time_central": "18:00",
+			"pillar": "End-of-day readiness recap",
+			"format": "Closing checklist",
+			"post_content": "Before the week closes, one emergency-readiness check worth doing:\n\nPick one classroom.\n\nCan staff find the evacuation route?\nCan they explain shelter-in-place versus lockdown?\nCan they name who takes attendance during a drill?\nCan they reach the current emergency contacts?\nCan they identify medical alerts quickly?\nCan they explain how authorized pickup is verified after an evacuation?\nCan the director find the last drill log and any corrective action?\n\nThat small review will tell you more than a binder tab label.\n\nPreparedness is not the presence of paperwork.\n\nIt is the relationship between the plan, the staff, the child records, and the proof that practice actually happened.\n\nThat is the record directors want ready before anyone asks.",
+			"source": "apps/site/src/content/guides/childcare-emergency-preparedness-guide.md",
+			"url": "https://pebbledesk.app/resources/guides/childcare-emergency-preparedness-guide/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Closes the emergency day with a compact checklist drawn from the guide's binder, drill, protocol, and reunification sections."
+		}
+	]
+}

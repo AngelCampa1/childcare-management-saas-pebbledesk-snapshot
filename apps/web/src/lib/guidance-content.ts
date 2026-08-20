@@ -1,0 +1,26 @@
+export type {
+	AppInlineHelp,
+	AppPageHelp,
+	Guide,
+	GuideStep,
+	GuideTone,
+	HelpTopic,
+} from "@pebbledesk/shared/public-knowledge/app";
+export {
+	APP_INLINE_HELP,
+	APP_PAGE_HELP,
+	GUIDES,
+	getAppInlineHelpById,
+	getAppPageHelpByRoute,
+	getAppPageHelpForRole,
+	getGuideById,
+	getGuidesForRole,
+	getRequiredAppInlineHelpById,
+	getRequiredAppPageHelpByRoute,
+	getTopicsForRole,
+	guideVisibleToRole,
+	HELP_TOPICS,
+	pageHelpVisibleToRole,
+	searchHelp,
+	stepVisibleToRole,
+} from "@pebbledesk/shared/public-knowledge/app";

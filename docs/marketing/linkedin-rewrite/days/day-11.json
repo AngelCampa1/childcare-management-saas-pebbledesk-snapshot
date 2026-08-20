@@ -1,0 +1,171 @@
+{
+	"date": "2026-05-16",
+	"theme": "Choosing childcare software, demos, trials, scorecards, and evaluation traps",
+	"posts": [
+		{
+			"index_in_day": 1,
+			"time_central": "04:00",
+			"pillar": "Software evaluation",
+			"format": "Practical tip",
+			"post_content": "Before you book a childcare software demo, write down the three jobs you are actually hiring the software to do.\n\nNot the features you might like.\n\nThe jobs.\n\nFor many licensed centers, the list looks like this:\n\n- Keep attendance records clean enough for licensing and billing\n- Track ratios while rooms are changing in real time\n- Produce subsidy reports in the format the state agency accepts\n- Keep family, staff, and incident documentation easy to retrieve\n- Make billing less fragile at month-end\n\nThat list should drive the demo.\n\nIf ratio compliance is your biggest risk, do not let the first 25 minutes disappear into parent photos. If subsidy billing is where your admin time goes, do not accept a generic billing dashboard tour.\n\nThe best software decision starts before the vendor joins the call.",
+			"source": "apps/site/src/content/guides/childcare-software-selection-checklist.md",
+			"url": "https://pebbledesk.app/resources/guides/childcare-software-selection-checklist/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Introduces the day's evaluation theme using the checklist guidance to define primary software jobs before demos."
+		},
+		{
+			"index_in_day": 2,
+			"time_central": "05:00",
+			"pillar": "Demo evaluation",
+			"format": "Risk callout",
+			"post_content": "A polished demo can hide a lot.\n\nIt can hide that subsidy billing still takes two separate manual steps.\nIt can hide that ratio history only shows daily totals, not a specific time window.\nIt can hide that data export requires a support ticket.\nIt can hide that the mobile check-in flow is too slow for morning arrival.\n\nThe trap is evaluating the best version of the product instead of the version your staff will use on a busy Tuesday.\n\nAsk vendors to show real center scenarios:\n\n- A subsidy child with a family co-pay\n- A room approaching ratio limit during arrival\n- A disputed invoice\n- A historical ratio report for a specific date and time\n- A full export path if you cancel\n\nA demo is useful only when it reveals how the software behaves under childcare conditions.",
+			"source": "apps/site/src/content/guides/childcare-software-demo-questions.md",
+			"url": "https://pebbledesk.app/resources/guides/childcare-software-demo-questions/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Uses the demo questions guide's emphasis on specific scenario demonstrations rather than generic walkthroughs."
+		},
+		{
+			"index_in_day": 3,
+			"time_central": "06:00",
+			"pillar": "Trial evaluation",
+			"format": "Teaching post",
+			"post_content": "A free trial with fake data will tell you almost nothing.\n\nA trial with realistic childcare data will tell you a lot.\n\nSet up at least a small version of your actual center:\n\n- 10 to 15 children with real ages and classroom assignments\n- Your actual rate structure\n- A few staff records with real roles and rooms\n- Two or three subsidy-funded children, if you accept subsidies\n- The check-in setup your families would actually use\n\nThen test the work that matters.\n\nRun a week of attendance. Try a billing cycle. Generate a subsidy attendance report. Watch the ratio dashboard during morning arrival.\n\nThe goal is not to admire the interface.\n\nThe goal is to find out whether the software can carry the administrative weight your center already carries every day.",
+			"source": "apps/site/src/content/guides/childcare-software-free-trial-guide.md",
+			"url": "https://pebbledesk.app/resources/guides/childcare-software-free-trial-guide/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Turns the free trial setup instructions into a practical LinkedIn teaching post."
+		},
+		{
+			"index_in_day": 4,
+			"time_central": "07:00",
+			"pillar": "Pricing and contracts",
+			"format": "Practical tip",
+			"post_content": "The number on a childcare software pricing page is rarely the number directors should use.\n\nCalculate the cost three ways:\n\n1. Current enrollment\n2. 20% enrollment growth\n3. Full licensed capacity\n\nThen add the parts that often sit outside the headline price:\n\n- Setup or onboarding fees\n- Training fees\n- Additional users or classrooms\n- Payment processing fees\n- Parent communication add-ons\n- Data export or migration fees\n\nPer-child pricing can look affordable at 40 children and feel very different at 80.\n\nFlat pricing can look high at first and become predictable as enrollment changes.\n\nThe question is not, \"What is the cheapest plan?\"\n\nIt is, \"What will this actually cost our center in the year we are about to run?\"",
+			"source": "apps/site/src/content/guides/how-to-choose-childcare-management-software.md",
+			"url": "https://pebbledesk.app/resources/guides/how-to-choose-childcare-management-software/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Applies the choosing guide's cost comparison guidance to a practical pricing evaluation post."
+		},
+		{
+			"index_in_day": 5,
+			"time_central": "08:00",
+			"pillar": "Ratio compliance",
+			"format": "Operator question",
+			"post_content": "When a vendor says they track ratios, ask one follow-up:\n\n\"Can you show me what happens when a room approaches its limit right now?\"\n\nNot a slide.\nNot a promise.\nNot yesterday's attendance report.\n\nA real ratio tool should make the director's morning easier to read:\n\n- Current child count by room\n- Current qualified staff count by room\n- Compliant, warning, or violation status\n- Alerts that reach the right person fast enough to matter\n- Historical reports for specific dates and times\n\nThis matters because licensing officers do not only care about the daily total. They may ask what ratios looked like during a specific window.\n\nA check-in count you can use to calculate ratios manually is not the same as ratio monitoring.",
+			"source": "apps/site/src/content/guides/childcare-software-demo-questions.md",
+			"url": "https://pebbledesk.app/resources/guides/childcare-software-demo-questions/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Grounded in the demo guide's ratio dashboard and alert questions."
+		},
+		{
+			"index_in_day": 6,
+			"time_central": "09:00",
+			"pillar": "Subsidy billing",
+			"format": "Risk callout",
+			"post_content": "For centers that accept subsidies, \"supports subsidy billing\" is too vague to trust.\n\nAsk the harder question:\n\n\"Can you show me the report I would submit to my state agency?\"\n\nThen look at the actual output.\n\nDoes it match the columns and format your agency accepts? Does it handle authorized hours? Does it separate the family co-pay from the state-paid portion? Can you track whether a submitted claim was paid, pending, or short?\n\nA generic attendance export may still leave the director rebuilding the claim manually every billing cycle.\n\nThat is not subsidy support. That is a spreadsheet with better lighting.",
+			"source": "apps/site/src/content/guides/how-to-choose-childcare-management-software.md",
+			"url": "https://pebbledesk.app/resources/guides/how-to-choose-childcare-management-software/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Uses the source's state-specific subsidy reporting warning and vendor question."
+		},
+		{
+			"index_in_day": 7,
+			"time_central": "10:00",
+			"pillar": "Scorecards and decision process",
+			"format": "Framework",
+			"post_content": "Feature lists make childcare software decisions feel scientific.\n\nThey usually are not.\n\nA better evaluation uses weighted categories tied to daily risk:\n\n- Attendance tracking\n- Billing and invoicing\n- Subsidy management\n- Parent communication\n- Licensing compliance\n- Staff scheduling\n- Pricing model\n- Mobile app quality\n\nThen adjust the weights for your program.\n\nA subsidy-heavy center should score subsidy management and attendance higher. An in-home provider may reduce staff scheduling. A multi-site operator may care more about reporting consistency across locations.\n\nThe point is not to find the software with the most checkmarks.\n\nThe point is to find the software that scores highest on the work your center cannot afford to get wrong.",
+			"source": "apps/site/src/content/lead-magnets/childcare-software-scorecard.md",
+			"url": "https://pebbledesk.app/free/childcare-software-scorecard/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Summarizes the scorecard's eight weighted evaluation categories and adjustment guidance."
+		},
+		{
+			"index_in_day": 8,
+			"time_central": "11:00",
+			"pillar": "Trial evaluation",
+			"format": "Checklist",
+			"post_content": "During a childcare software trial, test the four daily tasks that can change your decision.\n\n1. Daily attendance\nUse it for at least a week. Watch arrival and pickup, not just a quiet desk test.\n\n2. Billing\nEnter your real rates and review invoices before anything goes out. Compare the software totals to your manual expectation.\n\n3. Subsidy reporting\nGenerate the attendance report your agency would need. Do not wait until after signing to discover format problems.\n\n4. Ratio dashboard\nUse it during morning arrival when classroom counts are moving.\n\nThe red flag is not that a trial takes effort.\n\nThe red flag is a vendor asking you to decide without giving you enough time or support to test the work that carries licensing, billing, and reimbursement risk.",
+			"source": "apps/site/src/content/guides/childcare-software-free-trial-guide.md",
+			"url": "https://pebbledesk.app/resources/guides/childcare-software-free-trial-guide/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Adapts the guide's four critical trial tests into a LinkedIn checklist."
+		},
+		{
+			"index_in_day": 9,
+			"time_central": "12:00",
+			"pillar": "Data ownership",
+			"format": "Operator question",
+			"post_content": "Ask this before you sign any childcare software contract:\n\n\"If we cancel, can we export five years of attendance records in a usable format?\"\n\nThen listen carefully.\n\nYou are not only buying software for today's check-in.\n\nYou are trusting it with records that may be needed later for licensing visits, subsidy reviews, family questions, billing history, and internal audits.\n\nA strong answer should cover:\n\n- What records can be exported\n- Whether exports are CSV, PDF, or another usable format\n- How long access remains after cancellation\n- Whether there is a fee\n- Whether exports include complete historical detail or only summaries\n\nYour center's licensing history should not become leverage in a renewal conversation.",
+			"source": "apps/site/src/content/guides/how-to-choose-childcare-management-software.md",
+			"url": "https://pebbledesk.app/resources/guides/how-to-choose-childcare-management-software/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Based on the choosing guide's data export and migration support section."
+		},
+		{
+			"index_in_day": 10,
+			"time_central": "13:00",
+			"pillar": "Staff usability",
+			"format": "Practical tip",
+			"post_content": "Include the people who will actually use the childcare software in the evaluation.\n\nAt minimum:\n\n- One staff member who handles daily attendance\n- One person who handles billing\n- Someone who is less comfortable with technology\n\nDirectors see the big picture. Staff see the tiny friction points that become daily habits.\n\nThey notice whether check-in takes too many taps. They notice whether the tablet needs to be in exactly the wrong place. They notice whether the mobile app makes pickup harder instead of easier.\n\nA system can impress the director in a demo and still fail at the classroom door.\n\nThe question for staff is simple: \"Could you use this during our busiest 20 minutes of the day without losing focus on children?\"",
+			"source": "apps/site/src/content/guides/childcare-software-demo-questions.md",
+			"url": "https://pebbledesk.app/resources/guides/childcare-software-demo-questions/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Uses the demo guide's recommendation to include attendance and billing staff in evaluation."
+		},
+		{
+			"index_in_day": 11,
+			"time_central": "14:00",
+			"pillar": "Support evaluation",
+			"format": "Risk callout",
+			"post_content": "A free trial is also a support test.\n\nDo not save all your questions for after you sign.\n\nAsk one or two hard, realistic questions during the trial:\n\n- How do we handle a subsidy eligibility change mid-month?\n- What happens if we need to correct last week's attendance entry?\n- Does a backdated change create an audit record?\n- How do we split billing between a state payer and a family co-pay?\n\nThen pay attention to the answer.\n\nDid support understand childcare billing and compliance language? Did they answer the exact scenario? Did they respond fast enough for a center working under billing deadlines?\n\nTrial support is the vendor's audition.\n\nIf basic operating questions go unanswered during the sales period, that is useful information.",
+			"source": "apps/site/src/content/guides/childcare-software-free-trial-guide.md",
+			"url": "https://pebbledesk.app/resources/guides/childcare-software-free-trial-guide/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Grounded in the guide's advice to test support response quality during the trial."
+		},
+		{
+			"index_in_day": 12,
+			"time_central": "15:00",
+			"pillar": "Audit readiness",
+			"format": "Teaching post",
+			"post_content": "The right question is not, \"Does this software have reports?\"\n\nThe better question is:\n\n\"If a licensing inspector asks for ratio documentation from last month, what exact steps do I take?\"\n\nCount the steps.\n\nIf the answer is two or three clicks into a clear historical report, good.\n\nIf the answer involves exporting attendance, checking staff schedules, filtering a spreadsheet, and assembling proof by hand, the software may be giving you ingredients instead of the inspection record.\n\nThat distinction matters.\n\nAudit-ready childcare software should help connect attendance, staff coverage, ratios, billing, and documentation into a record the director can retrieve without a scramble.",
+			"source": "apps/site/src/content/guides/childcare-software-selection-checklist.md",
+			"url": "https://pebbledesk.app/resources/guides/childcare-software-selection-checklist/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Draws from the checklist's audit documentation step-count guidance."
+		},
+		{
+			"index_in_day": 13,
+			"time_central": "16:00",
+			"pillar": "Decision quality",
+			"format": "Contrarian post",
+			"post_content": "The highest overall score should not always win.\n\nIn childcare software, one critical failure can outweigh a long list of nice features.\n\nA platform might have strong parent messaging, clean billing screens, good mobile design, and pretty daily reports.\n\nBut if it scores a 1 on subsidy management for a center where many families receive subsidy, that is not a small gap.\n\nIt is a dealbreaker.\n\nSame for attendance exports if licensing records are your pain point. Same for ratio monitoring if you run multiple classrooms with thin coverage windows.\n\nUse a scorecard, but do not let arithmetic blur operational risk.\n\nThe total score helps compare options. The critical category scores protect the center.",
+			"source": "apps/site/src/content/lead-magnets/childcare-software-scorecard.md",
+			"url": "https://pebbledesk.app/free/childcare-software-scorecard/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Uses the scorecard's guidance that critical category failures can disqualify a platform despite total score."
+		},
+		{
+			"index_in_day": 14,
+			"time_central": "17:00",
+			"pillar": "Implementation timing",
+			"format": "Practical tip",
+			"post_content": "Switching childcare software mid-year is possible.\n\nIt is also higher risk than most demos make it sound.\n\nThe migration has to preserve the records your center may need later:\n\n- Attendance history\n- Family contacts\n- Billing history\n- Subsidy records\n- Classroom assignments\n- Staff records\n- Documents tied to licensing or audits\n\nIf you accept subsidies, the risk is even sharper. Attendance gaps during a billing period can become reimbursement problems.\n\nWhen possible, plan a switch at the start of a licensing year, contract year, or clean billing period.\n\nAnd before the move, ask both vendors the unglamorous questions: what can be exported, what can be imported, what gets lost, and how will we verify the first billing cycle?",
+			"source": "apps/site/src/content/guides/how-to-choose-childcare-management-software.md",
+			"url": "https://pebbledesk.app/resources/guides/how-to-choose-childcare-management-software/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Based on the guide's advice about implementation timing, migration, and record export."
+		},
+		{
+			"index_in_day": 15,
+			"time_central": "18:00",
+			"pillar": "PebbleDesk positioning",
+			"format": "Soft product positioning",
+			"post_content": "Childcare software should not win because it had the best demo.\n\nIt should win because it holds up under the work directors actually do:\n\n- Morning arrival\n- Afternoon pickup\n- Ratio changes\n- Subsidy billing\n- Family co-pays\n- Licensing documentation\n- Staff credential tracking\n- Data export when records are needed later\n\nThat is the standard we keep coming back to at PebbleDesk.\n\nThe product category is not just \"childcare management software.\"\n\nFor licensed centers, it is compliance infrastructure.\n\nA good evaluation should leave a director with less uncertainty, not more tabs open and a vague sense that every vendor says the same thing.\n\nChoose the tool that can show the record, explain the billing, prove the export, and survive the busiest part of the day.",
+			"source": "apps/site/src/content/guides/childcare-software-selection-checklist.md",
+			"url": "https://pebbledesk.app/resources/guides/childcare-software-selection-checklist/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Closes the day with PebbleDesk's practical compliance-first evaluation standard without hard selling."
+		}
+	]
+}

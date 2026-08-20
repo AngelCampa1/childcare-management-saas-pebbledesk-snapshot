@@ -1,0 +1,88 @@
+{
+	"schemaVersion": 1,
+	"generatedFrom": "canonical PebbleDesk public knowledge modules",
+	"artifacts": [
+		{
+			"file": "marketing.json",
+			"surface": "marketing",
+			"documentCount": 2
+		},
+		{
+			"file": "app-help.json",
+			"surface": "app-help",
+			"documentCount": 3
+		},
+		{
+			"file": "lead-magnets.json",
+			"surface": "lead-magnets",
+			"documentCount": 16
+		},
+		{
+			"file": "email-lifecycle.json",
+			"surface": "email-lifecycle",
+			"documentCount": 1
+		},
+		{
+			"file": "full.json",
+			"surface": "full",
+			"documentCount": 3
+		},
+		{
+			"file": "content-index.json",
+			"surface": "content-index",
+			"documentCount": 289
+		}
+	],
+	"documents": [
+		{
+			"id": "pebbledesk-public-pricing",
+			"lastReviewed": "2026-05-09",
+			"publicPaths": ["/pricing/", "/signup/"],
+			"sourceRefs": ["/pricing/", "/signup/"]
+		},
+		{
+			"id": "pebbledesk-records-audit-readiness",
+			"lastReviewed": "2026-05-09",
+			"publicPaths": ["/features/audit-readiness/", "/resources/audit-licensing/"],
+			"sourceRefs": ["/features/audit-readiness/", "/resources/audit-licensing/"]
+		},
+		{
+			"id": "pebbledesk-authenticated-app-help",
+			"lastReviewed": "2026-05-09",
+			"publicPaths": [
+				"/help",
+				"/dashboard",
+				"/attendance",
+				"/classrooms",
+				"/children",
+				"/children/enroll",
+				"/guardians",
+				"/scheduling",
+				"/ratios",
+				"/reports",
+				"/billing",
+				"/subsidies",
+				"/import",
+				"/messages",
+				"/settings"
+			],
+			"sourceRefs": [
+				"/help",
+				"/dashboard",
+				"/attendance",
+				"/classrooms",
+				"/children",
+				"/children/enroll",
+				"/guardians",
+				"/scheduling",
+				"/ratios",
+				"/reports",
+				"/billing",
+				"/subsidies",
+				"/import",
+				"/messages",
+				"/settings"
+			]
+		}
+	]
+}

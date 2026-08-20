@@ -1,0 +1,18 @@
+{
+  "commits": 1443,
+  "firstCommit": "2026-04-07",
+  "lastCommit": "2026-07-08",
+  "authors": [
+    {
+      "email": "operator@ventoralabs.com",
+      "commits": 1404
+    },
+    {
+      "email": "ai.alex@ventoralabs.com",
+      "commits": 39
+    }
+  ],
+  "authorsNote": "The operator's own address appears here as operator@ventoralabs.com. The identities and their counts are unchanged and sum to 1,443.",
+  "sourceCommit": "78c0893472ad45eb25b1dc1bd4bc77a2c6ad8a84",
+  "exportedAt": "2026-08-13"
+}

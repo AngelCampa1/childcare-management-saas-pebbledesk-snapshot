@@ -1,0 +1,107 @@
+---
+import "../../../styles/global.css"
+import { getCollection, render } from "astro:content"
+import FaqSection from "@pebbledesk/marketing/components/faq-section.astro"
+import FunnelCta from "@pebbledesk/marketing/components/funnel-cta.astro"
+import RelatedPages from "@pebbledesk/marketing/components/related-pages.astro"
+import ListicleLayout from "@pebbledesk/marketing/layouts/listicle-layout.astro"
+import AnswerBlock from "@pebbledesk/marketing/seo/answer-block.astro"
+import DataTableBlock from "@pebbledesk/marketing/seo/data-table-block.astro"
+import ProsConsBlock from "@pebbledesk/marketing/seo/pros-cons-block.astro"
+import { inferPageTrack } from "@pebbledesk/marketing/lib/page-track"
+import { siteConfig } from "@/config/site"
+import { buildListicleBreadcrumbs } from "@/lib/breadcrumbs"
+import { buildContentMap, entrySlug, padToolIndex, resolveRelatedLinksWithFallback } from "@/lib/page-helpers"
+
+export async function getStaticPaths() {
+  const entries = await getCollection("listicles")
+  return entries.map((entry) => ({
+    params: { slug: entrySlug(entry) },
+    props: { entry },
+  }))
+}
+
+const { entry } = Astro.props
+const { Content } = await render(entry)
+const { title, description, bluf, buyerStage, publishedAt, updatedAt, tools, faqs, relatedPages, tableData, answers, noindex } = entry.data
+const canonicalPath = entry.data.canonicalHref ?? `/resources/best/${entrySlug(entry)}`
+const track = inferPageTrack({ track: entry.data.track, pageType: "best", hubId: "software-buying" })
+
+const [alternatives, comparisons, pricingBreakdowns, listicles, guides, statePages, leadMagnets, features] = await Promise.all([
+  getCollection("alternatives"),
+  getCollection("comparisons"),
+  getCollection("pricing-breakdowns"),
+  getCollection("listicles"),
+  getCollection("guides"),
+  getCollection("state-pages"),
+  getCollection("lead-magnets"),
+  getCollection("features"),
+])
+const contentMap = buildContentMap({ alternatives, comparisons, pricingBreakdowns, listicles, guides, statePages, leadMagnets, features })
+const resolvedRelatedPages = resolveRelatedLinksWithFallback({ currentPath: canonicalPath, relatedPages, contentMap })
+
+const breadcrumbs = buildListicleBreadcrumbs(title, canonicalPath)
+---
+
+<ListicleLayout
+  title={title}
+  description={description}
+  bluf={bluf}
+  buyerStage={buyerStage}
+  publishedAt={publishedAt}
+  updatedAt={updatedAt}
+  canonicalPath={canonicalPath}
+  config={siteConfig}
+  breadcrumbs={breadcrumbs}
+  tools={tools}
+  answers={answers?.map(a => ({ question: a.q, answer: a.a }))}
+  noindex={noindex}
+  track={track}
+>
+  {tableData && (
+    <DataTableBlock
+      name={tableData.name}
+      description={tableData.description}
+      columns={tableData.columns}
+      rows={tableData.rows}
+    />
+  )}
+
+  {tools.map((tool, i) => (
+    <section class="mb-12">
+      <div class="flex items-start gap-4 mb-3">
+        <span class="font-[family-name:var(--font-mono)] text-4xl font-bold text-[var(--color-neutral-200)] leading-none select-none shrink-0">
+          {padToolIndex(i)}
+        </span>
+        <h2 class="font-[family-name:var(--font-heading)] text-2xl font-bold text-[var(--color-brand-text)] leading-tight pt-1">{tool.name}</h2>
+      </div>
+      <p class="text-[var(--color-neutral-600)] mb-4 ml-[3.5rem]">{tool.summary}</p>
+      <div class="ml-[3.5rem]">
+        <ProsConsBlock subject={tool.name} pros={tool.pros} cons={tool.cons} />
+      </div>
+      <p class="text-sm ml-[3.5rem] mt-3"><strong>Pricing:</strong> {tool.pricing}</p>
+      <p class="text-sm mt-1 ml-[3.5rem]"><strong>Verdict:</strong> {tool.verdict}</p>
+    </section>
+  ))}
+
+  <Content />
+
+  {answers && answers.map((a) => (
+    <AnswerBlock question={a.q} answer={a.a} />
+  ))}
+
+  <FunnelCta
+    stage={buyerStage}
+    funnel={siteConfig.funnel}
+    sourcePage={canonicalPath}
+    subtitle={siteConfig.funnel.ctaSubtitle}
+  />
+
+  <FaqSection faqs={faqs} />
+
+  {resolvedRelatedPages.length > 0 && (
+    <RelatedPages
+      pages={resolvedRelatedPages}
+    />
+  )}
+</ListicleLayout>

@@ -1,0 +1,171 @@
+{
+	"date": "2026-06-14",
+	"theme": "Founder POV, connected records, and soft conversion recap",
+	"posts": [
+		{
+			"index_in_day": 1,
+			"time_central": "04:00",
+			"pillar": "Founder POV",
+			"format": "Sunday opening note",
+			"post_content": "PebbleDesk started with a very ordinary director problem:\n\nThe day happened once, but the records end up scattered.\n\nAttendance in one place.\nRatio context somewhere else.\nBilling notes in a spreadsheet.\nSubsidy support in a folder.\nFamily records in a roster export.\nStaff records in a binder.\nReports rebuilt when someone asks.\n\nThat is not a failure of directors.\n\nIt is a system design problem.\n\nPebbleDesk was built around the belief that the daily childcare record should stay understandable after the day is over.\n\nNot more software for its own sake.\n\nA cleaner way to keep the work directors already do from falling apart before licensing, billing, or a family question arrives.",
+			"source": "apps/site/src/pages/index.astro",
+			"url": "https://pebbledesk.app/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Humanized founder opening with concrete director problem and less internal product-thesis language."
+		},
+		{
+			"index_in_day": 2,
+			"time_central": "05:00",
+			"pillar": "Connected daily record",
+			"format": "Company point of view",
+			"post_content": "A childcare director does not live in feature categories.\n\nThe day moves in handoffs.\n\nA child arrives.\nA room count changes.\nA staff member moves.\nA ratio needs attention.\nA guardian asks about pickup.\nA subsidy record may depend on attendance.\nA billing note may need the same child record.\nA report may need to explain it later.\n\nIf each handoff creates a separate little truth, the director has to decide which one to trust.\n\nThat is where the cleanup work starts.\n\nThe better operating model is simpler:\n\nCapture the day once, keep the context attached, and make the later report easier to trust.",
+			"source": "apps/site/src/pages/index.astro",
+			"url": "https://pebbledesk.app/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Rewritten to reduce connected-record repetition and remove internal operating-model wording."
+		},
+		{
+			"index_in_day": 3,
+			"time_central": "06:00",
+			"pillar": "Attendance as source record",
+			"format": "Founder note",
+			"post_content": "Attendance deserves more respect than a tap-in screen.\n\nIt is often where the rest of the question starts.\n\nWho was here?\nWhich room were they in?\nWhat changed during the day?\nDid the attendance day support the invoice?\nDoes the subsidy record match care delivered?\nCan a report explain who was present and when?\n\nPebbleDesk's attendance work is built around that connection to classrooms, ratios, reports, and subsidy context.\n\nThe practical test is not whether a check-in was captured.\n\nIt is whether the record still makes sense when finance, licensing, or a family asks about the day.",
+			"source": "apps/site/src/content/features/attendance-tracking.md",
+			"url": "https://pebbledesk.app/features/attendance-tracking/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Rewritten to be more direct and less philosophy-heavy."
+		},
+		{
+			"index_in_day": 4,
+			"time_central": "07:00",
+			"pillar": "Ratio visibility",
+			"format": "Practical philosophy",
+			"post_content": "Ratio tracking is not a report-only problem.\n\nIt is a timing problem.\n\nA room can be fine at 8:10 and need attention at 8:25.\nA staff member can step out.\nA child can move rooms.\nA late arrival can change the picture.\nA pickup can hide a problem if the record is only reviewed later.\n\nPebbleDesk keeps ratio work close to attendance and classrooms because that is where the risk appears.\n\nDirectors do not need to stare at a dashboard all day.\n\nThey need the room picture to surface while there is still time to act, with enough context preserved for review later.\n\nCurrent enough to help now.\nStructured enough to explain later.",
+			"source": "apps/site/src/content/features/ratio-tracking.md",
+			"url": "https://pebbledesk.app/features/ratio-tracking/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Proactively rewritten to remove goal/goal phrasing from the ratio recap."
+		},
+		{
+			"index_in_day": 5,
+			"time_central": "08:00",
+			"pillar": "Audit reports",
+			"format": "Connected-record thesis",
+			"post_content": "A polished export cannot rescue messy source records.\n\nThat is the trap with audit reports.\n\nThe PDF may look clean, but if attendance, room coverage, billing context, and edit history do not line up, the director still has to explain the gaps by hand.\n\nA useful report starts earlier than the export button.\n\nIt starts when the daily record can answer:\n\nWho was present?\nWhich staff were assigned?\nWhat ratio context mattered?\nWhat was billed?\nWhat changed afterward?\n\nThe report should help the director answer the question, not become another document to clean up.",
+			"source": "apps/site/src/content/features/audit-reports.md",
+			"url": "https://pebbledesk.app/features/audit-reports/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Rewritten to reduce internal page-framing language and make audit-report value practical."
+		},
+		{
+			"index_in_day": 6,
+			"time_central": "09:00",
+			"pillar": "Enrollment foundation",
+			"format": "Founder POV",
+			"post_content": "A lot of childcare admin pain starts before attendance begins.\n\nIt starts when the record is incomplete.\n\nA child is tied to the wrong room.\nA guardian contact is old.\nA pickup permission is unclear.\nA subsidy field is missing.\nA billing contact is not the same person staff keep calling.\n\nThen every downstream workflow inherits the problem.\n\nAttendance gets corrected.\nBilling gets delayed.\nPickup gets stressful.\nReports need explanation.\nStaff ask the same question twice.\n\nPebbleDesk treats enrollment and records as operating infrastructure because that is what they are.\n\nThe child file is not just a file.\n\nIt is the foundation for the day the center is about to run.",
+			"source": "apps/site/src/content/features/enrollment-records.md",
+			"url": "https://pebbledesk.app/features/enrollment-records/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Uses enrollment feature source around child, guardian, classroom, pickup, billing, and subsidy context."
+		},
+		{
+			"index_in_day": 7,
+			"time_central": "10:00",
+			"pillar": "Subsidy records",
+			"format": "Operational belief",
+			"post_content": "Subsidy billing gets harder when the support record is spread out.\n\nA director may need attendance, authorization context, claim status, payment follow-up, and documentation for a specific period.\n\nIf those records live in separate places, reconciliation becomes detective work.\n\nThe practical chain is plain:\n\nWas care delivered?\nFor which child?\nOn which dates?\nUnder which authorization or billing period?\nWhat was submitted?\nWhat is still outstanding?\n\nSoftware should make that chain easier to follow.\n\nFor subsidy-heavy centers, the billing story needs to stay understandable before the review question arrives.",
+			"source": "apps/site/src/content/features/subsidy-billing.md",
+			"url": "https://pebbledesk.app/features/subsidy-billing/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Rewritten to reduce connected-record phrasing and keep subsidy value concrete."
+		},
+		{
+			"index_in_day": 8,
+			"time_central": "11:00",
+			"pillar": "Staff records",
+			"format": "Practical recap",
+			"post_content": "Staff records need to stay close to the daily schedule.\n\nA schedule is not only a calendar.\nIt affects room coverage.\nRoom coverage affects ratios.\nCredentials affect who can be counted and what a licensing inspector may ask to see.\nTraining records affect inspection readiness.\n\nThat matters.\n\nA staffing decision should not float beside the compliance consequence.\n\nIf a director moves a teacher, the room picture should make more sense, not less.\n\nIf a credential is expiring, the schedule should not be the first place the problem is discovered.\n\nThe staff side of the record deserves the same connection as the child side.",
+			"source": "apps/site/src/content/features/staff-scheduling.md",
+			"url": "https://pebbledesk.app/features/staff-scheduling/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Uses staff scheduling source plus credential theme without claiming unsupported payroll or time-approval features."
+		},
+		{
+			"index_in_day": 9,
+			"time_central": "12:00",
+			"pillar": "Product honesty",
+			"format": "Trust-building note",
+			"post_content": "A useful childcare software demo should include the limits too.\n\nAsk the vendor:\n\nWhich workflows work nationally?\nWhich state-specific ratio and licensing reports are available today?\nWhat happens if my state is not on that list yet?\nDoes the product work offline?\nWhat paper fallback should my center keep?\n\nThat kind of detail matters because directors make real operating decisions from software claims.\n\nSoftware can help keep records connected, show risk earlier, and prepare better reports.\n\nIt should not pretend compliance is automatic.",
+			"source": "apps/site/src/config/site.ts",
+			"url": "https://pebbledesk.app/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Uses current siteConfig support boundaries and online-only V1 truth rule."
+		},
+		{
+			"index_in_day": 10,
+			"time_central": "13:00",
+			"pillar": "Migration and starting clean",
+			"format": "Soft conversion education",
+			"post_content": "Starting with new childcare software should not mean rebuilding the whole center by hand.\n\nBut it also should not mean importing a messy roster and pretending the job is finished.\n\nPebbleDesk supports CSV import plus Brightwheel and Procare migration presets.\n\nThat helps with the first move.\n\nThe important review happens next:\n\nAre children in the right classrooms?\nAre guardians current?\nAre pickup permissions clear?\nAre billing contacts attached?\nAre subsidy fields reviewed?\nAre attendance and ratios ready for the first live day?\n\nA migration is successful when staff can trust the record during the day.\n\nNot when the spreadsheet merely uploaded.",
+			"source": "apps/site/src/pages/index.astro",
+			"url": "https://pebbledesk.app/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Grounded in homepage import and migration copy plus enrollment-record dependencies."
+		},
+		{
+			"index_in_day": 11,
+			"time_central": "14:00",
+			"pillar": "Soft conversion",
+			"format": "Product fit note",
+			"post_content": "PebbleDesk is not trying to be every childcare product for every childcare problem.\n\nThat matters.\n\nIf the main pain is parent photos and newsletters, another tool may feel more familiar.\n\nIf the pain is attendance, ratios, subsidy paperwork, enrollment records, billing context, staff records, and audit-ready reports, that is the problem space PebbleDesk is built around.\n\nA useful product fit question:\n\nWhich part of the director's week keeps turning into cleanup?\n\nIf the answer is records, proof, billing support, ratio review, or licensing prep, the evaluation should start there.",
+			"source": "packages/shared/src/constants/offering.ts",
+			"url": "https://pebbledesk.app/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Humanized product-fit post with concrete buyer question and less repeated story language."
+		},
+		{
+			"index_in_day": 12,
+			"time_central": "15:00",
+			"pillar": "Director relief",
+			"format": "Brand POV",
+			"post_content": "Relief, for a childcare director, is usually practical.\n\nIt can look like:\n\nAttendance tied to the room.\nThe ratio picture visible before pickup gets messy.\nThe family record current when someone asks about pickup.\nThe subsidy context close to the attendance day.\nA billing note that can be traced.\nA report that does not require a weekend cleanup.\n\nNone of that is flashy.\n\nIt is the kind of quiet support that matters when the building is bright, loud, and already moving.\n\nChildcare administration is serious work.\n\nThe software should feel sturdy enough to trust and plain enough to use while the day is still happening.",
+			"source": ".impeccable.md",
+			"url": "https://pebbledesk.app/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Rewritten from director lived experience rather than product-philosophy framing."
+		},
+		{
+			"index_in_day": 13,
+			"time_central": "16:00",
+			"pillar": "Audit-ready records",
+			"format": "Soft CTA",
+			"post_content": "Audit-ready records without the end-of-week scramble.\n\nFor directors, the scramble is real.\n\nIt shows up when a subsidy claim needs support.\nWhen a parent asks about a charge.\nWhen a room count needs review.\nWhen staff credential records are requested.\nWhen enrollment details do not match pickup or billing.\n\nA cleaner record does not replace the director's judgment.\n\nIt gives that judgment a better starting point.\n\nIf a director has to answer a hard question, the system should help her start from the day as it happened instead of from a pile of disconnected clues.",
+			"source": "packages/shared/src/constants/offering.ts",
+			"url": "https://pebbledesk.app/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Rewritten to soften copy-critique framing and remove goal/goal wording."
+		},
+		{
+			"index_in_day": 14,
+			"time_central": "17:00",
+			"pillar": "Trial and evaluation",
+			"format": "Low-pressure conversion",
+			"post_content": "A good childcare software trial should answer operational questions, not just show nice screens.\n\nDuring a PebbleDesk trial, the useful questions are practical:\n\nCan we set up classrooms cleanly?\nCan we enroll children and guardians without record confusion?\nCan attendance stay tied to rooms?\nCan ratio review make sense from the daily record?\nCan billing and subsidy context stay close to attendance?\nCan reports explain what happened without manual reconstruction?\n\nThe trial gives directors room to test the jobs that matter before deciding whether the system fits the center.",
+			"source": "apps/site/src/config/site.ts",
+			"url": "https://pebbledesk.app/pricing/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Uses siteConfig trial terms and keeps the CTA soft and operational."
+		},
+		{
+			"index_in_day": 15,
+			"time_central": "18:00",
+			"pillar": "Founder POV recap",
+			"format": "Closing thought",
+			"post_content": "A simple close for the week:\n\nChildcare directors already do the hard work.\n\nThey manage people, rooms, rules, families, payments, inspections, and interruptions.\n\nPebbleDesk exists because the record behind that work should not be harder to manage than the work itself.\n\nAttendance, rooms, staff coverage, family records, subsidy context, billing notes, and audit reports all point back to the same day.\n\nWhen those pieces stay close together, the director has a better chance of answering the next question without starting from scratch.\n\nThat is the work worth building for.",
+			"source": "docs/marketing/linkedin-rewrite/founder-context.md",
+			"url": "https://pebbledesk.app/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Rewritten as a human closer with concrete director benefit and no brand-note echo."
+		}
+	]
+}

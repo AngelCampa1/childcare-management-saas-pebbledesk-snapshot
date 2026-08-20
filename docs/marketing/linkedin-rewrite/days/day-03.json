@@ -1,0 +1,171 @@
+{
+	"date": "2026-05-08",
+	"theme": "CCDF subsidy billing and reimbursement records",
+	"posts": [
+		{
+			"index_in_day": 1,
+			"time_central": "04:00",
+			"pillar": "Subsidy billing documentation",
+			"format": "Practical tip",
+			"post_content": "The strongest CCDF billing process is not built at submission time.\n\nIt is built every morning when attendance is recorded.\n\nFor every billed day, directors need a clean chain:\n\nAttendance record.\nAuthorization document.\nCo-pay record.\nClaim submission record.\nPayment reconciliation.\n\nWhen one link is missing, the claim becomes harder to defend. Not because care was not delivered, but because the record does not tell the story clearly enough.\n\nA practical Friday check for subsidy-heavy centers:\n\nCan you pull one subsidized child's record for this week and see the attendance, authorization dates, family co-pay status, and billing status without opening a separate spreadsheet?\n\nIf not, that is the work to fix before month-end.",
+			"source": "apps/site/src/content/guides/ccdf-childcare-billing-guide.md",
+			"url": "https://pebbledesk.app/resources/guides/ccdf-childcare-billing-guide/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Introduces the day's core frame: subsidy billing depends on a continuous documentation chain."
+		},
+		{
+			"index_in_day": 2,
+			"time_central": "05:00",
+			"pillar": "Revenue protection",
+			"format": "Data-backed insight",
+			"post_content": "CCDF paperwork is not just paperwork.\n\nThe repo cites research estimating that providers miss over 8% of annual subsidy revenue from billing errors without automation.\n\nThat loss usually does not come from one dramatic mistake.\n\nIt comes from ordinary friction:\n\nAttendance copied from one place to another.\nRate codes checked by hand.\nCo-pays tracked outside the billing record.\nAuthorization dates noticed after the claim is already filed.\nShort-pays accepted because no one had time to investigate the line items.\n\nFor childcare operators, subsidy billing discipline is margin protection.\n\nThe question is not, \"Did we submit the claim?\"\n\nThe better question is, \"Can we prove every part of the claim before the state asks?\"",
+			"source": "apps/site/src/content/guides/subsidy-billing-automation-guide.md",
+			"url": "https://pebbledesk.app/resources/guides/subsidy-billing-automation-guide/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Uses the sourced revenue-loss statistic and turns it into an operational point about margin protection."
+		},
+		{
+			"index_in_day": 3,
+			"time_central": "06:00",
+			"pillar": "Audit readiness and licensing confidence",
+			"format": "Operator reminder",
+			"post_content": "A subsidy audit rarely starts with a broad question.\n\nIt starts with a sample.\n\nA child.\nA date range.\nA billed period.\nA request for the supporting records.\n\nThat is why \"we have the records somewhere\" is not enough.\n\nThe record needs to reconcile across attendance, authorization, co-pay documentation, rate information, and the claim that was submitted.\n\nIf a director has to rebuild that story from paper sign-ins, payment notes, state portal screenshots, and an old spreadsheet, the audit has already become harder than it needed to be.\n\nAudit-ready means the story is already assembled before anyone asks for it.",
+			"source": "apps/site/src/content/guides/ccdf-childcare-billing-guide.md",
+			"url": "https://pebbledesk.app/resources/guides/ccdf-childcare-billing-guide/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Explains how sampled audit review works without overstating compliance guarantees."
+		},
+		{
+			"index_in_day": 4,
+			"time_central": "07:00",
+			"pillar": "Attendance and billing alignment",
+			"format": "Practical tip",
+			"post_content": "One small subsidy billing habit can prevent a lot of rework:\n\nDo not wait until the billing period closes to review attendance.\n\nA missing sign-out on Tuesday is easy to fix on Wednesday.\n\nA missing sign-out discovered after the claim is denied becomes a correction, a delay, and a note in the reimbursement trail.\n\nFor subsidized children, attendance is not just an operational record. It is the source record for billing.\n\nExact arrival and departure times matter. Required signatures matter. Absence reasons matter when your state requires them.\n\nThe cleaner the daily record, the less the director has to reconstruct later.",
+			"source": "apps/site/src/content/lead-magnets/ccdf-billing-error-prevention.md",
+			"url": "https://pebbledesk.app/free/ccdf-billing-error-prevention/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Turns the attendance checklist into a daily operational habit."
+		},
+		{
+			"index_in_day": 5,
+			"time_central": "08:00",
+			"pillar": "Authorization tracking",
+			"format": "Risk callout",
+			"post_content": "Expired authorizations are one of the quietest subsidy billing risks.\n\nEverything can look normal at the center level:\n\nThe child attended.\nThe family still needs care.\nThe classroom had coverage.\nThe billing period closed like usual.\n\nBut if the authorization expired mid-period, the center can only bill for care delivered inside the authorized window.\n\nA safer habit:\n\nReview authorization start and end dates before each billing cycle.\nSplit claims when a child's authorization expires during the period.\nKeep expired authorization documents in the child's file, because auditors may ask for prior periods.\n\nThe calendar is part of the billing record.",
+			"source": "apps/site/src/content/lead-magnets/ccdf-billing-error-prevention.md",
+			"url": "https://pebbledesk.app/free/ccdf-billing-error-prevention/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Focuses on authorization expiration, a specific sourced denial and improper-payment risk."
+		},
+		{
+			"index_in_day": 6,
+			"time_central": "09:00",
+			"pillar": "Reimbursement timing and cash flow",
+			"format": "Educational post",
+			"post_content": "Most states reimburse CCDF care after the care has already been delivered and documented.\n\nThat timing matters.\n\nReimbursement can take up to 60 days depending on the state and whether the claim triggers review issues.\n\nFor directors, this makes subsidy tracking a cash-flow discipline, not just an admin task.\n\nYou need to know:\n\nWhat was claimed.\nWhat was paid.\nWhat was short-paid.\nWhat is still outstanding.\nWhich documentation supports each line.\n\nA total deposit amount is not enough. The center needs claim-level visibility while there is still time to correct or dispute a problem.",
+			"source": "apps/site/src/content/guides/subsidy-reimbursement-tracking-guide.md",
+			"url": "https://pebbledesk.app/resources/guides/subsidy-reimbursement-tracking-guide/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Uses the sourced reimbursement timing claim and connects it to practical cash-flow tracking."
+		},
+		{
+			"index_in_day": 7,
+			"time_central": "10:00",
+			"pillar": "Documentation hygiene",
+			"format": "Data-backed insight",
+			"post_content": "Improper payments are not always dramatic.\n\nThe national CCDF improper payment rate was 3.55% in 2023, and the repo source cites 40% of those errors as missing or insufficient documentation.\n\nFor a childcare director, that points to the ordinary places where a clean claim can get weak:\n\nAttendance that does not support the billed day.\nAuthorization paperwork that expired before anyone noticed.\nCo-pay records that are hard to match.\nBilling support that lives in a separate spreadsheet.\n\nThe practical move is not fear.\n\nIt is a same-week documentation check for subsidy claims:\n\nCan each billed day point back to attendance?\nCan each child point back to current authorization?\nCan co-pays be found without searching receipts and inboxes?\n\nHonest care still needs a clean record.",
+			"source": "apps/site/src/content/guides/subsidy-billing-automation-guide.md",
+			"url": "https://pebbledesk.app/resources/guides/subsidy-billing-automation-guide/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Uses the sourced improper-payment statistics while avoiding legal advice or fear-based exaggeration."
+		},
+		{
+			"index_in_day": 8,
+			"time_central": "11:00",
+			"pillar": "Co-pay documentation",
+			"format": "Practical tip",
+			"post_content": "Family co-pays deserve the same care as the subsidy claim.\n\nFor mixed private-pay and subsidy families, the record has to show both sides of the tuition picture:\n\nThe subsidized portion billed to the agency.\nThe family co-pay billed or collected from the parent.\nThe authorized amount.\nThe date and method of payment.\nAny approved waiver or adjustment.\n\nA common mistake is treating co-pays like ordinary family billing and subsidy claims like compliance work.\n\nIn practice, they belong together.\n\nWhen co-pay records live somewhere else, directors have to reconcile the child's full billing story by hand. That is exactly where month-end errors hide.",
+			"source": "apps/site/src/content/guides/subsidy-reimbursement-tracking-guide.md",
+			"url": "https://pebbledesk.app/resources/guides/subsidy-reimbursement-tracking-guide/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Highlights mixed-funding and co-pay tracking requirements from the reimbursement and CCDF sources."
+		},
+		{
+			"index_in_day": 9,
+			"time_central": "12:00",
+			"pillar": "Process improvement",
+			"format": "Checklist",
+			"post_content": "Before evaluating subsidy billing software, map the process you already have.\n\nWrite down each step from attendance capture to payment reconciliation.\n\nA director may find the same pattern:\n\nAttendance is pulled from one system.\nRate codes are checked somewhere else.\nClaims are formatted for a state portal.\nCo-pays are reviewed separately.\nPayments are compared against a spreadsheet after the fact.\n\nThe source guide notes that a monthly process can have 8-15 steps, several involving copied data or reformatted exports.\n\nThat map is useful.\n\nIt helps you ask a better vendor question:\n\n\"Which of these steps does your system actually remove, and which ones do we still do by hand?\"",
+			"source": "apps/site/src/content/guides/subsidy-billing-automation-guide.md",
+			"url": "https://pebbledesk.app/resources/guides/subsidy-billing-automation-guide/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Repurposes the automation guide's workflow-mapping step into a LinkedIn-native evaluation prompt."
+		},
+		{
+			"index_in_day": 10,
+			"time_central": "13:00",
+			"pillar": "State submission readiness",
+			"format": "Vendor evaluation prompt",
+			"post_content": "A childcare billing tool has not really handled subsidy billing if it only moves the spreadsheet into a prettier place.\n\nFor CCAP and voucher work, the practical test is simple:\n\nCan the system produce the information your state agency actually requires?\n\nThat means the right child identifiers, dates of care, hours, rate codes, billing period, and export or report format.\n\nEvery state program has its own rules. Some variation can even happen by county or regional agency.\n\nSo when a vendor says \"we support subsidy billing,\" ask to see the output.\n\nThen compare it against your agency's instructions.\n\nThe format is not a small detail. It is the difference between less manual work and manual work wearing a new label.",
+			"source": "apps/site/src/content/guides/subsidy-billing-automation-guide.md",
+			"url": "https://pebbledesk.app/resources/guides/subsidy-billing-automation-guide/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Uses the guide's state-format requirement and avoids claiming universal automatic portal submission."
+		},
+		{
+			"index_in_day": 11,
+			"time_central": "14:00",
+			"pillar": "Post-payment reconciliation",
+			"format": "Practical tip",
+			"post_content": "Receiving the state payment is not the end of the subsidy billing cycle.\n\nIt is the start of reconciliation.\n\nDirectors still need to compare:\n\nAmount claimed.\nAmount received.\nAdjustments.\nDenied lines.\nShort-paid claims.\nOutstanding balance by billing period.\n\nSkipping this step can make a payment feel \"done\" when the center was actually underpaid.\n\nThe best time to catch a short-pay is while the billing period is still fresh, the attendance records are easy to find, and the dispute or correction window is still open.\n\nA clean reimbursement ledger is not busywork.\n\nIt is how earned revenue stays visible.",
+			"source": "apps/site/src/content/lead-magnets/ccdf-billing-error-prevention.md",
+			"url": "https://pebbledesk.app/free/ccdf-billing-error-prevention/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Turns post-payment reconciliation guidance into a practical revenue visibility post."
+		},
+		{
+			"index_in_day": 12,
+			"time_central": "15:00",
+			"pillar": "Provider burden",
+			"format": "Data-backed reflection",
+			"post_content": "One reason subsidy billing deserves better systems:\n\nProvider participation in CCDF fell from 475,394 in 2006 to 225,204 in 2022.\n\nThat is a 53% decline.\n\nThe source guide points to administrative burden as a major driver: attendance tracking, billing reconciliation, portal rules, and documentation retention all consume staff time centers cannot bill directly.\n\nThis matters for families and providers.\n\nWhen subsidy participation becomes too hard to sustain, access narrows.\n\nThe practical path forward is not asking directors to remember more details. It is making the daily record strong enough that billing and reimbursement do not require a month-end rebuild.",
+			"source": "apps/site/src/content/guides/ccdf-childcare-billing-guide.md",
+			"url": "https://pebbledesk.app/resources/guides/ccdf-childcare-billing-guide/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Uses the sourced participation decline and ties it to administrative burden without inventing causes."
+		},
+		{
+			"index_in_day": 13,
+			"time_central": "16:00",
+			"pillar": "Product education",
+			"format": "Soft product post",
+			"post_content": "Subsidy billing gets harder when the record is fragmented.\n\nAttendance in one place.\nInvoices in another.\nChild records in a file cabinet.\nReports built only when someone asks.\n\nPebbleDesk's product story for subsidy support is intentionally practical:\n\nKeep subsidy work close to attendance, child records, billing, and reporting so directors can review the month with less manual reconciliation.\n\nPebbleDesk does not replace every state portal.\n\nThe work still needs center review and submission through the right state or local system.\n\nBut when the supporting record is cleaner before submission, directors spend less time rebuilding what happened after the fact.",
+			"source": "apps/site/src/content/features/subsidy-billing.md",
+			"url": "https://pebbledesk.app/features/subsidy-billing/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Softly positions PebbleDesk using the feature page's careful claim boundaries."
+		},
+		{
+			"index_in_day": 14,
+			"time_central": "17:00",
+			"pillar": "Pre-submission controls",
+			"format": "Checklist",
+			"post_content": "A simple pre-submission subsidy billing review can save weeks of correction work.\n\nBefore filing, check:\n\nAre all authorization dates current for the billed period?\nDoes attendance exist for every claimed day?\nAre required signatures present?\nDo absences stay within your state's allowed rules?\nDoes the rate code match the child's age, schedule, and care type?\nIs the family co-pay documented separately from the state-paid portion?\nDoes the claim exclude days outside the authorization window?\n\nThe point is not to make directors slower.\n\nIt is to catch the preventable errors before they become denials, delays, or audit questions.",
+			"source": "apps/site/src/content/lead-magnets/ccdf-billing-error-prevention.md",
+			"url": "https://pebbledesk.app/free/ccdf-billing-error-prevention/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Condenses the lead magnet's pre-submission checklist into a usable LinkedIn post."
+		},
+		{
+			"index_in_day": 15,
+			"time_central": "18:00",
+			"pillar": "Leadership question",
+			"format": "Engagement prompt",
+			"post_content": "A useful question for subsidy-heavy childcare centers:\n\nWhere does the billing record break?\n\nNot where the team works hardest.\nNot where people care least.\n\nWhere the handoff creates risk.\n\nAttendance to claim.\nClaim to state payment.\nState payment to ledger.\nFamily co-pay to child record.\nAuthorization renewal to billing cutoff.\n\nMost subsidy issues are found at the handoffs.\n\nPick one handoff this month and make it cleaner. Add the reminder, connect the record, review it weekly, or remove the spreadsheet step.\n\nAudit-ready records are built one boring, reliable handoff at a time.",
+			"source": "apps/site/src/content/features/subsidy-billing.md",
+			"url": "https://pebbledesk.app/features/subsidy-billing/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Closes the day with an operator-focused question tied to fragmented subsidy record risks."
+		}
+	]
+}

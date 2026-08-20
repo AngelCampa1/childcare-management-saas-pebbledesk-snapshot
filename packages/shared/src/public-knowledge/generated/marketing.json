@@ -1,0 +1,88 @@
+{
+	"schemaVersion": 1,
+	"surface": "marketing",
+	"documents": [
+		{
+			"schemaVersion": 1,
+			"id": "pebbledesk-public-pricing",
+			"title": "Public pricing",
+			"tags": ["pricing", "plans", "trial", "billing", "limited-offer"],
+			"sections": [
+				{
+					"id": "pricing.default-cadence",
+					"heading": "Annual billing is the default",
+					"body": "PebbleDesk publishes flat childcare software pricing with annual billing as the default. The Home, Center Starter, Center Pro, and Group plans are self-serve. Larger multi-site rollouts are sales-led and custom-priced."
+				},
+				{
+					"id": "pricing.published-plans",
+					"heading": "Published plan labels",
+					"body": "Home is $8/mo when paid yearly ($93.60/year), then $39/mo when paid yearly ($468/year). Center Starter is $26/mo when paid yearly ($309.60/year), then $129/mo when paid yearly ($1548/year). Center Pro is $40/mo when paid yearly ($477.60/year), then $199/mo when paid yearly ($2388/year). Group is $80/mo when paid yearly ($957.60/year), then $399/mo when paid yearly ($4788/year)."
+				},
+				{
+					"id": "pricing.promotion",
+					"heading": "Limited subscription offer",
+					"body": "Use M80OFF or Y80OFF. Get 80% off the first year. Home is $8/mo when paid yearly, then $39/mo when paid yearly ($468/year). Center Starter is $26/mo when paid yearly, then $129/mo when paid yearly ($1548/year). Center Pro is $40/mo when paid yearly, then $199/mo when paid yearly ($2388/year). Group is $80/mo when paid yearly, then $399/mo when paid yearly ($4788/year). PebbleDesk offers a 30-day free trial."
+				}
+			],
+			"sourceRefs": [
+				{
+					"id": "site.pricing",
+					"label": "Pricing page",
+					"url": "/pricing/",
+					"kind": "site-page"
+				},
+				{
+					"id": "site.signup",
+					"label": "Signup page",
+					"url": "/signup/",
+					"kind": "site-page"
+				}
+			],
+			"publicPaths": ["/pricing/", "/signup/"],
+			"roleVisibility": ["public", "guardian", "staff", "director", "owner"],
+			"lastReviewed": "2026-05-09",
+			"botSafeAnswer": "PebbleDesk has flat published pricing with annual billing as the default. Plans start with Home at $8/mo when paid yearly, then $39/mo when paid yearly ($468/year). Center plans start with Center Starter at $26/mo when paid yearly, then $129/mo when paid yearly ($1548/year). Use M80OFF or Y80OFF. Get 80% off the first year. Larger multi-site rollouts are sales-led and custom-priced, and PebbleDesk offers a 30-day free trial."
+		},
+		{
+			"schemaVersion": 1,
+			"id": "pebbledesk-records-audit-readiness",
+			"title": "Records and audit readiness",
+			"tags": ["audit-readiness", "attendance", "records", "ratios", "subsidy-billing"],
+			"sections": [
+				{
+					"id": "records.connected-workflow",
+					"heading": "Connected childcare records",
+					"body": "PebbleDesk keeps attendance, ratios, family records, subsidy billing context, and reports connected so directors can answer licensing and payment questions without rebuilding records from separate tools."
+				},
+				{
+					"id": "records.operational-scope",
+					"heading": "Operational scope",
+					"body": "PebbleDesk supports online childcare administration for licensed centers, family childcare homes, and multi-site operators. V1 focuses on attendance, ratio visibility, child and guardian records, billing workflows, messaging, and report readiness."
+				},
+				{
+					"id": "records.state-support",
+					"heading": "State support posture",
+					"body": "PebbleDesk supports generic childcare workflows nationally, with verified state-specific ratio and licensing report support for Texas, California, and Florida. State-specific workflows outside those formats are scoped during rollout."
+				}
+			],
+			"sourceRefs": [
+				{
+					"id": "site.features.audit",
+					"label": "Audit-ready childcare platform positioning",
+					"url": "/features/audit-readiness/",
+					"kind": "site-page"
+				},
+				{
+					"id": "site.resources.audit",
+					"label": "Audit and licensing resources",
+					"url": "/resources/audit-licensing/",
+					"kind": "site-page"
+				}
+			],
+			"publicPaths": ["/features/audit-readiness/", "/resources/audit-licensing/"],
+			"roleVisibility": ["public", "staff", "director", "owner"],
+			"lastReviewed": "2026-05-09",
+			"botSafeAnswer": "PebbleDesk is an audit-ready childcare administration platform for licensed childcare operators. It keeps attendance, ratios, family records, billing context, messaging, and reports connected so center teams can prepare for licensing visits and payment reviews with less manual record chasing."
+		}
+	]
+}

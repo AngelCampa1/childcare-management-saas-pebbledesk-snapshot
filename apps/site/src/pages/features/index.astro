@@ -1,0 +1,133 @@
+---
+import "../../styles/global.css"
+import { getCollection } from "astro:content"
+import ProductDashboard from "@pebbledesk/marketing/components/product-dashboard.astro"
+import PublicSignupCta from "@pebbledesk/marketing/components/public-signup-cta"
+import CategoryHub from "@pebbledesk/marketing/hubs/category-hub.astro"
+import { mapToContentItems, sortByUpdatedAtDesc } from "@pebbledesk/marketing/lib/collections"
+import { PEBBLEDESK_OFFERING } from "@pebbledesk/shared/constants"
+import { siteConfig } from "@/config/site"
+import { entrySlug } from "@/lib/page-helpers"
+
+const entries = await getCollection("features")
+const sorted = sortByUpdatedAtDesc(entries)
+const items = mapToContentItems(
+  sorted,
+  (e) => `/features/${entrySlug(e)}`,
+  () => ({ category: "Feature" }),
+)
+
+const page = {
+  data: items,
+  currentPage: 1,
+  lastPage: 1,
+  url: { prev: undefined, next: undefined },
+}
+---
+
+<CategoryHub
+  config={siteConfig}
+  title="PebbleDesk Features"
+  description="See how the daily record stays audit-ready. Start with the director workflow you need to run clearly today."
+  items={items}
+  page={page}
+  basePath="/features"
+  breadcrumbs={[
+    { label: "Home", href: "/" },
+    { label: "Features", href: "/features" },
+  ]}
+  faqs={siteConfig.faqs.slice(0, 4)}
+>
+  <section
+    slot="intro"
+    class="mb-8 grid gap-6 rounded-[var(--radius-xl)] border border-[var(--site-panel-border)] bg-[var(--site-panel-bg)] p-6 shadow-[var(--shadow-card)] lg:grid-cols-[minmax(0,0.95fr)_minmax(24rem,1.05fr)]"
+  >
+    <div>
+      <p class="font-mono text-[length:var(--text-caption)] uppercase tracking-[0.18em] text-[var(--color-accent-700)]">
+        Audit-ready workflows
+      </p>
+      <h2 class="mt-2 text-xl font-bold text-[var(--color-brand-text)]">
+        The problem: daily childcare records scatter before audit week.
+      </h2>
+      <p class="mt-4 leading-7 text-[var(--color-brand-muted)]">
+        Attendance, ratios, family records, billing, and staff notes often live in separate places.
+        Directors then have to rebuild the story when a parent, subsidy agency, or licensing
+        reviewer asks what happened.
+      </p>
+      <h2 class="mt-6 text-xl font-bold text-[var(--color-brand-text)]">
+        The solution: each PebbleDesk feature feeds the same audit-ready record.
+      </h2>
+      <p class="mt-4 leading-7 text-[var(--color-brand-muted)]">
+        Start with the workflow creating rework today, then move to the nearby
+        features that shape the same record. Each page explains the problem first and shows how PebbleDesk keeps the record
+        connected for licensed centers, family childcare homes, and multi-site programs.
+      </p>
+    </div>
+    <ProductDashboard compact />
+  </section>
+
+  <section
+    slot="intro"
+    class="mb-8 rounded-[var(--radius-xl)] border border-[var(--site-panel-border)] bg-[var(--surface-secondary)] p-5"
+    aria-labelledby="feature-link-index-heading"
+  >
+    <div class="flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
+      <div>
+        <p class="font-mono text-[length:var(--text-caption)] uppercase tracking-[0.18em] text-[var(--color-accent-700)]">
+          Feature links
+        </p>
+        <h2 id="feature-link-index-heading" class="mt-2 text-xl font-bold text-[var(--color-brand-text)]">
+          Jump to the feature that matches today's problem.
+        </h2>
+      </div>
+      <a
+        href="#signup"
+        class="inline-flex min-h-11 items-center justify-center rounded-full bg-[var(--color-brand-primary)] px-5 py-2 text-sm font-semibold text-white no-underline transition-colors hover:bg-[var(--color-primary-700)]"
+      >
+        Start trial
+      </a>
+    </div>
+    <div class="mt-5 flex flex-wrap gap-2">
+      {items.map((item) => (
+        <a
+          href={item.href}
+          class="inline-flex min-h-11 items-center rounded-full border border-[var(--color-neutral-300)] bg-[var(--surface-primary)] px-4 py-2 text-sm font-semibold text-[var(--color-brand-text)] no-underline transition-colors hover:border-[var(--color-brand-primary)] hover:text-[var(--color-brand-primary)]"
+        >
+          {item.title}
+        </a>
+      ))}
+    </div>
+  </section>
+
+  <section
+    slot="intro"
+    class="mb-8 grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4"
+    aria-label="Feature pillars"
+  >
+    {[
+      "Daily operations",
+      "Family and room records",
+      "Billing and compliance",
+      "Rollout and scale",
+    ].map((pillar) => (
+      <div class="rounded-[var(--radius-lg)] border border-[var(--site-panel-border)] bg-[var(--surface-secondary)] p-5">
+        <p class="font-semibold text-[var(--color-brand-text)]">{pillar}</p>
+        <p class="mt-2 text-sm leading-6 text-[var(--color-brand-muted)]">
+          Start here when this is the part of the day creating rework.
+        </p>
+      </div>
+    ))}
+  </section>
+
+  <section slot="cta" class="mt-8 border-t border-[var(--color-neutral-200)] py-10 text-center" id="signup">
+    <h2 class="mb-2 text-2xl font-bold text-[var(--color-brand-text)]">Ready to put the workflows into use?</h2>
+    <p class="mx-auto mb-6 max-w-md text-[var(--color-brand-muted)]">
+      {PEBBLEDESK_OFFERING.claims.trialStartDisclosure} Choose the plan that fits your center and continue into setup.
+    </p>
+    <PublicSignupCta
+      client:load
+      sourcePage="/features"
+      buttonText={siteConfig.funnel.bofu.ctaText}
+    />
+  </section>
+</CategoryHub>

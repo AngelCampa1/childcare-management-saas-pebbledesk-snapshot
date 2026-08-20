@@ -1,0 +1,187 @@
+---
+import "../styles/global.css";
+import FaqSection from "@pebbledesk/marketing/components/faq-section.astro";
+import LandingLayout from "@pebbledesk/marketing/layouts/landing-layout.astro";
+import { PricingCards, getProductSignupUrl, resolvePublicSignupCta } from "@pebbledesk/marketing";
+import {
+	buildComparisonRows,
+	buildEnterprisePricingNote,
+	getPromotionalPlanPrice,
+	getPromotionalPriceLabel,
+	PEBBLEDESK_OFFERING,
+	SUBSCRIPTION_PROMOTIONS,
+} from "@pebbledesk/shared/constants";
+import { siteConfig } from "@/config/site";
+
+const pricingTiers = siteConfig.pricingTiers ?? [];
+const homeLimitedOfferPrice = getPromotionalPriceLabel("home", "annual");
+const homeAnnualPromo = getPromotionalPlanPrice("home", "annual");
+const limitedOfferCodes = SUBSCRIPTION_PROMOTIONS.map((promotion) => promotion.code).join(" and ");
+const limitedOfferSummary = `${limitedOfferCodes} give ${PEBBLEDESK_OFFERING.promotion.label}`;
+const enterprisePricingNote = buildEnterprisePricingNote();
+const enterprisePricingCardNote = { ...enterprisePricingNote, ctaTarget: "/pricing/#contact" };
+
+const pricingCards = pricingTiers.map((tier) => ({
+	...tier,
+	cta: resolvePublicSignupCta({
+		sourcePage: "/pricing/",
+		explicitTarget: `${getProductSignupUrl()}?plan=${tier.slug ?? tier.name.toLowerCase().replace(/\s+/g, "_")}&source=%2Fpricing%2F`,
+		explicitText: tier.ctaText,
+	}),
+}));
+
+const pricingFaqKeys = [
+	"How does PebbleDesk pricing work?",
+	"What happens if my internet goes down?",
+	"What happens after I create an account?",
+	"How does rollout work for an existing center or multi-site group?",
+];
+const pricingFaqs = siteConfig.faqs.filter((faq) => pricingFaqKeys.includes(faq.q));
+
+const signupCta = resolvePublicSignupCta({
+	sourcePage: "/pricing/",
+	explicitTarget: `${getProductSignupUrl()}?plan=center_starter&source=%2Fpricing%2F`,
+	explicitText: PEBBLEDESK_OFFERING.trial.label,
+});
+
+const comparisonRows = buildComparisonRows();
+const comparisonPlans = PEBBLEDESK_OFFERING.plans.filter((plan) => plan.id !== "enterprise");
+---
+
+<LandingLayout
+	config={siteConfig}
+	canonicalPath="/pricing"
+	schemaMode="product"
+	title="Pricing for PebbleDesk Childcare Center Software"
+	description={`Flat childcare pricing from ${homeLimitedOfferPrice}. ${limitedOfferSummary}. ${homeAnnualPromo.renewalPriceLabel}.`}
+>
+	<section class="bg-[var(--surface-primary)] px-4 pb-10 pt-16">
+		<div class="mx-auto max-w-3xl text-center">
+			<p class="font-mono text-[length:var(--text-caption)] uppercase tracking-[0.18em] text-[var(--color-accent-700)]">
+				Pricing
+			</p>
+			<h1 class="mt-3 font-heading text-[length:var(--text-display)] font-bold text-[var(--color-brand-text)]">
+				Flat pricing that matches how childcare operators actually buy.
+			</h1>
+			<p class="mt-4 text-[length:var(--text-body-lg)] leading-8 text-[var(--color-brand-muted)]">
+				Choose by the kind of childcare program you run now: family childcare home, licensed single-site center, larger center, or multi-site operator that needs rollout support.
+			</p>
+			<div class="mt-6 rounded-[var(--radius-lg)] border border-[var(--site-chip-border)] bg-[var(--site-chip-bg)] px-4 py-3 text-[length:var(--text-caption)] text-[var(--color-brand-text)] shadow-[var(--shadow-card)]">
+				{siteConfig.pricingConfig?.trialBannerText}
+			</div>
+		</div>
+	</section>
+
+	<section class="bg-[var(--surface-secondary)] px-4 pb-16 pt-10" aria-labelledby="pricing-cards-heading">
+		<h2 id="pricing-cards-heading" class="sr-only">Pricing plans</h2>
+		<div class="mx-auto max-w-6xl">
+			<p class="mb-8 text-sm text-[var(--color-brand-muted)]">
+				Limited offer: {limitedOfferSummary}. See each plan's regular price below. <a class="inline-flex min-h-[40px] items-center py-1 underline underline-offset-4" href="/terms/#limited-offer">Offer details</a>.
+			</p>
+			<PricingCards
+				client:load
+				tiers={pricingCards}
+				enterpriseNote={enterprisePricingCardNote}
+				annualSavingsText={siteConfig.pricingConfig?.annualSavingsText}
+				monthlyToggleLabel={siteConfig.pricingConfig?.monthlyToggleLabel}
+				annualToggleLabel={siteConfig.pricingConfig?.annualToggleLabel}
+				sourcePage="/pricing/"
+			/>
+		</div>
+	</section>
+
+	<section class="bg-[var(--surface-primary)] px-4 py-16" aria-labelledby="comparison-heading">
+		<div class="mx-auto max-w-6xl">
+			<div class="max-w-3xl">
+				<h2 id="comparison-heading" class="font-heading text-[length:var(--text-heading)] font-bold text-[var(--color-brand-text)]">
+					What changes by plan
+				</h2>
+				<p class="mt-3 text-[length:var(--text-body)] text-[var(--color-brand-muted)]">
+					The table stays narrow on purpose. If a capability is not provable as a hard entitlement in code or docs, it is described as included, available on qualifying plans, or rollout-supported.
+				</p>
+			</div>
+
+			<p class="md:hidden mt-6 text-sm text-[var(--color-brand-muted)] mb-2">Swipe to compare →</p>
+			<div class="mt-2 md:mt-8 overflow-x-auto rounded-[var(--radius-xl)] border border-[var(--site-panel-border)] shadow-[var(--shadow-card)]">
+				<table class="min-w-full border-collapse bg-[var(--site-panel-bg)] text-[length:var(--text-caption)]">
+					<thead>
+						<tr class="border-b border-[var(--site-panel-border)]">
+							<th class="sticky left-0 z-10 bg-[var(--surface-primary)] px-6 py-4 text-left font-semibold text-[var(--color-brand-text)]">Workflow</th>
+							{comparisonPlans.map((plan) => (
+								<th class:list={[
+									"px-4 py-4 text-center font-semibold",
+									plan.highlighted
+										? "bg-[var(--color-accent-50)] text-[var(--color-accent-800)]"
+										: "text-[var(--color-brand-text)]",
+								]}>
+									{plan.label}
+								</th>
+							))}
+						</tr>
+					</thead>
+					<tbody>
+						{comparisonRows.map((row, index) => (
+							<tr
+								class:list={[
+									"border-b border-[var(--site-panel-border)] last:border-b-0",
+									index % 2 === 0 ? "" : "bg-[var(--site-soft-surface)]",
+								]}
+							>
+								<td class:list={["sticky left-0 z-10 px-6 py-4 text-[var(--color-brand-text)]", index % 2 === 0 ? "bg-[var(--surface-primary)]" : "bg-[var(--site-soft-surface)]"]}>{row.feature}</td>
+								<td class="px-4 py-4 text-center text-[var(--color-brand-muted)]">{row.home}</td>
+								<td class="bg-[var(--color-accent-50)] px-4 py-4 text-center text-[var(--color-accent-800)]">{row.centerStarter}</td>
+								<td class="px-4 py-4 text-center text-[var(--color-brand-muted)]">{row.centerPro}</td>
+								<td class="px-4 py-4 text-center text-[var(--color-brand-muted)]">{row.group}</td>
+							</tr>
+						))}
+					</tbody>
+				</table>
+			</div>
+
+			<div class="mt-6 grid gap-4 md:grid-cols-3">
+				<div class="rounded-[var(--radius-lg)] border border-[var(--site-panel-border)] bg-[var(--site-soft-surface)] px-5 py-4 text-sm leading-6 text-[var(--color-brand-muted)]">
+					<p class="font-semibold text-[var(--color-brand-text)]">Migration and setup</p>
+					<p class="mt-2">CSV import is available now, with Brightwheel and Procare presets for faster cleanup and first-load setup.</p>
+				</div>
+				<div class="rounded-[var(--radius-lg)] border border-[var(--site-panel-border)] bg-[var(--site-soft-surface)] px-5 py-4 text-sm leading-6 text-[var(--color-brand-muted)]">
+					<p class="font-semibold text-[var(--color-brand-text)]">Internet and rollout reality</p>
+					<p class="mt-2">PebbleDesk is online-only in V1. We do not market offline capability, and larger rollouts are scoped before promising a deployment path.</p>
+				</div>
+				<div class="rounded-[var(--radius-lg)] border border-[var(--site-panel-border)] bg-[var(--site-soft-surface)] px-5 py-4 text-sm leading-6 text-[var(--color-brand-muted)]">
+					<p class="font-semibold text-[var(--color-brand-text)]">What happens next</p>
+					<p class="mt-2">Self-serve plans go straight into account creation and center setup. Enterprise starts with evaluation, rollout mapping, and plan fit confirmation.</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<FaqSection faqs={pricingFaqs} heading="Pricing questions" />
+
+	<section class="bg-[var(--surface-secondary)] px-4 py-16" id="contact">
+		<div class="mx-auto max-w-3xl rounded-[var(--radius-xl)] border border-[var(--site-panel-border)] bg-[var(--site-panel-bg)] px-6 py-8 text-center shadow-[var(--shadow-card)]">
+			<h2 class="font-heading text-[length:var(--text-heading)] font-bold text-[var(--color-brand-text)]">
+				Start self-serve, or evaluate the rollout first.
+			</h2>
+			<p class="mt-3 text-[length:var(--text-body)] text-[var(--color-brand-muted)]">
+				Home, Center Starter, Center Pro, and Group use the self-serve signup flow. Enterprise stays sales-led so rollout, migration, and cross-center oversight can be scoped cleanly.
+			</p>
+			<p class="mt-4 text-sm text-[var(--color-brand-muted)]">
+				{PEBBLEDESK_OFFERING.claims.trialDisclosure} {PEBBLEDESK_OFFERING.guarantee.label} after your first paid charge.
+			</p>
+			<div class="mt-6 flex flex-col items-center justify-center gap-3 sm:flex-row">
+				<a
+					href={signupCta.target}
+					class="inline-flex items-center justify-center rounded-full bg-[var(--color-accent-700)] px-8 py-3 font-medium text-white no-underline transition-colors hover:bg-[var(--color-accent-800)]"
+				>
+					{signupCta.text}
+				</a>
+				<a
+					href={`mailto:${siteConfig.contactEmail}`}
+					class="inline-flex items-center justify-center rounded-full border border-[var(--site-panel-border)] px-8 py-3 font-medium text-[var(--color-brand-text)] no-underline transition-colors hover:bg-[var(--site-soft-surface)]"
+				>
+					Contact sales
+				</a>
+			</div>
+		</div>
+	</section>
+</LandingLayout>

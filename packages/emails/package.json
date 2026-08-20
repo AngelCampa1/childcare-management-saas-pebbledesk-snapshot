@@ -1,0 +1,27 @@
+{
+	"name": "@pebbledesk/emails",
+	"version": "0.0.1",
+	"private": true,
+	"type": "module",
+	"exports": {
+		".": "./src/render.ts"
+	},
+	"scripts": {
+		"typecheck": "tsc --noEmit",
+		"test": "vitest run --maxWorkers=1 --pool=forks --no-file-parallelism",
+		"test:watch": "vitest watch",
+		"test:coverage": "vitest run --maxWorkers=1 --pool=forks --no-file-parallelism --coverage"
+	},
+	"dependencies": {
+		"@pebbledesk/shared": "workspace:*",
+		"@react-email/components": "^1.0.12",
+		"@react-email/render": "^2.0.7",
+		"react": "^19.0.0"
+	},
+	"devDependencies": {
+		"@types/react": "^19",
+		"@vitest/coverage-v8": "4.1.5",
+		"typescript": "6.0.3",
+		"vitest": "4.1.5"
+	}
+}

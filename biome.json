@@ -1,0 +1,39 @@
+{
+	"$schema": "https://biomejs.dev/schemas/2.4.12/schema.json",
+	"assist": {
+		"actions": {
+			"source": {
+				"organizeImports": "on"
+			}
+		},
+		"includes": ["**", "!**/*.gen.ts", "!**/*.astro"]
+	},
+	"linter": {
+		"enabled": true,
+		"rules": {
+			"recommended": true
+		},
+		"includes": ["**", "!**/*.gen.ts", "!**/*.astro"]
+	},
+	"formatter": {
+		"enabled": true,
+		"indentStyle": "tab",
+		"lineWidth": 100,
+		"lineEnding": "lf",
+		"includes": ["**", "!**/*.gen.ts", "!**/*.astro"]
+	},
+	"files": {
+		"includes": [
+			"**",
+			"!**/node_modules",
+			"!**/dist",
+			"!**/coverage",
+			"!**/.wrangler",
+			"!**/drizzle",
+			"!**/.turbo",
+			"!**/.worktrees",
+			"!**/.astro",
+			"!**/*.css"
+		]
+	}
+}

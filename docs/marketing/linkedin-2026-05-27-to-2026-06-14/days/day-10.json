@@ -1,0 +1,171 @@
+{
+	"date": "2026-06-05",
+	"theme": "Staff scheduling for ratio coverage and labor control",
+	"posts": [
+		{
+			"index_in_day": 1,
+			"time_central": "04:00",
+			"pillar": "Ratio coverage",
+			"format": "Operational risk post",
+			"post_content": "Childcare scheduling is not just a calendar.\n\nIt is a ratio plan.\n\nA shift that looks fine on paper can still create a gap during drop-off, lunch breaks, nap handoff, or pickup. Those are the windows where normal variation shows up: a child arrives early, a teacher steps away, a floater is covering two rooms.\n\nThe schedule needs to protect the messy parts of the day, not only the average day.",
+			"source": "apps/site/src/content/guides/staff-scheduling-for-ratio-compliance.md",
+			"url": "https://pebbledesk.app/resources/guides/staff-scheduling-for-ratio-compliance/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Introduces the day's theme using the four high-risk transition windows."
+		},
+		{
+			"index_in_day": 2,
+			"time_central": "05:00",
+			"pillar": "Drop-off coverage",
+			"format": "Practical tip",
+			"post_content": "One small scheduling habit that pays off:\n\nMap arrivals in 15-minute blocks before you build the staff schedule.\n\nNot just how many children are enrolled. How many are usually in each room at 7:15, 7:30, 7:45, and 8:00.\n\nThat curve tells you when the second qualified staff member needs to be present, not when the shift template says it would be convenient.",
+			"source": "apps/site/src/content/guides/staff-scheduling-for-childcare-centers.md",
+			"url": "https://pebbledesk.app/resources/guides/staff-scheduling-for-childcare-centers/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Adapts the guide's 15-minute attendance mapping recommendation."
+		},
+		{
+			"index_in_day": 3,
+			"time_central": "06:00",
+			"pillar": "Labor control",
+			"format": "Balanced tradeoff",
+			"post_content": "Overstaffing is expensive.\n\nUnderstaffing is risky.\n\nChildcare directors live in the middle: enough coverage to protect ratios, not so much extra labor that the budget breaks.\n\nThe useful question is not \"How few hours can we schedule?\"\n\nIt is \"Where do we need overlap because ordinary transitions create ratio risk?\"",
+			"source": "apps/site/src/content/guides/staff-scheduling-for-childcare-centers.md",
+			"url": "https://pebbledesk.app/resources/guides/staff-scheduling-for-childcare-centers/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Grounded in the guide's labor cost versus ratio compliance framing."
+		},
+		{
+			"index_in_day": 4,
+			"time_central": "07:00",
+			"pillar": "Break planning",
+			"format": "Director checklist",
+			"post_content": "Break coverage is where a schedule either works or only looks like it works.\n\nBefore publishing the week, check:\n\nWho covers each room during breaks?\nAre breaks placed during lower-census periods when possible?\nCan a qualified floater cover without weakening another room?\nWhat happens if the floater is already handling a callout?\n\nThe break plan is part of the ratio plan.",
+			"source": "apps/site/src/content/guides/staff-scheduling-for-childcare-centers.md",
+			"url": "https://pebbledesk.app/resources/guides/staff-scheduling-for-childcare-centers/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Uses break coverage and floater concepts from the scheduling guide."
+		},
+		{
+			"index_in_day": 5,
+			"time_central": "08:00",
+			"pillar": "Pickup risk",
+			"format": "Specific scenario",
+			"post_content": "The last hour of the day still needs a ratio plan.\n\nPickup does not happen evenly.\n\nOne family arrives early. Another gets stuck in traffic. A teacher helps a child find a jacket. A staff member starts closing tasks before the room is fully empty.\n\nThat is how a quiet-looking room can become a fragile room.\n\nBefore pickup starts, directors should know:\n\nWhich staff stay counted until close?\nWhen can rooms combine?\nWho watches the room while teachers talk with parents?\nWhat happens when the last few children are not all in the same age group?",
+			"source": "apps/site/src/content/guides/staff-scheduling-for-ratio-compliance.md",
+			"url": "https://pebbledesk.app/resources/guides/staff-scheduling-for-ratio-compliance/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Rewritten to remove repeated pickup hook and add concrete pickup-coverage questions."
+		},
+		{
+			"index_in_day": 6,
+			"time_central": "09:00",
+			"pillar": "Callout readiness",
+			"format": "Preparedness post",
+			"post_content": "A callout protocol is not a contact list.\n\nA useful one says:\n\nWho can be called within two hours?\nWhich rooms can combine, if licensing rules allow it?\nWhen does the director step into coverage?\nHow is the decision documented?\nWho verifies the room is back in ratio?\n\nThe moment a staff member calls out is too late to invent the plan.",
+			"source": "apps/site/src/content/guides/staff-scheduling-for-ratio-compliance.md",
+			"url": "https://pebbledesk.app/resources/guides/staff-scheduling-for-ratio-compliance/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Based on the guide's callout protocol definition and steps."
+		},
+		{
+			"index_in_day": 7,
+			"time_central": "10:00",
+			"pillar": "Product positioning",
+			"format": "Product POV",
+			"post_content": "PebbleDesk treats staff scheduling as part of daily operations, not a payroll suite promise.\n\nThat distinction matters.\n\nFor childcare directors, the scheduling question is often: will this plan keep rooms covered as attendance changes?\n\nThe answer belongs near attendance, classrooms, and ratio review, not buried in a separate staffing calendar.",
+			"source": "apps/site/src/content/features/staff-scheduling.md",
+			"url": "https://pebbledesk.app/features/staff-scheduling/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Grounded in the feature page's careful current-product claim."
+		},
+		{
+			"index_in_day": 8,
+			"time_central": "11:00",
+			"pillar": "Historical proof",
+			"format": "Audit readiness",
+			"post_content": "The weekly schedule tells one version of the truth.\n\nThe day may tell another.\n\nA teacher calls out.\nA child arrives early.\nA room runs heavier than expected.\nA floater gets moved.\nA break starts late.\n\nThat gap between planned and actual is where ratio review gets serious.\n\nFor a director, the useful record is not just who was assigned.\n\nIt is who was present, where they were counted, and what changed while children were in care.",
+			"source": "apps/site/src/content/guides/staff-scheduling-for-ratio-compliance.md",
+			"url": "https://pebbledesk.app/resources/guides/staff-scheduling-for-ratio-compliance/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Rewritten to avoid repeated schedule hook and sharpen planned-versus-actual framing."
+		},
+		{
+			"index_in_day": 9,
+			"time_central": "12:00",
+			"pillar": "Room coverage",
+			"format": "Question post",
+			"post_content": "A good weekly schedule answers more than \"who is working?\"\n\nIt answers:\n\nWhich room is protected at arrival?\nWho covers lunch breaks?\nWhere is the floater during pickup?\nWhich staff count toward ratio in each room?\nWhat happens if one person is out?\n\nIf the schedule cannot answer those questions, the director still has to solve coverage in real time.",
+			"source": "apps/site/src/content/guides/staff-scheduling-for-childcare-centers.md",
+			"url": "https://pebbledesk.app/resources/guides/staff-scheduling-for-childcare-centers/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Summarizes guide concepts: floaters, breaks, ratio coverage, callouts."
+		},
+		{
+			"index_in_day": 10,
+			"time_central": "13:00",
+			"pillar": "Ratio monitoring",
+			"format": "Practical evaluation",
+			"post_content": "A scheduling tool records the plan.\n\nA ratio-aware workflow tests the plan against the day.\n\nIf Room A has enough scheduled staff but only one qualified person is actually checked in during a busy arrival window, the calendar is not the source of truth anymore.\n\nDirectors need visibility into the current room reality, not just the intended staffing plan.",
+			"source": "apps/site/src/content/features/ratio-tracking.md",
+			"url": "https://pebbledesk.app/features/ratio-tracking/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Connects ratio visibility with attendance and classroom activity from the feature page."
+		},
+		{
+			"index_in_day": 11,
+			"time_central": "14:00",
+			"pillar": "Floater planning",
+			"format": "Operational guidance",
+			"post_content": "A floater is not extra in childcare.\n\nA floater is the buffer between a tidy schedule and a real day.\n\nBathroom escorts, late arrivals, teacher breaks, callouts, lunch transitions, parent questions at pickup. These are not edge cases. They are normal operations.\n\nIf the schedule depends on nothing unexpected happening, it is too thin.",
+			"source": "apps/site/src/content/guides/staff-scheduling-for-childcare-centers.md",
+			"url": "https://pebbledesk.app/resources/guides/staff-scheduling-for-childcare-centers/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Uses the guide's floater definition and transition coverage framing."
+		},
+		{
+			"index_in_day": 12,
+			"time_central": "15:00",
+			"pillar": "State rules",
+			"format": "Compliance reminder",
+			"post_content": "Ratio coverage is not one national number.\n\nInfants, toddlers, preschoolers, and school-age children can have different requirements. States define who counts as qualified staff. Some roles may count only under specific conditions.\n\nThat is why a director's schedule should start with the licensed room reality, not a generic staffing template.",
+			"source": "apps/site/src/content/guides/staff-scheduling-for-ratio-compliance.md",
+			"url": "https://pebbledesk.app/resources/guides/staff-scheduling-for-ratio-compliance/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Grounded in ratio requirements by room, age group, and qualified staff definitions."
+		},
+		{
+			"index_in_day": 13,
+			"time_central": "16:00",
+			"pillar": "Labor control",
+			"format": "Budget-aware tip",
+			"post_content": "The cheapest schedule is not always the least expensive one.\n\nIf a thin schedule creates ratio corrections, director interruptions, overtime calls, or licensing risk, the savings can disappear quickly.\n\nThe better target is controlled coverage: overlap where the day is volatile, tighter staffing where attendance is stable, and clear proof of what happened.",
+			"source": "apps/site/src/content/guides/staff-scheduling-for-childcare-centers.md",
+			"url": "https://pebbledesk.app/resources/guides/staff-scheduling-for-childcare-centers/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Keeps the labor-control theme grounded in matching staff hours to attendance curves."
+		},
+		{
+			"index_in_day": 14,
+			"time_central": "17:00",
+			"pillar": "Weekly review",
+			"format": "Director routine",
+			"post_content": "A useful Friday scheduling review:\n\nLook at next week's known absences.\nCheck high-census mornings.\nConfirm lunch break coverage.\nReview pickup overlap.\nMake sure a qualified backup exists for each fragile window.\n\nThis is not about making the schedule perfect. It is about finding the predictable weak spots before Monday morning finds them for you.",
+			"source": "apps/site/src/content/guides/staff-scheduling-for-ratio-compliance.md",
+			"url": "https://pebbledesk.app/resources/guides/staff-scheduling-for-ratio-compliance/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Built from the guide's transition windows, callout planning, and overlap guidance."
+		},
+		{
+			"index_in_day": 15,
+			"time_central": "18:00",
+			"pillar": "Director relief",
+			"format": "End-of-day reflection",
+			"post_content": "A strong childcare schedule gives the director fewer surprises.\n\nNot zero surprises. That is not realistic.\n\nFewer moments where the room count changed, the staff plan did not, and everyone had to improvise under pressure.\n\nThat is the practical value of connecting scheduling, attendance, and ratio coverage in the same operating loop.",
+			"source": "packages/shared/src/constants/offering.ts",
+			"url": "https://pebbledesk.app/features/staff-scheduling/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Closes with PebbleDesk's connected daily-operations positioning."
+		}
+	]
+}

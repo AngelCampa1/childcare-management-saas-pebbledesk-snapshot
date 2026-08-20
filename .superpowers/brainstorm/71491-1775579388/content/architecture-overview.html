@@ -1,0 +1,66 @@
+<h2>Section 1: Architecture Overview</h2>
+<p class="subtitle">How the system fits together</p>
+
+<div class="mockup">
+  <div class="mockup-header">Production Architecture</div>
+  <div class="mockup-body" style="padding:32px 24px">
+    <div style="display:flex;gap:24px;justify-content:center;flex-wrap:wrap;margin-bottom:32px">
+      <!-- Web App -->
+      <div style="background:#4f46e5;color:white;padding:16px 24px;border-radius:12px;text-align:center;min-width:200px">
+        <div style="font-weight:700;font-size:16px">apps/web</div>
+        <div style="font-size:12px;opacity:0.85;margin-top:4px">React + Vite SPA</div>
+        <div style="font-size:11px;opacity:0.7;margin-top:2px">Cloudflare Pages</div>
+      </div>
+    </div>
+
+    <!-- Arrow down -->
+    <div style="text-align:center;font-size:24px;color:#64748b;margin:8px 0">↓ <span style="font-size:12px">fetch / TanStack Query</span></div>
+
+    <div style="display:flex;gap:24px;justify-content:center;flex-wrap:wrap;margin-bottom:24px">
+      <!-- API -->
+      <div style="background:#059669;color:white;padding:16px 24px;border-radius:12px;text-align:center;min-width:200px">
+        <div style="font-weight:700;font-size:16px">apps/api</div>
+        <div style="font-size:12px;opacity:0.85;margin-top:4px">Hono + Better Auth</div>
+        <div style="font-size:11px;opacity:0.7;margin-top:2px">Cloudflare Workers</div>
+      </div>
+    </div>
+
+    <!-- Arrow down -->
+    <div style="text-align:center;font-size:24px;color:#64748b;margin:8px 0">↓ <span style="font-size:12px">Drizzle ORM via Hyperdrive</span></div>
+
+    <div style="display:flex;gap:24px;justify-content:center;flex-wrap:wrap">
+      <!-- Database -->
+      <div style="background:#d97706;color:white;padding:16px 24px;border-radius:12px;text-align:center;min-width:200px">
+        <div style="font-weight:700;font-size:16px">Neon (Postgres)</div>
+        <div style="font-size:12px;opacity:0.85;margin-top:4px">All tables, row-level tenancy</div>
+        <div style="font-size:11px;opacity:0.7;margin-top:2px">center_id on every row</div>
+      </div>
+    </div>
+
+    <!-- Shared packages -->
+    <div style="margin-top:40px;border-top:1px solid #e2e8f0;padding-top:24px">
+      <div style="text-align:center;font-size:13px;color:#64748b;margin-bottom:16px;text-transform:uppercase;letter-spacing:1px">Shared Packages</div>
+      <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
+        <div style="background:#f1f5f9;border:1px solid #cbd5e1;padding:10px 16px;border-radius:8px;font-size:13px"><strong>packages/db</strong><br><span style="color:#64748b;font-size:11px">Schema, migrations, client</span></div>
+        <div style="background:#f1f5f9;border:1px solid #cbd5e1;padding:10px 16px;border-radius:8px;font-size:13px"><strong>packages/auth</strong><br><span style="color:#64748b;font-size:11px">Better Auth config</span></div>
+        <div style="background:#f1f5f9;border:1px solid #cbd5e1;padding:10px 16px;border-radius:8px;font-size:13px"><strong>packages/shared</strong><br><span style="color:#64748b;font-size:11px">Types, Zod validators</span></div>
+        <div style="background:#f1f5f9;border:1px solid #cbd5e1;padding:10px 16px;border-radius:8px;font-size:13px"><strong>packages/ui</strong><br><span style="color:#64748b;font-size:11px">Shadcn + Tailwind</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section" style="margin-top:24px">
+  <h3>Key Decisions</h3>
+  <ul>
+    <li><strong>apps/web</strong> → React + Vite + TanStack Router + TanStack Query, deployed to Cloudflare Pages</li>
+    <li><strong>apps/api</strong> → Hono on Cloudflare Workers, Better Auth mounted as middleware, Drizzle ORM</li>
+    <li><strong>packages/db</strong> → Drizzle schema + Neon client, shared by API (and future cron workers)</li>
+    <li><strong>packages/auth</strong> → Better Auth config with email+password and Google OAuth, shared by API and web</li>
+    <li><strong>packages/shared</strong> → Zod schemas for API request/response validation, TypeScript types, domain constants (role enums, ratio limits)</li>
+    <li><strong>packages/ui</strong> → Shadcn/UI components (new-york style), Tailwind CSS 4 config, shared design tokens</li>
+    <li><strong>Cloudflare Hyperdrive</strong> → connection pooling between Workers and Neon</li>
+    <li><strong>Row-level tenancy</strong> → every table has <code>center_id</code>, all queries filter by it</li>
+    <li><strong>Polling</strong> → dashboard fetches ratios every 10-30s via TanStack Query <code>refetchInterval</code></li>
+  </ul>
+</div>

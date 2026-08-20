@@ -1,0 +1,99 @@
+@import "tailwindcss";
+@source "../../../../packages/ui/src/**/*.{astro,tsx,ts}";
+@source "../../../../packages/marketing/src/**/*.{astro,tsx,ts}";
+@import "@pebbledesk/marketing/styles/globals.css";
+
+:root {
+  /* ── Brand alias vars (resolve --color-brand-* in globals.css) ── */
+  --site-primary: #4f6b5f;
+  --site-accent: #c97b63;
+  --site-surface: #f6efe6;
+  --site-text: #22312d;
+  --site-muted: #61716a;
+
+  /* ── Primary scale override → sage green ── */
+  --color-primary-50: #f1f5f3;
+  --color-primary-100: #dde8e4;
+  --color-primary-200: #bcd2ca;
+  --color-primary-300: #93b5aa;
+  --color-primary-400: #6d9487;
+  --color-primary-500: #4f6b5f;
+  --color-primary-600: #3e5549;
+  --color-primary-700: #2f4138;
+  --color-primary-800: #21302a;
+  --color-primary-900: #151f1b;
+  --color-primary-950: #0d1410;
+
+  /* ── Accent scale override → terracotta ── */
+  --color-accent-50: #fdf4f1;
+  --color-accent-100: #fae5dd;
+  --color-accent-200: #f5c9b8;
+  --color-accent-300: #e8a88e;
+  --color-accent-400: #df9178;
+  --color-accent-500: #c97b63;
+  --color-accent-600: #b5614a;
+  --color-accent-700: #8e4a38;
+  --color-accent-800: #693529;
+  --color-accent-900: #4a2419;
+  --color-accent-950: #311610;
+
+  --site-panel-border: color-mix(
+    in srgb,
+    var(--color-neutral-300) 58%,
+    transparent
+  );
+  --site-panel-bg: color-mix(
+    in srgb,
+    var(--surface-elevated) 88%,
+    var(--surface-primary)
+  );
+  --site-soft-surface: color-mix(
+    in srgb,
+    var(--surface-secondary) 84%,
+    var(--surface-primary)
+  );
+  --site-soft-outline: color-mix(
+    in srgb,
+    var(--color-primary-300) 28%,
+    var(--color-neutral-200)
+  );
+  --site-section-rule: color-mix(
+    in srgb,
+    var(--color-neutral-300) 52%,
+    transparent
+  );
+  --site-hero-halo: radial-gradient(
+    circle at top,
+    color-mix(in srgb, var(--color-accent-100) 58%, transparent) 0%,
+    transparent 68%
+  );
+  --site-editorial-wash: linear-gradient(
+    180deg,
+    color-mix(in srgb, var(--surface-primary) 88%, var(--color-primary-50)) 0%,
+    color-mix(in srgb, var(--surface-primary) 94%, var(--color-accent-50)) 100%
+  );
+  --site-cta-band: linear-gradient(
+    135deg,
+    color-mix(in srgb, var(--color-primary-800) 86%, #16201d) 0%,
+    color-mix(in srgb, var(--color-primary-700) 74%, var(--color-accent-900))
+      100%
+  );
+  --site-cta-band-border: color-mix(
+    in srgb,
+    var(--color-accent-300) 32%,
+    transparent
+  );
+  --site-cta-text: #f8f1e9;
+  --site-cta-muted: color-mix(in srgb, var(--site-cta-text) 72%, transparent);
+  --site-chip-bg: color-mix(
+    in srgb,
+    var(--surface-primary) 74%,
+    var(--color-primary-50)
+  );
+  --site-chip-border: color-mix(
+    in srgb,
+    var(--color-primary-200) 42%,
+    var(--color-neutral-200)
+  );
+}
+

@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="180" height="36" viewBox="0 0 180 36" role="img" aria-label="PebbleDesk wordmark">
+	<title>PebbleDesk wordmark</title>
+	<text
+		x="90"
+		y="25"
+		text-anchor="middle"
+		fill="#243446"
+		font-family="Manrope, Avenir Next, system-ui, sans-serif"
+		font-size="24"
+		font-weight="700"
+		letter-spacing="-0.02em"
+	>
+		<tspan fill="#243446">Pebble</tspan><tspan fill="#d97b67">Desk</tspan>
+	</text>
+</svg>

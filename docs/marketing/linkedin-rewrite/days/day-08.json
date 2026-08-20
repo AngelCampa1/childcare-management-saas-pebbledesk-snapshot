@@ -1,0 +1,171 @@
+{
+	"date": "2026-05-13",
+	"theme": "Enrollment, guardian records, authorized pickup, and clean child files",
+	"posts": [
+		{
+			"index_in_day": 1,
+			"time_central": "04:00",
+			"pillar": "Enrollment records and daily operations",
+			"format": "Practical tip",
+			"post_content": "Enrollment records are not quiet paperwork.\n\nThey decide what happens during the loud parts of the day.\n\nWho can pick up this child?\nWhich guardian gets the illness call?\nWhat classroom is the child assigned to?\nWho receives the invoice?\nIs there subsidy eligibility context attached to the file?\nIs there an allergy plan staff need to see before snack?\n\nWhen those answers live in different places, the director becomes the search function. Staff wait. Families get mixed messages. Billing questions take longer than they should.\n\nA clean child file is operating infrastructure.\n\nIt gives attendance a reliable roster, billing a clear family record, and pickup decisions a safer place to stand.\n\nUseful morning question:\n\nIf a new staff member had to cover the front desk today, could they find the right guardian, pickup, and emergency information without asking three people?",
+			"source": "apps/site/src/content/features/enrollment-records.md",
+			"url": "https://pebbledesk.app/features/enrollment-records/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Opens the day by framing enrollment records as the foundation for attendance, billing, communication, and pickup decisions."
+		},
+		{
+			"index_in_day": 2,
+			"time_central": "05:00",
+			"pillar": "Authorized pickup and child safety",
+			"format": "Risk callout",
+			"post_content": "Authorized pickup is one of those policies that feels simple until pickup is crowded.\n\nA grandparent arrives.\nA parent's phone is off.\nA teacher at the door does not recognize the adult.\nAnother family is waiting behind them.\nThe child is already reaching for their backpack.\n\nThat is not the moment to hunt through enrollment packets or rely on memory.\n\nA strong pickup record should make three things clear:\n\nWho is authorized.\nWhether photo ID is required.\nWhether any custody or court order documentation changes the answer.\n\nThe enrollment agreement template is careful here for a reason: centers should not release a child to someone who is not listed or not authorized in writing, and unfamiliar adults should expect photo ID review.\n\nThe practical goal is not to make pickup feel unfriendly.\n\nIt is to make the safe answer easy, even at 5:27 PM.",
+			"source": "apps/site/src/content/lead-magnets/childcare-enrollment-agreement-template.md",
+			"url": "https://pebbledesk.app/free/childcare-enrollment-agreement-template/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Uses the enrollment agreement pickup authorization language and turns it into a concrete center risk."
+		},
+		{
+			"index_in_day": 3,
+			"time_central": "06:00",
+			"pillar": "Guardian records and communication",
+			"format": "Operator question",
+			"post_content": "A useful child file test for directors:\n\nCan your team tell the difference between a guardian, an emergency contact, an authorized pickup person, and a billing contact?\n\nThose roles often overlap.\n\nBut they are not always the same person.\n\nA parent may be the billing contact but not the one who usually picks up.\nA relative may be authorized for pickup but not allowed to make enrollment decisions.\nAn emergency contact may be called when guardians cannot be reached, but that does not automatically make them the tuition contact.\n\nWhen the roles blur, staff have to interpret the family structure under pressure.\n\nClean guardian records help reduce that guessing. They keep contact, communication, pickup, billing, and subsidy context attached to the child in ways staff can actually use.\n\nThe file should answer the question before the front desk has to ask it.",
+			"source": "apps/site/src/content/features/enrollment-records.md",
+			"url": "https://pebbledesk.app/features/enrollment-records/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Builds from the feature page's record structure: guardians, authorized pickup, billing contacts, and subsidy fields."
+		},
+		{
+			"index_in_day": 4,
+			"time_central": "07:00",
+			"pillar": "Enrollment agreements and family expectations",
+			"format": "Teaching post",
+			"post_content": "A childcare enrollment contract is not just a legal file.\n\nIt is an operating tool for the moments families and centers remember differently.\n\nWhen is tuition due?\nDoes absence reduce tuition?\nWhat late pickup fee applies?\nHow much withdrawal notice is required?\nWhat happens if a child becomes ill during the day?\nWho is authorized to pick up?\n\nVague language makes those conversations harder. Specific language gives the director a documented standard to point back to.\n\nThe contract guide puts it plainly: many disputes come from clauses that were missing or vague, not from dramatic mistakes.\n\nA practical review today:\n\nRead your enrollment agreement like a parent who is upset about a fee, illness exclusion, or withdrawal notice.\n\nWould the answer still be clear?",
+			"source": "apps/site/src/content/guides/childcare-enrollment-contract-guide.md",
+			"url": "https://pebbledesk.app/resources/guides/childcare-enrollment-contract-guide/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Grounded in the contract guide's point that strong clauses prevent predictable disputes."
+		},
+		{
+			"index_in_day": 5,
+			"time_central": "08:00",
+			"pillar": "Clean child files and compliance readiness",
+			"format": "Practical checklist",
+			"post_content": "A clean child file should not require a scavenger hunt.\n\nFor each enrolled child, directors should be able to find the basics quickly:\n\n- Child's full legal name and date of birth\n- Classroom or group assignment\n- Guardian contact information\n- Emergency contacts\n- Authorized pickup list\n- Emergency medical treatment authorization\n- Immunization record or allowed exemption documentation\n- Allergy, medication, or medical condition documentation, if applicable\n- Signed enrollment agreement\n- Signed parent handbook acknowledgment\n\nSome of these records support licensing. Some support safety. Some prevent billing and family communication confusion.\n\nTogether, they answer the ordinary question behind many stressful moments:\n\nWhat does the center know about this child, and can staff act on it today?\n\nIf the answer lives across binders, inboxes, and memory, the file is not really clean yet.",
+			"source": "apps/site/src/content/lead-magnets/parent-handbook-template.md",
+			"url": "https://pebbledesk.app/free/parent-handbook-template/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Uses the parent handbook enrollment requirements and pickup/health sections to make a practical child-file checklist."
+		},
+		{
+			"index_in_day": 6,
+			"time_central": "09:00",
+			"pillar": "Enrollment records and product education",
+			"format": "Product education",
+			"post_content": "A roster is not the same thing as an enrollment record.\n\nA roster says which children are enrolled.\n\nA usable enrollment record connects the details that daily care depends on:\n\nChildren.\nGuardians.\nClassrooms.\nAuthorized pickup.\nBilling contacts.\nSubsidy eligibility context.\n\nThat difference matters because attendance, billing, family communication, and compliance questions all start from the same foundation.\n\nIf the foundation is messy, every later question takes longer:\n\nWhy was this child billed at this rate?\nWhich guardian should receive the message?\nWho approved pickup?\nWhich classroom should count this child in ratio?\n\nPebbleDesk treats enrollment and records as part of childcare center administration, not as background data entry.\n\nClean records do not make the day quiet.\n\nThey make the day easier to answer for.",
+			"source": "apps/site/src/content/features/enrollment-records.md",
+			"url": "https://pebbledesk.app/features/enrollment-records/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Explains the product feature page without over-promoting or adding unsupported document management claims."
+		},
+		{
+			"index_in_day": 7,
+			"time_central": "10:00",
+			"pillar": "Parent handbook and policy clarity",
+			"format": "Practical tip",
+			"post_content": "Parent handbooks prevent morning debates when they are specific enough to use.\n\nThe most useful sections are the ones staff need during real friction:\n\nEnrollment requirements.\nDrop-off and pickup procedures.\nIllness policy.\nMedication rules.\nEmergency procedures.\nCommunication expectations.\nHoliday and closure schedule.\nFee schedule.\n\nA handbook that says \"late pickup fees may apply\" leaves room for argument.\n\nA handbook that states the pickup time, fee amount, billing method, and escalation policy gives staff and families a shared reference.\n\nThe same is true for illness exclusion, authorized pickup, custody documentation, and emergency contacts.\n\nClear policies are not cold.\n\nThey are a form of care for the director, the teachers, and the families who need to know what will happen before the stressful moment arrives.",
+			"source": "apps/site/src/content/lead-magnets/parent-handbook-template.md",
+			"url": "https://pebbledesk.app/free/parent-handbook-template/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Uses the parent handbook template sections and its dispute-prevention framing."
+		},
+		{
+			"index_in_day": 8,
+			"time_central": "11:00",
+			"pillar": "Tuition terms and enrollment contracts",
+			"format": "Risk callout",
+			"post_content": "The tuition section of an enrollment agreement is where many future disputes are either prevented or invited.\n\nSpecific beats flexible.\n\nA strong agreement names:\n\n- The weekly or monthly tuition rate\n- Whether the child is full-time, part-time, or before/after care\n- The due date\n- Accepted payment methods\n- Late fee amount and trigger date\n- Returned payment fee\n- Whether absences reduce tuition\n- What happens after non-payment\n\nThe contract guide warns against soft phrases like \"late fees may apply\" because they create room for disagreement.\n\nFamilies deserve clarity before care begins.\n\nDirectors deserve a record that still makes sense when a payment conversation becomes uncomfortable.\n\nThis is not legal advice. It is an operations habit: write the policy in a way the center can actually follow.",
+			"source": "apps/site/src/content/guides/childcare-enrollment-contract-guide.md",
+			"url": "https://pebbledesk.app/resources/guides/childcare-enrollment-contract-guide/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Turns the guide's tuition clause advice into a practical LinkedIn post while avoiding legal guarantees."
+		},
+		{
+			"index_in_day": 9,
+			"time_central": "12:00",
+			"pillar": "Operations checklist and record maintenance",
+			"format": "Midday reflection",
+			"post_content": "Child files get stale quietly.\n\nA phone number changes.\nA family moves.\nA pickup person is removed.\nA new allergy plan arrives.\nA subsidy eligibility period changes.\nA custody order is updated.\n\nNo one sets out to keep bad information on file. It just happens when records are only reviewed at enrollment.\n\nThe operations checklist recommends a monthly emergency contact review because families change details more often than they remember to tell the center.\n\nThat review does not need to be dramatic.\n\nSpot-check a set of child records each month:\n\nCan guardians be reached?\nAre emergency contacts current?\nDo pickup permissions still match what families expect?\nAre health notes current enough for staff to act on?\n\nThe best child file is not the thickest one.\n\nIt is the one staff can trust today.",
+			"source": "apps/site/src/content/guides/childcare-center-operations-checklist.md",
+			"url": "https://pebbledesk.app/resources/guides/childcare-center-operations-checklist/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Uses the monthly emergency contact review recommendation and ties it to enrollment record hygiene."
+		},
+		{
+			"index_in_day": 10,
+			"time_central": "13:00",
+			"pillar": "Authorized pickup and custody documentation",
+			"format": "Teaching post",
+			"post_content": "Authorized pickup policies need one sentence directors sometimes wish they never had to say:\n\nA center cannot enforce a custody order it has not been given.\n\nThe enrollment agreement template is clear that families should provide current custody orders, restraining orders, or other court orders affecting pickup or contact.\n\nThat record belongs where staff can find it when pickup decisions are happening.\n\nNot in a director's memory.\nNot buried in an old email.\nNot implied because everyone \"knows the situation.\"\n\nPickup is too important for informal knowledge.\n\nThe practical habit:\n\nWhen a family mentions a custody change, ask for the current documentation and update the child file before the next pickup window.\n\nStaff should not have to interpret family law at the classroom door.\n\nThey should have a current record and a clear center policy.",
+			"source": "apps/site/src/content/lead-magnets/childcare-enrollment-agreement-template.md",
+			"url": "https://pebbledesk.app/free/childcare-enrollment-agreement-template/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Source-backed custody-order pickup guidance, careful not to give legal advice beyond operational recordkeeping."
+		},
+		{
+			"index_in_day": 11,
+			"time_central": "14:00",
+			"pillar": "Health records and enrollment documentation",
+			"format": "Practical checklist",
+			"post_content": "Health records should be reviewed before they become urgent.\n\nFor each enrolled child, check whether the file includes what staff would need during the care day:\n\nCurrent immunization record or allowed exemption documentation.\nEmergency medical treatment authorization.\nAllergy documentation, if applicable.\nMedication authorization, if medication may be administered.\nOriginal medication container and labeling expectations in policy.\nReturn-to-care expectations after illness.\nEmergency contacts who can actually be reached.\n\nThe enrollment agreement template includes health requirements because these records are not just administrative.\n\nThey affect whether a child can begin care, how staff respond to illness, and what happens when a guardian cannot be reached during an emergency.\n\nA clean health section is not about thicker files.\n\nIt is about fewer pauses when staff need to act.",
+			"source": "apps/site/src/content/lead-magnets/childcare-enrollment-agreement-template.md",
+			"url": "https://pebbledesk.app/free/childcare-enrollment-agreement-template/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Uses the template's health, immunization, medication, and emergency authorization sections."
+		},
+		{
+			"index_in_day": 12,
+			"time_central": "15:00",
+			"pillar": "Enrollment status and roster accuracy",
+			"format": "Operator question",
+			"post_content": "Does your roster clearly show where each child actually stands?\n\nActive.\nWaitlist.\nWithdrawn.\n\nThose statuses sound basic until the center gets busy.\n\nA child starts part-time.\nA family asks to hold a spot.\nA waitlisted family calls again.\nA withdrawn child still appears in a billing export.\nA classroom count includes a child who has not started yet.\n\nRecord status affects attendance, classroom assignment, billing, communication, and reporting.\n\nPebbleDesk supports active, waitlist, and withdrawn status so the file reflects the child's real place in the center.\n\nThat may not be flashy.\n\nBut it is the kind of record clarity that prevents small roster mistakes from becoming larger operational confusion.\n\nA useful weekly check: compare your active roster against classroom assignments and upcoming start dates.",
+			"source": "apps/site/src/content/features/enrollment-records.md",
+			"url": "https://pebbledesk.app/features/enrollment-records/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Uses the feature page FAQ on active, waitlist, and withdrawn status."
+		},
+		{
+			"index_in_day": 13,
+			"time_central": "16:00",
+			"pillar": "Enrollment contract review and policy upkeep",
+			"format": "Director habit",
+			"post_content": "Enrollment agreements should not age silently.\n\nRates change.\nLate pickup policies change.\nOperating hours change.\nIllness guidance changes.\nPayment methods change.\nWithdrawal notice expectations change.\n\nThe enrollment agreement template recommends annual review and updated signatures when significant changes are made.\n\nThat matters because families should not be held to terms they never agreed to.\n\nA practical annual review can be simple:\n\nRead the agreement next to your current parent handbook, tuition schedule, and daily practice.\n\nDo they match?\n\nIf the contract says one thing, the handbook says another, and the director explains a third version during enrollment, the center is planting the next dispute before the child even starts.\n\nClean records include clean policy history.",
+			"source": "apps/site/src/content/lead-magnets/childcare-enrollment-agreement-template.md",
+			"url": "https://pebbledesk.app/free/childcare-enrollment-agreement-template/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Uses the template FAQ about annual agreement review and new signatures for significant changes."
+		},
+		{
+			"index_in_day": 14,
+			"time_central": "17:00",
+			"pillar": "Daily closeout and record trust",
+			"format": "End-of-day checklist",
+			"post_content": "Before pickup ends today, try a five-minute child file trust check.\n\nChoose one classroom and ask:\n\nCan staff identify each child's authorized pickup adults?\nAre unfamiliar adults expected to show photo ID?\nAre emergency contacts current enough to use?\nAre allergy or medication notes visible to the people who need them?\nDoes the roster match who is actually active in the room?\nAre any guardian or pickup changes waiting in an inbox instead of the file?\n\nThis is not about catching staff out.\n\nIt is about finding the places where the record is asking people to remember too much.\n\nThe safer system is the one where staff can follow the file, the file reflects the family, and the director does not have to rebuild the truth at the end of the day.",
+			"source": "apps/site/src/content/guides/childcare-center-operations-checklist.md",
+			"url": "https://pebbledesk.app/resources/guides/childcare-center-operations-checklist/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Adapts daily and monthly operations checklist thinking to child-file maintenance at pickup time."
+		},
+		{
+			"index_in_day": 15,
+			"time_central": "18:00",
+			"pillar": "Enrollment records and operational relief",
+			"format": "Closing thought",
+			"post_content": "Clean enrollment records do not remove the human parts of childcare administration.\n\nDirectors will still have hard conversations.\nFamilies will still forget to update phone numbers.\nPickup will still get busy.\nIllness calls will still interrupt the plan.\nBilling questions will still happen.\n\nBut clean child files give the center a steadier place to work from.\n\nThe guardian record is current.\nThe authorized pickup list is clear.\nThe billing contact is attached.\nThe classroom assignment matches reality.\nThe health documentation is findable.\nThe enrollment status is not a guess.\n\nThat is the work PebbleDesk is built to support: children, guardians, classrooms, authorized pickup, billing contacts, and subsidy context kept close to the daily records directors rely on.\n\nAudit-ready records often start before attendance begins.\n\nThey start with a child file staff can trust.",
+			"source": "apps/site/src/content/features/enrollment-records.md",
+			"url": "https://pebbledesk.app/features/enrollment-records/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Closes the day by tying enrollment record structure to the core PebbleDesk promise without overstating compliance outcomes."
+		}
+	]
+}

@@ -1,0 +1,171 @@
+{
+	"date": "2026-05-31",
+	"theme": "Weekly closeout, record cleanup, and director relief",
+	"posts": [
+		{
+			"index_in_day": 1,
+			"time_central": "04:00",
+			"pillar": "Weekly record closeout",
+			"format": "Practical tip",
+			"post_content": "Sunday closeout does not need to be a dramatic paperwork session.\n\nThe useful version is small and specific:\n\nPick the records most likely to create Monday stress.\n\n- attendance gaps\n- missing sign-outs\n- room moves that were never cleaned up\n- incident notes waiting for signatures\n- subsidy attendance that needs support\n- child file changes still sitting in email\n\nNobody is trying to make the week perfect.\n\nThe useful outcome is simpler: the director does not start Monday with a pile of unresolved questions from Friday.\n\nA good closeout habit protects the next week before it starts.",
+			"source": "apps/site/src/content/features/audit-reports.md",
+			"url": "https://pebbledesk.app/features/audit-reports/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Rewritten to remove goal phrasing from closeout post."
+		},
+		{
+			"index_in_day": 2,
+			"time_central": "05:00",
+			"pillar": "Attendance proof",
+			"format": "Risk reminder",
+			"post_content": "Attendance records get harder to fix with every day that passes.\n\nA missing sign-out from Friday is still fresh on Sunday.\n\nBy next Thursday, everyone is guessing.\n\nThat is why weekly closeout should include one simple attendance review:\n\nWhich children have incomplete check-in or check-out records?\nWhich room assignments look wrong?\nWhich attendance edits need a note?\nWhich days may be needed later for subsidy, billing, or licensing follow-up?\n\nAttendance is not only a daily count. It becomes the record directors rely on when someone asks what happened.\n\nClean it while the week is still close enough to remember.",
+			"source": "apps/site/src/content/features/attendance-tracking.md",
+			"url": "https://pebbledesk.app/features/attendance-tracking/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Uses the attendance page's framing that attendance supports room context, reports, billing, and licensing follow-up."
+		},
+		{
+			"index_in_day": 3,
+			"time_central": "06:00",
+			"pillar": "Audit readiness",
+			"format": "Director checklist",
+			"post_content": "A weekly audit-ready closeout can be short.\n\nAsk five questions:\n\n1. Can attendance explain the week?\n2. Can ratio reports explain the fragile moments?\n3. Can billing records point back to attendance?\n4. Can child file changes be found in the record, not only in messages?\n5. Can incident documentation be retrieved by child and date?\n\nIf the answer is no, fix the record while the week is still recent.\n\nMost director stress comes from rebuilding the story later.\n\nWeekly closeout is the habit that keeps the story from falling apart in the first place.",
+			"source": "apps/site/src/content/guides/preparing-for-state-audit-childcare.md",
+			"url": "https://pebbledesk.app/resources/guides/preparing-for-state-audit-childcare/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Applies the audit guide's recurring documentation system to a weekly closeout habit."
+		},
+		{
+			"index_in_day": 4,
+			"time_central": "07:00",
+			"pillar": "Ratio records",
+			"format": "Operator insight",
+			"post_content": "The ratio moments worth reviewing are rarely the calm ones.\n\nThey are the transitions:\n\nMorning arrivals.\nLunch coverage.\nNap wake-up.\nOutdoor moves.\nAfternoon pickup.\n\nA weekly review should ask: did the record show who was present, where children were assigned, and which staff were covering the room at those pressure points?\n\nThat is different from asking whether the schedule looked fine.\n\nA schedule is the plan.\n\nThe weekly record is what the center can actually show later.",
+			"source": "apps/site/src/content/guides/preparing-for-state-audit-childcare.md",
+			"url": "https://pebbledesk.app/resources/guides/preparing-for-state-audit-childcare/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Uses the guide's focus on ratio evidence at specific points in time."
+		},
+		{
+			"index_in_day": 5,
+			"time_central": "08:00",
+			"pillar": "Enrollment record cleanup",
+			"format": "Practical tip",
+			"post_content": "One underrated weekly closeout task:\n\nMove family updates out of conversations and into the child record.\n\nA new phone number in a text thread is not enough.\nA pickup change mentioned at the desk is not enough.\nA billing contact update in an email is not enough.\nA subsidy note on a sticky note is not enough.\n\nIf the information affects attendance, billing, pickup, communication, or safety, it belongs in the record staff will use next week.\n\nThe director should not have to remember where the update came from.\n\nThe file should carry it.",
+			"source": "apps/site/src/content/features/enrollment-records.md",
+			"url": "https://pebbledesk.app/features/enrollment-records/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Grounded in the enrollment page's child, guardian, pickup, billing contact, and subsidy record structure."
+		},
+		{
+			"index_in_day": 6,
+			"time_central": "09:00",
+			"pillar": "Billing closeout",
+			"format": "Finance operations note",
+			"post_content": "Weekly billing cleanup starts with one practical question:\n\nCan every charge or claim point back to the record that supports it?\n\nFor private-pay billing, that may mean tuition, late pickup fees, balances, or one-off charges.\n\nFor subsidy work, it means attendance, authorization context, and documentation that can support the claim.\n\nWhen billing sits away from the child and attendance record, closeout turns into cross-checking.\n\nA cleaner habit is to resolve small mismatches each week, before they become month-end finance work.",
+			"source": "apps/site/src/content/features/billing-payments.md",
+			"url": "https://pebbledesk.app/features/billing-payments/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Uses the billing page's positioning that invoices and payment status stay close to the child and family record."
+		},
+		{
+			"index_in_day": 7,
+			"time_central": "10:00",
+			"pillar": "Subsidy documentation",
+			"format": "Risk callout",
+			"post_content": "For subsidy-heavy centers, Friday's attendance record can become next month's reimbursement question.\n\nThat is why weekly closeout should not wait for claim week.\n\nLook for:\n\n- missing attendance verification\n- unexplained absences\n- mismatched child names or identifiers\n- days billed differently than attendance suggests\n- notes that need to be attached while staff still remember them\n\nSubsidy documentation is easier when the center treats every week as part of the claim record.\n\nMonth-end is too late to discover the daily proof was thin.",
+			"source": "apps/site/src/content/guides/ccdf-attendance-documentation-requirements.md",
+			"url": "https://pebbledesk.app/resources/guides/ccdf-attendance-documentation-requirements/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Based on the CCDF guide's same-day verification, absence, and identifier requirements."
+		},
+		{
+			"index_in_day": 8,
+			"time_central": "11:00",
+			"pillar": "Product education",
+			"format": "Soft product post",
+			"post_content": "The reason PebbleDesk keeps attendance, ratios, billing context, and reports close together is simple:\n\nDirectors should not have to rebuild the week by hand.\n\nThe same records that run the day are the records that answer follow-up questions later.\n\nWho was present?\nWhich room were they in?\nWhat was billed?\nWhich records support the claim?\nWhat changed after the fact?\n\nWeekly closeout is calmer when those answers come from one connected operating record instead of separate exports and memory.",
+			"source": "packages/shared/src/constants/offering.ts",
+			"url": "https://pebbledesk.app/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Uses PebbleDesk's core positioning around connected attendance, ratios, subsidy billing, records, and reports."
+		},
+		{
+			"index_in_day": 9,
+			"time_central": "12:00",
+			"pillar": "Director relief",
+			"format": "Operator reflection",
+			"post_content": "Director relief is not always a big automation moment.\n\nSometimes it is a clean Friday record.\n\nAttendance closed.\nPickup notes attached.\nIncident reports findable.\nBilling questions marked.\nSubsidy documentation not waiting for a month-end scramble.\n\nThat kind of cleanup does not make childcare administration easy.\n\nIt just removes the extra work directors create for their future selves when records stay half-finished.\n\nA small closeout habit is a kindness to Monday morning.",
+			"source": "apps/site/src/content/features/audit-reports.md",
+			"url": "https://pebbledesk.app/features/audit-reports/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "LinkedIn-native reflection based on the audit reports page's operations cleanup use case."
+		},
+		{
+			"index_in_day": 10,
+			"time_central": "13:00",
+			"pillar": "Inspection readiness",
+			"format": "Teaching post",
+			"post_content": "A licensing visit does not only test whether a center did the right things.\n\nIt tests whether the center can show the right things.\n\nThat is why weekly closeout should focus on proof, not memory.\n\nA director may know the ratio was covered.\nA teacher may remember the pickup change.\nAn admin may know the subsidy absence was allowed.\n\nBut the record still needs to show it.\n\nThe weekly question is plain: if someone asked about this day later, would the file explain it without a long story from the director?",
+			"source": "apps/site/src/content/guides/preparing-for-state-audit-childcare.md",
+			"url": "https://pebbledesk.app/resources/guides/preparing-for-state-audit-childcare/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Uses the guide's distinction between compliant operation and documentation that survives inspection."
+		},
+		{
+			"index_in_day": 11,
+			"time_central": "14:00",
+			"pillar": "Attendance closeout",
+			"format": "Practical checklist",
+			"post_content": "A useful Friday attendance review can fit on one screen:\n\n- children with missing check-out times\n- children checked into the wrong room\n- absences without a reason note where one is needed\n- attendance edits without enough context\n- days that may support subsidy billing\n- unusual pickup times that should match billing or incident notes\n\nThis is not about policing staff.\n\nIt is about making sure the center's operating record still makes sense after a busy week.\n\nAttendance is the thread running through ratios, billing, reports, and audit follow-up.\n\nTreat it like the source record it becomes.",
+			"source": "apps/site/src/content/features/attendance-tracking.md",
+			"url": "https://pebbledesk.app/features/attendance-tracking/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Applies the attendance page's downstream record value to a closeout checklist."
+		},
+		{
+			"index_in_day": 12,
+			"time_central": "15:00",
+			"pillar": "Subsidy reimbursement discipline",
+			"format": "Operator question",
+			"post_content": "Before the week is fully closed, ask one subsidy question:\n\nWhich records would we need if an agency questioned this week's claim later?\n\nUsually the answer includes attendance, authorization context, parent verification, absence notes, and any billing exceptions.\n\nIf those pieces are not connected while the week is fresh, the director will have to reconstruct them when the claim is under pressure.\n\nThat is the expensive version of admin work.\n\nThe cheaper version is boring: clean the exceptions weekly, attach the notes, and make the claim easier to explain before anyone asks.",
+			"source": "apps/site/src/content/guides/subsidy-reimbursement-tracking-guide.md",
+			"url": "https://pebbledesk.app/resources/guides/subsidy-reimbursement-tracking-guide/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Grounded in the reimbursement guide's focus on matching attendance records to subsidy billing."
+		},
+		{
+			"index_in_day": 13,
+			"time_central": "16:00",
+			"pillar": "Record cleanup",
+			"format": "Practical tip",
+			"post_content": "Weekly closeout should have an inbox rule.\n\nIf a message changes the center record, do not leave it in the inbox.\n\nExamples:\n\nA guardian updates a phone number.\nA parent adds an authorized pickup adult.\nA billing contact changes.\nA child moves classrooms next week.\nA subsidy eligibility detail changes.\nA family sends health documentation.\n\nMessages are useful for communication.\n\nThey are a weak place to store operating truth.\n\nClose the loop by moving the update into the record staff will actually use.",
+			"source": "apps/site/src/content/features/enrollment-records.md",
+			"url": "https://pebbledesk.app/features/enrollment-records/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Uses the enrollment records page's record types and downstream workflow impact."
+		},
+		{
+			"index_in_day": 14,
+			"time_central": "17:00",
+			"pillar": "Audit reports",
+			"format": "Product education",
+			"post_content": "An audit report is only as useful as the records behind it.\n\nIf attendance is incomplete, ratio context is missing, billing exceptions live in a spreadsheet, and child file updates are scattered, the report becomes another cleanup project.\n\nPebbleDesk's reporting story is built around a practical idea: the daily record should already hold the context directors need later.\n\nReports should help answer the question.\n\nThey should not force the director to reconstruct the question from five places first.",
+			"source": "apps/site/src/content/features/audit-reports.md",
+			"url": "https://pebbledesk.app/features/audit-reports/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Accurately reflects the audit reports feature page without adding unsupported claims."
+		},
+		{
+			"index_in_day": 15,
+			"time_central": "18:00",
+			"pillar": "Director relief",
+			"format": "Closing reflection",
+			"post_content": "The end-of-week scramble usually starts as tiny record gaps.\n\nOne missing sign-out.\nOne pickup update left in a message.\nOne incident note waiting for parent notification details.\nOne subsidy absence that never got coded.\nOne invoice question that does not point back to attendance.\n\nNone of those feels huge alone.\n\nTogether, they become the director's Sunday night.\n\nA strong weekly closeout is not about perfection. It is about leaving the next week with records that can answer ordinary questions without a hunt.\n\nThat is the relief PebbleDesk is built around: audit-ready records without the end-of-week scramble.",
+			"source": "apps/site/src/config/site.ts",
+			"url": "https://pebbledesk.app/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Closes with the site tagline and core positioning from the site config."
+		}
+	]
+}

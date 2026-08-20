@@ -1,0 +1,27 @@
+{
+	"name": "@pebbledesk/auth",
+	"version": "0.0.1",
+	"private": true,
+	"type": "module",
+	"exports": {
+		".": "./src/index.ts",
+		"./server": "./src/server.ts",
+		"./client": "./src/client.ts"
+	},
+	"scripts": {
+		"typecheck": "tsc --noEmit",
+		"test": "vitest run --maxWorkers=1 --pool=forks --no-file-parallelism --passWithNoTests",
+		"test:watch": "vitest watch"
+	},
+	"dependencies": {
+		"better-auth": "^1.6.8",
+		"drizzle-orm": "^0.45",
+		"@neondatabase/serverless": "^1.0",
+		"@pebbledesk/db": "workspace:*",
+		"@pebbledesk/shared": "workspace:*"
+	},
+	"devDependencies": {
+		"typescript": "6.0.3",
+		"vitest": "4.1.5"
+	}
+}

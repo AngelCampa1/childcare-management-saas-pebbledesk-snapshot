@@ -1,0 +1,168 @@
+---
+import "../../styles/global.css";
+import BreadcrumbNav from "@pebbledesk/marketing/components/breadcrumb-nav.astro";
+import FaqSection from "@pebbledesk/marketing/components/faq-section.astro";
+import PublicSignupCta from "@pebbledesk/marketing/components/public-signup-cta";
+import SiteFooter from "@pebbledesk/marketing/components/site-footer.astro";
+import SiteHeader from "@pebbledesk/marketing/components/site-header.astro";
+import BaseLayout from "@pebbledesk/marketing/layouts/base-layout.astro";
+import { buildCollectionPageSchema } from "@pebbledesk/marketing/lib/schema-builders";
+import SchemaMarkup from "@pebbledesk/marketing/seo/schema-markup.astro";
+import {
+  resourceHubById,
+  resourceHubBySlug,
+  resourceHubs,
+} from "@/config/resource-hubs";
+import { PEBBLEDESK_OFFERING } from "@pebbledesk/shared/constants";
+import { siteConfig } from "@/config/site";
+import {
+  filterItemsForHub,
+  loadHubPageItems,
+  resolveStartHereItems,
+} from "@/lib/resource-hub-items";
+
+export function getStaticPaths() {
+  return resourceHubs.map((hub) => ({ params: { hub: hub.slug } }));
+}
+
+const hub = resourceHubBySlug.get(Astro.params.hub ?? "");
+if (!hub) return Astro.redirect("/resources/");
+
+const items = await loadHubPageItems();
+const hubItems = filterItemsForHub(items, hub.id);
+const startHereItems = resolveStartHereItems(hub.startHere, hubItems, items);
+const groups = [...new Set(hubItems.map((item) => item.typeLabel))].map((label) => ({
+  label,
+  items: hubItems.filter((item) => item.typeLabel === label),
+}));
+const adjacentHubs = hub.adjacentHubIds
+  .map((id) => resourceHubById.get(id))
+  .filter((item) => item !== undefined);
+const canonicalUrl = `https://${siteConfig.domain}${hub.href}`;
+const collectionSchema = buildCollectionPageSchema({
+  name: hub.title,
+  description: hub.description,
+  url: canonicalUrl,
+  items: hubItems.map((item) => ({
+    name: item.title,
+    description: item.description,
+    url: `https://${siteConfig.domain}${item.href}`,
+  })),
+});
+---
+
+<BaseLayout
+  title={`${hub.title} | ${siteConfig.name}`}
+  description={hub.description}
+  canonicalUrl={canonicalUrl}
+  siteName={siteConfig.name}
+  ogType="website"
+  themeColor={siteConfig.theme.primary}
+  theme={siteConfig.theme}
+  fonts={siteConfig.theme.fonts}
+>
+  <SiteHeader
+    slot="header"
+    siteName={siteConfig.name}
+    navItems={siteConfig.nav?.items}
+    signInHref={siteConfig.nav?.signInHref}
+    ctaText={siteConfig.nav?.ctaText ?? siteConfig.funnel.bofu.ctaText}
+    ctaHref={siteConfig.funnel.bofu.ctaTarget}
+    logoLight={siteConfig.logo?.light}
+    logoDark={siteConfig.logo?.dark}
+    promo={siteConfig.promoBanner}
+  />
+
+  <main class="mx-auto max-w-6xl px-4 py-[var(--section-py-sm)]">
+    <BreadcrumbNav
+      items={[
+        { label: "Home", href: "/" },
+        { label: "Resources", href: "/resources/" },
+        { label: hub.navLabel, href: hub.href },
+      ]}
+      siteUrl={`https://${siteConfig.domain}`}
+    />
+
+    <header class="mt-4 rounded-[var(--radius-xl)] border border-[var(--site-panel-border)] bg-[var(--site-panel-bg)] p-6 shadow-[var(--shadow-card)]">
+      <p class="font-mono text-[length:var(--text-caption)] uppercase tracking-[0.18em] text-[var(--color-accent-700)]">
+        Resource hub
+      </p>
+      <h1 class="mt-3 text-[length:var(--text-heading)] font-bold text-[var(--color-brand-text)]">
+        {hub.title}
+      </h1>
+      <p class="mt-3 max-w-3xl text-[length:var(--text-body-lg)] leading-7 text-[var(--color-brand-muted)]">
+        {hub.description}
+      </p>
+      <p class="mt-4 max-w-3xl text-[var(--color-brand-muted)]">{hub.intro}</p>
+      <p class="mt-4 inline-flex rounded-full bg-[var(--site-soft-surface)] px-3 py-1 text-[length:var(--text-caption)] text-[var(--color-brand-muted)]">
+        {hubItems.length} resources grouped by type
+      </p>
+    </header>
+
+    {startHereItems.length > 0 && (
+      <section class="mt-8 rounded-[var(--radius-xl)] border border-[var(--site-soft-outline)] bg-[var(--site-soft-surface)] p-6" aria-labelledby="start-here">
+        <h2 id="start-here" class="text-xl font-bold text-[var(--color-brand-text)]">Start here</h2>
+        <div class="mt-4 grid gap-4 md:grid-cols-3">
+          {startHereItems.map((item) => (
+            <a href={item.href} class="rounded-[var(--radius-lg)] border border-[var(--site-panel-border)] bg-white p-4 shadow-[var(--shadow-card)]">
+              <p class="text-[length:var(--text-caption)] font-semibold uppercase tracking-[0.12em] text-[var(--color-accent-700)]">{item.typeLabel}</p>
+              <h3 class="mt-2 font-bold text-[var(--color-brand-text)]">{item.title}</h3>
+              <p class="mt-2 text-[length:var(--text-caption)] leading-6 text-[var(--color-brand-muted)]">{item.description}</p>
+            </a>
+          ))}
+        </div>
+      </section>
+    )}
+
+    <div class="mt-8 grid gap-8">
+      {groups.map((group) => (
+        <section aria-labelledby={`group-${group.label.toLowerCase().replaceAll(" ", "-")}`}>
+          <div class="mb-4 flex items-end justify-between gap-4 border-b border-[var(--site-section-rule)] pb-3">
+            <h2 id={`group-${group.label.toLowerCase().replaceAll(" ", "-")}`} class="text-xl font-bold text-[var(--color-brand-text)]">{group.label}</h2>
+            <p class="text-[length:var(--text-caption)] text-[var(--color-brand-muted)]">{group.items.length} pages</p>
+          </div>
+          <div class="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+            {group.items.map((item) => (
+              <a href={item.href} class="rounded-[var(--radius-lg)] border border-[var(--site-panel-border)] bg-white p-5 shadow-[var(--shadow-card)] transition hover:-translate-y-0.5 hover:border-[var(--color-accent-400)]">
+                <h3 class="font-bold text-[var(--color-brand-text)]">{item.title}</h3>
+                <p class="mt-2 text-[length:var(--text-caption)] leading-6 text-[var(--color-brand-muted)]">{item.description}</p>
+              </a>
+            ))}
+          </div>
+        </section>
+      ))}
+    </div>
+
+    <section class="mt-10 rounded-[var(--radius-xl)] border border-[var(--site-panel-border)] bg-[var(--site-editorial-wash)] p-6" aria-labelledby="adjacent-hubs">
+      <h2 id="adjacent-hubs" class="text-xl font-bold text-[var(--color-brand-text)]">Related hubs</h2>
+      <div class="mt-4 grid gap-4 md:grid-cols-3">
+        {adjacentHubs.map((adjacent) => (
+          <a href={adjacent.href} class="rounded-[var(--radius-lg)] border border-[var(--site-panel-border)] bg-white p-4">
+            <h3 class="font-bold text-[var(--color-brand-text)]">{adjacent.navLabel}</h3>
+            <p class="mt-2 text-[length:var(--text-caption)] leading-6 text-[var(--color-brand-muted)]">{adjacent.description}</p>
+          </a>
+        ))}
+      </div>
+    </section>
+
+    <section class="mt-10 border-t border-[var(--site-section-rule)] pt-10 text-center" id="signup">
+      <h2 class="text-2xl font-bold text-[var(--color-brand-text)]">Want these workflows connected in one place?</h2>
+      <p class="mx-auto mb-6 mt-3 max-w-2xl text-[var(--color-brand-muted)]">
+        Start your {PEBBLEDESK_OFFERING.trial.label} and keep attendance, ratios, billing, records, and reports together.
+      </p>
+      <PublicSignupCta client:load sourcePage={hub.href} buttonText={siteConfig.funnel.bofu.ctaText} />
+    </section>
+
+    <FaqSection faqs={hub.faqs} showBottomCta={false} ctaVariant="compact" />
+  </main>
+
+  <SiteFooter
+    slot="footer"
+    siteName={siteConfig.name}
+    tagline={siteConfig.tagline}
+    linkGroups={siteConfig.footer?.linkGroups}
+    legalLinks={siteConfig.footer?.legalLinks}
+    captureVariant="compact"
+  />
+  <SchemaMarkup schemas={[collectionSchema]} />
+</BaseLayout>

@@ -1,0 +1,1 @@
+ALTER TYPE "public"."scheduled_send_status" ADD VALUE 'processing' BEFORE 'sent';

@@ -1,0 +1,11 @@
+{
+	"extends": "astro/tsconfigs/strict",
+	"exclude": ["dist", "coverage"],
+	"compilerOptions": {
+		"jsx": "react-jsx",
+		"types": ["@cloudflare/workers-types"],
+		"paths": {
+			"@/*": ["./src/*"]
+		}
+	}
+}

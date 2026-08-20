@@ -1,0 +1,25 @@
+{
+	"schemaVersion": 1,
+	"surface": "email-lifecycle",
+	"freeResourcePolicy": {
+		"freeResourceAnswer": "Yes, completely free. Enter your email and we'll email you a direct download link - no credit card, no trial, no strings.",
+		"formatAnswer": "It's a PDF you can save, print, or share with your team. Works on any device.",
+		"deliveryAnswer": "We'll send you the resource you requested.",
+		"noAccountRequired": "No account required. Just your email - we send the resource directly to your inbox.",
+		"noCreditCardRequired": "No credit card required for self-serve trial signup."
+	},
+	"subscriptionTrial": {
+		"reminderDaysBeforeEnd": 3,
+		"endingSoonSubjectPrefix": "3 days left",
+		"endingSoonPreview": "Your PebbleDesk trial ends in 3 days.",
+		"endingSoonHeading": "Your trial ends in 3 days",
+		"startedSubject": "Your PebbleDesk trial has started"
+	},
+	"unsubscribe": {
+		"title": "Unsubscribed - PebbleDesk",
+		"heading": "You've been unsubscribed.",
+		"body": "You've been unsubscribed from PebbleDesk emails.",
+		"returnLabel": "Return to pebbledesk.app",
+		"returnHref": "https://pebbledesk.app/"
+	}
+}

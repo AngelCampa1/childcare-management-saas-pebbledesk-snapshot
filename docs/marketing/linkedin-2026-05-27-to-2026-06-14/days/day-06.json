@@ -1,0 +1,171 @@
+{
+	"date": "2026-06-01",
+	"theme": "Subsidy billing documentation and reimbursement discipline",
+	"posts": [
+		{
+			"index_in_day": 1,
+			"time_central": "04:00",
+			"pillar": "Subsidy documentation",
+			"format": "Practical tip",
+			"post_content": "Subsidy billing discipline starts before the claim is submitted.\n\nIt starts at check-in.\n\nEvery billed day needs a record that can explain:\n\n- which child was authorized\n- whether the child was present\n- when care started and ended\n- who verified attendance\n- whether an absence was billable\n- what was submitted later\n\nThat sounds basic until the center is trying to answer a payment question weeks after care happened.\n\nThe safer habit is to treat attendance as claim support from the beginning, not as paperwork to clean up at the end of the month.",
+			"source": "apps/site/src/content/guides/ccdf-attendance-documentation-requirements.md",
+			"url": "https://pebbledesk.app/resources/guides/ccdf-attendance-documentation-requirements/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Opens with the CCDF guide's core requirement that billing must connect to verified attendance records."
+		},
+		{
+			"index_in_day": 2,
+			"time_central": "05:00",
+			"pillar": "Reimbursement discipline",
+			"format": "Risk reminder",
+			"post_content": "Most subsidy reimbursement problems are not mysterious.\n\nThe record does not match the claim.\n\nA sign-out is missing.\nA parent verification was added late.\nAn absence was billed without a reason code.\nA child's name does not match across attendance and billing.\nA submission deadline slipped.\n\nSmall gaps can turn into delayed payment questions.\n\nThat matters because many states reimburse after care is delivered. When payment follows the paperwork, documentation discipline becomes cash flow discipline.",
+			"source": "apps/site/src/content/guides/subsidy-reimbursement-tracking-guide.md",
+			"url": "https://pebbledesk.app/resources/guides/subsidy-reimbursement-tracking-guide/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Uses the reimbursement guide's causes of delays and retroactive payment timing."
+		},
+		{
+			"index_in_day": 3,
+			"time_central": "06:00",
+			"pillar": "Attendance verification",
+			"format": "Teaching post",
+			"post_content": "Same-day attendance verification is not busywork.\n\nIt is the difference between a record and a reconstruction.\n\nA parent or authorized adult signs in on the day of service. The time is captured. The child identifier is clear. If the child is absent, the reason is recorded the same day.\n\nThat record can travel into billing, audit review, and payment follow-up.\n\nA signature collected two weeks later may still look like a signature, but it does not carry the same weight.\n\nFor subsidy billing, late paperwork is weaker paperwork.",
+			"source": "apps/site/src/content/guides/ccdf-attendance-documentation-requirements.md",
+			"url": "https://pebbledesk.app/resources/guides/ccdf-attendance-documentation-requirements/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Grounded in the CCDF guide's same-day verification and retroactive signature definitions."
+		},
+		{
+			"index_in_day": 4,
+			"time_central": "07:00",
+			"pillar": "Claim readiness",
+			"format": "Checklist",
+			"post_content": "Before a subsidy claim goes out, check the support record.\n\nFor each child in the claim sample, can you show:\n\n- authorization period\n- billed dates\n- time-stamped attendance\n- same-day verification\n- absence reason where applicable\n- co-pay or family billing context where needed\n- submission date\n- payment or short-pay follow-up\n\nA giant binder is not the prize.\n\nAn explainable claim is.\n\nIf the center has to jump between attendance sheets, family records, billing exports, and memory before filing, the claim is already carrying too much risk.",
+			"source": "apps/site/src/content/features/subsidy-billing.md",
+			"url": "https://pebbledesk.app/features/subsidy-billing/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Rewritten to close with the actual filing risk instead of goal/goal phrasing."
+		},
+		{
+			"index_in_day": 5,
+			"time_central": "08:00",
+			"pillar": "Absence documentation",
+			"format": "Practical tip",
+			"post_content": "Absences should not look like blank days.\n\nFor subsidy billing, a blank day creates a question:\n\nWas the child absent?\nWas the slot held?\nWas the absence billable under the state's rules?\nWas the reason documented?\nWas the monthly limit exceeded?\n\nA same-day absence note gives the director a record to work from later.\n\nThe exact rules vary by state, so centers still need to follow their own provider handbook.\n\nBut the operating habit is steady everywhere: do not leave absence days for future-you to decode.",
+			"source": "apps/site/src/content/guides/ccdf-attendance-documentation-requirements.md",
+			"url": "https://pebbledesk.app/resources/guides/ccdf-attendance-documentation-requirements/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Based on the CCDF guide's absence-code and billable absence guidance while avoiding universal state claims."
+		},
+		{
+			"index_in_day": 6,
+			"time_central": "09:00",
+			"pillar": "Cash flow visibility",
+			"format": "Finance operations note",
+			"post_content": "Subsidy reimbursement tracking is not only about compliance.\n\nIt is also about knowing what cash is still outstanding.\n\nA director should be able to answer:\n\nWhat was submitted?\nWhat was paid?\nWhat is still pending?\nWhat was short-paid or rejected?\nWhich attendance records support the claim?\nWhat needs follow-up before the next cycle closes?\n\nWhen those answers live in a spreadsheet apart from attendance, it is easy to miss the small problem until it becomes a cash problem.\n\nThe reimbursement tracker should stay close to the daily record.",
+			"source": "apps/site/src/content/guides/subsidy-reimbursement-tracking-guide.md",
+			"url": "https://pebbledesk.app/resources/guides/subsidy-reimbursement-tracking-guide/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Uses the reimbursement guide's claim, outstanding payment, and reconciliation focus."
+		},
+		{
+			"index_in_day": 7,
+			"time_central": "10:00",
+			"pillar": "Record consistency",
+			"format": "Risk callout",
+			"post_content": "One quiet subsidy billing risk: inconsistent child identifiers.\n\nAttendance says \"Maddie R.\"\nThe authorization says \"Madeline Rivera.\"\nThe billing spreadsheet says \"M Rivera.\"\nThe family file uses a nickname.\n\nA human may know those records belong together.\n\nA reviewer or portal may not.\n\nThe fix is plain: use the full legal name and required state identifier consistently across attendance, authorization, billing, and reimbursement tracking.\n\nIt feels small until a claim is slowed by a mismatch everyone thought was obvious.",
+			"source": "apps/site/src/content/guides/ccdf-attendance-documentation-requirements.md",
+			"url": "https://pebbledesk.app/resources/guides/ccdf-attendance-documentation-requirements/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Draws from the CCDF guide's warning about inconsistent identifiers slowing reconciliation."
+		},
+		{
+			"index_in_day": 8,
+			"time_central": "11:00",
+			"pillar": "Product education",
+			"format": "Soft product post",
+			"post_content": "PebbleDesk does not replace every state subsidy portal.\n\nThat is not the claim.\n\nThe product is built to keep the supporting record cleaner before the director submits or answers questions elsewhere.\n\nAttendance.\nChild records.\nBilling context.\nReports.\nClaim follow-up.\n\nThose pieces are easier to defend when they are not scattered across a sign-in sheet, an invoice tool, a spreadsheet, and a folder of downloaded remittance notices.\n\nSubsidy work gets less brittle when the daily record and reimbursement record stay close together.",
+			"source": "apps/site/src/content/features/subsidy-billing.md",
+			"url": "https://pebbledesk.app/features/subsidy-billing/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Uses the feature page's explicit guardrail that PebbleDesk helps supporting records and does not replace every state portal."
+		},
+		{
+			"index_in_day": 9,
+			"time_central": "12:00",
+			"pillar": "Billing alignment",
+			"format": "Operator question",
+			"post_content": "Subsidy billing question for directors:\n\nCan your claim record explain the difference between private-pay billing, family co-pay, and the subsidy-covered portion?\n\nMixed billing is where confusion grows quickly.\n\nA family may owe a co-pay.\nThe agency may reimburse a separate portion.\nAttendance may support only some billed dates.\nAn absence may be allowed under one rule but not another.\n\nIf those records are not separated clearly, the director ends up sorting finance, attendance, and family communication at the same time.\n\nA cleaner system lets each piece keep its place.",
+			"source": "apps/site/src/content/guides/subsidy-reimbursement-tracking-guide.md",
+			"url": "https://pebbledesk.app/resources/guides/subsidy-reimbursement-tracking-guide/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Based on the reimbursement guide FAQ about families with mixed private-pay and subsidy."
+		},
+		{
+			"index_in_day": 10,
+			"time_central": "13:00",
+			"pillar": "Audit readiness",
+			"format": "Teaching post",
+			"post_content": "A subsidy audit usually asks a practical question:\n\nDid the center bill for care it can support?\n\nThat means the documentation trail matters more than the director's memory.\n\nThe attendance record should match the claim.\nThe authorization should match the child and dates.\nAbsences should be explained.\nParent or authorized-adult verification should be clear.\nPayment follow-up should show what happened after submission.\n\nThis is operating discipline: build the claim from records that would still make sense to someone who was not there that day.",
+			"source": "apps/site/src/content/guides/ccdf-attendance-documentation-requirements.md",
+			"url": "https://pebbledesk.app/resources/guides/ccdf-attendance-documentation-requirements/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Turns CCDF documentation requirements into a non-legal audit-readiness post."
+		},
+		{
+			"index_in_day": 11,
+			"time_central": "14:00",
+			"pillar": "Submission deadlines",
+			"format": "Practical tip",
+			"post_content": "Submission deadlines deserve a place on the director's calendar, not just in someone's head.\n\nA good subsidy closeout rhythm works backward from the deadline:\n\n- attendance exceptions reviewed\n- absences coded\n- missing verifications resolved where possible\n- claim draft checked against authorization\n- director review completed\n- submission confirmation saved\n- pending payment tracked\n\nThe deadline is not the day to discover the record is incomplete.\n\nThe deadline is when the documentation should already be ready enough to submit with confidence.",
+			"source": "apps/site/src/content/guides/subsidy-reimbursement-tracking-guide.md",
+			"url": "https://pebbledesk.app/resources/guides/subsidy-reimbursement-tracking-guide/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Grounded in the reimbursement guide's submission deadline and documentation delay risks."
+		},
+		{
+			"index_in_day": 12,
+			"time_central": "15:00",
+			"pillar": "Attendance and billing connection",
+			"format": "Product positioning",
+			"post_content": "PebbleDesk's subsidy billing work starts with a simple recordkeeping belief:\n\nThe reimbursement record should not be far away from the attendance record.\n\nIf a director has to pull attendance from one system, child details from another, invoices from a third, and notes from a spreadsheet, every review gets slower.\n\nPebbleDesk keeps subsidy workflows closer to attendance, child records, billing, and reporting.\n\nThat does not make state rules disappear.\n\nIt makes the support record easier to keep clean while the center is doing the work anyway.",
+			"source": "apps/site/src/content/features/subsidy-billing.md",
+			"url": "https://pebbledesk.app/features/subsidy-billing/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Rewritten to remove internal product-thesis phrasing while keeping subsidy record logic."
+		},
+		{
+			"index_in_day": 13,
+			"time_central": "16:00",
+			"pillar": "Documentation quality",
+			"format": "Checklist",
+			"post_content": "A subsidy record is stronger when it answers the boring questions clearly.\n\nChild name: complete.\nDate of service: exact.\nTime in and time out: captured.\nVerification: same-day where required.\nAbsence: documented, not blank.\nAuthorization: current for the billed period.\nClaim: matched to the record.\nPayment: tracked after submission.\n\nThere is nothing flashy here.\n\nThat is the point.\n\nSubsidy documentation works best when it is plain enough for a reviewer, director, or new administrator to understand without a long explanation.",
+			"source": "apps/site/src/content/guides/ccdf-attendance-documentation-requirements.md",
+			"url": "https://pebbledesk.app/resources/guides/ccdf-attendance-documentation-requirements/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Summarizes source-backed CCDF documentation elements in checklist form."
+		},
+		{
+			"index_in_day": 14,
+			"time_central": "17:00",
+			"pillar": "Director workflow",
+			"format": "Operator insight",
+			"post_content": "The hardest subsidy billing work is often not the state portal.\n\nIt is getting the center's own records ready before the portal.\n\nAttendance has to be clean.\nAuthorizations have to be current.\nAbsences need context.\nFamily co-pays need separation.\nShort-pays need follow-up.\nSubmission confirmations need to be saved.\n\nThe portal is where the claim goes.\n\nThe operating record is where the claim becomes defensible.\n\nDirectors save themselves real stress when that record is maintained all month instead of rebuilt at the deadline.",
+			"source": "apps/site/src/content/guides/subsidy-reimbursement-tracking-guide.md",
+			"url": "https://pebbledesk.app/resources/guides/subsidy-reimbursement-tracking-guide/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Uses the guide's submission and reconciliation themes without claiming portal replacement."
+		},
+		{
+			"index_in_day": 15,
+			"time_central": "18:00",
+			"pillar": "Reimbursement discipline",
+			"format": "Closing reflection",
+			"post_content": "Subsidy billing is unforgiving because the paperwork trails the care.\n\nThe child was present weeks ago.\nThe parent signed at pickup.\nThe absence happened on a Tuesday.\nThe claim was submitted later.\nThe payment question arrives after that.\n\nBy then, memory is a weak tool.\n\nThe record has to carry the story.\n\nThat is the discipline: capture attendance cleanly, document exceptions the same day, tie billing back to the daily record, and track what is still outstanding.\n\nNot because directors need more admin work.\n\nBecause reimbursement is easier to defend when the proof was built while the day was happening.",
+			"source": "apps/site/src/content/guides/subsidy-reimbursement-tracking-guide.md",
+			"url": "https://pebbledesk.app/resources/guides/subsidy-reimbursement-tracking-guide/",
+			"review_status": "writer self-reviewed: truth, source, humanization, brand, duplication, LinkedIn fit",
+			"notes": "Closes the day with source-backed reimbursement and documentation discipline."
+		}
+	]
+}

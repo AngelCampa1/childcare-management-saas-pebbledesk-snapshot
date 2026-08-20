@@ -1,0 +1,177 @@
+---
+import "../../styles/global.css"
+import { getCollection, render } from "astro:content"
+import type { CollectionEntry } from "astro:content"
+import FaqSection from "@pebbledesk/marketing/components/faq-section.astro"
+import FunnelCta from "@pebbledesk/marketing/components/funnel-cta.astro"
+import InlineSignup from "@pebbledesk/marketing/components/inline-signup.astro"
+import RelatedPages from "@pebbledesk/marketing/components/related-pages.astro"
+import ArticleLayout from "@pebbledesk/marketing/layouts/article-layout.astro"
+import { formatNumber } from "@pebbledesk/marketing/lib/collections"
+import { buildGeoArticleSchema } from "@pebbledesk/marketing/lib/schema-builders"
+import DataTableBlock from "@pebbledesk/marketing/seo/data-table-block.astro"
+import StatisticCitation from "@pebbledesk/marketing/seo/statistic-citation.astro"
+import { inferPageTrack } from "@pebbledesk/marketing/lib/page-track"
+import { siteConfig } from "@/config/site"
+import { buildCityBreadcrumbs, buildStateBreadcrumbs } from "@/lib/breadcrumbs"
+import { buildContentMap, entrySlug, resolveRelatedLinksWithFallback } from "@/lib/page-helpers"
+
+type StateEntry = CollectionEntry<"state-pages">
+type CityEntry = CollectionEntry<"city-pages">
+
+export async function getStaticPaths() {
+  const [stateEntries, cityEntries] = await Promise.all([
+    getCollection("state-pages"),
+    getCollection("city-pages"),
+  ])
+
+  const statePaths = stateEntries.map((entry) => ({
+    params: { slug: entrySlug(entry) },
+    props: { entry: entry as StateEntry | CityEntry, type: "state" as const },
+  }))
+
+  const cityPaths = cityEntries.map((entry) => ({
+    params: { slug: entrySlug(entry) },
+    props: { entry: entry as StateEntry | CityEntry, type: "city" as const },
+  }))
+
+  return [...statePaths, ...cityPaths]
+}
+
+const { entry, type } = Astro.props
+const { Content, headings } = await render(entry)
+const { title, description, bluf, buyerStage, publishedAt, updatedAt, faqs, stateCode, establishmentCount, topMetros, licensingNotes, seasonalNotes, pricingStats, tableData, noindex } = entry.data
+const slug = entrySlug(entry)
+const canonicalPath = entry.data.canonicalHref ?? `/childcare-software/${slug}`
+
+const isCity = type === "city"
+const cityEntry = isCity ? (entry as CityEntry) : null
+const city = cityEntry?.data.city ?? ""
+const state = entry.data.state
+
+// For city pages, prepend the state page link to relatedPages if not already present
+const rawRelatedPages = entry.data.relatedPages
+const relatedPages = isCity && cityEntry
+  ? (rawRelatedPages.includes(cityEntry.data.statePage)
+      ? rawRelatedPages
+      : [cityEntry.data.statePage, ...rawRelatedPages])
+  : rawRelatedPages
+
+const [alternatives, comparisons, pricingBreakdowns, listicles, guides, statePages, leadMagnets, features, cityPages] = await Promise.all([
+  getCollection("alternatives"),
+  getCollection("comparisons"),
+  getCollection("pricing-breakdowns"),
+  getCollection("listicles"),
+  getCollection("guides"),
+  getCollection("state-pages"),
+  getCollection("lead-magnets"),
+  getCollection("features"),
+  getCollection("city-pages"),
+])
+const contentMap = buildContentMap({ alternatives, comparisons, pricingBreakdowns, listicles, guides, statePages, leadMagnets, features, cityPages })
+const resolvedRelatedPages = resolveRelatedLinksWithFallback({ currentPath: canonicalPath, relatedPages, contentMap })
+
+const breadcrumbs = isCity
+  ? buildCityBreadcrumbs(city, stateCode, canonicalPath)
+  : buildStateBreadcrumbs(state, canonicalPath)
+
+const geoSchemaState = isCity ? `${city}, ${stateCode}` : state
+const geoSchema = buildGeoArticleSchema({ title, description, state: geoSchemaState })
+
+const track = inferPageTrack({ track: entry.data.track, pageType: "childcare-software" })
+
+const inlineSignupHeading = isCity
+  ? `Running a childcare center in ${city}, ${stateCode}?`
+  : `Running a ${state} childcare center?`
+
+const funnelCtaHeading = isCity
+  ? `Ready to run your ${city}, ${stateCode} childcare center on one screen?`
+  : `Ready to run your ${state} childcare center on one screen?`
+---
+
+<ArticleLayout
+  title={title}
+  description={description}
+  bluf={bluf}
+  buyerStage={buyerStage}
+  publishedAt={publishedAt}
+  updatedAt={updatedAt}
+  canonicalPath={canonicalPath}
+  config={siteConfig}
+  breadcrumbs={breadcrumbs}
+  schemas={[geoSchema]}
+  headings={headings}
+  noindex={noindex}
+  track={track}
+>
+  <Content />
+
+  {pricingStats && pricingStats.map((s) => (
+    <StatisticCitation stat={s.stat} source={s.source} sourceUrl={s.sourceUrl} />
+  ))}
+
+  {tableData && (
+    <DataTableBlock
+      name={tableData.name}
+      description={tableData.description}
+      columns={tableData.columns}
+      rows={tableData.rows}
+    />
+  )}
+
+  <InlineSignup
+    sourcePage={canonicalPath}
+    heading={inlineSignupHeading}
+    subtext={siteConfig.funnel.ctaSubtitle}
+  />
+
+  <section class="my-8 rounded-lg border border-[var(--color-neutral-200)] bg-[var(--color-neutral-50)] p-6">
+    <h2 class="mb-4 text-lg font-semibold text-[var(--color-brand-text)]">Licensed Childcare Facilities; Top {isCity ? `${city} Area` : state} Markets</h2>
+    <table class="w-full text-sm">
+      <thead>
+        <tr class="border-b border-[var(--color-neutral-200)] text-left">
+          <th class="pb-2 font-medium text-[var(--color-brand-muted)]">Metro Area</th>
+          <th class="pb-2 font-medium text-[var(--color-brand-muted)] text-right">Facilities</th>
+        </tr>
+      </thead>
+      <tbody>
+        {topMetros?.map((metro) => (
+          <tr class="border-b border-[var(--color-neutral-200)] last:border-0">
+            <td class="py-2 text-[var(--color-brand-text)]">{metro.name}</td>
+            <td class="py-2 text-[var(--color-brand-text)] text-right">{formatNumber(metro.count)}</td>
+          </tr>
+        ))}
+        <tr class="font-medium">
+          <th scope="row" class="pt-3 text-[var(--color-brand-text)] font-medium text-left">Total; {stateCode}</th>
+          <td class="pt-3 text-[var(--color-brand-text)] text-right">{formatNumber(establishmentCount ?? 0)}+</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="my-8 rounded-lg border border-[var(--color-accent-200)] bg-[var(--color-accent-50)] p-6">
+    <h2 class="mb-2 text-lg font-semibold text-[var(--color-brand-text)]">Licensing Requirements; {isCity ? `${city}, ${stateCode}` : state}</h2>
+    <p class="text-sm text-[var(--color-brand-muted)]">{licensingNotes}</p>
+  </section>
+
+  <section class="my-8 rounded-lg border border-[var(--color-primary-200)] bg-[var(--color-primary-50)] p-6">
+    <h2 class="mb-2 text-lg font-semibold text-[var(--color-brand-text)]">Enrollment Patterns; {isCity ? `${city}, ${stateCode}` : state}</h2>
+    <p class="text-sm text-[var(--color-brand-muted)]">{seasonalNotes}</p>
+  </section>
+
+  <FunnelCta
+    stage={buyerStage}
+    funnel={siteConfig.funnel}
+    sourcePage={canonicalPath}
+    heading={funnelCtaHeading}
+    subtitle={siteConfig.funnel.ctaSubtitle}
+  />
+
+  <FaqSection faqs={faqs} />
+
+  {resolvedRelatedPages.length > 0 && (
+    <RelatedPages
+      pages={resolvedRelatedPages}
+    />
+  )}
+</ArticleLayout>

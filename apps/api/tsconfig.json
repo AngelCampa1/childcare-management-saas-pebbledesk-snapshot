@@ -1,0 +1,14 @@
+{
+	"extends": "../../tsconfig.json",
+	"compilerOptions": {
+		"outDir": "dist",
+		"rootDir": "../..",
+		"types": ["@cloudflare/workers-types", "vitest/globals", "node"],
+		"jsx": "react-jsx",
+		"paths": {
+			"@pebbledesk/emails": ["../../packages/emails/src/render.ts"],
+			"@pebbledesk/shared": ["../../packages/shared/src/index.ts"]
+		}
+	},
+	"include": ["src", "../../packages/emails/src"]
+}

@@ -1,0 +1,166 @@
+{
+	"schemaVersion": 1,
+	"surface": "lead-magnets",
+	"magnets": [
+		{
+			"slug": "licensing-compliance-checklist",
+			"title": "Licensing Compliance Checklist",
+			"publicPath": "/free/licensing-compliance-checklist/",
+			"downloadPath": "/lead-magnets/licensing-compliance-checklist.pdf",
+			"coverPath": "/lead-magnets/licensing-compliance-checklist-cover.png",
+			"track": "compliance",
+			"nurtureTrack": "compliance",
+			"sourceRefs": ["/free/licensing-compliance-checklist/"]
+		},
+		{
+			"slug": "ratio-tracking-cheatsheet",
+			"title": "Ratio Tracking Cheatsheet",
+			"publicPath": "/free/ratio-tracking-cheatsheet/",
+			"downloadPath": "/lead-magnets/ratio-tracking-cheatsheet.pdf",
+			"coverPath": "/lead-magnets/ratio-tracking-cheatsheet-cover.png",
+			"track": "compliance",
+			"nurtureTrack": "compliance",
+			"sourceRefs": ["/free/ratio-tracking-cheatsheet/"]
+		},
+		{
+			"slug": "state-audit-preparation-toolkit",
+			"title": "State Audit Preparation Toolkit",
+			"publicPath": "/free/state-audit-preparation-toolkit/",
+			"downloadPath": "/lead-magnets/state-audit-preparation-toolkit.pdf",
+			"coverPath": "/lead-magnets/state-audit-preparation-toolkit-cover.png",
+			"track": "compliance",
+			"nurtureTrack": "compliance",
+			"sourceRefs": ["/free/state-audit-preparation-toolkit/"]
+		},
+		{
+			"slug": "parent-handbook-template",
+			"title": "Parent Handbook Template",
+			"publicPath": "/free/parent-handbook-template/",
+			"downloadPath": "/lead-magnets/parent-handbook-template.pdf",
+			"coverPath": "/lead-magnets/parent-handbook-template-cover.png",
+			"track": "compliance",
+			"nurtureTrack": "compliance",
+			"sourceRefs": ["/free/parent-handbook-template/"]
+		},
+		{
+			"slug": "ccdf-billing-error-prevention",
+			"title": "CCDF Billing Error Prevention",
+			"publicPath": "/free/ccdf-billing-error-prevention/",
+			"downloadPath": "/lead-magnets/ccdf-billing-error-prevention.pdf",
+			"coverPath": "/lead-magnets/ccdf-billing-error-prevention-cover.png",
+			"track": "billing",
+			"nurtureTrack": "billing",
+			"sourceRefs": ["/free/ccdf-billing-error-prevention/"]
+		},
+		{
+			"slug": "state-subsidy-billing-guide",
+			"title": "State Subsidy Billing Guide",
+			"publicPath": "/free/state-subsidy-billing-guide/",
+			"downloadPath": "/lead-magnets/state-subsidy-billing-guide.pdf",
+			"coverPath": "/lead-magnets/state-subsidy-billing-guide-cover.png",
+			"track": "billing",
+			"nurtureTrack": "billing",
+			"sourceRefs": ["/free/state-subsidy-billing-guide/"]
+		},
+		{
+			"slug": "childcare-software-pricing-comparison",
+			"title": "Childcare Software Pricing Comparison",
+			"publicPath": "/free/childcare-software-pricing-comparison/",
+			"downloadPath": "/lead-magnets/childcare-software-pricing-comparison.pdf",
+			"coverPath": "/lead-magnets/childcare-software-pricing-comparison-cover.png",
+			"track": "buying",
+			"nurtureTrack": "buying",
+			"sourceRefs": ["/free/childcare-software-pricing-comparison/"]
+		},
+		{
+			"slug": "childcare-software-scorecard",
+			"title": "Childcare Software Scorecard",
+			"publicPath": "/free/childcare-software-scorecard/",
+			"downloadPath": "/lead-magnets/childcare-software-scorecard.pdf",
+			"coverPath": "/lead-magnets/childcare-software-scorecard-cover.png",
+			"track": "buying",
+			"nurtureTrack": "buying",
+			"sourceRefs": ["/free/childcare-software-scorecard/"]
+		},
+		{
+			"slug": "brightwheel-cost-calculator",
+			"title": "Brightwheel Cost Calculator",
+			"publicPath": "/free/brightwheel-cost-calculator/",
+			"downloadPath": "/lead-magnets/brightwheel-cost-calculator.pdf",
+			"coverPath": "/lead-magnets/brightwheel-cost-calculator-cover.png",
+			"track": "buying",
+			"nurtureTrack": "buying",
+			"sourceRefs": ["/free/brightwheel-cost-calculator/"]
+		},
+		{
+			"slug": "childcare-staff-handbook-template",
+			"title": "Childcare Staff Handbook Template",
+			"publicPath": "/free/childcare-staff-handbook-template/",
+			"downloadPath": "/lead-magnets/childcare-staff-handbook-template.pdf",
+			"coverPath": "/lead-magnets/childcare-staff-handbook-template-cover.png",
+			"track": "hr",
+			"nurtureTrack": "hr",
+			"sourceRefs": ["/free/childcare-staff-handbook-template/"]
+		},
+		{
+			"slug": "staff-credential-tracker",
+			"title": "Staff Credential Tracker",
+			"publicPath": "/free/staff-credential-tracker/",
+			"downloadPath": "/lead-magnets/staff-credential-tracker.pdf",
+			"coverPath": "/lead-magnets/staff-credential-tracker-cover.png",
+			"track": "hr",
+			"nurtureTrack": "hr",
+			"sourceRefs": ["/free/staff-credential-tracker/"]
+		},
+		{
+			"slug": "cacfp-compliance-checklist",
+			"title": "CACFP Compliance Checklist",
+			"publicPath": "/free/cacfp-compliance-checklist/",
+			"downloadPath": "/lead-magnets/cacfp-compliance-checklist.pdf",
+			"coverPath": "/lead-magnets/cacfp-compliance-checklist-cover.png",
+			"track": "compliance",
+			"nurtureTrack": "compliance",
+			"sourceRefs": ["/free/cacfp-compliance-checklist/"]
+		},
+		{
+			"slug": "childcare-enrollment-agreement-template",
+			"title": "Childcare Enrollment Agreement Template",
+			"publicPath": "/free/childcare-enrollment-agreement-template/",
+			"downloadPath": "/lead-magnets/childcare-enrollment-agreement-template.pdf",
+			"coverPath": "/lead-magnets/childcare-enrollment-agreement-template-cover.png",
+			"track": "compliance",
+			"nurtureTrack": "compliance",
+			"sourceRefs": ["/free/childcare-enrollment-agreement-template/"]
+		},
+		{
+			"slug": "incident-report-log-template",
+			"title": "Incident Report Log Template",
+			"publicPath": "/free/incident-report-log-template/",
+			"downloadPath": "/lead-magnets/incident-report-log-template.pdf",
+			"coverPath": "/lead-magnets/incident-report-log-template-cover.png",
+			"track": "compliance",
+			"nurtureTrack": "compliance",
+			"sourceRefs": ["/free/incident-report-log-template/"]
+		},
+		{
+			"slug": "childcare-fee-policy-template",
+			"title": "Childcare Fee Policy Template",
+			"publicPath": "/free/childcare-fee-policy-template/",
+			"downloadPath": "/lead-magnets/childcare-fee-policy-template.pdf",
+			"coverPath": "/lead-magnets/childcare-fee-policy-template-cover.png",
+			"track": "billing",
+			"nurtureTrack": "billing",
+			"sourceRefs": ["/free/childcare-fee-policy-template/"]
+		},
+		{
+			"slug": "head-start-self-assessment-checklist",
+			"title": "Head Start Self-Assessment Checklist",
+			"publicPath": "/free/head-start-self-assessment-checklist/",
+			"downloadPath": "/lead-magnets/head-start-self-assessment-checklist.pdf",
+			"coverPath": "/lead-magnets/head-start-self-assessment-checklist-cover.png",
+			"track": "compliance",
+			"nurtureTrack": "compliance",
+			"sourceRefs": ["/free/head-start-self-assessment-checklist/"]
+		}
+	]
+}

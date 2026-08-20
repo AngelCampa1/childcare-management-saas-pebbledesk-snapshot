@@ -1,0 +1,555 @@
+---
+import type { NavItemConfig, NavMegaMenuItem, PromoBannerConfig } from "../types"
+import PromoBanner from "./promo-banner.astro"
+
+interface Props {
+  siteName: string
+  navItems?: NavItemConfig[]
+  ctaText: string
+  ctaHref?: string
+  signInHref?: string
+  mobileCtaEyebrow?: string
+  ctaVariant?: "primary" | "secondary"
+  logoLight?: string
+  logoDark?: string
+  promo?: PromoBannerConfig
+}
+
+const {
+  siteName,
+  navItems = [],
+  ctaText,
+  ctaHref = "/#signup",
+  signInHref,
+  mobileCtaEyebrow = "Get started",
+  ctaVariant = "secondary",
+  logoLight,
+  logoDark,
+  promo,
+} = Astro.props
+
+const logoSrc = logoLight ?? logoDark
+
+function isMegaMenu(item: NavItemConfig): item is NavMegaMenuItem {
+  return "megaMenu" in item
+}
+---
+
+<header
+  id="site-header"
+  class="site-header sticky top-0 z-50 border-b border-[color-mix(in_srgb,var(--color-neutral-300)_55%,transparent)] bg-[color-mix(in_srgb,var(--surface-primary)_88%,transparent)] transition-[box-shadow,background-color,border-color] duration-[var(--transition-base)]"
+>
+  {promo && (
+    <PromoBanner
+      code={promo.code}
+      label={promo.label}
+      renewalLabel={promo.renewalLabel}
+      urgencyLabel={promo.urgencyLabel}
+      validThrough={promo.validThrough}
+      ctaHref={promo.ctaHref}
+      ctaLabel={promo.ctaLabel}
+      emoji={promo.emoji}
+      expiryNote={promo.expiryNote}
+    />
+  )}
+  <div data-site-header-inner class="site-header-shell mx-auto flex min-h-16 max-w-7xl items-center justify-between gap-4 px-4 sm:px-6 lg:px-8">
+    <a
+      href="/"
+      data-site-brand
+      class="site-header-brand inline-flex min-h-11 min-w-11 items-center gap-3 no-underline"
+      aria-label={`${siteName} home`}
+    >
+      {logoSrc ? (
+        <img src={logoSrc} alt={`${siteName} logo`} width="120" height="32" class="h-8 w-24 md:w-[120px]" />
+      ) : (
+        <>
+          <span
+            class="inline-block h-2.5 w-2.5 shrink-0 rounded-full bg-[var(--color-accent-400)]"
+            aria-hidden="true"
+          ></span>
+          <span
+            class="font-heading text-base font-semibold leading-none tracking-[0.18em] text-[var(--color-brand-text)] uppercase"
+          >
+            {siteName}
+          </span>
+        </>
+      )}
+    </a>
+
+    <nav data-site-nav class="site-header-nav hidden lg:flex items-center" aria-label="Main navigation">
+      <ul class="site-header-nav-list m-0 flex list-none items-center gap-2">
+        {navItems.map((item) => (
+          <li class={isMegaMenu(item) ? "mega-group relative" : ""}>
+            {isMegaMenu(item) ? (
+              <>
+                <button
+                  type="button"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                  class="site-header-nav-link inline-flex min-h-11 min-w-11 items-center gap-1.5 rounded-full px-4 py-2 font-body text-[length:var(--text-caption)] text-[var(--color-neutral-600)] no-underline transition-[color,background-color] duration-[var(--transition-fast)] hover:bg-[color-mix(in_srgb,var(--color-primary-50)_72%,transparent)] hover:text-[var(--color-primary-700)]"
+                >
+                  {item.label}
+                  <svg class="mega-chevron h-3.5 w-3.5 transition-transform duration-[var(--transition-fast)]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                    <path fill-rule="evenodd" d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
+                  </svg>
+                </button>
+                <div
+                  class="mega-panel absolute left-0 right-0 top-full"
+                  role="region"
+                  aria-label={`${item.label} menu`}
+                >
+                  <div class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                      {item.megaMenu.map((category) => (
+                        <div class="mega-category">
+                          <p class="mega-category-heading mb-3 font-mono text-[length:var(--text-caption)] font-semibold uppercase tracking-[0.18em] text-[var(--color-accent-700)]">
+                            {category.heading}
+                          </p>
+                          <ul class="m-0 list-none space-y-1 p-0">
+                            {category.links.map((link) => (
+                              <li>
+                                <a
+                                  href={link.href}
+                                  class="block rounded-[var(--radius-md)] px-2 py-1.5 text-[length:var(--text-caption)] text-[var(--color-neutral-700)] no-underline transition-[background-color,color] duration-[var(--transition-fast)] hover:bg-[color-mix(in_srgb,var(--color-primary-50)_80%,transparent)] hover:text-[var(--color-primary-700)]"
+                                >
+                                  {link.label}
+                                </a>
+                              </li>
+                            ))}
+                          </ul>
+                          {category.viewAllHref && (
+                            <a
+                              href={category.viewAllHref}
+                              class="mt-3 inline-flex items-center gap-1 text-[length:var(--text-caption)] font-medium text-[var(--color-accent-700)] no-underline transition-[color] duration-[var(--transition-fast)] hover:text-[var(--color-accent-800)]"
+                            >
+                              {category.viewAllText ?? "View all →"}
+                            </a>
+                          )}
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </>
+            ) : (
+              <a
+                href={item.href}
+                class="site-header-nav-link link-slide inline-flex min-h-11 min-w-11 items-center rounded-full px-4 py-2 font-body text-[length:var(--text-caption)] text-[var(--color-neutral-600)] no-underline transition-[color,background-color] duration-[var(--transition-fast)] hover:bg-[color-mix(in_srgb,var(--color-primary-50)_72%,transparent)] hover:text-[var(--color-primary-700)]"
+              >
+                {item.label}
+              </a>
+            )}
+          </li>
+        ))}
+      </ul>
+    </nav>
+
+    <div class="site-header-actions flex items-center gap-3">
+      <slot name="theme-toggle" />
+      <slot name="search" />
+
+      <div class="hidden lg:flex items-center gap-3">
+        {signInHref && (
+          <a
+            href={signInHref}
+            class="inline-flex min-h-11 items-center px-3 py-2 font-body text-[length:var(--text-caption)] text-[var(--color-neutral-600)] no-underline transition-[color] duration-[var(--transition-fast)] hover:text-[var(--color-primary-700)]"
+          >
+            Sign in
+          </a>
+        )}
+        <a href={ctaHref} class={`btn-${ctaVariant} no-underline shrink-0 whitespace-nowrap`}>
+          {ctaText}
+        </a>
+      </div>
+
+      <div class="relative lg:hidden" id="mobile-nav-details" data-mobile-nav-ready="false">
+        <div
+          data-mobile-nav-fallback
+          class="mobile-nav-fallback rounded-[var(--radius-lg)] border border-[color-mix(in_srgb,var(--color-neutral-300)_55%,transparent)] bg-[color-mix(in_srgb,var(--surface-primary)_96%,var(--surface-secondary))] p-3 shadow-[var(--shadow-card)]"
+        >
+          <p class="px-1 pb-2 text-[length:var(--text-body-sm)] uppercase tracking-[0.18em] text-[var(--color-brand-muted)]">
+            Menu
+          </p>
+          <nav aria-label="Mobile navigation fallback" class="flex flex-col gap-1">
+            {navItems.map((item) => (
+              isMegaMenu(item) ? (
+                <div>
+                  <p class="px-3 py-1.5 text-[length:var(--text-body-sm)] font-semibold uppercase tracking-[0.12em] text-[var(--color-brand-muted)]">
+                    {item.label}
+                  </p>
+                  {item.megaMenu.map((category) => (
+                    <div class="mb-2">
+                      <p class="px-3 py-1 text-[length:var(--text-caption)] uppercase tracking-[0.12em] text-[var(--color-brand-muted)] opacity-70">
+                        {category.heading}
+                      </p>
+                      {category.links.map((link) => (
+                        <a
+                          href={link.href}
+                          class="flex min-h-[44px] items-center rounded-[var(--radius-md)] px-4 py-2 font-body text-[length:var(--text-body)] text-[var(--color-neutral-700)] no-underline transition-[background-color,color] duration-[var(--transition-fast)] hover:bg-[color-mix(in_srgb,var(--surface-elevated)_70%,var(--color-primary-50))] hover:text-[var(--color-primary-600)]"
+                        >
+                          {link.label}
+                        </a>
+                      ))}
+                    </div>
+                  ))}
+                </div>
+              ) : (
+                <a
+                  href={item.href}
+                  class="flex min-h-[44px] items-center rounded-[var(--radius-md)] px-3 py-2 font-body text-[length:var(--text-body)] text-[var(--color-neutral-700)] no-underline transition-[background-color,color] duration-[var(--transition-fast)] hover:bg-[color-mix(in_srgb,var(--surface-elevated)_70%,var(--color-primary-50))] hover:text-[var(--color-primary-600)]"
+                >
+                  {item.label}
+                </a>
+              )
+            ))}
+            {signInHref && (
+              <a
+                href={signInHref}
+                class="flex min-h-[44px] items-center rounded-[var(--radius-md)] px-3 py-2 font-body text-[length:var(--text-body)] text-[var(--color-neutral-700)] no-underline transition-[background-color,color] duration-[var(--transition-fast)] hover:bg-[color-mix(in_srgb,var(--surface-elevated)_70%,var(--color-primary-50))] hover:text-[var(--color-primary-600)]"
+              >
+                Sign in
+              </a>
+            )}
+            <a
+              href={ctaHref}
+              class={`mt-2 btn-${ctaVariant} block w-full text-center no-underline`}
+            >
+              {ctaText}
+            </a>
+          </nav>
+        </div>
+
+        <button
+          type="button"
+          data-mobile-nav-trigger
+          aria-label="Toggle navigation menu"
+          aria-controls="mobile-nav-panel"
+          aria-expanded="false"
+          class="mobile-nav-trigger relative z-[61] min-h-11 min-w-11 list-none cursor-pointer items-center justify-center rounded-full border border-[color-mix(in_srgb,var(--color-neutral-300)_60%,transparent)] bg-[color-mix(in_srgb,var(--surface-elevated)_90%,var(--surface-secondary))] p-2 text-[var(--color-neutral-600)] shadow-[var(--shadow-sm)] transition-[background-color,border-color,color,transform] duration-[var(--transition-fast)] hover:-translate-y-px hover:border-[color-mix(in_srgb,var(--color-brand-primary)_25%,var(--color-neutral-300))] hover:bg-[var(--surface-primary)] hover:text-[var(--color-primary-600)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-primary-500)] focus-visible:ring-offset-2"
+        >
+          <svg
+            class="hamburger-icon h-5 w-5"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            stroke-width="2"
+            aria-hidden="true"
+          >
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+          <svg
+            class="close-icon hidden h-5 w-5"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            stroke-width="2"
+            aria-hidden="true"
+          >
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+
+        <div data-mobile-nav-overlay class="mobile-nav-overlay" hidden>
+          <div
+            class="mobile-nav-backdrop"
+            data-mobile-nav-backdrop
+            aria-hidden="true"
+          ></div>
+
+          <div
+            class="mobile-nav-panel-shell overflow-hidden rounded-[calc(var(--radius-lg)+6px)] border border-[color-mix(in_srgb,var(--color-neutral-300)_55%,transparent)] bg-[color-mix(in_srgb,var(--surface-primary)_98%,var(--surface-secondary))] shadow-[var(--shadow-lg)]"
+          >
+            <nav
+              id="mobile-nav-panel"
+              class="relative flex flex-col p-3 pt-14"
+              aria-label="Mobile navigation"
+            >
+              <button
+                type="button"
+                data-mobile-nav-close
+                aria-label="Close navigation menu"
+                class="absolute right-3 top-3 inline-flex min-h-11 min-w-11 items-center justify-center rounded-full border border-[color-mix(in_srgb,var(--color-neutral-300)_60%,transparent)] bg-[color-mix(in_srgb,var(--surface-elevated)_92%,var(--surface-primary))] text-[var(--color-neutral-600)] transition-[background-color,border-color,color,transform] duration-[var(--transition-fast)] hover:-translate-y-px hover:border-[color-mix(in_srgb,var(--color-brand-primary)_25%,var(--color-neutral-300))] hover:bg-[var(--surface-primary)] hover:text-[var(--color-primary-600)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-primary-500)] focus-visible:ring-offset-2"
+              >
+                <svg
+                  class="h-5 w-5"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  aria-hidden="true"
+                >
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+              <p class="px-3 py-2 text-[length:var(--text-body-sm)] uppercase tracking-[0.18em] text-[var(--color-brand-muted)]">
+                Menu
+              </p>
+              {navItems.map((item) => (
+                isMegaMenu(item) ? (
+                  <div class="mobile-mega-group">
+                    <button
+                      type="button"
+                      data-mega-trigger
+                      aria-expanded="false"
+                      class="flex min-h-[48px] w-full items-center justify-between rounded-[var(--radius-md)] px-4 py-3 font-body text-[length:var(--text-body)] text-[var(--color-neutral-700)] transition-[background-color,color] duration-[var(--transition-fast)] hover:bg-[color-mix(in_srgb,var(--surface-elevated)_70%,var(--color-primary-50))] hover:text-[var(--color-primary-600)]"
+                    >
+                      <span>{item.label}</span>
+                      <svg class="h-4 w-4 transition-transform duration-[var(--transition-fast)]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                        <path fill-rule="evenodd" d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
+                      </svg>
+                    </button>
+                    <div data-mega-content hidden class="px-2 pb-2">
+                      {item.megaMenu.map((category) => (
+                        <div class="mb-3">
+                          <p class="px-2 py-1 text-[length:var(--text-caption)] font-semibold uppercase tracking-[0.12em] text-[var(--color-brand-muted)]">
+                            {category.heading}
+                          </p>
+                          {category.links.map((link) => (
+                            <a
+                              href={link.href}
+                              class="flex min-h-[44px] items-center rounded-[var(--radius-md)] px-3 py-2 text-[length:var(--text-body-sm)] text-[var(--color-neutral-700)] no-underline transition-[background-color,color,transform] duration-[var(--transition-fast)] hover:translate-x-0.5 hover:bg-[color-mix(in_srgb,var(--surface-elevated)_70%,var(--color-primary-50))] hover:text-[var(--color-primary-600)]"
+                            >
+                              {link.label}
+                            </a>
+                          ))}
+                          {category.viewAllHref && (
+                            <a
+                              href={category.viewAllHref}
+                              class="flex min-h-[44px] items-center rounded-[var(--radius-md)] px-3 py-2 text-[length:var(--text-caption)] font-medium text-[var(--color-accent-700)] no-underline transition-[background-color,color] duration-[var(--transition-fast)] hover:bg-[color-mix(in_srgb,var(--surface-elevated)_70%,var(--color-primary-50))] hover:text-[var(--color-accent-800)]"
+                            >
+                              {category.viewAllText ?? "View all →"}
+                            </a>
+                          )}
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                ) : (
+                  <a
+                    href={item.href}
+                    class="flex min-h-[48px] items-center rounded-[var(--radius-md)] px-4 py-3 font-body text-[length:var(--text-body)] text-[var(--color-neutral-700)] no-underline transition-[background-color,color,transform] duration-[var(--transition-fast)] hover:translate-x-0.5 hover:bg-[color-mix(in_srgb,var(--surface-elevated)_70%,var(--color-primary-50))] hover:text-[var(--color-primary-600)]"
+                  >
+                    {item.label}
+                  </a>
+                )
+              ))}
+              <div class="mt-2 border-t border-[color-mix(in_srgb,var(--color-neutral-300)_55%,transparent)] px-3 pb-2 pt-3">
+                {signInHref && (
+                  <a
+                    href={signInHref}
+                    class="mb-2 flex min-h-[44px] items-center rounded-[var(--radius-md)] px-3 py-2 font-body text-[length:var(--text-body)] text-[var(--color-neutral-700)] no-underline transition-[background-color,color] duration-[var(--transition-fast)] hover:bg-[color-mix(in_srgb,var(--surface-elevated)_70%,var(--color-primary-50))] hover:text-[var(--color-primary-600)]"
+                  >
+                    Sign in
+                  </a>
+                )}
+                <p class="mb-2 text-[length:var(--text-body-sm)] uppercase tracking-[0.18em] text-[var(--color-brand-muted)]">
+                  {mobileCtaEyebrow}
+                </p>
+                <a
+                  href={ctaHref}
+                  class={`btn-${ctaVariant} block w-full text-center no-underline`}
+                >
+                  {ctaText}
+                </a>
+              </div>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<style>
+  .mobile-nav-trigger {
+    display: none;
+  }
+
+  [data-mobile-nav-ready="true"] .mobile-nav-trigger {
+    display: inline-flex;
+  }
+
+  [data-mobile-nav-ready="true"] [data-mobile-nav-fallback] {
+    display: none;
+  }
+
+  .mobile-nav-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 58;
+    margin-top: 0;
+  }
+
+  .mobile-nav-backdrop {
+    display: block;
+    position: absolute;
+    inset: 0;
+    background: color-mix(in srgb, var(--surface-overlay) 68%, transparent);
+  }
+
+  .mobile-nav-panel-shell {
+    position: absolute;
+    left: 0.5rem;
+    right: 0.5rem;
+    top: calc(4rem + 0.75rem);
+    z-index: 60;
+    width: auto;
+    max-height: calc(100dvh - 8rem);
+    margin-left: 0;
+    overflow-y: auto;
+  }
+
+  .mobile-nav-overlay[hidden] {
+    display: none;
+  }
+
+  [data-mobile-nav-trigger][aria-expanded="true"] .hamburger-icon {
+    display: none;
+  }
+  [data-mobile-nav-trigger][aria-expanded="true"] .close-icon {
+    display: block;
+  }
+
+  #site-header.scrolled {
+    background-color: color-mix(in srgb, var(--surface-primary) 94%, transparent);
+    border-color: color-mix(in srgb, var(--color-neutral-300) 72%, transparent);
+    box-shadow: var(--shadow-card);
+  }
+
+  /* Mega menu */
+  .mega-group {
+    position: static;
+  }
+
+  .mega-panel {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100%;
+    z-index: 50;
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+    background-color: color-mix(in srgb, var(--surface-primary) 98%, var(--surface-secondary));
+    border-bottom: 1px solid color-mix(in srgb, var(--color-neutral-300) 55%, transparent);
+    box-shadow: var(--shadow-lg);
+    transition: opacity var(--transition-base), visibility var(--transition-base);
+  }
+
+  .mega-group.is-open .mega-panel {
+    visibility: visible;
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .mega-group.is-open .mega-chevron {
+    transform: rotate(180deg);
+  }
+
+  /* Mobile mega accordion */
+  [data-mega-content][hidden] {
+    display: none;
+  }
+
+  [data-mega-trigger][aria-expanded="true"] svg {
+    transform: rotate(180deg);
+  }
+</style>
+
+<script>
+  import { initMobileNav } from "../lib/mobile-nav"
+
+  const header = document.getElementById("site-header")
+  if (header) {
+    let ticking = false
+    function handleScroll() {
+      if (ticking) return
+      ticking = true
+      requestAnimationFrame(() => {
+        if (window.scrollY > 8) {
+          header!.classList.add("scrolled")
+        } else {
+          header!.classList.remove("scrolled")
+        }
+        ticking = false
+      })
+    }
+    window.addEventListener("scroll", handleScroll, { passive: true })
+    handleScroll()
+
+    document.addEventListener(
+      "astro:before-swap",
+      () => {
+        window.removeEventListener("scroll", handleScroll)
+      },
+      { once: true },
+    )
+  }
+
+  const details = document.getElementById("mobile-nav-details") as HTMLDivElement | null
+  if (details) {
+    const cleanup = initMobileNav(details)
+
+    document.addEventListener(
+      "astro:before-swap",
+      () => {
+        cleanup()
+      },
+      { once: true },
+    )
+  }
+
+  // Desktop mega menu uses JS-driven mouseenter/mouseleave
+  const megaGroups = document.querySelectorAll<HTMLElement>(".mega-group")
+  megaGroups.forEach((group) => {
+    let closeTimer: ReturnType<typeof setTimeout> | undefined
+
+    function open() {
+      clearTimeout(closeTimer)
+      group.classList.add("is-open")
+      group.querySelector("button")?.setAttribute("aria-expanded", "true")
+    }
+
+    function close() {
+      closeTimer = setTimeout(() => {
+        group.classList.remove("is-open")
+        group.querySelector("button")?.setAttribute("aria-expanded", "false")
+      }, 80)
+    }
+
+    group.addEventListener("mouseenter", open)
+    group.addEventListener("mouseleave", close)
+    group.addEventListener("focusin", open)
+    group.addEventListener("focusout", (e) => {
+      if (!group.contains((e as FocusEvent).relatedTarget as Node)) close()
+    })
+    group.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") {
+        clearTimeout(closeTimer)
+        group.classList.remove("is-open")
+        group.querySelector("button")?.setAttribute("aria-expanded", "false")
+        group.querySelector<HTMLButtonElement>("button")?.focus()
+      }
+    })
+  })
+
+  // Mobile mega accordion
+  const megaTriggers = document.querySelectorAll<HTMLButtonElement>("[data-mega-trigger]")
+  megaTriggers.forEach((trigger) => {
+    const content = trigger.nextElementSibling as HTMLElement | null
+    if (!content) return
+
+    trigger.addEventListener("click", () => {
+      const isOpen = trigger.getAttribute("aria-expanded") === "true"
+      trigger.setAttribute("aria-expanded", isOpen ? "false" : "true")
+      if (isOpen) {
+        content.hidden = true
+      } else {
+        content.hidden = false
+      }
+    })
+  })
+</script>

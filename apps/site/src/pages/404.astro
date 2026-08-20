@@ -1,0 +1,85 @@
+---
+import "../styles/global.css";
+import SiteFooter from "@pebbledesk/marketing/components/site-footer.astro";
+import SiteHeader from "@pebbledesk/marketing/components/site-header.astro";
+import { ThemeToggle } from "@pebbledesk/marketing/components/theme-toggle";
+import BaseLayout from "@pebbledesk/marketing/layouts/base-layout.astro";
+import { resolvePublicSignupCta } from "@pebbledesk/marketing/lib/public-signup-cta";
+import { siteConfig } from "@/config/site";
+
+const headerCta = resolvePublicSignupCta({
+  sourcePage: "/404",
+  explicitTarget: siteConfig.funnel.bofu.ctaTarget,
+  explicitText: siteConfig.funnel.bofu.ctaText,
+});
+---
+
+<BaseLayout
+  title={`Page Not Found | ${siteConfig.name}`}
+  description={`The page you're looking for doesn't exist. Head back to ${siteConfig.name}.`}
+  canonicalUrl={`https://${siteConfig.domain}/404`}
+  siteName={siteConfig.name}
+  siteUrl={`https://${siteConfig.domain}`}
+  themeColor={siteConfig.theme.primary}
+  theme={siteConfig.theme}
+  fonts={siteConfig.theme.fonts}
+  preserveMetaTagCopy={siteConfig.preserveMetaTagCopy}
+  noindex={true}
+>
+  <SiteHeader
+    slot="header"
+    siteName={siteConfig.name}
+    navItems={siteConfig.nav?.items}
+    signInHref={siteConfig.nav?.signInHref}
+    ctaText={siteConfig.nav?.ctaText ?? headerCta.text}
+    ctaHref={headerCta.target}
+    logoLight={siteConfig.logo?.light}
+    logoDark={siteConfig.logo?.dark}
+    promo={siteConfig.promoBanner}
+  >
+    <ThemeToggle client:load slot="theme-toggle" />
+  </SiteHeader>
+
+  <section class="flex min-h-[60vh] items-center justify-center px-4 py-24 sm:px-6 lg:px-8" style="background: var(--site-editorial-wash);">
+    <div class="mx-auto w-full max-w-3xl rounded-[var(--radius-xl)] border border-[var(--site-panel-border)] bg-[var(--site-panel-bg)] px-4 py-10 text-center sm:px-6 lg:px-8 shadow-[var(--shadow-lg)]">
+      <p class="font-mono text-sm uppercase tracking-[0.18em] text-[var(--color-accent-700)]">
+        404
+      </p>
+      <h1 class="mt-4 text-4xl font-bold text-[var(--color-brand-text)]">
+        This page is not part of the current record.
+      </h1>
+      <p class="mx-auto mb-10 mt-4 max-w-2xl text-lg leading-8 text-[var(--color-brand-muted)]">
+        The page may have moved, the link may be outdated, or the route may no longer be published. Start from the main PebbleDesk paths below and you should be able to find the right software page again.
+      </p>
+      <div class="flex flex-col justify-center gap-4 sm:flex-row">
+        <a
+          href="/"
+          class="btn-primary no-underline"
+        >
+          Back to home
+        </a>
+        <a
+          href="/resources/"
+          class="btn-secondary no-underline"
+        >
+          Browse resources
+        </a>
+        <a
+          href="/compare/"
+          class="btn-secondary no-underline"
+        >
+          Compare software
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <SiteFooter
+    slot="footer"
+    siteName={siteConfig.name}
+    tagline={siteConfig.tagline}
+    linkGroups={siteConfig.footer?.linkGroups}
+    legalLinks={siteConfig.footer?.legalLinks}
+    contactEmail={siteConfig.contactEmail}
+  />
+</BaseLayout>

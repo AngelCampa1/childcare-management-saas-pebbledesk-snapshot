@@ -1,0 +1,21 @@
+---
+import ProductDashboard from "./product-dashboard.astro"
+---
+
+<div data-floating-collage class="relative mx-auto max-w-[34rem]">
+	<div class="absolute -left-4 top-8 z-10 hidden rotate-[-4deg] rounded-[var(--radius-lg)] border border-[var(--site-panel-border)] bg-[var(--surface-elevated)] p-4 shadow-[var(--shadow-card)] sm:block">
+		<p class="font-mono text-xs uppercase tracking-[0.14em] text-[var(--color-accent-700)]">
+			Attendance captured
+		</p>
+		<p class="mt-2 text-sm font-semibold text-[var(--color-brand-text)]">42 check-ins linked to rooms</p>
+	</div>
+	<div class="absolute -right-3 bottom-10 z-10 hidden rotate-[3deg] rounded-[var(--radius-lg)] border border-[var(--site-panel-border)] bg-[var(--surface-elevated)] p-4 shadow-[var(--shadow-card)] md:block">
+		<p class="font-mono text-xs uppercase tracking-[0.14em] text-[var(--color-primary-700)]">
+			Subsidy binder
+		</p>
+		<p class="mt-2 text-sm font-semibold text-[var(--color-brand-text)]">Claim proof already attached</p>
+	</div>
+	<div class="relative">
+		<ProductDashboard compact />
+	</div>
+</div>

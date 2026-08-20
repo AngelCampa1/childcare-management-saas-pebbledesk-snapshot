@@ -1,0 +1,482 @@
+{
+  "version": "7",
+  "dialect": "postgresql",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "7",
+      "when": 1775585734778,
+      "tag": "0000_concerned_the_fury",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1775608146770,
+      "tag": "0001_needy_terror",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1775613861337,
+      "tag": "0002_lethal_vertigo",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "7",
+      "when": 1775618000000,
+      "tag": "0003_phase5_realignment",
+      "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "7",
+      "when": 1775660049920,
+      "tag": "0004_empty_mephistopheles",
+      "breakpoints": true
+    },
+    {
+      "idx": 5,
+      "version": "7",
+      "when": 1775663736165,
+      "tag": "0005_phase7_quickbooks_manual_sync",
+      "breakpoints": true
+    },
+    {
+      "idx": 6,
+      "version": "7",
+      "when": 1776079188766,
+      "tag": "0006_phase8_platform_subscriptions",
+      "breakpoints": true
+    },
+    {
+      "idx": 7,
+      "version": "7",
+      "when": 1776082655769,
+      "tag": "0007_absurd_viper",
+      "breakpoints": true
+    },
+    {
+      "idx": 8,
+      "version": "7",
+      "when": 1776256660330,
+      "tag": "0008_loose_synch",
+      "breakpoints": true
+    },
+    {
+      "idx": 9,
+      "version": "7",
+      "when": 1776300000000,
+      "tag": "0009_numeric_billing_amounts",
+      "breakpoints": true
+    },
+    {
+      "idx": 10,
+      "version": "7",
+      "when": 1776300060000,
+      "tag": "0010_add_indexes",
+      "breakpoints": true
+    },
+    {
+      "idx": 11,
+      "version": "7",
+      "when": 1776386400000,
+      "tag": "0011_integrity_indexes",
+      "breakpoints": true
+    },
+    {
+      "idx": 12,
+      "version": "7",
+      "when": 1776537975810,
+      "tag": "0012_deep_loners",
+      "breakpoints": true
+    },
+    {
+      "idx": 13,
+      "version": "7",
+      "when": 1776538223203,
+      "tag": "0013_gigantic_nuke",
+      "breakpoints": true
+    },
+    {
+      "idx": 14,
+      "version": "7",
+      "when": 1776542314068,
+      "tag": "0014_thankful_jack_power",
+      "breakpoints": true
+    },
+    {
+      "idx": 15,
+      "version": "7",
+      "when": 1776575054146,
+      "tag": "0015_aromatic_slapstick",
+      "breakpoints": true
+    },
+    {
+      "idx": 16,
+      "version": "7",
+      "when": 1776600000000,
+      "tag": "0016_pricing_tiers",
+      "breakpoints": true
+    },
+    {
+      "idx": 17,
+      "version": "7",
+      "when": 1776941990000,
+      "tag": "0017_trial_subscription_notifications",
+      "breakpoints": true
+    },
+    {
+      "idx": 18,
+      "version": "7",
+      "when": 1776942000000,
+      "tag": "0018_guidance_progress",
+      "breakpoints": true
+    },
+    {
+      "idx": 19,
+      "version": "7",
+      "when": 1777000000000,
+      "tag": "0019_repair_missing_production_relations",
+      "breakpoints": true
+    },
+    {
+      "idx": 20,
+      "version": "7",
+      "when": 1777075200000,
+      "tag": "0020_child_guardians_center_scope",
+      "breakpoints": true
+    },
+    {
+      "idx": 21,
+      "version": "7",
+      "when": 1777597200000,
+      "tag": "0021_task_d_schema_remediation",
+      "breakpoints": true
+    },
+    {
+      "idx": 22,
+      "version": "7",
+      "when": 1777678860000,
+      "tag": "0022_app_signup_email_lifecycle",
+      "breakpoints": true
+    },
+    {
+      "idx": 23,
+      "version": "7",
+      "when": 1778091028161,
+      "tag": "0023_trial_feature",
+      "breakpoints": true
+    },
+    {
+      "idx": 24,
+      "version": "7",
+      "when": 1778177400000,
+      "tag": "0024_db_integrity_hardening",
+      "breakpoints": true
+    },
+    {
+      "idx": 25,
+      "version": "7",
+      "when": 1778177460000,
+      "tag": "0025_repair_subscription_plan_trial",
+      "breakpoints": true
+    },
+    {
+      "idx": 26,
+      "version": "7",
+      "when": 1778799600000,
+      "tag": "0026_invitation_tokens",
+      "breakpoints": true
+    },
+    {
+      "idx": 27,
+      "version": "7",
+      "when": 1779237000000,
+      "tag": "0027_message_replies",
+      "breakpoints": true
+    },
+    {
+      "idx": 28,
+      "version": "7",
+      "when": 1748217600000,
+      "tag": "0028_child_health_fields",
+      "breakpoints": true
+    },
+    {
+      "idx": 29,
+      "version": "7",
+      "when": 1748304000000,
+      "tag": "0029_checkin_late_and_signatures",
+      "breakpoints": true
+    },
+    {
+      "idx": 30,
+      "version": "7",
+      "when": 1748390400000,
+      "tag": "0030_subsidy_claim_period_unique",
+      "breakpoints": true
+    },
+    {
+      "idx": 31,
+      "version": "7",
+      "when": 1748476800000,
+      "tag": "0031_ratio_violation_breach_fields",
+      "breakpoints": true
+    },
+    {
+      "idx": 32,
+      "version": "7",
+      "when": 1748563200000,
+      "tag": "0032_email_based_invitations",
+      "breakpoints": true
+    },
+    {
+      "idx": 33,
+      "version": "7",
+      "when": 1748649600000,
+      "tag": "0033_invoice_guardian_period_unique",
+      "breakpoints": true
+    },
+    {
+      "idx": 34,
+      "version": "7",
+      "when": 1748736000000,
+      "tag": "0034_child_guardian_center_scope",
+      "breakpoints": true
+    },
+    {
+      "idx": 35,
+      "version": "7",
+      "when": 1748822400000,
+      "tag": "0035_shift_schedule_center_scope",
+      "breakpoints": true
+    },
+    {
+      "idx": 36,
+      "version": "7",
+      "when": 1748908800000,
+      "tag": "0036_staff_assignment_center_scope",
+      "breakpoints": true
+    },
+    {
+      "idx": 37,
+      "version": "7",
+      "when": 1748995200000,
+      "tag": "0037_classroom_assignment_center_scope",
+      "breakpoints": true
+    },
+    {
+      "idx": 38,
+      "version": "7",
+      "when": 1749081600000,
+      "tag": "0038_staff_check_in_center_scope",
+      "breakpoints": true
+    },
+    {
+      "idx": 39,
+      "version": "7",
+      "when": 1749168000000,
+      "tag": "0039_check_in_center_scope",
+      "breakpoints": true
+    },
+    {
+      "idx": 40,
+      "version": "7",
+      "when": 1749254400000,
+      "tag": "0040_subsidy_center_scope",
+      "breakpoints": true
+    },
+    {
+      "idx": 41,
+      "version": "7",
+      "when": 1749340800000,
+      "tag": "0041_ratio_center_scope",
+      "breakpoints": true
+    },
+    {
+      "idx": 42,
+      "version": "7",
+      "when": 1749427200000,
+      "tag": "0042_invoice_guardian_center_scope",
+      "breakpoints": true
+    },
+    {
+      "idx": 43,
+      "version": "7",
+      "when": 1749513600000,
+      "tag": "0043_messaging_center_scope",
+      "breakpoints": true
+    },
+    {
+      "idx": 44,
+      "version": "7",
+      "when": 1749600000000,
+      "tag": "0044_scheduling_center_scope",
+      "breakpoints": true
+    },
+    {
+      "idx": 45,
+      "version": "7",
+      "when": 1749686400000,
+      "tag": "0045_quickbooks_center_scope",
+      "breakpoints": true
+    },
+    {
+      "idx": 46,
+      "version": "7",
+      "when": 1749772800000,
+      "tag": "0046_guidance_audit_center_scope",
+      "breakpoints": true
+    },
+    {
+      "idx": 47,
+      "version": "7",
+      "when": 1749859200000,
+      "tag": "0047_message_recipients_center_scope",
+      "breakpoints": true
+    },
+    {
+      "idx": 48,
+      "version": "7",
+      "when": 1749945600000,
+      "tag": "0048_invoice_line_items_center_scope",
+      "breakpoints": true
+    },
+    {
+      "idx": 49,
+      "version": "7",
+      "when": 1750032000000,
+      "tag": "0049_invoice_template_line_items_center_scope",
+      "breakpoints": true
+    },
+    {
+      "idx": 50,
+      "version": "7",
+      "when": 1750118400000,
+      "tag": "0050_feedback_relations",
+      "breakpoints": true
+    },
+    {
+      "idx": 51,
+      "version": "7",
+      "when": 1750204800000,
+      "tag": "0051_invoice_template_default_unique",
+      "breakpoints": true
+    },
+    {
+      "idx": 52,
+      "version": "7",
+      "when": 1750291200000,
+      "tag": "0052_time_entry_hours_check",
+      "breakpoints": true
+    },
+    {
+      "idx": 53,
+      "version": "7",
+      "when": 1750377600000,
+      "tag": "0053_shift_temporal_check",
+      "breakpoints": true
+    },
+    {
+      "idx": 54,
+      "version": "7",
+      "when": 1750464000000,
+      "tag": "0054_subsidy_claim_amount_order_check",
+      "breakpoints": true
+    },
+    {
+      "idx": 55,
+      "version": "7",
+      "when": 1750550400000,
+      "tag": "0055_schedule_date_order_check",
+      "breakpoints": true
+    },
+    {
+      "idx": 56,
+      "version": "7",
+      "when": 1750636800000,
+      "tag": "0056_attendance_temporal_check",
+      "breakpoints": true
+    },
+    {
+      "idx": 57,
+      "version": "7",
+      "when": 1750723200000,
+      "tag": "0057_assignment_date_order_check",
+      "breakpoints": true
+    },
+    {
+      "idx": 58,
+      "version": "7",
+      "when": 1750809600000,
+      "tag": "0058_classroom_positive_values_check",
+      "breakpoints": true
+    },
+    {
+      "idx": 59,
+      "version": "7",
+      "when": 1750896000000,
+      "tag": "0059_child_guardian_primary_unique",
+      "breakpoints": true
+    },
+    {
+      "idx": 60,
+      "version": "7",
+      "when": 1750982400000,
+      "tag": "0060_invoice_guardian_restrict_delete",
+      "breakpoints": true
+    },
+    {
+      "idx": 61,
+      "version": "7",
+      "when": 1751068800000,
+      "tag": "0061_membership_deactivation",
+      "breakpoints": true
+    },
+    {
+      "idx": 62,
+      "version": "7",
+      "when": 1779906000000,
+      "tag": "0062_repair_membership_auth_columns",
+      "breakpoints": true
+    },
+    {
+      "idx": 63,
+      "version": "7",
+      "when": 1779906100000,
+      "tag": "0063_ai_cs_escalations",
+      "breakpoints": true
+    },
+    {
+      "idx": 64,
+      "version": "7",
+      "when": 1779906200000,
+      "tag": "0064_ai_cs_session_owners",
+      "breakpoints": true
+    },
+    {
+      "idx": 65,
+      "version": "7",
+      "when": 1779906300000,
+      "tag": "0065_stripe_subscription_event_created_at",
+      "breakpoints": true
+    },
+    {
+      "idx": 66,
+      "version": "7",
+      "when": 1779906400000,
+      "tag": "0066_shifts_no_overlap",
+      "breakpoints": true
+    },
+    {
+      "idx": 67,
+      "version": "7",
+      "when": 1779906500000,
+      "tag": "0067_subsidy_claim_no_overlap",
+      "breakpoints": true
+    }
+  ]
+}
